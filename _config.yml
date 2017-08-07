@@ -83,5 +83,5 @@ theme: material
 ## Docs: https://hexo.io/docs/deployment.html
 deploy: 
   type: git
-  repository: https://github.com/shanlanmi/shanlanmi.github.io.git
+  repository: https://github.com/shanlanmi/zsl-blog.git
   branch: master
