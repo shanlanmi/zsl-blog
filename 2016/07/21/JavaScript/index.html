@@ -1,0 +1,3530 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            JavaScript | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="img/favicon.png">
+    <link rel="icon" sizes="192x192" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="JavaScript | 张圣兰">
+    <meta property="og:image" content="img/favicon.png" />
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="JavaScript | 张圣兰">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "JavaScript",
+    "url": "https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/zsl-blog/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/zsl-blog/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/zsl-blog/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/zsl-blog/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/zsl-blog/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript"><span class="post-toc-number">1.</span> <span class="post-toc-text">JavaScript</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Place-the-JavaScript-code"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Place the JavaScript code</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Number"><span class="post-toc-number">2.</span> <span class="post-toc-text">Variable - Number</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Precision"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Precision</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Special-numbers"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Special numbers</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Hexadecimal"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Hexadecimal</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Properties-and-Methods"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Properties and Methods</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-String"><span class="post-toc-number">3.</span> <span class="post-toc-text">Variable - String</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Special-Character"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Special Character</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Breaking-Code-Lines"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Breaking Code Lines</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Accessing-a-String-as-an-Array"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Accessing a String as an Array</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Properties-and-Methods-1"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">Properties and Methods</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Transform-String-to-Num"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">Transform String to Num</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Boolean"><span class="post-toc-number">4.</span> <span class="post-toc-text">Variable - Boolean</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Object"><span class="post-toc-number">5.</span> <span class="post-toc-text">Variable - Object</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Defining"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Defining</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-Properties"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Object Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-Methods"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Object Methods</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-Prototypes"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">Object Prototypes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Global-Properties-and-Functions"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">Global Properties and Functions</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Array"><span class="post-toc-number">6.</span> <span class="post-toc-text">Variable - Array</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Defining-1"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">Defining</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Accessing"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">Accessing</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Compare-With-Object"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">Compare With Object</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Properties-and-Methods-2"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">Properties and Methods</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Date"><span class="post-toc-number">7.</span> <span class="post-toc-text">Variable - Date</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Defining-2"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">Defining</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Date-Formats"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">Date Formats</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Compare-Dates"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">Compare Dates</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Properties-and-Methods-3"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">Properties and Methods</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Math"><span class="post-toc-number">8.</span> <span class="post-toc-text">Variable - Math</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Undefined-and-Null"><span class="post-toc-number">9.</span> <span class="post-toc-text">Variable - Undefined and Null</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Undefined"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">Undefined</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Null"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">Null</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Function"><span class="post-toc-number">10.</span> <span class="post-toc-text">Variable - Function</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Definitions"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">Definitions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Parameters"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">Parameters</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Invocation"><span class="post-toc-number">10.3.</span> <span class="post-toc-text">Invocation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Closures"><span class="post-toc-number">10.4.</span> <span class="post-toc-text">Closures</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Recursion"><span class="post-toc-number">10.5.</span> <span class="post-toc-text">Recursion</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Named"><span class="post-toc-number">11.</span> <span class="post-toc-text">Variable - Named</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Declare"><span class="post-toc-number">12.</span> <span class="post-toc-text">Variable - Declare</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Scope"><span class="post-toc-number">13.</span> <span class="post-toc-text">Variable - Scope</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Local-variables"><span class="post-toc-number">13.1.</span> <span class="post-toc-text">Local variables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Global-variables"><span class="post-toc-number">13.2.</span> <span class="post-toc-text">Global variables</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Variable-Type"><span class="post-toc-number">14.</span> <span class="post-toc-text">Variable - Type</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Check-Data-Types"><span class="post-toc-number">14.1.</span> <span class="post-toc-text">Check Data Types</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Type-Conversion"><span class="post-toc-number">14.2.</span> <span class="post-toc-text">Type Conversion</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Operator"><span class="post-toc-number">15.</span> <span class="post-toc-text">Operator</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Operators-and-Precedence"><span class="post-toc-number">15.1.</span> <span class="post-toc-text">Operators and Precedence</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Comparison"><span class="post-toc-number">15.2.</span> <span class="post-toc-text">Comparison</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Statements"><span class="post-toc-number">16.</span> <span class="post-toc-text">Statements</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Conditional-Statements"><span class="post-toc-number">16.1.</span> <span class="post-toc-text">Conditional Statements</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Loop-Statements"><span class="post-toc-number">16.2.</span> <span class="post-toc-text">Loop Statements</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Keyword"><span class="post-toc-number">16.3.</span> <span class="post-toc-text">Keyword</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Other-Keywords"><span class="post-toc-number">17.</span> <span class="post-toc-text">Other Keywords</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Error"><span class="post-toc-number">17.1.</span> <span class="post-toc-text">Error</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Display-Data"><span class="post-toc-number">17.2.</span> <span class="post-toc-text">Display Data</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Comments"><span class="post-toc-number">17.3.</span> <span class="post-toc-text">Comments</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Hoisting"><span class="post-toc-number">17.4.</span> <span class="post-toc-text">Hoisting</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JS-JSON"><span class="post-toc-number">18.</span> <span class="post-toc-text">JS JSON</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#What-is-JSON"><span class="post-toc-number">18.1.</span> <span class="post-toc-text">What is JSON?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSON-Example"><span class="post-toc-number">18.2.</span> <span class="post-toc-text">JSON Example</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#JSON-Syntax-Rules"><span class="post-toc-number">18.3.</span> <span class="post-toc-text">JSON Syntax Rules</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Converting-to-Object"><span class="post-toc-number">18.4.</span> <span class="post-toc-text">Converting to Object</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JS-Forms"><span class="post-toc-number">19.</span> <span class="post-toc-text">JS Forms</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Form-Validation"><span class="post-toc-number">19.1.</span> <span class="post-toc-text">Form Validation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML-Constraint-Validation"><span class="post-toc-number">19.2.</span> <span class="post-toc-text">HTML Constraint Validation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Forms-API"><span class="post-toc-number">19.3.</span> <span class="post-toc-text">Forms API</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本文相关"><span class="post-toc-number">20.</span> <span class="post-toc-text">本文相关</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                JavaScript
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=JavaScript&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=JavaScript&summary=&pics=https://shanlanmi.github.io/zsl-blogimg/favicon.png&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><ol>
+<li>JavaScript statements are separated by semicolons(;).</li>
+<li>JavaScript statements = Values + Operators + Expressions + Keywords + Comments</li>
+<li>Value = Fixed value (<strong>literals</strong>) + variable values (<strong>variables</strong>)</li>
+<li>Literals = Numbers + Strings</li>
+<li>There are six basic types of values: numbers, strings, booleans, objects, functions, undefined values.</li>
+</ol>
+<h3 id="Place-the-JavaScript-code"><a href="#Place-the-JavaScript-code" class="headerlink" title="Place the JavaScript code"></a>Place the JavaScript code</h3><ol>
+<li><p><strong>Placing in HTML page with script element</strong></p>
+<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token operator">&lt;</span>script<span class="token operator">></span>
+document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"demo"</span><span class="token punctuation">)</span><span class="token punctuation">.</span>innerHTML <span class="token operator">=</span> <span class="token string">"Text"</span><span class="token punctuation">;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol>
+<li><code>&lt;script type=&quot;text/javascript&quot;&gt;</code> is <strong>not</strong> required.</li>
+<li>Script can placed in body or head.</li>
+<li>Keeping all code at the bottom of the body element is a good habit, because script compilation can slow down the display.</li>
+</ol>
+</li>
+<li><p><strong>Placing in External files</strong></p>
+<pre class="line-numbers language-JS"><code class="language-JS"> <script src="myscript.js"></script>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol>
+<li>You can place an external script reference in <code>&lt;head&gt;</code> or <code>&lt;body&gt;</code> as you like.</li>
+<li><p>External script cannot contain <code>&lt;script&gt;</code> tags.</p>
+<p>Placing JavaScripts in external files has some advantages:</p>
+</li>
+<li>Separates HTML and code.</li>
+<li>Easier to read and maintain.</li>
+<li>Speed up page loads.</li>
+</ol>
+</li>
+</ol>
+<h2 id="Variable-Number"><a href="#Variable-Number" class="headerlink" title="Variable - Number"></a>Variable - Number</h2><h3 id="Precision"><a href="#Precision" class="headerlink" title="Precision"></a>Precision</h3><ul>
+<li>JavaScript numbers are always 64-bit floating point.</li>
+<li>Integers are considered accurate up to <strong>15 digits</strong>.</li>
+<li>The maximum number of <strong>decimals is 17</strong>, but floating point arithmetic is not always 100% </li>
+</ul>
+<h3 id="Special-numbers"><a href="#Special-numbers" class="headerlink" title="Special numbers"></a>Special numbers</h3><ul>
+<li><code>Infinity</code> and <code>-Infinity</code></li>
+<li><code>NaN</code>: Not A Number<br>The type of <code>Infinity</code> and <code>NaN</code> are “number”.</li>
+</ul>
+<h3 id="Hexadecimal"><a href="#Hexadecimal" class="headerlink" title="Hexadecimal"></a>Hexadecimal</h3><ul>
+<li>Hexadecimal: <code>var x = 0xFF;</code></li>
+<li>Never write a number with a <strong>leading</strong> <strong>zero</strong>, some JS interpret numbers as <strong>octal</strong>.</li>
+<li>Using <code>toString(n)</code> method to change between base 16(hex), base 8(octal), base 2(binary).</li>
+</ul>
+<h3 id="Properties-and-Methods"><a href="#Properties-and-Methods" class="headerlink" title="Properties and Methods"></a>Properties and Methods</h3><p><strong>Number Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>Returns the function that created JavaScript’s Number prototype</td>
+</tr>
+<tr>
+<td>MAX_VALUE</td>
+<td>Returns the largest number possible in JavaScript</td>
+</tr>
+<tr>
+<td>MIN_VALUE</td>
+<td>Returns the smallest number possible in JavaScript</td>
+</tr>
+<tr>
+<td>NEGATIVE_INFINITY</td>
+<td>Represents negative infinity (returned on overflow)</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>Represents a “Not-a-Number” value</td>
+</tr>
+<tr>
+<td>POSITIVE_INFINITY</td>
+<td>Represents infinity (returned on overflow)</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>Allows you to add properties and methods to an object</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Number Methods</strong><br>All number methods return a new value. They do not change the original variable.</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>isFinite()</td>
+<td>Checks whether a value is a finite number</td>
+</tr>
+<tr>
+<td>isInteger()</td>
+<td>Checks whether a value is an integer</td>
+</tr>
+<tr>
+<td>isNaN()</td>
+<td>Checks whether a value is Number.NaN</td>
+</tr>
+<tr>
+<td>isSafeInteger()</td>
+<td>Checks whether a value is a safe integer</td>
+</tr>
+<tr>
+<td>toExponential(x)</td>
+<td>Converts a number into an exponential notation</td>
+</tr>
+<tr>
+<td>toFixed(x)</td>
+<td>Formats a number with x numbers of digits after the decimal point</td>
+</tr>
+<tr>
+<td>toPrecision(x)</td>
+<td>Formats a number to x length</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td>Converts a number to a string</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>Returns the primitive value of a number</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_number.asp" target="_blank" rel="external">Number Reference</a></p>
+<h2 id="Variable-String"><a href="#Variable-String" class="headerlink" title="Variable - String"></a>Variable - String</h2><ul>
+<li>Strings can be compared.</li>
+</ul>
+<h3 id="Special-Character"><a href="#Special-Character" class="headerlink" title="Special Character"></a>Special Character</h3><table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Outputs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\</td>
+<td>Backslash</td>
+</tr>
+<tr>
+<td>\’</td>
+<td>Single quote</td>
+</tr>
+<tr>
+<td>\”</td>
+<td>Double quote</td>
+</tr>
+<tr>
+<td>\n</td>
+<td>New line</td>
+</tr>
+<tr>
+<td>\r</td>
+<td>Return</td>
+</tr>
+<tr>
+<td>\t</td>
+<td>Tab</td>
+</tr>
+<tr>
+<td>\b</td>
+<td>Backsapace</td>
+</tr>
+<tr>
+<td>\f</td>
+<td>Form feed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Breaking-Code-Lines"><a href="#Breaking-Code-Lines" class="headerlink" title="Breaking Code Lines"></a>Breaking Code Lines</h3><p><strong>Note</strong>: Can not break up a code line with a backslash.</p>
+<h3 id="Accessing-a-String-as-an-Array"><a href="#Accessing-a-String-as-an-Array" class="headerlink" title="Accessing a String as an Array"></a>Accessing a String as an Array</h3><ul>
+<li>It does not work in all browsers (not in IE5, IE6, IE7)</li>
+<li>It makes strings look like arrays (but they are not)</li>
+<li>str[0] = “H” does <strong>not</strong> give an error (but does not work)</li>
+<li>Using <code>string.charAt(n)</code> is better.</li>
+</ul>
+<h3 id="Properties-and-Methods-1"><a href="#Properties-and-Methods-1" class="headerlink" title="Properties and Methods"></a>Properties and Methods</h3><p><strong>String Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>Returns the function that created the String object’s prototype</td>
+</tr>
+<tr>
+<td>length</td>
+<td>Returns the length of a string</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>Allows you to add properties and methods to an object</td>
+</tr>
+</tbody>
+</table>
+<p><strong>String Methods</strong></p>
+<ul>
+<li>All string methods return a new string. They don’t modify the original string.</li>
+<li>Strings are immutable: Strings cannot be changed, only replaced.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>charAt()</td>
+<td>Returns the character at the specified index (position), note: don’t use <code>charAt[]</code></td>
+</tr>
+<tr>
+<td>charCodeAt()</td>
+<td>Returns the Unicode of the character at the specified index</td>
+</tr>
+<tr>
+<td>concat()</td>
+<td>Joins two or more strings, and returns a new joined strings</td>
+</tr>
+<tr>
+<td>endsWith()</td>
+<td>Checks whether a string ends with specified string/characters</td>
+</tr>
+<tr>
+<td>fromCharCode()</td>
+<td>Converts Unicode values to characters</td>
+</tr>
+<tr>
+<td>includes()</td>
+<td>Checks whether a string contains the specified string/characters</td>
+</tr>
+<tr>
+<td>indexOf()</td>
+<td>Returns the position of the first found occurrence of a specified value in a string, e.g. <code>string.indexOf(char)</code></td>
+</tr>
+<tr>
+<td>lastIndexOf()</td>
+<td>Returns the position of the last found occurrence of a specified value in a string</td>
+</tr>
+<tr>
+<td>localeCompare()</td>
+<td>Compares two strings in the current locale</td>
+</tr>
+<tr>
+<td>match()</td>
+<td>Searches a string for a match against a <strong>regular</strong> <strong>expression</strong>, and returns the matches</td>
+</tr>
+<tr>
+<td>repeat()</td>
+<td>Returns a new string with a specified number of copies of an existing string</td>
+</tr>
+<tr>
+<td><a href="#replace">replace()</a></td>
+<td>Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced</td>
+</tr>
+<tr>
+<td>search()</td>
+<td>Searches a string for a specified value, or regular expression, and returns the position of the match</td>
+</tr>
+<tr>
+<td>slice()</td>
+<td>Extracts a part of a string and returns a new string</td>
+</tr>
+<tr>
+<td><a href="#split">split()</a></td>
+<td>Splits a string into an array of substrings</td>
+</tr>
+<tr>
+<td>startsWith()</td>
+<td>Checks whether a string begins with specified characters</td>
+</tr>
+<tr>
+<td>substr()</td>
+<td>Extracts the characters from a string, beginning at a specified start position, and through the specified number of character</td>
+</tr>
+<tr>
+<td>substring()</td>
+<td>Extracts the characters from a string, between two specified indices</td>
+</tr>
+<tr>
+<td>toLocaleLowerCase()</td>
+<td>Converts a string to lowercase letters, according to the host’s locale</td>
+</tr>
+<tr>
+<td>toLocaleUpperCase()</td>
+<td>Converts a string to uppercase letters, according to the host’s locale</td>
+</tr>
+<tr>
+<td>toLowerCase()</td>
+<td>Converts a string to lowercase letters</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td>Returns the value of a String object</td>
+</tr>
+<tr>
+<td>toUpperCase()</td>
+<td>Converts a string to uppercase letters</td>
+</tr>
+<tr>
+<td>trim()</td>
+<td>Removes whitespace from both ends of a string</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>Returns the primitive value of a String object</td>
+</tr>
+</tbody>
+</table>
+<p><strong><a id="replace">replace()</a></strong></p>
+<ul>
+<li>The replace() method does not change the string it is called on. It returns a new string.</li>
+<li>Supports regular expression.</li>
+<li>The replace() function replaces only the first match.</li>
+<li>To replace all matches, use a regular expression with a g flag (for global match):</li>
+</ul>
+<p><strong><a id="split">split()</a></strong><br>Syntax: <code>string.split(&quot;separator&quot;);</code></p>
+<ul>
+<li>If the separator is omitted, the returned array will contain the whole string in index [0].</li>
+<li>If the separator is “”, the returned array will be an array of single characters:</li>
+</ul>
+<h3 id="Transform-String-to-Num"><a href="#Transform-String-to-Num" class="headerlink" title="Transform String to Num"></a>Transform String to Num</h3><ol>
+<li><strong>Function: parseInt() and parseFloat()</strong><pre class="line-numbers language-JS"><code class="language-JS">parseInt("1234blue");       // returns 1234
+parseInt("22.5");           // returns 22
+parseInt("blue");           // returns NaN
+parseFloat("22.34.5");      // returns 22.34
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><strong>Type casting: Boolean(), Number() and String()</strong><pre class="line-numbers language-JS"><code class="language-JS">Number(false)               // 0
+Number(true)                // 1
+Number(undefined)           // NaN
+Number(null)                // 0
+Number("5.5 ")              // 5.5
+Number("56 ")               // 56
+Number("5.6.7")             // NaN
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><strong>Arithmetic</strong><pre><code>var str = &#39;012.345 &#39;;
+var x = str - 0;
+x = x * 1
+</code></pre></li>
+</ol>
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_string.asp" target="_blank" rel="external">String Reference</a></p>
+<h2 id="Variable-Boolean"><a href="#Variable-Boolean" class="headerlink" title="Variable - Boolean"></a>Variable - Boolean</h2><p>Only <strong>true</strong> or <strong>false</strong> in JS’ Boolean  date.<br><strong>Special</strong> <strong>false</strong>: 0, -0, “”, undefined, null, false, NaN</p>
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_boolean.asp" target="_blank" rel="external">Boolean Reference</a></p>
+<h2 id="Variable-Object"><a href="#Variable-Object" class="headerlink" title="Variable - Object"></a>Variable - Object</h2><p>In JavaScript, almost “everything” is an object:</p>
+<ul>
+<li><strong>Booleans</strong>, <strong>Numbers</strong>, <strong>Strings</strong> can be objects (or primitive data treated as objects)</li>
+<li><strong>Dates</strong>, <strong>Maths</strong>, <strong>Regular Expressions</strong>, <strong>Array</strong>, <strong>Functions</strong>, <strong>Objects</strong> are always objects</li>
+<li>All values, except primitive values, are objects.<br>  Primitive values are: strings (“John Doe”), numbers (3.14), true, false, null, and undefined.  </li>
+</ul>
+<p>Objects can contain one value or many values.</p>
+<ul>
+<li>An object has <strong>properties</strong> and <strong>methods</strong>.</li>
+<li>The values are written as <strong>name:value</strong> pairs.</li>
+<li><strong>Properties</strong>, the name of values.</li>
+<li><strong>Methods</strong>, actions that can be proformed on objects.</li>
+<li>An object <strong>method</strong> is an object property containing a <strong>function</strong> <strong>definition</strong>.</li>
+<li>All objects have the <strong>same</strong> properties, but the property values <strong>differ</strong> from object to object.</li>
+<li>All objects have the <strong>same</strong> methods, but the methods are performed at <strong>different</strong> times.</li>
+</ul>
+<h3 id="Defining"><a href="#Defining" class="headerlink" title="Defining"></a>Defining</h3><p>There are different ways to create new objects:</p>
+<ul>
+<li>Define and create a single object, using an object literal.<pre class="line-numbers language-JS"><code class="language-JS">  var person = {firstName:"John", lastName:"Doe"};
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Define and create a single object, with the keyword <code>new</code>.<pre class="line-numbers language-JS"><code class="language-JS">  var person = new Object()
+  person.firstName = "John";
+  person.lastName = "Doe";
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Define an object constructor, and then create objects of the constructed type.<pre class="line-numbers language-JS"><code class="language-JS">  function Person(first, last, age, eye) {
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye;
+  }
+  var myFather = new person("John", "Doe", 50, "blue");
+  var myMother = new person("Sally", "Rally", 48, "green");
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Identifying constructor names start with a <strong>capital letter</strong>, they can easily identify which functions are construcotor.</li>
+<li>In ECMAScript 5, an object can also be created with the function <code>Object.create()</code>.</li>
+</ul>
+<p><strong>The “This” Keyword</strong><br>In JavaScript, <code>this</code> is the object that “owns” the JavaScript code.<br><code>this</code> is not a variable. It is a keyword. You cannot change the value of this.</p>
+<p><strong>Built-in JavaScript Constructors</strong></p>
+<p>There is no reason to create complex objects. Primitive values execute much faster.</p>
+<p><strong>JavaScript Objects are Mutable</strong></p>
+<p>The object x is not a <strong>copy</strong> of y, it <strong>is</strong> y. Both x and y point to the same object.</p>
+<h3 id="Object-Properties"><a href="#Object-Properties" class="headerlink" title="Object Properties"></a>Object Properties</h3><ul>
+<li><p><strong>Accessing Properties</strong></p>
+<pre class="line-numbers language-JS"><code class="language-JS">  objectName.property          // person.age
+  objectName["property"]       // person["age"]
+  objectName[expression]       // x = "age"; person[x]
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>Property Attributes</strong></p>
+<ul>
+<li>Attributes: values, enumerable, configurable, writable.</li>
+<li>These attributes define how the property can be accessed.</li>
+<li>All attributes can be read, but only the value attribute can be changed (and only if the property is writable).</li>
+</ul>
+</li>
+<li><p><strong>Prototype Properties</strong></p>
+<ul>
+<li>JavaScript objects inherit the properties of their prototype.</li>
+<li>The <code>delete</code> keyword does not delete inherited properties, but if you delete a prototype property, it will affect all objects inherited from the prototype.</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object" target="_blank" rel="external">Object Properties and Methods Reference</a></p>
+<h3 id="Object-Methods"><a href="#Object-Methods" class="headerlink" title="Object Methods"></a>Object Methods</h3><ul>
+<li><strong>Accessing Object Methods</strong><ul>
+<li><strong>Creat an object method</strong><pre class="line-numbers language-JS"><code class="language-JS">  methodName : function() { code }
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><strong>Access an object method</strong><pre class="line-numbers language-JS"><code class="language-JS">  objectName.methodName();
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><strong>Access an object method function definition</strong><pre class="line-numbers language-JS"><code class="language-JS">  objectName.methodName;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Methods of the Object constructor</strong></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Object.assign(target, …sources)</td>
+<td>Creates a new object by copying the values of all enumerable own properties from one or more source objects to a target object.(单层 clon)</td>
+</tr>
+<tr>
+<td>Object.create()</td>
+<td>Creates a new object with the specified prototype object and properties.</td>
+</tr>
+<tr>
+<td>Object.defineProperty(obj, prop, descriptor)</td>
+<td>Adds the named property described by a given descriptor to an object.</td>
+</tr>
+<tr>
+<td>Object.defineProperties(obj, props)</td>
+<td>Adds the named properties described by the given descriptors to an object.</td>
+</tr>
+<tr>
+<td>Object.entries()</td>
+<td>Returns an <strong>array</strong> of a given object’s own enumerable property <strong>[key, value]</strong> pairs.</td>
+</tr>
+<tr>
+<td>Object.freeze()</td>
+<td>Freezes an object: other code can’t delete or change any properties.</td>
+</tr>
+<tr>
+<td>Object.getOwnPropertyDescriptor(obj, prop)</td>
+<td>Returns a property descriptor for a named property on an object.</td>
+</tr>
+<tr>
+<td>Object.getOwnPropertyNames()</td>
+<td>Returns an array containing the names of all of the given object’s own enumerable and non-enumerable properties.</td>
+</tr>
+<tr>
+<td>Object.getOwnPropertySymbols()</td>
+<td>Returns an array of all symbol properties found directly upon a given object.</td>
+</tr>
+<tr>
+<td>Object.getPrototypeOf()</td>
+<td>Returns the prototype of the specified object.</td>
+</tr>
+<tr>
+<td>Object.is(value1, value2)</td>
+<td>Compares if two values are distinguishable (ie. the same)</td>
+</tr>
+<tr>
+<td>Object.isExtensible()</td>
+<td>Determines if extending of an object is allowed.</td>
+</tr>
+<tr>
+<td>Object.isFrozen()</td>
+<td>Determines if an object was frozen.</td>
+</tr>
+<tr>
+<td>Object.isSealed()</td>
+<td>Determines if an object is sealed.</td>
+</tr>
+<tr>
+<td>Object.keys()</td>
+<td>Returns an <strong>array</strong> containing the <strong>names</strong> of all of the given object’s own enumerable properties.</td>
+</tr>
+<tr>
+<td>Object.preventExtensions()</td>
+<td>Prevents any extensions of an object.</td>
+</tr>
+<tr>
+<td>Object.seal()</td>
+<td>Prevents other code from deleting properties of an object.</td>
+</tr>
+<tr>
+<td>Object.setPrototypeOf()</td>
+<td>Sets the prototype (i.e., the internal [[Prototype]] property)</td>
+</tr>
+<tr>
+<td>Object.values()</td>
+<td>Returns an array of a given object’s own enumerable values.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Converting Object to Array</strong></p>
+<pre><code>let arr = Object.keys(obj).map((k) =&gt; obj[k])
+</code></pre><h3 id="Object-Prototypes"><a href="#Object-Prototypes" class="headerlink" title="Object Prototypes"></a>Object Prototypes</h3><ul>
+<li><p><strong>About Prototypes</strong></p>
+<ul>
+<li>Every JavaScript object has a prototype. The prototype is also an object.</li>
+<li>All JavaScript objects inherit their properties and methods from their prototype.</li>
+<li>All JavaScript objects (Date, Array, RegExp, Function, ….) inherit from the Object.prototype.</li>
+</ul>
+</li>
+<li><p><strong>Creating a Proptotype</strong></p>
+<ol>
+<li>Using an object constructor function<pre class="line-numbers language-JS"><code class="language-JS"> function person(first, last, age, eyecolor) {
+     this.firstName = first;
+     this.lastName = last;
+     this.age = age;
+     this.eyeColor = eyecolor;
+ }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>Using <code>new</code> keyword to create new objects from the same prototype</p>
+<pre class="line-numbers language-JS"><code class="language-JS"> var myFather = new person("John", "Doe", 50, "blue");
+ var myMother = new person("Sally", "Rally", 48, "green");
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<p> The constructor function is the prototype for your person objects.</p>
+</li>
+<li><p>To add a new property or method to a constructor, you must add it to the constructor function:</p>
+<pre class="line-numbers language-JS"><code class="language-JS"> //Adding a property
+ person.prototype.nationality = "English";
+
+ //Adding a method
+ person.prototype.name = function() {
+     return this.firstName + " " + this.lastName;
+ };
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p> Note: Only modify your <strong>own</strong> prototypes. <strong>Never</strong> modify the prototypes of standard JavaScript objects.</p>
+</li>
+<li><code>Object.create</code>: To create an object with a specific prototype.<pre class="line-numbers language-javascript"><code class="language-javascript"> <span class="token keyword">var</span> protoRabbit <span class="token operator">=</span> <span class="token punctuation">{</span>
+   speak<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span>line<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"The"</span> <span class="token operator">+</span> <span class="token keyword">this</span><span class="token punctuation">.</span>type <span class="token operator">+</span> <span class="token string">"rabbit says'"</span> <span class="token operator">+</span> line <span class="token operator">+</span> <span class="token string">"'"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+   <span class="token punctuation">}</span>
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+ <span class="token keyword">var</span> killerRabbit <span class="token operator">=</span> Object<span class="token punctuation">.</span><span class="token function">create</span><span class="token punctuation">(</span>protoRabbit<span class="token punctuation">)</span><span class="token punctuation">;</span>
+ killerRabbit<span class="token punctuation">.</span>type <span class="token operator">=</span> <span class="token string">"killer"</span><span class="token punctuation">;</span>
+ killerRabbit<span class="token punctuation">.</span><span class="token function">speak</span><span class="token punctuation">(</span><span class="token string">"SKREEEE!"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ <span class="token comment" spellcheck="true">//- The killer rabbit says 'SKREEEE!'</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><code>Object.getPrototypeOf</code>: returns the prototype of an object</li>
+</ol>
+</li>
+</ul>
+<h3 id="Global-Properties-and-Functions"><a href="#Global-Properties-and-Functions" class="headerlink" title="Global Properties and Functions"></a>Global Properties and Functions</h3><ul>
+<li>Accessing object <strong>properties</strong> with <code>objectName.propertyName</code> or <code>objectName[&quot;propertyName&quot;]</code>.</li>
+<li>Accessing object <strong>methods</strong> with <code>objectName.methodName()</code> or <code>name = objectName.method();</code>.</li>
+<li>If you access the fullName property, <strong>without</strong> (), it will return the function definition.</li>
+<li>Almost all Javascript values have properties, except <strong>null</strong> and <strong>undefined</strong>.</li>
+</ul>
+<p><strong>JavaScript Global Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Infinity</td>
+<td>A numeric value that represents positive/negative infinity</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>“Not-a-Number” value</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>Indicates that a variable has not been assigned a value</td>
+</tr>
+</tbody>
+</table>
+<p><strong>JavaScript Global Functions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>decodeURI()</td>
+<td>Decodes a URI</td>
+</tr>
+<tr>
+<td>decodeURIComponent()</td>
+<td>Decodes a URI component</td>
+</tr>
+<tr>
+<td>encodeURI()</td>
+<td>Encodes a URI</td>
+</tr>
+<tr>
+<td>encodeURIComponent()</td>
+<td>Encodes a URI component</td>
+</tr>
+<tr>
+<td>escape()</td>
+<td>Deprecated in version 1.5. Use encodeURI() or encodeURIComponent() instead</td>
+</tr>
+<tr>
+<td>eval()</td>
+<td>Evaluates a string and executes it as if it was script code</td>
+</tr>
+<tr>
+<td>isFinite()</td>
+<td>Determines whether a value is a finite, legal number</td>
+</tr>
+<tr>
+<td>isNaN()</td>
+<td>Determines whether a value is an illegal number</td>
+</tr>
+<tr>
+<td>Number()</td>
+<td>Converts an object’s value to a number</td>
+</tr>
+<tr>
+<td>parseFloat()</td>
+<td>Parses a string and returns a floating point number</td>
+</tr>
+<tr>
+<td>parseInt()</td>
+<td>Parses a string and returns an integer</td>
+</tr>
+<tr>
+<td>String()</td>
+<td>Converts an object’s value to a string</td>
+</tr>
+<tr>
+<td>unescape()</td>
+<td>Deprecated in version 1.5. Use decodeURI() or decodeURIComponent() instead</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Adding New Properties</strong></p>
+<p><strong>Deleting Properties</strong></p>
+<ul>
+<li>The <strong>delete</strong> keyword deletes both the value of the property and the property itself.</li>
+<li>The <strong>delete</strong> operator is designed to be used on <strong>object</strong> properties. It has no effect on <strong>variables</strong> or <strong>functions</strong>.</li>
+<li>The delete operator should not be used on predefined JavaScript object properties. It can crash your application.</li>
+</ul>
+<p><strong>Find an property</strong></p>
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_global.asp" target="_blank" rel="external">Global Reference</a></p>
+<h2 id="Variable-Array"><a href="#Variable-Array" class="headerlink" title="Variable - Array"></a>Variable - Array</h2><ul>
+<li>You can have different objects in one array.</li>
+<li>You can have variables of different types (object, function, array) in the same Array.</li>
+</ul>
+<h3 id="Defining-1"><a href="#Defining-1" class="headerlink" title="Defining"></a>Defining</h3><h3 id="Accessing"><a href="#Accessing" class="headerlink" title="Accessing"></a>Accessing</h3><p>Note: [0] is the first element in an array. [1] is the second. Array indexes start with 0.</p>
+<h3 id="Compare-With-Object"><a href="#Compare-With-Object" class="headerlink" title="Compare With Object"></a>Compare With Object</h3><p>Arrays are a <strong>special</strong> <strong>kind</strong> of objects, with numbered indexes.</p>
+<p><strong>When to Use Arrays or Objects?</strong></p>
+<ul>
+<li>You should use objects when you want the element names to be strings (text).</li>
+<li>You should use arrays when you want the element names to be numbers.</li>
+</ul>
+<p><strong>How to Recognize an Array?</strong></p>
+<ul>
+<li><p>Solution 1:</p>
+<pre class="line-numbers language-JS"><code class="language-JS">  Array.isArray(fruits);     // returns true
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>  The problem with this solution is that ECMAScript 5 is not supported in older browsers.</p>
+</li>
+<li><p>Solution 2:<br>  To solve this problem you can create your own isArray() function:</p>
+<pre class="line-numbers language-JS"><code class="language-JS">  function isArray(x) {
+      return x.constructor.toString().indexOf("Array") > -1;
+  }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>  Note: The function returns true if the argument is an array, or the object prototype contains the word “Array”.</p>
+</li>
+<li><p>Solution 3:<br>  The instanceof operator returns true if an object is created by a given constructor:</p>
+<pre><code>  var fruits = [&quot;Banana&quot;, &quot;Orange&quot;, &quot;Apple&quot;, &quot;Mango&quot;];
+  fruits instanceof Array     // returns true
+</code></pre></li>
+</ul>
+<h3 id="Properties-and-Methods-2"><a href="#Properties-and-Methods-2" class="headerlink" title="Properties and Methods"></a>Properties and Methods</h3><p><strong>Array Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>Returns the function that created the Array object’s prototype</td>
+</tr>
+<tr>
+<td>length</td>
+<td>Sets or returns the number of elements in an array</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>Allows you to add properties and methods to an Array object</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Array Methods</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>concat()</td>
+<td>Joins two or more arrays, and returns a copy of the joined arrays<br>e.g. arr1.concat(arr2, arr3);</td>
+</tr>
+<tr>
+<td>copyWithin()</td>
+<td>Copies array elements within the array, to and from specified positions</td>
+</tr>
+<tr>
+<td>every()</td>
+<td>Checks if every element in an array pass a test</td>
+</tr>
+<tr>
+<td>fill()</td>
+<td>Fill the elements in an array with a static value</td>
+</tr>
+<tr>
+<td>filter()</td>
+<td>Creates a new array with every element in an array that pass a test</td>
+</tr>
+<tr>
+<td>find()</td>
+<td>Returns the value of the first element in an array that pass a test</td>
+</tr>
+<tr>
+<td>findIndex()</td>
+<td>Returns the index of the first element in an array that pass a test</td>
+</tr>
+<tr>
+<td>forEach()</td>
+<td>Calls a function for each array element</td>
+</tr>
+<tr>
+<td>indexOf()</td>
+<td>Search the array for an element and returns its position</td>
+</tr>
+<tr>
+<td>isArray()</td>
+<td>Checks whether an object is an array</td>
+</tr>
+<tr>
+<td>join()</td>
+<td>Joins all elements of an array into a string</td>
+</tr>
+<tr>
+<td>lastIndexOf()</td>
+<td>Search the array for an element, starting at the end, and returns its position</td>
+</tr>
+<tr>
+<td>map()</td>
+<td>Creates a <strong>new array</strong> with the result of calling a function for each array element</td>
+</tr>
+<tr>
+<td>reduce()</td>
+<td>Reduce the values of an array to a single value (going left-to-right)</td>
+</tr>
+<tr>
+<td>reduceRight()</td>
+<td>Reduce the values of an array to a single value (going right-to-left)</td>
+</tr>
+<tr>
+<td>reverse()</td>
+<td>Reverses the order of the elements in an array</td>
+</tr>
+<tr>
+<td>some()</td>
+<td>Checks if any of the elements in an array pass a test</td>
+</tr>
+<tr>
+<td>sort()</td>
+<td>Sorts the elements of an array</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td>Converts an array to a string, and returns the result</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>Returns the primitive value of an array</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>slice()</td>
+<td>Selects a part of an array, and returns the new array<br>e.g. slice(n1, n2);</td>
+</tr>
+<tr>
+<td>push()</td>
+<td>Adds new elements to the end of an array, and returns the new length</td>
+</tr>
+<tr>
+<td>pop()</td>
+<td>Removes the last element of an array, and returns that element</td>
+</tr>
+<tr>
+<td>unshift()</td>
+<td>Adds new elements to the beginning of an array, and returns the new length</td>
+</tr>
+<tr>
+<td>shift()</td>
+<td>Removes the first element of an array, and returns that element</td>
+</tr>
+<tr>
+<td>splice()</td>
+<td>Adds/Removes elements from an array<br>e.g. array.splice(n, 0, “Element1”, “Element2”);</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong><a id="sort">sort()</a></strong><br>  This method changes the original array.</p>
+<p>  Numeric Sort<br>  You can find the Highest (or Lowest) Value with this way:</p>
+<pre class="line-numbers language-JS"><code class="language-JS">  points.sort(function(a, b){return a-b});
+  points.sort(function(a, b){return b-a});
+
+// object can be sorted
+  points.sort(function(a, b){return a.value-b.value});
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><strong><a id="filter">filter()</a></strong><ul>
+<li>filter() does <strong>not</strong> execute the function for array elements without values.</li>
+<li>filter() does <strong>not</strong> change the original array.<br><code>js Example
+ages = [32, 33, 16, 40];
+var newArr = ages.filter( function(age) {
+  return age &gt;= 18;
+};</code></li>
+</ul>
+</li>
+<li><p><strong>Adding array element</strong></p>
+<ul>
+<li><code>array.push(&quot;element&quot;);</code></li>
+<li><code>array[10] = &quot;element&quot;;</code></li>
+<li><code>array[array.length] = &quot;element&quot;;</code></li>
+</ul>
+</li>
+<li><p><strong>Looping Array Elements</strong><br>  The best way to loop through an array, is using a “for” loop:</p>
+<pre class="line-numbers language-JS"><code class="language-JS">  var index;
+  var fruits = ["Banana", "Orange", "Apple", "Mango"];
+  for    (index = 0; index < fruits.length; index++) {
+      text += fruits[index];
+  }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_array.asp" target="_blank" rel="external">Array Reference</a></p>
+<h2 id="Variable-Date"><a href="#Variable-Date" class="headerlink" title="Variable - Date"></a>Variable - Date</h2><h3 id="Defining-2"><a href="#Defining-2" class="headerlink" title="Defining"></a>Defining</h3><p>A date consists of a year, a month, a day, an hour, a minute, a second, and milliseconds.<br>Date objects are created with the <code>new Date()</code> constructor.<br>There are 4 ways of initiating a date:</p>
+<ul>
+<li>new Date()</li>
+<li>new Date(milliseconds)</li>
+<li>new Date(dateString)</li>
+<li>new Date(year, month, day, hours, minutes, seconds, milliseconds)</li>
+</ul>
+<h3 id="Date-Formats"><a href="#Date-Formats" class="headerlink" title="Date Formats"></a>Date Formats</h3><p><strong>JavaScript Date Input</strong><br>There are generally 4 types of JavaScript date formats:</p>
+<ol>
+<li>ISO Dates<pre class="line-numbers language-JS"><code class="language-JS"> var d = new Date("2015-03-25");
+ var d = new Date("2015-03");
+ var d = new Date("2015");
+ var d = new Date("2015-03-25T12:00:00");
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+ The T in the date string, between the date and time, indicates UTC time.</li>
+<li>Long Dates<pre class="line-numbers language-JS"><code class="language-JS"> var d = new Date("Mar 25 2015");
+ var d = new Date("25 Mar 2015");
+ var d = new Date("January 25 2015");
+ var d = new Date("Jan 25 2015");
+ var d = new Date("JANUARY, 25, 2015");
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ Month can be written in full (January), or abbreviated (Jan):<br> Commas are ignored. Names are case insensitive:</li>
+<li>Short Dates<pre class="line-numbers language-JS"><code class="language-JS"> var d = new Date("03/25/2015");
+ var d = new Date("2015/03/25");
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>Full Format<pre class="line-numbers language-JS"><code class="language-JS"> var d = new Date("Wed Mar 25 2015 01:00:00 GMT+0100");
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ JavaScript will accept date strings in “full JavaScript format”:</li>
+</ol>
+<p><strong>JavaScript Date Output</strong><br>Independent of input format, JavaScript will (by default) output dates in full text string format.<br>JavaScript counts months from 0 to 11. January is 0. December is 11.</p>
+<p><strong>Time Zone</strong></p>
+<table>
+<thead>
+<tr>
+<th>Time Zone</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UTC</td>
+<td>Coordinated Universal Time</td>
+</tr>
+<tr>
+<td>GMT</td>
+<td>Greenwich Mean Time</td>
+</tr>
+<tr>
+<td>EDT</td>
+<td>(US) Eastern Daylight Time</td>
+</tr>
+<tr>
+<td>CDT</td>
+<td>(US) Central Daylight Time</td>
+</tr>
+<tr>
+<td>MDT</td>
+<td>(US) Mountain Daylight Time</td>
+</tr>
+<tr>
+<td>PDT</td>
+<td>(US) Pacific Daylight Time</td>
+</tr>
+<tr>
+<td>EST</td>
+<td>(US) Eastern Standard Time</td>
+</tr>
+<tr>
+<td>CST</td>
+<td>(US) Central Standard Time</td>
+</tr>
+<tr>
+<td>MST</td>
+<td>(US) Mountain Standard Time</td>
+</tr>
+<tr>
+<td>PST</td>
+<td>(US) Pacific Standard Time</td>
+</tr>
+</tbody>
+</table>
+<p>The browser’s time zone is default.</p>
+<h3 id="Compare-Dates"><a href="#Compare-Dates" class="headerlink" title="Compare Dates"></a>Compare Dates</h3><p>The following example compares today’s date with January 14, 2100:</p>
+<h3 id="Properties-and-Methods-3"><a href="#Properties-and-Methods-3" class="headerlink" title="Properties and Methods"></a>Properties and Methods</h3><p><strong>Date Object Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>constructor</td>
+<td>Returns the function that created the Date object’s prototype</td>
+</tr>
+<tr>
+<td>prototype</td>
+<td>Allows you to add properties and methods to an object</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Get Date Methods</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getDate()</td>
+<td>Returns the day of the month (from 1-31)</td>
+</tr>
+<tr>
+<td>getDay()</td>
+<td>Returns the day of the week (from 0-6),0 for Sunday, 1 for Monday</td>
+</tr>
+<tr>
+<td>getFullYear()</td>
+<td>Returns the year (four digits)</td>
+</tr>
+<tr>
+<td>getYear()</td>
+<td>Deprecated. Use the getFullYear() method instead</td>
+</tr>
+<tr>
+<td>getHours()</td>
+<td>Returns the hour (from 0-23)</td>
+</tr>
+<tr>
+<td>getMilliseconds()</td>
+<td>Returns the milliseconds (from 0-999)</td>
+</tr>
+<tr>
+<td>getMinutes()</td>
+<td>Returns the minutes (from 0-59)</td>
+</tr>
+<tr>
+<td>getMonth()</td>
+<td>Returns the month (from 0-11)</td>
+</tr>
+<tr>
+<td>getSeconds()</td>
+<td>Returns the seconds (from 0-59)</td>
+</tr>
+<tr>
+<td>getTime()</td>
+<td>Returns the number of milliseconds since midnight Jan 1 1970, and a specified date</td>
+</tr>
+<tr>
+<td>getTimezoneOffset()</td>
+<td>Returns the time difference between UTC time and local time, in minutes</td>
+</tr>
+<tr>
+<td>now()</td>
+<td>Returns the number of milliseconds since midnight Jan 1, 1970</td>
+</tr>
+<tr>
+<td>parse()</td>
+<td>Parses a date string and returns the number of milliseconds since January 1, 1970</td>
+</tr>
+<tr>
+<td>valueOf()</td>
+<td>Returns the primitive value of a Date object</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Get the last day of the month</strong></p>
+<p><strong>Get UTC Date Methods</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getUTCDate()</td>
+<td>Returns the day of the month, according to universal time (from 1-31)</td>
+</tr>
+<tr>
+<td>getUTCDay()</td>
+<td>Returns the day of the week, according to universal time (from 0-6)</td>
+</tr>
+<tr>
+<td>getUTCFullYear()</td>
+<td>Returns the year, according to universal time (four digits)</td>
+</tr>
+<tr>
+<td>getUTCHours()</td>
+<td>Returns the hour, according to universal time (from 0-23)</td>
+</tr>
+<tr>
+<td>getUTCMilliseconds()</td>
+<td>Returns the milliseconds, according to universal time (from 0-999)</td>
+</tr>
+<tr>
+<td>getUTCMinutes()</td>
+<td>Returns the minutes, according to universal time (from 0-59)</td>
+</tr>
+<tr>
+<td>getUTCMonth()</td>
+<td>Returns the month, according to universal time (from 0-11)</td>
+</tr>
+<tr>
+<td>getUTCSeconds()</td>
+<td>Returns the seconds, according to universal time (from 0-59)</td>
+</tr>
+<tr>
+<td>UTC()</td>
+<td>Returns the number of milliseconds in a date since midnight of January 1, 1970, according to UTC time</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Set Date Methods</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setDate()</td>
+<td>Sets the day of the month of a date object</td>
+</tr>
+<tr>
+<td>setFullYear()</td>
+<td>Sets the year (four digits) of a date object</td>
+</tr>
+<tr>
+<td>setHours()</td>
+<td>Sets the hour of a date object</td>
+</tr>
+<tr>
+<td>setMilliseconds()</td>
+<td>Sets the milliseconds of a date object</td>
+</tr>
+<tr>
+<td>setMinutes()</td>
+<td>Set the minutes of a date object</td>
+</tr>
+<tr>
+<td>setMonth()</td>
+<td>Sets the month of a date object</td>
+</tr>
+<tr>
+<td>setSeconds()</td>
+<td>Sets the seconds of a date object</td>
+</tr>
+<tr>
+<td>setTime()</td>
+<td>Sets a date to a specified number of milliseconds after/before January 1, 1970</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Set UTC Date Methods</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>setUTCDate()</td>
+<td>Sets the day of the month of a date object, according to universal time</td>
+</tr>
+<tr>
+<td>setUTCFullYear()</td>
+<td>Sets the year of a date object, according to universal time (four digits)</td>
+</tr>
+<tr>
+<td>setUTCHours()</td>
+<td>Sets the hour of a date object, according to universal time</td>
+</tr>
+<tr>
+<td>setUTCMilliseconds()</td>
+<td>Sets the milliseconds of a date object, according to universal time</td>
+</tr>
+<tr>
+<td>setUTCMinutes()</td>
+<td>Set the minutes of a date object, according to universal time</td>
+</tr>
+<tr>
+<td>setUTCMonth()</td>
+<td>Sets the month of a date object, according to universal time</td>
+</tr>
+<tr>
+<td>setUTCSeconds()</td>
+<td>Set the seconds of a date object, according to universal time</td>
+</tr>
+<tr>
+<td>setYear()</td>
+<td>Deprecated. Use the setFullYear() method instead</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Converts Format Methods</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>toDateString()</td>
+<td>Converts the date portion of a Date object into a readable string</td>
+</tr>
+<tr>
+<td>toGMTString()</td>
+<td>Deprecated. Use the toUTCString() method instead</td>
+</tr>
+<tr>
+<td>toISOString()</td>
+<td>Returns the date as a string, using the ISO standard</td>
+</tr>
+<tr>
+<td>toJSON()</td>
+<td>Returns the date as a string, formatted as a JSON date</td>
+</tr>
+<tr>
+<td>toLocaleDateString()</td>
+<td>Returns the date portion of a Date object as a string, using locale conventions</td>
+</tr>
+<tr>
+<td>toLocaleTimeString()</td>
+<td>Returns the time portion of a Date object as a string, using locale conventions</td>
+</tr>
+<tr>
+<td>toLocaleString()</td>
+<td>Converts a Date object to a string, using locale conventions</td>
+</tr>
+<tr>
+<td>toString()</td>
+<td>Converts a Date object to a string</td>
+</tr>
+<tr>
+<td>toTimeString()</td>
+<td>Converts the time portion of a Date object to a string</td>
+</tr>
+<tr>
+<td>toUTCString()</td>
+<td>Converts a Date object to a string, according to universal time</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>new Date</code>: Mon Feb 13 2017 00:00:00 GMT+0800 (CST)</li>
+<li><code>toDateString</code>: Mon Feb 13 2017</li>
+<li><code>toGMTString</code>: Sun, 12 Feb 2017 16:00:00 GMT</li>
+<li><code>toISOString</code>: 2017-02-12T16:00:00.000Z</li>
+<li><code>toJSON</code>: 2017-02-12T16:00:00.000Z</li>
+<li><code>toLocaleDateString</code>: 2/13/2017</li>
+<li><code>toLocaleTimeString</code>: 12:00:00 AM</li>
+<li><code>toLocaleString</code>: 2/13/2017, 12:00:00 AM</li>
+<li><code>toString</code>: Mon Feb 13 2017 00:00:00 GMT+0800 (CST)</li>
+<li><code>toTimeString</code>: 00:00:00 GMT+0800 (CST)</li>
+<li><code>toUTCString</code>: Sun, 12 Feb 2017 16:00:00 GMT</li>
+</ul>
+<p><strong>Add days with setDate() method</strong></p>
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_date.asp" target="_blank" rel="external">Date Reference</a></p>
+<h2 id="Variable-Math"><a href="#Variable-Math" class="headerlink" title="Variable - Math"></a>Variable - Math</h2><p>Math has no constructor. No methods have to create a Math object first.</p>
+<p><strong>Math Object Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Math.E</td>
+<td>Returns Euler’s number (approx. 2.718)</td>
+</tr>
+<tr>
+<td>Math.LN2</td>
+<td>Returns the natural logarithm of 2 (approx. 0.693)</td>
+</tr>
+<tr>
+<td>Math.LN10</td>
+<td>Returns the natural logarithm of 10 (approx. 2.302)</td>
+</tr>
+<tr>
+<td>Math.LOG2E</td>
+<td>Returns the base-2 logarithm of E (approx. 1.442)</td>
+</tr>
+<tr>
+<td>Math.LOG10E</td>
+<td>Returns the base-10 logarithm of E (approx. 0.434)</td>
+</tr>
+<tr>
+<td>Math.PI</td>
+<td>Returns PI (approx. 3.14)</td>
+</tr>
+<tr>
+<td>Math.SQRT1_2</td>
+<td>Returns the square root of 1/2 (approx. 0.707)</td>
+</tr>
+<tr>
+<td>Math.SQRT2</td>
+<td>Returns the square root of 2 (approx. 1.414)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Math Object Methods</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Math.abs(x)</td>
+<td>Returns the absolute value of x</td>
+</tr>
+<tr>
+<td>Math.acos(x)</td>
+<td>Returns the arccosine of x, in radians</td>
+</tr>
+<tr>
+<td>Math.asin(x)</td>
+<td>Returns the arcsine of x, in radians</td>
+</tr>
+<tr>
+<td>Math.atan(x)</td>
+<td>Returns the arctangent of x as a numeric value between -PI/2 and PI/2 radians</td>
+</tr>
+<tr>
+<td>Math.atan2(y,x)</td>
+<td>Returns the arctangent of the quotient of its arguments</td>
+</tr>
+<tr>
+<td>Math.ceil(x)</td>
+<td>Returns x, rounded upwards to the nearest integer</td>
+</tr>
+<tr>
+<td>Math.cos(x)</td>
+<td>Returns the cosine of x (x is in radians)</td>
+</tr>
+<tr>
+<td>Math.exp(x)</td>
+<td>Returns the value of Ex</td>
+</tr>
+<tr>
+<td>Math.floor(x)</td>
+<td>Returns x, rounded downwards to the nearest integer</td>
+</tr>
+<tr>
+<td>Math.log(x)</td>
+<td>Returns the natural logarithm (base E) of x</td>
+</tr>
+<tr>
+<td>Math.max(x,y,z,…,n)</td>
+<td>Returns the number with the highest value</td>
+</tr>
+<tr>
+<td>Math.min(x,y,z,…,n)</td>
+<td>Returns the number with the lowest value</td>
+</tr>
+<tr>
+<td>Math.pow(x,y)</td>
+<td>Returns the value of x to the power of y</td>
+</tr>
+<tr>
+<td>Math.random()</td>
+<td>Returns a random number between 0 and 1</td>
+</tr>
+<tr>
+<td>Math.round(x)</td>
+<td>Rounds x to the nearest integer</td>
+</tr>
+<tr>
+<td>Math.sin(x)</td>
+<td>Returns the sine of x (x is in radians)</td>
+</tr>
+<tr>
+<td>Math.sqrt(x)</td>
+<td>Returns the square root of x</td>
+</tr>
+<tr>
+<td>Math.tan(x)</td>
+<td>Returns the tangent of an angle</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.w3schools.com/jsref/jsref_obj_math.asp" target="_blank" rel="external">Math Reference</a></p>
+<h2 id="Variable-Undefined-and-Null"><a href="#Variable-Undefined-and-Null" class="headerlink" title="Variable - Undefined and Null"></a>Variable - Undefined and Null</h2><h3 id="Undefined"><a href="#Undefined" class="headerlink" title="Undefined"></a>Undefined</h3><ul>
+<li><strong>Undefined</strong> is for variables, properties, and methods.</li>
+<li>Both the value, and the data type, of a variable with no value is <strong>undefined</strong>.</li>
+</ul>
+<p><strong>Test if a variable are undefined</strong></p>
+<h3 id="Null"><a href="#Null" class="headerlink" title="Null"></a>Null</h3><ul>
+<li>Null is for objects, It is supposed to be something that doesn’t exist.</li>
+<li><p>To be null, an object has to be defined, otherwise it will be undefined.</p>
+<pre class="line-numbers language-JS"><code class="language-JS">  //Incorrect
+  if (myObj !== null && typeof myObj !== "undefined")
+
+  //Correct
+  if (typeof !== "undefined" && myObj !== null)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Differenc Between Undefined and Null<pre class="line-numbers language-JS"><code class="language-JS">  typeof undefined    // undefined
+  typeof null         // object
+  null === undefined  // false
+  null == undefined   // true
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h2 id="Variable-Function"><a href="#Variable-Function" class="headerlink" title="Variable - Function"></a>Variable - Function</h2><h3 id="Definitions"><a href="#Definitions" class="headerlink" title="Definitions"></a>Definitions</h3><ul>
+<li><p><strong>There are two way to defining:</strong></p>
+<ol>
+<li>Function <strong>Declaration</strong><pre class="line-numbers language-javascript"><code class="language-javascript"> <span class="token keyword">function</span> <span class="token function">name</span><span class="token punctuation">(</span>parameter1<span class="token punctuation">,</span> parameter2<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     code
+ <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>Because of hoisting, JavaScript functions can be called <strong>before</strong> the declared.</li>
+<li>Function declaration is <strong>not</strong> an executable statement, it is <strong>not</strong> end with a semicolon<code>;</code>.</li>
+</ul>
+</li>
+<li>Function <strong>Expression</strong><pre class="line-numbers language-javascript"><code class="language-javascript"> <span class="token keyword">var</span> variableName <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span>parameter<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+     code
+ <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>Function are Invoked using the variable name.</li>
+<li>Inside the function, the arguments behave as <strong>local</strong> <strong>variable</strong>.</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p><strong>About Return</strong></p>
+<ol>
+<li>When JS reaches a return statement, the function will stop executing.</li>
+<li>The return value is returned back to the “caller”.</li>
+</ol>
+</li>
+<li><p><strong>Functions are Objects</strong><br>  JavaScript functions have both properties and methods.</p>
+<ul>
+<li>The arguments <code>length</code> property returns the number of arguments received when the function was invoked:<pre class="line-numbers language-JS"><code class="language-JS">  function myFunction(a, b) {
+      return arguments.length;
+  }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>The <code>toString()</code> method returns the function as a string:</p>
+<pre class="line-numbers language-JS"><code class="language-JS">  function myFunction(a, b) {
+      return a * b;
+  }
+
+  var txt = myFunction.toString();
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>There ars two way to use functions</strong></p>
+<ol>
+<li>Avoid writing very similar code multiple times.</li>
+<li>You need some functionality that you haven’t wrtten yet, and you’ll start by naming the funcion.</li>
+</ol>
+</li>
+</ul>
+<h3 id="Parameters"><a href="#Parameters" class="headerlink" title="Parameters"></a>Parameters</h3><ul>
+<li><strong>Undefined Arguments</strong><ul>
+<li>A JavaScript function does <strong>not</strong> perform any checking on parameter values (arguments).</li>
+<li>If a function is called with <strong>missing</strong> <strong>arguments</strong> (less than declared), the missing values are set to <strong>undefined</strong><br>```JS Assign a default value<br>function myFunction(x, y) {<br>  if (y === undefined) {<pre><code>    y = 0;
+</code></pre>  }<br>}<br>```</li>
+</ul>
+</li>
+<li><p><strong>Uncountable Arguments</strong><br>  If a function is called with too many arguments (more than declared), these arguments can be reached using the arguments object.<br>  ```JS Find Maximum<br>  x = findMax(1, 123, 400);<br>  function findMax() {</p>
+<pre><code>  var i;
+  var max = -Infinity;
+  for (i = 0; i &lt; arguments.length; i++) {
+      if (arguments[i] &gt; max) {
+          max = arguments[i];
+      }
+  }
+  return max;
+</code></pre><p>  }<br>  ```</p>
+</li>
+<li><p><strong>The arguments object</strong><br>  Argument use as an array.</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token keyword">function</span> <span class="token function">argumentCounter</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"You gave me"</span><span class="token punctuation">,</span> arguments<span class="token punctuation">.</span>length<span class="token punctuation">,</span> <span class="token string">"arguments."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">argumentCounter</span><span class="token punctuation">(</span><span class="token string">"Straw man"</span><span class="token punctuation">,</span> <span class="token string">"Tautology"</span><span class="token punctuation">,</span> <span class="token string">"Adhominem"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">//- You gave me 3 arguments.</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>Passing</strong></p>
+<ul>
+<li>Arguments are Passed by <strong>Value</strong>.<br>  If a function changes an argument’s value, it does <strong>not</strong> <strong>change</strong> the parameter’s original value.<br>  Changes to arguments are <strong>not</strong> visible (reflected) outside the function.</li>
+<li>Objects are Passed by <strong>Reference</strong><br>  If a function changes an object property, it changes the <strong>original</strong> value.<br>  Changes to object properties are visible (reflected) outside the function.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Invocation"><a href="#Invocation" class="headerlink" title="Invocation"></a>Invocation</h3><p>The keyword <code>this</code> is the object that “owns” the current code.<br>Accessing a function <strong>without</strong> <code>()</code> will return the function difinition.<br>Accessing a function <strong>with</strong> <code>()</code> will run the funcion <strong>immediately</strong> and return the <strong>result</strong> of funciton.</p>
+<ol>
+<li><p><strong>Invoking a Function as a Function</strong></p>
+<ul>
+<li>In JavaScript,the function is always a default <strong>global</strong> <strong>object</strong>.</li>
+<li>In HTML, the function above “belongs” to the <strong>HTML</strong> <strong>page</strong>.</li>
+<li>In a browser, the function above automatically becomes a <strong>window</strong> <strong>function</strong>, so <code>myFunction()</code> and <code>window.myFunction()</code> is the same function.</li>
+</ul>
+</li>
+<li><p><strong>Invoking a Function as a Method</strong></p>
+<pre class="line-numbers language-JS"><code class="language-JS"> var myObject = {
+     firstName:"John",
+     lastName: "Doe",
+     fullName: function () {
+         return this.firstName + " " + this.lastName;
+ }
+ }
+ myObject.fullName();         // Will return "John Doe"
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>Invoking a Function with a Function Constructor</strong></p>
+<pre class="line-numbers language-JS"><code class="language-JS"> // This is a function constructor:
+ function myFunction(arg1, arg2) {
+     this.firstName = arg1;
+     this.lastName  = arg2;
+ }
+
+ // This    creates a new object
+ var x = new myFunction("John","Doe");
+ x.firstName;                             // Will return "John"
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>Invoking a Function with a Function Method</strong></p>
+<ul>
+<li>Both <code>call()</code> and <code>apply()</code> are methods that can be used to invoke a function.</li>
+<li>Both methods must have the owner object as <strong>first</strong> <strong>parameter</strong>.</li>
+<li>The only difference is that <code>call()</code> takes the function arguments <strong>separately</strong>, and <code>apply()</code> takes the function arguments in an <strong>array</strong>.<br>call()<pre class="line-numbers language-JS"><code class="language-JS">function myFunction(a, b) {
+  return a * b;
+}
+myObject = myFunction.call(myObject, 10, 2);
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+apply()<pre class="line-numbers language-JS"><code class="language-JS">function myFunction(a, b) {
+  return a * b;
+}
+myArray = [10, 2];
+myObject = myFunction.apply(myObject, myArray);
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Strict Mode<ul>
+<li>Strict mode: the first argument becomes the value of <strong>this</strong> in the invoked function, even if the argument is not an object.</li>
+<li>Non-strict mode: if the value of the first argument is null or undefined, it is replaced with the global object.</li>
+</ul>
+</li>
+<li>With <code>call()</code> or <code>apply()</code> you can set the value of this, and invoke a function as a new method of an existing object.</li>
+</ul>
+</li>
+<li><p><strong>Self-lnvoking Functions</strong><br> A self-invoking expression is invoked (started) automatically, without being called.</p>
+<pre class="line-numbers language-JS"><code class="language-JS"> (function () {
+     var x = "Hello!!";      // I will invoke myself
+ })();
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="Closures"><a href="#Closures" class="headerlink" title="Closures"></a>Closures</h3><ul>
+<li><p>This feature—being able to reference a specific instance of local variables in an enclosing function—is called <strong>closure</strong>.A function that “closes over” some local variables is called a <strong>closure</strong>.<br>  ```javascript Example 1<br>  function multiplier(factor) {</p>
+<pre><code>return function(number) {
+  return number * factor;
+};
+</code></pre><p>  }</p>
+<p>  var twice = multiplier(2);<br>  console.log(twice(5));<br>  // → 10<br>  ```<br>  例子中 mulitiplier 函数只能返回一个缺少参数 <em>number</em> 的 function 函数，而twice 提供的参数则再供 function 函数使用。</p>
+</li>
+<li><p>This is called a JavaScript closure. It makes it possible for a function to have “private” variables.<br>  ```JS Example 2<br>  var add = (function () {</p>
+<pre><code>  var counter = 0;
+  return function () {return counter += 1;}
+</code></pre><p>  })();</p>
+<p>  add();<br>  add();<br>  add();   // the counter is now 3<br>  ```</p>
+</li>
+<li><p>Another way to make a JavaScript closure. Making the function executes <strong>twice</strong> is the key.<br>```JS Example 3<br>function makeCounter() {</p>
+<pre><code>var count = 0;
+function counter() {
+    count++;
+    return count;
+}
+return counter;
+</code></pre><p>}<br>var doCounter = makeCounter();</p>
+<p>console.log(doCounter());<br>console.log(doCounter());<br>console.log(doCounter());<br>console.log(doCounter());<br>```</p>
+</li>
+<li><p>The closure contains the actual environment, not a copy</p>
+<pre class="line-numbers language-JS"><code class="language-JS">function setTimer(doneMessage, n) {
+    setTimeout (function() {
+        alert(doneMessage);
+    }, n);
+
+    doneMessage = "OUCH!";
+}
+
+setTimer("Cookies are done!", 1000);
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>Creating a closure with an event handler</p>
+<pre class="line-numbers language-JS"><code class="language-JS">window.onload = function() {
+    counter = 0;
+    function click() {
+        counter++;
+        document.getElementById("message").innerHTML = 
+            "You clicked me " + counter + " times!"
+    }
+    var button = document.getElementById("clickme")
+    button.onclick = click;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="Recursion"><a href="#Recursion" class="headerlink" title="Recursion"></a>Recursion</h3><p>A function that calls itself is called <em>recursive</em>, but it <strong>slower</strong> than the loopling version. </p>
+<ol>
+<li>以加5和乘5为两个维度作数据的历遍，找到公式。</li>
+<li>自我引用的函数，要弄清楚 return 返回到哪个函数中了，容易混淆。</li>
+</ol>
+<h2 id="Variable-Named"><a href="#Variable-Named" class="headerlink" title="Variable - Named"></a>Variable - Named</h2><ul>
+<li><p><strong>Variable Name:</strong></p>
+<ol>
+<li>Names contain: letter, digits, <code>_</code>, <code>$</code></li>
+<li>Must start with: letter, <code>_</code>, <code>$</code>, must <strong>not</strong> start with a digit.</li>
+<li>Case sensitive</li>
+<li>Not include spaces.</li>
+<li>Don’t used Keywords and reserved words as a variable name.</li>
+</ol>
+</li>
+<li><p><strong>Joining multiple words into one variable name:</strong></p>
+<ol>
+<li>Hyphens (not allowed in JS): first-name, last-name</li>
+<li>Underscore: first_name, last_name</li>
+<li>Camel Case: FirstName, LastName</li>
+<li>Camel Case in <strong>JS</strong>: firstName, lastName</li>
+</ol>
+</li>
+</ul>
+<h2 id="Variable-Declare"><a href="#Variable-Declare" class="headerlink" title="Variable - Declare"></a>Variable - Declare</h2><ol>
+<li>Declare a variable: <code>var x;</code></li>
+<li>Declare some variable with value: <code>var x = 1, y = 2, z = 3;</code></li>
+<li>Do arithmetic with declare: <code>var x = 5 + 2;</code></li>
+<li>Add strings with declare: <code>var x = &quot;John&quot; + &quot;Doe&quot;;</code></li>
+<li>Declare with lines:<pre class="line-numbers language-JS"><code class="language-JS"> var x = 1,
+ y = 2,
+ z = 3;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>A variable declared without a value will have the value <strong>undefined</strong>.</li>
+<li>Re-declare a variable will <strong>not</strong> lose its value.</li>
+</ol>
+<h2 id="Variable-Scope"><a href="#Variable-Scope" class="headerlink" title="Variable - Scope"></a>Variable - Scope</h2><p>In JavaScript, scope is the set of variables, objects, and functions you have access to.</p>
+<h3 id="Local-variables"><a href="#Local-variables" class="headerlink" title="Local variables"></a>Local variables</h3><ul>
+<li>Local variables declared within a function, only be accessed within the function.</li>
+<li>Variables with the same name can be used in different functions.</li>
+<li>Local variables are created when a function starts, and deleted when the function is completed. </li>
+<li>Function arguments work as local variable.</li>
+</ul>
+<h3 id="Global-variables"><a href="#Global-variables" class="headerlink" title="Global variables"></a>Global variables</h3><ul>
+<li>Global scope: All scripts and function on a web page can asscess it.</li>
+<li>A variable declared outside a function, becomes Global.</li>
+<li>Assign a value to a variable that has <strong>not</strong> been declared, it will automatically become a global variable.</li>
+<li>Global variables are created when it is declared, and deleted when you close the page.</li>
+<li>In HTML, the global scope is the window object: All global variables belong to the window object.</li>
+</ul>
+<h2 id="Variable-Type"><a href="#Variable-Type" class="headerlink" title="Variable - Type"></a>Variable - Type</h2><h3 id="Check-Data-Types"><a href="#Check-Data-Types" class="headerlink" title="Check Data Types"></a>Check Data Types</h3><ol>
+<li><p><strong>Using typeof Operator</strong></p>
+<pre class="line-numbers language-JS"><code class="language-JS"> typeof variable
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>In JavaScript, a variable without a value, has the value <strong>undefined</strong>. The typeof is also <strong>undefined</strong>.</li>
+<li>The value of empty string is “”, the typeof is string.</li>
+</ul>
+</li>
+<li><p><strong>Using the Constructor Property</strong><br> The constructor property returns the constructor function for all JavaScript variables.<br> Syntax: <code>Variable.constructor</code><br> ```JS Check the type of Array or Date<br> function isArray(myArray) {</p>
+<pre><code> return myArray.constructor.toString().indexOf(&quot;Array&quot;) &gt; -1;
+</code></pre><p> }<br> ```</p>
+</li>
+</ol>
+<h3 id="Type-Conversion"><a href="#Type-Conversion" class="headerlink" title="Type Conversion"></a>Type Conversion</h3><ol>
+<li><p><strong>Convert with Global Method</strong></p>
+<ul>
+<li>String(x): Convert to strings.</li>
+<li>Number(x): Cnvert to numbers.</li>
+</ul>
+</li>
+<li><p><strong>Convert with Number Method</strong></p>
+<ul>
+<li>toString(): Convert to strings.</li>
+</ul>
+</li>
+<li><p><strong><a id="convertType">Convert with Operator</a></strong></p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Original Value</th>
+<th>to Number</th>
+<th>to String</th>
+<th style="text-align:center">to Boolean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>false</td>
+<td>0</td>
+<td>“false”</td>
+<td style="text-align:center">false</td>
+</tr>
+<tr>
+<td>true</td>
+<td>1</td>
+<td>“true”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>“0”</td>
+<td style="text-align:center">false</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>“1”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>“0”</td>
+<td>0</td>
+<td>“0”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>“1”</td>
+<td>1</td>
+<td>“1”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>NaN</td>
+<td>“NaN”</td>
+<td style="text-align:center">false</td>
+</tr>
+<tr>
+<td>Infinity</td>
+<td>Infinity</td>
+<td>“Infinity”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>-Infinity</td>
+<td>-Infinity</td>
+<td>“-Infinity”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>“”</td>
+<td><strong>0</strong></td>
+<td>“”</td>
+<td style="text-align:center"><strong>false</strong></td>
+</tr>
+<tr>
+<td>“20”</td>
+<td>20</td>
+<td>“20”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>“twenty”</td>
+<td>NaN</td>
+<td>“twenty”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>[ ]</td>
+<td><strong>0</strong></td>
+<td>“”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>[20]</td>
+<td><strong>20</strong></td>
+<td>“20”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>[10,20]</td>
+<td>NaN</td>
+<td>“10,20”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>[“twenty”]</td>
+<td>NaN</td>
+<td>“twenty”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>[“ten”,”twenty”]</td>
+<td>NaN</td>
+<td>“ten,twenty”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>function(){}</td>
+<td>NaN</td>
+<td>“function(){}”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>{ }</td>
+<td>NaN</td>
+<td>“[object Object]”</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>null</td>
+<td><strong>0</strong></td>
+<td>“null”</td>
+<td style="text-align:center">false</td>
+</tr>
+<tr>
+<td>undefined</td>
+<td>NaN</td>
+<td>“undefined”</td>
+<td style="text-align:center">false</td>
+</tr>
+</tbody>
+</table>
+<p>If the variable <strong>cannot</strong> be converted, it will still become a number, but with the value NaN (Not a number)</p>
+<h2 id="Operator"><a href="#Operator" class="headerlink" title="Operator"></a>Operator</h2><h3 id="Operators-and-Precedence"><a href="#Operators-and-Precedence" class="headerlink" title="Operators and Precedence"></a>Operators and Precedence</h3><p><strong>Arithmetic Operators</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Result in y</th>
+<th>Result in x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>Addition</td>
+<td>x = y + 2</td>
+<td>y = 5</td>
+<td>x = 7</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Subtraction</td>
+<td>x = y - 2</td>
+<td>y = 5</td>
+<td>x = 3</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Multiplication</td>
+<td>x = y * 2</td>
+<td>y = 5</td>
+<td>x = 10</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Division</td>
+<td>x = y / 2</td>
+<td>y = 5</td>
+<td>x = 2.5</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Modulus (division remainder)</td>
+<td>x = y % 2</td>
+<td>y = 5</td>
+<td>x = 1</td>
+</tr>
+<tr>
+<td>++</td>
+<td>Increment</td>
+<td>x = ++y</td>
+<td>y = 6</td>
+<td>x = 6</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>x = y++</td>
+<td>y = 6</td>
+<td>x = 5</td>
+</tr>
+<tr>
+<td>–</td>
+<td>Decrement</td>
+<td>x = –y</td>
+<td>y = 4</td>
+<td>x = 4</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>x = y–</td>
+<td>y = 4</td>
+<td>x = 5</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Assignment Operators</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Example</th>
+<th>Result in y</th>
+<th>Result in x</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>=</td>
+<td>x = y</td>
+<td>x = y</td>
+<td>x = 5</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>x += y</td>
+<td>x = x + y</td>
+<td>x = 15</td>
+</tr>
+<tr>
+<td>-=</td>
+<td>x -= y</td>
+<td>x = x - y</td>
+<td>x = 5</td>
+</tr>
+<tr>
+<td>*=</td>
+<td>x *= y</td>
+<td>x = x * y</td>
+<td>x = 50</td>
+</tr>
+<tr>
+<td>/=</td>
+<td>x /= y</td>
+<td>x = x / y</td>
+<td>x = 2</td>
+</tr>
+<tr>
+<td>%=</td>
+<td>x %= y</td>
+<td>x = x % y</td>
+<td>x = 0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>String Operators</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Example</th>
+<th>text1</th>
+<th>text2</th>
+<th>text3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+</td>
+<td>text3 = text1 + text2</td>
+<td>“Good “</td>
+<td>“Morning”</td>
+<td>“Good Morning”</td>
+</tr>
+<tr>
+<td>+=</td>
+<td>text1 += text2</td>
+<td>“Good “</td>
+<td>“Morning”</td>
+<td>“”</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Comparison Operators</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>==</td>
+<td>equal to</td>
+</tr>
+<tr>
+<td>===</td>
+<td>equal value and equal type</td>
+</tr>
+<tr>
+<td>!=</td>
+<td>not equal</td>
+</tr>
+<tr>
+<td>!==</td>
+<td>not equal value or not equal type</td>
+</tr>
+<tr>
+<td>&gt;</td>
+<td>greater than</td>
+</tr>
+<tr>
+<td>&lt;</td>
+<td>less than</td>
+</tr>
+<tr>
+<td>&gt;=</td>
+<td>greater than or equal to</td>
+</tr>
+<tr>
+<td>&lt;=</td>
+<td>less than or equal to</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Conditional Operator</strong></p>
+<table>
+<thead>
+<tr>
+<th>Syntax</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>variablename = (condition) ? value1:value2</td>
+<td>voteable = (age &lt; 18) ? “Too young”:”Old enough”;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Logical Operators</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;&amp;</td>
+<td>and</td>
+<td>(x &lt; 10 &amp;&amp; y &gt; 1) is true</td>
+</tr>
+<tr>
+<td>丨丨</td>
+<td>or</td>
+<td>(x === 5丨丨y === 5) is false</td>
+</tr>
+<tr>
+<td>!</td>
+<td>not</td>
+<td>!(x === y) is true</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><code>!</code> convert a value to Boolean type before negating it, and all strings except “” convert to true.</li>
+</ul>
+<p>Short-circuiting of logical operators</p>
+<ul>
+<li>当 || 无法转化成 Boolean value 时，若左侧值能被转化成 <strong>true</strong>，则显示左侧值，反之则显示右侧值。所以可以利用这个特性将右侧值设置为 default value。</li>
+<li>&amp;&amp; 与 || 用法相似，当左侧值能被转化成 <strong>false</strong> 时，则显示左侧之，反之显示右侧值。</li>
+<li>“”, null 不能转化成 ture。</li>
+</ul>
+<p><strong>Bitwise Operators</strong></p>
+<ul>
+<li>Bit operators work on 32-bit numbers.</li>
+<li>Any numeric operand in the operation is converted into a 32-bit number.</li>
+<li>The result is converted back to a JavaScript number.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+<th>Example</th>
+<th>Same as</th>
+<th>Result</th>
+<th>Decimal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&amp;</td>
+<td>AND</td>
+<td>x = 5 &amp; 1</td>
+<td>0101 &amp; 0001</td>
+<td>0001</td>
+<td>1</td>
+</tr>
+<tr>
+<td>丨</td>
+<td>OR</td>
+<td>x = 5丨1</td>
+<td>0101丨0001</td>
+<td>0101</td>
+<td>5</td>
+</tr>
+<tr>
+<td>~</td>
+<td>NOT</td>
+<td>x = ~ 5</td>
+<td>~0101</td>
+<td>1010</td>
+<td>10</td>
+</tr>
+<tr>
+<td>^</td>
+<td>XOR</td>
+<td>x = 5 ^ 1</td>
+<td>0101 ^ 0001</td>
+<td>0100</td>
+<td>4</td>
+</tr>
+<tr>
+<td>&lt;&lt;</td>
+<td>Left shift</td>
+<td>x = 5 &lt;&lt; 1</td>
+<td>0101 &lt;&lt; 1</td>
+<td>1010</td>
+<td>10</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>Right shift</td>
+<td>x = 5 &gt;&gt; 1</td>
+<td>0101 &gt;&gt; 1</td>
+<td>0010</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>Note: The examples above use 4 bits unsigned examples. But JavaScript uses 32-bit signed numbers.<br>Because of this, in JavaScript, ~ 5 will not return 10. It will return -6.</p>
+<p><strong>Typeof Operator</strong></p>
+<p><strong>Delete Operator</strong></p>
+<ul>
+<li>The <code>delete</code> operator deletes both the value of the property and the property itself.</li>
+<li>The <code>delete</code> operator <strong>cann’t</strong> be used on variables or functions.</li>
+<li>The <code>delete</code> operator should <strong>not</strong> be used on predefined JavaScript object properties. It can crash your application.</li>
+</ul>
+<p><strong>In Operator</strong><br>The in operator returns true if the specified <strong>property</strong> is in the specified <strong>object</strong>, otherwise false</p>
+<p><strong>Instanceof Operator</strong></p>
+<ul>
+<li>The <code>instanceof</code> operator returns true if the <strong>specified</strong> <strong>object</strong> is an instance of the specified object.</li>
+<li>The <code>instanceof</code> operator can check an object was created by the <strong>constructor</strong>.</li>
+</ul>
+<p><strong>Void Operator</strong><br>The <strong>void</strong> operator evaluates an expression and returns <strong>undefined</strong>.</p>
+<p><strong>Precedence</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">Value</th>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">19</td>
+<td><code>( )</code></td>
+<td>Expression grouping</td>
+</tr>
+<tr>
+<td style="text-align:center">18</td>
+<td><code>.</code>, <code>[]</code></td>
+<td>Member</td>
+</tr>
+<tr>
+<td style="text-align:center">17</td>
+<td><code>()</code>, <code>new</code></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:center">16</td>
+<td><code>++</code>, <code>--</code>, <code>++</code>, <code>--</code></td>
+<td>Postfix Increment or Decrement</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td><code>!</code></td>
+<td>Logical not</td>
+</tr>
+<tr>
+<td style="text-align:center">15</td>
+<td><code>typeof</code></td>
+<td>Return the type</td>
+</tr>
+<tr>
+<td style="text-align:center">14</td>
+<td><code>*</code>, <code>/</code> , <code>%</code> , <code>**</code></td>
+<td>Arithmetic</td>
+</tr>
+<tr>
+<td style="text-align:center">13</td>
+<td><code>+</code>, <code>-</code></td>
+<td>Addition, Subtraction</td>
+</tr>
+<tr>
+<td style="text-align:center">12</td>
+<td><code>&lt;&lt;</code>, <code>&gt;&gt;</code></td>
+<td>Shift</td>
+</tr>
+<tr>
+<td style="text-align:center">11</td>
+<td><code>&lt;</code>, <code>&lt;=</code>, <code>&gt;</code>, <code>&gt;=</code></td>
+<td>Greater than or Less than</td>
+</tr>
+<tr>
+<td style="text-align:center">10</td>
+<td><code>==</code>, <code>===</code>, <code>!=</code>, <code>!==</code></td>
+<td>Equal and Unequal</td>
+</tr>
+<tr>
+<td style="text-align:center">6</td>
+<td><code>&amp;&amp;</code></td>
+<td>And</td>
+</tr>
+<tr>
+<td style="text-align:center">5</td>
+<td><code>丨丨</code></td>
+<td>Or</td>
+</tr>
+<tr>
+<td style="text-align:center">3</td>
+<td><code>=</code>, <code>+=</code>, <code>-=</code>, <code>*=</code>, <code>/=</code></td>
+<td>Assignment</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Comparison"><a href="#Comparison" class="headerlink" title="Comparison"></a>Comparison</h3><p>Both number and string can comparison.</p>
+<p>Comparing Different Types</p>
+<ol>
+<li>When comparing a string with a number, JavaScript will convert the string to a number</li>
+<li>Operator <code>===</code> and <code>!==</code> will <strong>not</strong> automatic convert type.</li>
+</ol>
+<p><a href="#convertType">More information abour convert type</a></p>
+<h2 id="Statements"><a href="#Statements" class="headerlink" title="Statements"></a>Statements</h2><h3 id="Conditional-Statements"><a href="#Conditional-Statements" class="headerlink" title="Conditional Statements"></a>Conditional Statements</h3><ul>
+<li><strong>IF…else Statements</strong><br>  Marks a block of statements to be executed depending on <strong>a</strong> condition<br>  ```JS The if Statement<br>  if (condition) {<pre><code>  // if condition is true =&gt; executed
+</code></pre>  }<pre><code>  ```JS The else Statement
+  if (condition) {
+      // if condition is true =&gt; executed
+  } else { 
+      // if condition is false =&gt; executed
+  }
+</code></pre>  ```JS The else if Statement<br>  if (condition1) {<pre><code>  // if condition 1 is true =&gt; executed
+</code></pre>  } else if (condition2) {<pre><code>  // if condition 2 is true =&gt; executed
+</code></pre>  } else {<pre><code>  // if condition 2 is false =&gt; executed
+</code></pre>  }<br>  ```</li>
+<li><strong>Swith Statements</strong><br>  Use the switch statement to select <strong>one of many</strong> blocks of code to be executed.<br>  ```JS Syntax<br>  switch(expression) {<pre><code>  case value1:
+      code block
+      break;
+  case value2:
+      code block
+      break;
+  default:
+      default code block
+</code></pre>  }<pre><code>  ```JS Common Code and Fall-Through
+  switch (new Date().getDay()) {
+      case 1:
+      case 2:
+      case 3:
+      default: 
+          text = &quot;Looking forward to the Weekend&quot;;
+          break; 
+      case 4:
+      case 5:
+         text = &quot;Soon it is Weekend&quot;;
+          break; 
+      case 0:
+      case 6:
+         text = &quot;It is Weekend&quot;;
+  }
+</code></pre><ul>
+<li>If default is not the last case in the switch block, remember to end it with a <strong>break</strong>.</li>
+<li>Don’t forget (:).</li>
+</ul>
+</li>
+</ul>
+<h3 id="Loop-Statements"><a href="#Loop-Statements" class="headerlink" title="Loop Statements"></a>Loop Statements</h3><ul>
+<li><strong>The For Loop</strong><br>  Loops through a block of code a number of times<br>  ```JS Syntax<br>  for (statement 1; statement 2; statement 3) {<pre><code>  code block to be executed
+</code></pre>  }<pre><code>  ```JS Example
+  for (i = 0; i &lt; 5; i++) {
+      text += &quot;The number is &quot; + i + &quot;&lt;br&gt;&quot;;
+  }
+</code></pre><ul>
+<li>Statement 1 (optional): Executed before the loop starts.<ul>
+<li>You can initiate many values in statement 1, separated by comma.</li>
+<li>When your values are set before the loop starts, you can omit statement 1.</li>
+</ul>
+</li>
+<li>Statement 2 (optional): Defines the condition for running the loop.<ul>
+<li>If you omit statement 2, you must provid a <strong>break</strong> avoid loop will never end.</li>
+</ul>
+</li>
+<li>Statement 3 (optional): Executed each time after the loop has been executed.<ul>
+<li>When you increment your values inside the loop, you can omit statement 3.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p><strong>The For/In Loop</strong><br>  Loops through the properties of an <strong>object</strong></p>
+<pre class="line-numbers language-JS"><code class="language-JS">  var person = {fname:"John", lname:"Doe", age:25}; 
+
+  var text = "";
+  var x;
+  for (x in person) {
+      text += person[x];
+  }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><strong>While Loop Statements</strong><br>  Loops through a block of code while a specified condition is true    </p>
+<ul>
+<li><strong>While Loop</strong><br>  ```JS While Loop<br>  while (cndition) {<pre><code>code
+</code></pre>  }<pre><code>  If you forget to increase the variable used in the condition, the loop will never end.
+  ```javascript A example for While Loop
+  var number = 0;
+  while (number &lt;= 12) {
+    console.log(number);
+    number = number + 2;
+  }
+</code></pre></li>
+<li><strong>Do/While Loop</strong><br>  ```JS Do/While Loop<br>  do {<pre><code>code
+</code></pre>  }<br>  while (condition);<pre><code>  Do/While Loop will always be executed at least once.
+  A while loop is much the same as a for loop, with statement 1 and statement 3 omitted.
+  ```javascript A example for Do/While loop
+  do {
+    var name = prompt(&quot;Who are you?&quot;);
+  } while (!name);
+  console.log(name);
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h3 id="Keyword"><a href="#Keyword" class="headerlink" title="Keyword"></a>Keyword</h3><ul>
+<li><strong>Break</strong><ul>
+<li>The break statement “jumps out” of a loop.</li>
+<li>The continue statement “jumps over” one iteration in the loop.</li>
+</ul>
+</li>
+<li><p><strong>Labels</strong></p>
+<ul>
+<li>The continue statement (with or without a label reference) can only be used to skip one loop iteration.</li>
+<li>The break statement, without a label reference, can only be used to jump out of a loop or a switch.</li>
+<li><p>With a label reference, the break statement can be used to jump out of any code block:<br>```JS Syntax<br>break labelname;<br>continue labelname;</p>
+<pre><code>```JS Example
+var text = &quot;&quot;;
+var i, j;
+
+Loop1: // The first for loop is labeled &quot;Loop1&quot;
+for (i = 0; i &lt; 3; i++) {
+text += &quot;&lt;br&gt;&quot; + &quot;i = &quot; + i + &quot;, j = &quot;;
+
+  Loop2: // The second for loop is labeled &quot;Loop2&quot;
+  for (j = 10; j &lt; 15; j++) {
+      if (j === 12) {
+          continue Loop2;
+      }
+      document.getElementById(&quot;demo&quot;).innerHTML = text += j + &quot; &quot;;
+  }
+}
+</code></pre></li>
+</ul>
+</li>
+</ul>
+<h2 id="Other-Keywords"><a href="#Other-Keywords" class="headerlink" title="Other Keywords"></a>Other Keywords</h2><h3 id="Error"><a href="#Error" class="headerlink" title="Error"></a>Error</h3><p>debugger    Stops the execution of JavaScript, and calls (if available) the debugging function</p>
+<ul>
+<li><p><strong>Try and Catch </strong></p>
+<ul>
+<li><strong>try</strong>: Test a block of code for errors.</li>
+<li><strong>catch</strong>: Handle the error.<br><code>JS try and catch
+try {
+  adddlert(&quot;Welcome guest!&quot;);
+}
+catch(err) {
+ document.getElementById(&quot;demo&quot;).innerHTML = err.message;
+}</code></li>
+</ul>
+</li>
+<li><p><strong>Throw and Finally</strong></p>
+<ul>
+<li><strong>throw</strong>: Create custom errors.</li>
+<li><strong>finally</strong>: Execute code, after try and catch, regardless of the result.<br>```JS throw and finally<br>function myFunction() {<br>  var message, x;<br>  message = document.getElementById(“message”);<br>  message.innerHTML = “”;<br>  x = document.getElementById(“demo”).value;<br>  try { <pre><code>  if(x == &quot;&quot;) throw &quot;empty&quot;;
+  if(isNaN(x)) throw &quot;not a number&quot;;
+  x = Number(x);
+  if(x &lt; 5) throw &quot;too low&quot;;
+  if(x &gt; 10) throw &quot;too high&quot;;
+</code></pre>  }<br>  catch(err) {<pre><code>  message.innerHTML = &quot;Input is &quot; + err;
+</code></pre>  }<br>  finally {       //To be executed regardless of the result<pre><code>  document.getElementById(&quot;demo&quot;).value = &quot;&quot;;
+</code></pre>  }<br>}<br>```</li>
+</ul>
+</li>
+<li><p><strong>Debugger</strong><br>  The <code>debugger</code> statement stops the execution of JavaScript, and calls the debugging function.</p>
+<pre class="line-numbers language-JS"><code class="language-JS">  debugger;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="Display-Data"><a href="#Display-Data" class="headerlink" title="Display Data"></a>Display Data</h3><ol>
+<li>Writing into an <em>alert box</em>, using <code>window.alert()</code>.<pre class="line-numbers language-JS"><code class="language-JS"> <script>window.alert(5 + 6);</script>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Writing into the <em>HTML output</em> using <code>document.write()</code>.<pre class="line-numbers language-JS"><code class="language-JS"> <script>document.write(5 + 6);</script>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+ Using document.write() after an HTML document is fully loaded, will <strong>delete all existing HTML</strong>, so usually used this method only for testing.</li>
+<li>Writing into an <em>HTML element</em>, using <code>innerHTML</code>.(in most cases)<pre class="line-numbers language-JS"><code class="language-JS"> <script>document.getElementById("demo").innerHTML = 5 + 6;</script>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Writing into the <em>browser console</em>, using <code>console.log()</code>.<pre class="line-numbers language-JS"><code class="language-JS"> <script>console.log(5 + 6);</script>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><h3 id="Hoisting"><a href="#Hoisting" class="headerlink" title="Hoisting"></a>Hoisting</h3><ol>
+<li>Hoisting is JavaScript’s default behavior of moving declarations to the top.</li>
+<li>In JavaScript, a variable can be declared after it has been used.</li>
+<li>JavaScript <strong>only</strong> hoists declarations, <strong>not</strong> initializations.<ul>
+<li>Declare: <code>var x;</code></li>
+<li>Initialize: <code>var x = 5;</code></li>
+</ul>
+</li>
+<li>Always declared all variables at the beginning of every scope is a good rule.</li>
+</ol>
+<h2 id="JS-JSON"><a href="#JS-JSON" class="headerlink" title="JS JSON"></a>JS JSON</h2><p>JSON is a format for storing and transporting data.<br>JSON is often used when data is sent from a server to a web page.</p>
+<h3 id="What-is-JSON"><a href="#What-is-JSON" class="headerlink" title="What is JSON?"></a>What is JSON?</h3><ul>
+<li>JSON = <strong>J</strong>ava<strong>S</strong>crip <strong>O</strong>bject <strong>N</strong>otation</li>
+<li>JSON is lightweight data interchange format</li>
+<li>JSON is language independent <code>*</code></li>
+<li>JSON is “self-describing” and easy to understand</li>
+</ul>
+<p><code>*</code> The JSON syntax is derived from JavaScript object notation syntax, but the JSON format is text only. Code for reading and generating JSON data can be written in any programming language.</p>
+<h3 id="JSON-Example"><a href="#JSON-Example" class="headerlink" title="JSON Example"></a>JSON Example</h3><h3 id="JSON-Syntax-Rules"><a href="#JSON-Syntax-Rules" class="headerlink" title="JSON Syntax Rules"></a>JSON Syntax Rules</h3><ul>
+<li>Data is in name/value pairs.</li>
+<li>Data is separated by commas<code>,</code>.</li>
+<li>Curly braces<code>{</code> hold objects.</li>
+<li>Square brackets<code>[</code> hold arrays.</li>
+<li>JSON names require double quotes. JavaScript names don’t.</li>
+</ul>
+<h3 id="Converting-to-Object"><a href="#Converting-to-Object" class="headerlink" title="Converting to Object"></a>Converting to Object</h3><p><strong>Converting with <code>JSON.parse()</code> Methods</strong></p>
+<ol>
+<li><p>First, create a JavaScript string containing JSON syntax:</p>
+</li>
+<li><p>Then, use the JavaScript built-in function JSON.parse() to convert the string into a JavaScript object:</p>
+</li>
+<li><p>Finally, use the new JavaScript object in your page:</p>
+</li>
+</ol>
+<p><strong>Converting with <code>JSON.stringify()</code> Methods</strong></p>
+<h2 id="JS-Forms"><a href="#JS-Forms" class="headerlink" title="JS Forms"></a>JS Forms</h2><h3 id="Form-Validation"><a href="#Form-Validation" class="headerlink" title="Form Validation"></a>Form Validation</h3><p>If a form field (fname) is empty, the required attribute prevents this form from being submitted</p>
+<h3 id="HTML-Constraint-Validation"><a href="#HTML-Constraint-Validation" class="headerlink" title="HTML Constraint Validation"></a>HTML Constraint Validation</h3><p>HTML5 introduced a new HTML validation concept called constraint validation.<br>HTML constraint validation is based on:</p>
+<ul>
+<li>Constraint validation HTML Input Attributes</li>
+<li>Constraint validation CSS Pseudo Selectors</li>
+<li>Constraint validation DOM Properties and Methods</li>
+</ul>
+<p>Constraint Validation HTML Input Attributes</p>
+<table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>disabled</td>
+<td>Specifies that the input element should be disabled</td>
+</tr>
+<tr>
+<td>max</td>
+<td>Specifies the maximum value of an input element</td>
+</tr>
+<tr>
+<td>min</td>
+<td>Specifies the minimum value of an input element</td>
+</tr>
+<tr>
+<td>pattern</td>
+<td>Specifies the value pattern of an input element</td>
+</tr>
+<tr>
+<td>required</td>
+<td>Specifies that the input field requires an element</td>
+</tr>
+<tr>
+<td>type</td>
+<td>Specifies the type of an input element</td>
+</tr>
+</tbody>
+</table>
+<p>Constraint Validation CSS Pseudo Selectors</p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:disabled</td>
+<td>Selects input elements with the “disabled” attribute specified</td>
+</tr>
+<tr>
+<td>:invalid</td>
+<td>Selects input elements with invalid values</td>
+</tr>
+<tr>
+<td>:optional</td>
+<td>Selects input elements with no “required” attribute specified</td>
+</tr>
+<tr>
+<td>:required</td>
+<td>Selects input elements with the “required” attribute specified</td>
+</tr>
+<tr>
+<td>:valid</td>
+<td>Selects input elements with valid values</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Forms-API"><a href="#Forms-API" class="headerlink" title="Forms API"></a>Forms API</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>checkValidity()</td>
+<td>Returns true if an input element contains valid data.</td>
+</tr>
+<tr>
+<td>setCustomValidity()</td>
+<td>Sets the validationMessage property of an input element.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Constraint Validation DOM Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>validity</td>
+<td>Contains boolean properties related to the validity of an input element.</td>
+</tr>
+<tr>
+<td>validationMessage</td>
+<td>Contains the message a browser will display when the validity is false.</td>
+</tr>
+<tr>
+<td>willValidate</td>
+<td>Indicates if an input element will be validated.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Validity Properties</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customError</td>
+<td>Set to true, if a custom validity message is set.</td>
+</tr>
+<tr>
+<td>patternMismatch</td>
+<td>Set to true, if an element’s value does not match its pattern attribute.</td>
+</tr>
+<tr>
+<td>rangeOverflow</td>
+<td>Set to true, if an element’s value is greater than its max attribute.</td>
+</tr>
+<tr>
+<td>rangeUnderflow</td>
+<td>Set to true, if an element’s value is less than its min attribute.</td>
+</tr>
+<tr>
+<td>stepMismatch</td>
+<td>Set to true, if an element’s value is invalid per its step attribute.</td>
+</tr>
+<tr>
+<td>tooLong</td>
+<td>Set to true, if an element’s value exceeds its maxLength attribute.</td>
+</tr>
+<tr>
+<td>typeMismatch</td>
+<td>Set to true, if an element’s value is invalid per its type attribute.</td>
+</tr>
+<tr>
+<td>valueMissing</td>
+<td>Set to true, if an element (with a required attribute) has no value.</td>
+</tr>
+<tr>
+<td>valid</td>
+<td>Set to true, if an element’s value is valid.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="本文相关"><a href="#本文相关" class="headerlink" title="本文相关"></a>本文相关</h2><ol>
+<li>参考<br><a href="http://www.w3schools.com/js/default.asp" target="_blank" rel="external">w3schools - JavaScript Tutorial</a></li>
+<li>修订<br>2016-03-02:第一版<br>2016-04-07:正则表达式部分移除，单独重写</li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/JavaScript/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/JavaScript/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/webpack-概要/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/防止-string-过长的方法/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/zsl-blog/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/zsl-blog/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/zsl-blog/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/zsl-blog/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/zsl-blog/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/zsl-blog/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

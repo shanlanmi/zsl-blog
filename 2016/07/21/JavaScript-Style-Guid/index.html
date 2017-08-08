@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            JavaScript Style Guid | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="img/favicon.png">
+    <link rel="icon" sizes="192x192" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="JavaScript Style Guid | 张圣兰">
+    <meta property="og:image" content="img/favicon.png" />
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="JavaScript Style Guid | 张圣兰">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript-Style-Guid/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "JavaScript Style Guid",
+    "url": "https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript-Style-Guid/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/zsl-blog/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/zsl-blog/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/zsl-blog/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/zsl-blog/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/zsl-blog/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Strict-Mode"><span class="post-toc-number">1.</span> <span class="post-toc-text">Strict Mode</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Declaring-Strict-Mode"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Declaring Strict Mode</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Note-Allowed-in-Strict-Mode"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Note Allowed in Strict Mode</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript-Style-Guide"><span class="post-toc-number">2.</span> <span class="post-toc-text">JavaScript Style Guide</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Variable-Names"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Variable Names</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Spaces-Around-Operators"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Spaces Around Operators</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Code-Indentation"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Code Indentation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Statement-Rules"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Statement Rules</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-Rules"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">Object Rules</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Line-Length-lt-80"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">Line Length < 80</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Naming-Conventions"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">Naming Conventions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Loading-JavaScript-in-HTML"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">Loading JavaScript in HTML</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#File-Extensions"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">File Extensions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Use-Lower-Case-File-Names"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">Use Lower Case File Names</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript-Best-Practices"><span class="post-toc-number">3.</span> <span class="post-toc-text">JavaScript Best Practices</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Avoid-Global-Variables"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Avoid Global Variables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Always-Declare-Local-variables"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Always Declare Local variables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Declarations-on-Top"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Declarations on Top</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Initialize-Variables"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">Initialize Variables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Never-Treat-Number-String-or-Boolean-as-Objects"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">Never Treat Number, String or Boolean as Objects</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Don’t-Use-new-Object"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">Don’t Use new Object()</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Beware-of-Automatic-Type-Conversions"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">Beware of Automatic Type Conversions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Use-Comparison"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">Use === Comparison</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Use-Parameter-Defaults"><span class="post-toc-number">3.9.</span> <span class="post-toc-text">Use Parameter Defaults</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#End-Your-Switches-with-Defaults"><span class="post-toc-number">3.10.</span> <span class="post-toc-text">End Your Switches with Defaults</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Avoid-Using-eval"><span class="post-toc-number">3.11.</span> <span class="post-toc-text">Avoid Using eval()</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript-Performance"><span class="post-toc-number">4.</span> <span class="post-toc-text">JavaScript Performance</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reduce-Activity-in-Loops"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Reduce Activity in Loops</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reduce-DOM-Access"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Reduce DOM Access</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reduce-DOM-Size"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">Reduce DOM Size</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Avoid-Unnecessary-Variables"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">Avoid Unnecessary Variables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Delay-JavaScript-Loading"><span class="post-toc-number">4.5.</span> <span class="post-toc-text">Delay JavaScript Loading</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Avoid-Using-with"><span class="post-toc-number">4.6.</span> <span class="post-toc-text">Avoid Using with</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript-Mistakes"><span class="post-toc-number">5.</span> <span class="post-toc-text">JavaScript Mistakes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Accidentally-Using-the-Assgnment"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Accidentally Using the Assgnment</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Expecting-Loose-Comparison"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Expecting Loose Comparison</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Confusing-Addition-amp-Concatenation"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Confusing Addition & Concatenation</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Misunderstanding-Floats"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">Misunderstanding Floats</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Breaking-a-JavaScript-String"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">Breaking a JavaScript String</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Misplacing-Semicolon"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">Misplacing Semicolon(;)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Breaking-a-Return-Statement"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">Breaking a Return Statement</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Accessing-Arrays-with-Named-Indexes"><span class="post-toc-number">5.8.</span> <span class="post-toc-text">Accessing Arrays with Named Indexes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Ending-an-Array-Object-Definition-with-a-Comma"><span class="post-toc-number">5.9.</span> <span class="post-toc-text">Ending an Array/Object Definition with a Comma</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Expecting-Block-Level-Scope"><span class="post-toc-number">5.10.</span> <span class="post-toc-text">Expecting Block Level Scope</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#JavaScript-Reserved-Words"><span class="post-toc-number">6.</span> <span class="post-toc-text">JavaScript Reserved Words</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本文相关"><span class="post-toc-number">7.</span> <span class="post-toc-text">本文相关</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                JavaScript Style Guid
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=JavaScript Style Guid&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript-Style-Guid/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=JavaScript Style Guid&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript-Style-Guid/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript-Style-Guid/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript-Style-Guid/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=JavaScript Style Guid&summary=&pics=https://shanlanmi.github.io/zsl-blogimg/favicon.png&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/JavaScript-Style-Guid/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="Strict-Mode"><a href="#Strict-Mode" class="headerlink" title="Strict Mode"></a>Strict Mode</h2><h3 id="Declaring-Strict-Mode"><a href="#Declaring-Strict-Mode" class="headerlink" title="Declaring Strict Mode"></a>Declaring Strict Mode</h3><ul>
+<li>Adding <code>&quot;use strict&quot;;</code> to the beginning of a JavaScript or a JavaScript function.</li>
+<li>Declared at the beginning of a JavaScript file, it has global scope.</li>
+<li>Declared inside a function, it has local scope.</li>
+<li>Strict mode makes it easier to write “secure” JavaScript</li>
+</ul>
+<h3 id="Note-Allowed-in-Strict-Mode"><a href="#Note-Allowed-in-Strict-Mode" class="headerlink" title="Note Allowed in Strict Mode"></a>Note Allowed in Strict Mode</h3><ol>
+<li>Using a variable or object <strong>without</strong> <strong>declaring</strong> it, is not allowed.</li>
+<li><strong>Deleting</strong> a variable/object/function, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> delete x;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Duplicating a parameter name, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> function x (p1, p1) { };
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Octal numeric literals, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> var x = 010;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Escape character, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> var x =\010;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Writing to a read-only property, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> var obj = {};
+ Object.defineProperty(obj, "x", {value:0, writable:false});
+ obj.x = 3.14;            // This will cause an error
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Writing to get-only property, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> var obj = {get x() {return 0} };
+ obj.x = 3.14;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>Deleting an undeletable property, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> delete Object.prototype;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>The string “eval”/“arguments” cann’t be used as a variable, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> var eval = 3.14;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>The <code>with</code> statement, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> with (Math) {x = cos(2)};
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Using <code>eval()</code> to create variables in the scope from which it was called, is not allowed.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"> eval ("var x = 2");
+ alert (x);
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>In function calls like f(), the this value was the <strong>global</strong> <strong>object</strong>. In strict mode, it is now <strong>undefined</strong>.</li>
+<li>Future reserved keywords are not allowed in strict mode. These are: implements , interface , let , package , private , protected , public , static , yield</li>
+</ol>
+<h2 id="JavaScript-Style-Guide"><a href="#JavaScript-Style-Guide" class="headerlink" title="JavaScript Style Guide"></a>JavaScript Style Guide</h2><ul>
+<li>Always use the same coding conventions for all your JavaScript projects.</li>
+<li>Coding conventions are style guidelines for programming:<ul>
+<li>Naming and declaration rules for variables and functions.</li>
+<li>Rules for the use of white space, indentation, and comments.</li>
+<li>Programming practices and principles<br>Coding conventions secure quality:</li>
+<li>Improves code readability</li>
+<li>Make code maintenance easier</li>
+</ul>
+</li>
+</ul>
+<h3 id="Variable-Names"><a href="#Variable-Names" class="headerlink" title="Variable Names"></a>Variable Names</h3><ul>
+<li>At W3schools we use <strong>camelCase</strong> for identifier names (variables and functions).</li>
+<li>All names start with a letter.</li>
+</ul>
+<h3 id="Spaces-Around-Operators"><a href="#Spaces-Around-Operators" class="headerlink" title="Spaces Around Operators"></a>Spaces Around Operators</h3><p>Always put spaces around operators ( = + - * / ), and after commas:</p>
+<h3 id="Code-Indentation"><a href="#Code-Indentation" class="headerlink" title="Code Indentation"></a>Code Indentation</h3><p>Always use <strong>4</strong> spaces for indentation of code blocks:</p>
+<h3 id="Statement-Rules"><a href="#Statement-Rules" class="headerlink" title="Statement Rules"></a>Statement Rules</h3><ol>
+<li>General rules for <strong>simple</strong> statements:<ol>
+<li>Always end a simple statement with a semicolon<code>;</code>.</li>
+</ol>
+</li>
+<li>General rules for <strong>complex</strong> (compound) statements:<ol>
+<li>Put the opening bracket<code>{</code> at the end of the first line.</li>
+<li>Use one space before the opening bracket.</li>
+<li>Put the closing bracket<code>}</code> on a new line, without leading spaces.</li>
+<li>Do not end a complex statement with a semicolon.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">if (time < 20) {
+ greeting = "Good day";
+} else {
+ greeting = "Good evening";
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="Object-Rules"><a href="#Object-Rules" class="headerlink" title="Object Rules"></a>Object Rules</h3><p>General rules for object definitions:</p>
+<pre><code>1. Place the opening bracket`{` on the same line as the object name.
+1. Use colon`,` plus one space between each property and its value.
+1. Use quotes`&quot;` around string values, not around numeric values.
+1. Do **not** add a comma`;` after the last property value pair.
+1. Place the closing bracket`}` on a new line, without leading spaces.
+1. Always end an object definition with a semicolon`;`.
+    ```JavaScript
+    var person = {
+        firstName: &quot;John&quot;,
+        lastName: &quot;Doe&quot;,
+        age: 50,
+        eyeColor: &quot;blue&quot;
+    };
+    ```
+1. Short objects can be written compressed, on one line, using spaces only between properties, like this:
+    ```JavaScript
+    var person = {firstName:&quot;John&quot;, lastName:&quot;Doe&quot;, age:50, eyeColor:&quot;blue&quot;};
+    ```
+</code></pre><h3 id="Line-Length-lt-80"><a href="#Line-Length-lt-80" class="headerlink" title="Line Length &lt; 80"></a>Line Length &lt; 80</h3><ul>
+<li>For readability, avoid lines longer than 80 characters.</li>
+<li>If a JavaScript statement does not fit on one line, the best place to break it, is after an <strong>operator</strong> or a <strong>comma</strong><code>,</code>.</li>
+</ul>
+<h3 id="Naming-Conventions"><a href="#Naming-Conventions" class="headerlink" title="Naming Conventions"></a>Naming Conventions</h3><p>Always use the same naming convention for all your code. For example:</p>
+<ul>
+<li>Variable and function names written as <strong>camelCase</strong></li>
+<li>Global variables written in <strong>UPPERCASE</strong> (We don’t, but it’s quite common)</li>
+<li>Constants (like PI) written in <strong>UPPERCASE</strong></li>
+</ul>
+<h3 id="Loading-JavaScript-in-HTML"><a href="#Loading-JavaScript-in-HTML" class="headerlink" title="Loading JavaScript in HTML"></a>Loading JavaScript in HTML</h3><p>Use simple syntax for loading external scripts (the type attribute is not necessary):</p>
+<h3 id="File-Extensions"><a href="#File-Extensions" class="headerlink" title="File Extensions"></a>File Extensions</h3><ul>
+<li>HTML files should have a <strong>.html</strong> extension (not .htm).</li>
+<li>CSS files should have a <strong>.css</strong> extension.</li>
+<li>JavaScript files should have a <strong>.js</strong> extension.</li>
+</ul>
+<h3 id="Use-Lower-Case-File-Names"><a href="#Use-Lower-Case-File-Names" class="headerlink" title="Use Lower Case File Names"></a>Use Lower Case File Names</h3><p>Most web servers are case sensitive about file names, but some webservers are not, To avoid these problems, always use lower case file names (if possible).</p>
+<h2 id="JavaScript-Best-Practices"><a href="#JavaScript-Best-Practices" class="headerlink" title="JavaScript Best Practices"></a>JavaScript Best Practices</h2><h3 id="Avoid-Global-Variables"><a href="#Avoid-Global-Variables" class="headerlink" title="Avoid Global Variables"></a>Avoid Global Variables</h3><ul>
+<li>Global variables and functions can be overwritten by other scripts.</li>
+<li><p>Use local variables instead, and learn how to use <strong>closure</strong>.</p>
+<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">  var add = (function () {
+      var counter = 0;
+      return function () {return counter += 1;}
+  })();
+
+  add();
+  add();
+  add();   // the counter is now 3
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="Always-Declare-Local-variables"><a href="#Always-Declare-Local-variables" class="headerlink" title="Always Declare Local variables"></a>Always Declare Local variables</h3><h3 id="Declarations-on-Top"><a href="#Declarations-on-Top" class="headerlink" title="Declarations on Top"></a>Declarations on Top</h3><p>This will:</p>
+<ul>
+<li>Give cleaner code.</li>
+<li>Provide a single place to look for local variables.</li>
+<li>Make it easier to avoid unwanted (implied) global variables.</li>
+<li>Reduce the possibility of unwanted re-declarations.</li>
+</ul>
+<h3 id="Initialize-Variables"><a href="#Initialize-Variables" class="headerlink" title="Initialize Variables"></a>Initialize Variables</h3><p>This will:</p>
+<ul>
+<li>Give cleaner code.</li>
+<li>Provide a single place to initialize variables.</li>
+<li>Avoid undefined values.</li>
+</ul>
+<h3 id="Never-Treat-Number-String-or-Boolean-as-Objects"><a href="#Never-Treat-Number-String-or-Boolean-as-Objects" class="headerlink" title="Never Treat Number, String or Boolean as Objects"></a>Never Treat Number, String or Boolean as Objects</h3><h3 id="Don’t-Use-new-Object"><a href="#Don’t-Use-new-Object" class="headerlink" title="Don’t Use new Object()"></a>Don’t Use new Object()</h3><ul>
+<li>Use <code>{}</code> instead of new Object()</li>
+<li>Use <code>&quot;&quot;</code> instead of new String()</li>
+<li>Use <code>0</code> instead of new Number()</li>
+<li>Use <code>false</code> instead of new Boolean()</li>
+<li>Use <code>[]</code> instead of new Array()</li>
+<li>Use <code>/()/</code> instead of new RegExp()</li>
+<li>Use <code>function (){}</code> instead of new Function()</li>
+</ul>
+<h3 id="Beware-of-Automatic-Type-Conversions"><a href="#Beware-of-Automatic-Type-Conversions" class="headerlink" title="Beware of Automatic Type Conversions"></a>Beware of Automatic Type Conversions</h3><h3 id="Use-Comparison"><a href="#Use-Comparison" class="headerlink" title="Use === Comparison"></a>Use === Comparison</h3><h3 id="Use-Parameter-Defaults"><a href="#Use-Parameter-Defaults" class="headerlink" title="Use Parameter Defaults"></a>Use Parameter Defaults</h3><ul>
+<li>If a function is called with a missing argument, the value of the missing argument is set to undefined.</li>
+<li>Undefined values can break your code. It is a good habit to assign default values to arguments.<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">  function myFunction(x, y) {
+      if (y === undefined) {
+          y = 0;
+      }
+  }
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="End-Your-Switches-with-Defaults"><a href="#End-Your-Switches-with-Defaults" class="headerlink" title="End Your Switches with Defaults"></a>End Your Switches with Defaults</h3><h3 id="Avoid-Using-eval"><a href="#Avoid-Using-eval" class="headerlink" title="Avoid Using eval()"></a>Avoid Using eval()</h3><h2 id="JavaScript-Performance"><a href="#JavaScript-Performance" class="headerlink" title="JavaScript Performance"></a>JavaScript Performance</h2><h3 id="Reduce-Activity-in-Loops"><a href="#Reduce-Activity-in-Loops" class="headerlink" title="Reduce Activity in Loops"></a>Reduce Activity in Loops</h3><p>Each statement in a loop, including the for statement, is executed for each iteration of the loop.</p>
+<h3 id="Reduce-DOM-Access"><a href="#Reduce-DOM-Access" class="headerlink" title="Reduce DOM Access"></a>Reduce DOM Access</h3><ul>
+<li>Accessing the HTML DOM is very slow, compared to other JavaScript statements.</li>
+<li>If you expect to access a DOM element several times, access it once, and use it as a local variable:</li>
+</ul>
+<h3 id="Reduce-DOM-Size"><a href="#Reduce-DOM-Size" class="headerlink" title="Reduce DOM Size"></a>Reduce DOM Size</h3><p>Keep the number of elements in the HTML DOM small.</p>
+<h3 id="Avoid-Unnecessary-Variables"><a href="#Avoid-Unnecessary-Variables" class="headerlink" title="Avoid Unnecessary Variables"></a>Avoid Unnecessary Variables</h3><h3 id="Delay-JavaScript-Loading"><a href="#Delay-JavaScript-Loading" class="headerlink" title="Delay JavaScript Loading"></a>Delay JavaScript Loading</h3><ul>
+<li>Putting your scripts at the bottom of the page body, lets the browser load the page first.</li>
+<li>While a script is downloading, the browser will not start any other downloads. In addition all parsing and rendering activity might be blocked.</li>
+<li><p>If possible, you can add your script to the page by code, after the page has loaded:</p>
+<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">  <script>
+  window.onload = downScripts;
+
+  function downScripts() {
+      var element = document.createElement("script");
+      element.src = "myScript.js";
+      document.body.appendChild(element);
+  }
+  </script>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="Avoid-Using-with"><a href="#Avoid-Using-with" class="headerlink" title="Avoid Using with"></a>Avoid Using with</h3></li>
+<li>It has a negative effect on speed.</li>
+<li>It also clutters up JavaScript scopes.</li>
+<li>It is not allowed in strict mode.</li>
+</ul>
+<h2 id="JavaScript-Mistakes"><a href="#JavaScript-Mistakes" class="headerlink" title="JavaScript Mistakes"></a>JavaScript Mistakes</h2><h3 id="Accidentally-Using-the-Assgnment"><a href="#Accidentally-Using-the-Assgnment" class="headerlink" title="Accidentally Using the Assgnment"></a>Accidentally Using the Assgnment</h3><p>Programmer accidentally uses an assignment operator (=), instead of a comparison operator (==).</p>
+<h3 id="Expecting-Loose-Comparison"><a href="#Expecting-Loose-Comparison" class="headerlink" title="Expecting Loose Comparison"></a>Expecting Loose Comparison</h3><p>It is a common mistake to forget that switch statements use strict comparison.</p>
+<h3 id="Confusing-Addition-amp-Concatenation"><a href="#Confusing-Addition-amp-Concatenation" class="headerlink" title="Confusing Addition &amp; Concatenation"></a>Confusing Addition &amp; Concatenation</h3><p>In JavaScript, both addition and concatenation use the same <code>+</code> operator.</p>
+<h3 id="Misunderstanding-Floats"><a href="#Misunderstanding-Floats" class="headerlink" title="Misunderstanding Floats"></a>Misunderstanding Floats</h3><p>All numbers in JavaScript are stored as 64-bits Floating point numbers(Floats).</p>
+<h3 id="Breaking-a-JavaScript-String"><a href="#Breaking-a-JavaScript-String" class="headerlink" title="Breaking a JavaScript String"></a>Breaking a JavaScript String</h3><p>breaking a statement in the middle of a string will not work, you must use <code>\</code> to break in a string.</p>
+<h3 id="Misplacing-Semicolon"><a href="#Misplacing-Semicolon" class="headerlink" title="Misplacing Semicolon(;)"></a>Misplacing Semicolon(;)</h3><h3 id="Breaking-a-Return-Statement"><a href="#Breaking-a-Return-Statement" class="headerlink" title="Breaking a Return Statement"></a>Breaking a Return Statement</h3><p>JavaScript will close the return statement at the end of the line, because it is a complete statement.</p>
+<h3 id="Accessing-Arrays-with-Named-Indexes"><a href="#Accessing-Arrays-with-Named-Indexes" class="headerlink" title="Accessing Arrays with Named Indexes"></a>Accessing Arrays with Named Indexes</h3><p>In JavaScript, <strong>arrays</strong> use numbered indexes, <strong>object</strong> use named indexes.</p>
+<h3 id="Ending-an-Array-Object-Definition-with-a-Comma"><a href="#Ending-an-Array-Object-Definition-with-a-Comma" class="headerlink" title="Ending an Array/Object Definition with a Comma"></a>Ending an Array/Object Definition with a Comma</h3><h3 id="Expecting-Block-Level-Scope"><a href="#Expecting-Block-Level-Scope" class="headerlink" title="Expecting Block Level Scope"></a>Expecting Block Level Scope</h3><p>JavaScript does not create a new scope for each code block.</p>
+<h2 id="JavaScript-Reserved-Words"><a href="#JavaScript-Reserved-Words" class="headerlink" title="JavaScript Reserved Words"></a>JavaScript Reserved Words</h2><p>In JavaScript, some identifiers are reserved words and cannot be used as variables or function names.<br><a href="http://www.w3schools.com/js/js_reserved.asp" target="_blank" rel="external">Reserved Words</a></p>
+<hr>
+<h2 id="本文相关"><a href="#本文相关" class="headerlink" title="本文相关"></a>本文相关</h2><ol>
+<li>参考<br><a href="http://www.w3schools.com/js/default.asp" target="_blank" rel="external">w3schools - JavaScript Tutorial</a></li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/JavaScript-Style-Guid/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/JavaScript-Style-Guid/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/HTTP请求/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/彻底理解js中this的指向-转载/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/zsl-blog/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/zsl-blog/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/zsl-blog/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/zsl-blog/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/zsl-blog/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/zsl-blog/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

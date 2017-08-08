@@ -1,0 +1,1904 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            Bash常用命令  | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="img/favicon.png">
+    <link rel="icon" sizes="192x192" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Bash常用命令  | 张圣兰">
+    <meta property="og:image" content="img/favicon.png" />
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Bash常用命令  | 张圣兰">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Bash常用命令/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "Bash常用命令 ",
+    "url": "https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Bash常用命令/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/zsl-blog/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/zsl-blog/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/zsl-blog/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/zsl-blog/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/zsl-blog/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Bash-命令下达"><span class="post-toc-number">1.</span> <span class="post-toc-text">Bash 命令下达</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#type-查询内建命令"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">type:查询内建命令</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Bash-的变量功能"><span class="post-toc-number">2.</span> <span class="post-toc-text">Bash 的变量功能</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变量取用"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">:变量取用</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变量赋值守则"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">变量赋值守则</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变量的有效范围"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">变量的有效范围</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#几个常用变量"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">几个常用变量:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#export-自定义变量转环境变量"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">export:自定义变量转环境变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#locale-查看语系变量"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">locale:查看语系变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#read-输入变量"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">read:输入变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#declare-typeset-申明变量"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">declare/typeset:申明变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#array-数组变量"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">array:数组变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ulimit-系统限制变量"><span class="post-toc-number">2.10.</span> <span class="post-toc-text">ulimit:系统限制变量</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变量内容的删除、取代与替换"><span class="post-toc-number">2.11.</span> <span class="post-toc-text">变量内容的删除、取代与替换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#变量测试与替换"><span class="post-toc-number">2.12.</span> <span class="post-toc-text">变量测试与替换</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#alias-别名配置"><span class="post-toc-number">3.</span> <span class="post-toc-text">alias:别名配置</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#history-命令历史纪录"><span class="post-toc-number">4.</span> <span class="post-toc-text">history:命令历史纪录</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#查看历史命令"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">查看历史命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#运行历史命令"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">运行历史命令</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Bash-shell-的操作环境"><span class="post-toc-number">5.</span> <span class="post-toc-text">Bash shell 的操作环境</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#命令的搜寻顺序"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">命令的搜寻顺序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#bash-的进站信息"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">bash 的进站信息</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#login-shell"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">login shell</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#stty-终端的输入配置"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">stty:终端的输入配置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#set-终端的输出设置"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">set:终端的输出设置</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#通配符和特殊符号"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">通配符和特殊符号</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据流重导向"><span class="post-toc-number">6.</span> <span class="post-toc-text">数据流重导向</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#stdout-and-stderr"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">stdout and stderr</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#stdin"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">stdin</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#连续下达命令"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">连续下达命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#回传值-与-amp-amp-或"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">$?(回传值)与&&或||</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#pipe-线管命令"><span class="post-toc-number">7.</span> <span class="post-toc-text">pipe:线管命令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cut-截取字符串"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">cut:截取字符串</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#grep-截取行"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">grep:截取行</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#sort-排序"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">sort:排序</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#uniq-去重"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">uniq:去重</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#wc-计数"><span class="post-toc-number">7.5.</span> <span class="post-toc-text">wc:计数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tee-双向重导向"><span class="post-toc-number">7.6.</span> <span class="post-toc-text">tee:双向重导向</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tr-删除字符串或去重"><span class="post-toc-number">7.7.</span> <span class="post-toc-text">tr:删除字符串或去重</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#col-特殊符号转换"><span class="post-toc-number">7.8.</span> <span class="post-toc-text">col:特殊符号转换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#join-文件对比合并"><span class="post-toc-number">7.9.</span> <span class="post-toc-text">join:文件对比合并</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#paste-文件同行合并"><span class="post-toc-number">7.10.</span> <span class="post-toc-text">paste:文件同行合并</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#expand-TAB-转空格"><span class="post-toc-number">7.10.1.</span> <span class="post-toc-text">expand:[TAB]转空格</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#split-分割"><span class="post-toc-number">7.10.2.</span> <span class="post-toc-text">split:分割</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#xargs"><span class="post-toc-number">7.11.</span> <span class="post-toc-text">xargs</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#减号"><span class="post-toc-number">7.12.</span> <span class="post-toc-text">-:减号</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#date：时间日期"><span class="post-toc-number">8.</span> <span class="post-toc-text">date：时间日期</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#link-ln-make-link"><span class="post-toc-number">9.</span> <span class="post-toc-text">link/ln: make link</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本文相关"><span class="post-toc-number">10.</span> <span class="post-toc-text">本文相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考"><span class="post-toc-number">10.1.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修订"><span class="post-toc-number">10.2.</span> <span class="post-toc-text">修订</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Bash常用命令 
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Bash常用命令 &url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Bash常用命令/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Bash常用命令 &url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Bash常用命令/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Bash常用命令/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Bash常用命令/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=Bash常用命令 &summary=&pics=https://shanlanmi.github.io/zsl-blogimg/favicon.png&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Bash常用命令/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="Bash-命令下达"><a href="#Bash-命令下达" class="headerlink" title="Bash 命令下达"></a>Bash 命令下达</h2><ol>
+<li><p>自动补全:[TAB]</p>
+<p> 可以命令补全or文件补全.<br> [c+TAB+TAB]:查询c开头的所有命令.</p>
+</li>
+<li><p>命令分行:[\+ENTER]:</p>
+</li>
+<li><p>清屏:<code>clear</code></p>
+</li>
+<li>清屏:<code>clear</code></li>
+</ol>
+<h3 id="type-查询内建命令"><a href="#type-查询内建命令" class="headerlink" title="type:查询内建命令"></a>type:查询内建命令</h3><pre><code>type [-] name
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-</td>
+<td>显示name是外部命令还是内部命令.</td>
+</tr>
+<tr>
+<td><strong>-t</strong></td>
+<td><strong>file:外部命令</strong><br><strong>alias:别名配置命令</strong><br><strong>builtin:内建命令</strong></td>
+</tr>
+<tr>
+<td>-p</td>
+<td>外部命令显示完整文件名.</td>
+</tr>
+<tr>
+<td>-a</td>
+<td>列出所有PATH中的name命令.</td>
+</tr>
+</tbody>
+</table>
+<p>注:type主要找运行档的档名.</p>
+<h2 id="Bash-的变量功能"><a href="#Bash-的变量功能" class="headerlink" title="Bash 的变量功能"></a>Bash 的变量功能</h2><h3 id="变量取用"><a href="#变量取用" class="headerlink" title=":变量取用"></a>:变量取用</h3><pre><code>echo $PATH
+echo ${PATH} #两者均可
+</code></pre><h3 id="变量赋值守则"><a href="#变量赋值守则" class="headerlink" title="变量赋值守则"></a>变量赋值守则</h3><ul>
+<li>等号连接<code>name=mi</code>.</li>
+<li>等号两边不能接空格符.</li>
+<li>变量名只能是英文和数字,且开头字符不能是数字.</li>
+<li>变量内容里有空格,则用引号括起来.<pre><code>var=&quot;lang is $LANG&quot; #显示lang is en_US
+var=&#39;lang is $LANG&#39; #显示lang is $LANG
+</code></pre></li>
+<li>跳脱符号:<code>\</code>.</li>
+<li>取用命令 &#96;cmd` 或 <strong>$(cmd)</strong>.</li>
+<li>自增变量用<code>&quot;$变量&quot;</code>或<code>${变量}</code>.<pre><code>PATH=&quot;$PATH&quot;:/home/bin
+PATH=${PATH}:home/bin
+</code></pre></li>
+<li>推荐:大写字符-系统默认变量 ; 小写字符-自定义变量</li>
+<li>取消变量<code>unset 变量</code></li>
+</ul>
+<h3 id="变量的有效范围"><a href="#变量的有效范围" class="headerlink" title="变量的有效范围"></a>变量的有效范围</h3><ul>
+<li>环境变量=全局变量 ; 自定义变量=局部变量</li>
+<li>env:查看环境变量</li>
+<li>set:查看所有变量</li>
+</ul>
+<h3 id="几个常用变量"><a href="#几个常用变量" class="headerlink" title="几个常用变量:"></a>几个常用变量:</h3><ul>
+<li>PS1:提示字符的配置.<br>  设置PS1:<code>PS1=&#39;[\u@\h \w \A #\#]\$&#39;</code><ul>
+<li><code>\d</code>:日期WMD</li>
+<li><code>\H</code>:完整主机名</li>
+<li><code>\h</code>:主机名前缀</li>
+<li><code>\t</code>:24小时制[HH:MM:SS]</li>
+<li><code>\T</code>:12小时制[HH:MM:SS]</li>
+<li><code>\A</code>:24小时制[HH:MM]</li>
+<li><code>\@</code>:12小时制[am/pm]</li>
+<li><code>\u</code>:使用者账号名</li>
+<li><code>\v</code>:BASH版本</li>
+<li><code>\w</code>:完整工作目录</li>
+<li><code>\W</code>:当前工作目录的最后目录名</li>
+<li><code>\#</code>:命令序号</li>
+<li><code>\$</code>:root下是#,常规是$</li>
+</ul>
+</li>
+<li>$: Shell的线程代号PID.</li>
+<li>?: 上个命令的回传值,运行成功则为0</li>
+</ul>
+<h3 id="export-自定义变量转环境变量"><a href="#export-自定义变量转环境变量" class="headerlink" title="export:自定义变量转环境变量"></a>export:自定义变量转环境变量</h3><p>子程序继承父程序环境变量,但不继承自定义变量</p>
+<pre><code>export 变量
+export PATH=$PATH:~/[dir]
+</code></pre><p>环境变量转为自定义变量用declare</p>
+<h3 id="locale-查看语系变量"><a href="#locale-查看语系变量" class="headerlink" title="locale:查看语系变量"></a>locale:查看语系变量</h3><pre><code>loacale -m #显示可获得的语系
+</code></pre><table>
+<thead>
+<tr>
+<th>语系变量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LANG</td>
+<td>主语言的环境</td>
+</tr>
+<tr>
+<td>LC_CTYPE</td>
+<td>字符(文字)辨别的编码</td>
+</tr>
+<tr>
+<td>LC_NUMERIC</td>
+<td>数字系统</td>
+</tr>
+<tr>
+<td>LC_TIME</td>
+<td>时间系统</td>
+</tr>
+<tr>
+<td>LC_COLLATE</td>
+<td>字符串的比较与排序</td>
+</tr>
+<tr>
+<td>LC_MONETARY</td>
+<td>币值格式</td>
+</tr>
+<tr>
+<td>LC_MESSAGES</td>
+<td>信息显示内容</td>
+</tr>
+<tr>
+<td>LC_ALL</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="read-输入变量"><a href="#read-输入变量" class="headerlink" title="read:输入变量"></a>read:输入变量</h3><pre><code>read [-] variable
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-p</td>
+<td>可接提示字符</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>可接等待秒数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>逐行读取文件</strong></p>
+<h3 id="declare-typeset-申明变量"><a href="#declare-typeset-申明变量" class="headerlink" title="declare/typeset:申明变量"></a>declare/typeset:申明变量</h3><pre><code>declare [-] variable
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>申明为array类型</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>申明为integer类型</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>设为envronment(若+x,则取消env,改为自定义变量)</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>设为readonly类型</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>变量默认为字符串</li>
+<li>bash环境中,数值运算默认向下取整</li>
+</ul>
+<h3 id="array-数组变量"><a href="#array-数组变量" class="headerlink" title="array:数组变量"></a>array:数组变量</h3><pre><code>var[1]=&quot;small mi&quot;
+</code></pre><h3 id="ulimit-系统限制变量"><a href="#ulimit-系统限制变量" class="headerlink" title="ulimit:系统限制变量"></a>ulimit:系统限制变量</h3><h3 id="变量内容的删除、取代与替换"><a href="#变量内容的删除、取代与替换" class="headerlink" title="变量内容的删除、取代与替换"></a>变量内容的删除、取代与替换</h3><table>
+<thead>
+<tr>
+<th>变量修改代码</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>${变量<strong>#</strong>关键词}</td>
+<td>从头开始匹配关键词,删除最短</td>
+</tr>
+<tr>
+<td>${变量<strong>##</strong>关键词}</td>
+<td>从头开始匹配关键词,删除最长</td>
+</tr>
+<tr>
+<td>${变量<strong>%</strong>关键词}</td>
+<td>从尾开始匹配关键词,删除最短</td>
+</tr>
+<tr>
+<td>${变量<strong>%%</strong>关键词}</td>
+<td>从尾开始匹配关键词,删除最长</td>
+</tr>
+<tr>
+<td>${变量<strong>/</strong>旧字符串/新字符串}</td>
+<td>替换第一个旧字符串</td>
+</tr>
+<tr>
+<td>${变量<strong>//</strong>旧字符串/新字符串}</td>
+<td>替换所有旧字符串</td>
+</tr>
+</tbody>
+</table>
+<pre><code>a=123456789
+$echo ${a#*6} #注意通配符的使用
+789
+</code></pre><h3 id="变量测试与替换"><a href="#变量测试与替换" class="headerlink" title="变量测试与替换"></a>变量测试与替换</h3><table>
+<thead>
+<tr>
+<th>异变量测试代码</th>
+<th>old无配置</th>
+<th>old为空字符串</th>
+<th>old有配置</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>new=${old-ex}</td>
+<td>new=ex</td>
+<td>new=空</td>
+<td>new=old</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>new=${old:-ex}</strong></td>
+<td>new=ex</td>
+<td>new=ex</td>
+<td>new=old</td>
+<td>无有效配置就用缺省值</td>
+</tr>
+<tr>
+<td>new=${old+ex}</td>
+<td>new=空</td>
+<td>new=ex</td>
+<td>new=ex</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>new=${old:+ex}</strong></td>
+<td>new=空</td>
+<td>new=空</td>
+<td>new=ex</td>
+<td>存在有效配置就改为缺省值</td>
+</tr>
+<tr>
+<td>new=${old=ex}</td>
+<td>old=ex<br>new=ex</td>
+<td>old不变<br>new=空</td>
+<td>old不变<br>new=old</td>
+<td></td>
+</tr>
+<tr>
+<td><strong>new=${old:=ex}</strong></td>
+<td>old=ex<br>new=ex</td>
+<td>old=ex<br>new=ex</td>
+<td>old不变<br>new=old</td>
+<td>无有效置就都改为缺省值</td>
+</tr>
+<tr>
+<td>new=${old?string}</td>
+<td>string输出到stderr</td>
+<td>new=空</td>
+<td>new=old</td>
+<td></td>
+</tr>
+<tr>
+<td>new=${old:?string}</td>
+<td>string输出到stderr</td>
+<td>string输出到stderr</td>
+<td>new=old</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>同变量测试代码</th>
+<th>var无配置</th>
+<th>var为空字符串</th>
+<th>var有配置</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>var=${var=ex}</strong></td>
+<td>var=ex</td>
+<td>var=空</td>
+<td>var不变</td>
+<td>测试空值or无配置?</td>
+</tr>
+<tr>
+<td>var=${var:=ex}</td>
+<td>var=ex</td>
+<td>var=ex</td>
+<td>var不变</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="alias-别名配置"><a href="#alias-别名配置" class="headerlink" title="alias:别名配置"></a>alias:别名配置</h2><pre><code>alias rm=&#39;rm -i&#39; #配置别名
+unalias rm #移除别名
+</code></pre><p>alias命令只能在bash注销前有效,若要永久有效,需要在配置文件(~/.bashrc)中设置.</p>
+<p>用alias创建自定义命令:</p>
+<ol>
+<li>测试自定义命令cmd.</li>
+<li>设置命令:<code>alias mycmd=&quot;cmd&quot;</code>.</li>
+<li>设置变量:MYCMD=$(mycmd).</li>
+<li>将设置写入.bashrc中.</li>
+</ol>
+<h2 id="history-命令历史纪录"><a href="#history-命令历史纪录" class="headerlink" title="history:命令历史纪录"></a>history:命令历史纪录</h2><h3 id="查看历史命令"><a href="#查看历史命令" class="headerlink" title="查看历史命令"></a>查看历史命令</h3><ol>
+<li><p>用[↑][↓]快捷翻看.</p>
+</li>
+<li><p>用<code>cat ~/.bash_history</code>查看bash命令记录文件.</p>
+</li>
+<li><p>用命令行查看</p>
+<pre><code> history [n] #列出最近n条命令
+ history [-] histfiles
+</code></pre></li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-c</td>
+<td>清除history</td>
+</tr>
+<tr>
+<td>-a</td>
+<td>当前histroy添加到histfiles中</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>读取histfile到当前history</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>当前history写入histfiles</td>
+</tr>
+</tbody>
+</table>
+<h3 id="运行历史命令"><a href="#运行历史命令" class="headerlink" title="运行历史命令"></a>运行历史命令</h3><pre><code>!n #运行第n笔命令
+!! #运行上一条命令
+!cmd #搜索最近cmd开头的命令,并运行
+</code></pre><p>当bash注销时,history才会更新到histfiles.</p>
+<h2 id="Bash-shell-的操作环境"><a href="#Bash-shell-的操作环境" class="headerlink" title="Bash shell 的操作环境"></a>Bash shell 的操作环境</h2><h3 id="命令的搜寻顺序"><a href="#命令的搜寻顺序" class="headerlink" title="命令的搜寻顺序"></a>命令的搜寻顺序</h3><ol>
+<li>以相对/绝对路径运行命令;</li>
+<li>由 alias 找到该命令来运行；</li>
+<li>由 bash 内建的 (builtin) 命令来运行；</li>
+<li>透过 $PATH 这个变量的顺序搜寻到的第一个命令来运行.   </li>
+</ol>
+<h3 id="bash-的进站信息"><a href="#bash-的进站信息" class="headerlink" title="bash 的进站信息"></a>bash 的进站信息</h3><p>进站欢迎字符串文件:/etc/issue<br>远程登录通知字符串文件:/etc/motd</p>
+<ul>
+<li><code>\d</code>本地端日期</li>
+<li><code>\l</code>显示第几个终端机接口</li>
+<li><code>\m</code>显示硬件的等级</li>
+<li><code>\n</code>主机网络名称</li>
+<li><code>\o</code>显示domain name</li>
+<li><code>\r</code>操作系统版本</li>
+<li><code>\t</code>本地端时间</li>
+<li><code>\s</code>操作系统名称</li>
+<li><code>\v</code>操作系统版本</li>
+</ul>
+<h3 id="login-shell"><a href="#login-shell" class="headerlink" title="login shell"></a>login shell</h3><table>
+<thead>
+<tr>
+<th>差异</th>
+<th>login shell</th>
+<th>non-login shell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>登录</td>
+<td>需要输入密码</td>
+<td>无需密码</td>
+</tr>
+<tr>
+<td>读取配置</td>
+<td>1. /etc/profile整体配置<br>2. /etc/inputrc热键<br>3. /etc/profile.d/*.sh别名<br>4. /etc/sysconfig/i18n语系<br>5. 读取个人配置文件</td>
+<td>依照如下顺序读取其中一个:<br>1. ~/.bash_profile <br> 2. ~/.bash_login<br>3. ~/.profile</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>命令<code>source ~/.bashrc</code>或<code>. ~/.bashrc</code>读取bash配置并生效</li>
+<li>/etc/man.config: man的查找路径变量MANPATH在此设置内</li>
+<li>~/.bash_history: bash的历史文件</li>
+<li>~/.bash_logout: 记录注销bash后的任务运行情况</li>
+<li>/etc/shells: 记录使用者能用的shell.</li>
+<li>/etc/passwd: 登录取得默认shell.</li>
+<li>/etc/inputrc: bash按键配置.</li>
+<li>~/.bash_history: 查看bash命令记录.</li>
+</ul>
+<h3 id="stty-终端的输入配置"><a href="#stty-终端的输入配置" class="headerlink" title="stty:终端的输入配置"></a>stty:终端的输入配置</h3><pre><code>stty cmd #添加到stty设置
+stty -a #列出所有stty设置
+</code></pre><p>几个重要的代表意义:</p>
+<ul>
+<li>eof   : End of file,结束输入</li>
+<li>erase : 向后删除字符</li>
+<li>intr  : interrupt,中断目前正在 run 的程序</li>
+<li>kill  : 删除在目前命令列上的所有文字</li>
+<li>quit  : quit,退出目前正在 run 的程序</li>
+<li>start : 在某个程序停止后，重新启动他的 output</li>
+<li>stop  : 停止目前屏幕的输出；</li>
+<li>susp  : terminal stop,停止正在 run 的程序</li>
+</ul>
+<h3 id="set-终端的输出设置"><a href="#set-终端的输出设置" class="headerlink" title="set:终端的输出设置"></a>set:终端的输出设置</h3><pre><code>echo $- #变量$-为set所有配置,默认为himBH
+set [-]
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-u</td>
+<td>当使用未配置变量时，会显示错误信息,默认不激活</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>在信息被输出前，会先显示信息的原始内容,默认不激活</td>
+</tr>
+<tr>
+<td>-x</td>
+<td>在命令被运行前，会显示命令内容(前面有 ++ 符号),默认不激活</td>
+</tr>
+<tr>
+<td>-C</td>
+<td>若使用 &gt; 等,则若文件存在时,该文件不会被覆盖,默认不激活</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>默认组合键</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ctrl + C</td>
+<td>终止目前的命令</td>
+</tr>
+<tr>
+<td>Ctrl + D</td>
+<td>输入结束 (EOF)</td>
+</tr>
+<tr>
+<td>Ctrl + M</td>
+<td>Enter</td>
+</tr>
+<tr>
+<td>Ctrl + S</td>
+<td>暂停屏幕的输出</td>
+</tr>
+<tr>
+<td>Ctrl + Q</td>
+<td>恢复屏幕的输出</td>
+</tr>
+<tr>
+<td>Ctrl + U</td>
+<td>在提示字符下，将整列命令删除</td>
+</tr>
+<tr>
+<td>Ctrl + Z</td>
+<td>暂停目前的命令</td>
+</tr>
+</tbody>
+</table>
+<h3 id="通配符和特殊符号"><a href="#通配符和特殊符号" class="headerlink" title="通配符和特殊符号"></a>通配符和特殊符号</h3><table>
+<thead>
+<tr>
+<th>通配符号</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>代表”任意个”任意字符</td>
+</tr>
+<tr>
+<td>?</td>
+<td>代表”必有一个”任意字符</td>
+</tr>
+<tr>
+<td>[ ]</td>
+<td>代表”必有一个”在括号内的字符</td>
+</tr>
+<tr>
+<td>[ - ]</td>
+<td>代表”在编码顺序内的所有字符”,例[0-9]代表0到9之间的所有数字</td>
+</tr>
+<tr>
+<td>[^ ]</td>
+<td>表示”必有一个,反向选择”,例[^abc]代表必有一个非abc的字符</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>特殊符号</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>#</td>
+<td>批注符号</td>
+</tr>
+<tr>
+<td>\</td>
+<td>跳脱符号</td>
+</tr>
+<tr>
+<td>&#124;</td>
+<td>管线命令分隔号(pipe)</td>
+</tr>
+<tr>
+<td>;</td>
+<td>连续命令分隔符</td>
+</tr>
+<tr>
+<td>~</td>
+<td>HOME目录</td>
+</tr>
+<tr>
+<td>$</td>
+<td>变量前导符</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>背景工作符</td>
+</tr>
+<tr>
+<td>!</td>
+<td>逻辑非</td>
+</tr>
+<tr>
+<td>/</td>
+<td>路径分隔符</td>
+</tr>
+<tr>
+<td>&gt;,&gt;&gt;</td>
+<td>数据流输出导向,分别为取代和累加</td>
+</tr>
+<tr>
+<td>&lt;,&lt;&lt;</td>
+<td>数据流输入导向</td>
+</tr>
+<tr>
+<td>‘ ‘</td>
+<td>单引号,不具有变量置换功能</td>
+</tr>
+<tr>
+<td>“ “</td>
+<td>双引号,具有变量置换功能</td>
+</tr>
+<tr>
+<td>` `</td>
+<td>引用命令结果,推荐用$()</td>
+</tr>
+<tr>
+<td>( )</td>
+<td>子shell起始与结束</td>
+</tr>
+<tr>
+<td>{ }</td>
+<td>命令区块的组合</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据流重导向"><a href="#数据流重导向" class="headerlink" title="数据流重导向"></a>数据流重导向</h2><table>
+<thead>
+<tr>
+<th>传输类型</th>
+<th>代码</th>
+<th>特殊符号</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>标准输入(stdin)</td>
+<td>0</td>
+<td>&lt;或&lt;&lt;</td>
+</tr>
+<tr>
+<td>标准输出(stdout)</td>
+<td>1</td>
+<td>&gt;或&gt;&gt;</td>
+</tr>
+<tr>
+<td>标准错误输出(stderr)</td>
+<td>2</td>
+<td>2&gt;或2&gt;&gt;</td>
+</tr>
+</tbody>
+</table>
+<h3 id="stdout-and-stderr"><a href="#stdout-and-stderr" class="headerlink" title="stdout and stderr"></a>stdout and stderr</h3><ul>
+<li>若输出文件不存在,将自动创建.</li>
+<li>用<code>&gt;</code>输出时,文件会清空后在写入.</li>
+<li>信息黑洞:/dev/null,会吃掉所有导入的信息.</li>
+<li>用<code>&gt;list 2&gt;list</code>输出到同一个文件,信息会混乱,改用<code>&gt;list 2&gt;&amp;1</code>或<code>&amp;&gt;list</code>.<pre><code>  find /home -name .bashrc &gt;list_right 2&gt;list_error #sdtout和sdterr分别输出
+  find /home -name .bashrc &gt;list 2&gt;&amp;1 #两者均输出到同个文件(方式一)
+  find /home -name .bashrc &amp;&gt;list #两者均输出到同个文件(方式二)
+</code></pre></li>
+</ul>
+<h3 id="stdin"><a href="#stdin" class="headerlink" title="stdin"></a>stdin</h3><pre><code>cat &gt;catfile &lt;~/.bashrc #以.bashrc为输入内容,输出到catfile中
+cat &gt;catfile &lt;&lt;&quot;eof&quot; #输出到catfile,以eof为结束控制符
+</code></pre><h3 id="连续下达命令"><a href="#连续下达命令" class="headerlink" title="连续下达命令"></a>连续下达命令</h3><pre><code>cmd; cmd
+</code></pre><p>依次下达命令用<code>cmd &amp;&amp; cmd</code></p>
+<h3 id="回传值-与-amp-amp-或"><a href="#回传值-与-amp-amp-或" class="headerlink" title="$?(回传值)与&amp;&amp;或||"></a>$?(回传值)与&amp;&amp;或||</h3><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cmd1 &amp;&amp; cmd2</td>
+<td>若cmd1运行正确,则运行cmd2,反正则不运行</td>
+</tr>
+<tr>
+<td>cmd1 &#124;&#124; cmd2</td>
+<td>若cmd1运行错误,则运行cmd2,反之则不运行</td>
+</tr>
+</tbody>
+</table>
+<pre><code>cmd1 || cmd2 &amp;&amp; cmd3 #从左往右依次判断运行
+</code></pre><p>以(|| cmd2)为一组,来判断是运行还是跳过</p>
+<h2 id="pipe-线管命令"><a href="#pipe-线管命令" class="headerlink" title="pipe:线管命令"></a>pipe:线管命令</h2><p>线管命令的意义在于处理程序的输出结果,以得到我们要的数据.</p>
+<pre><code>cmd1 | pipe_cmd1 | pipe_cmd2
+</code></pre><ul>
+<li>pipe_cmd必须是能够把前一个命令的output作为input</li>
+<li>线管命令会忽略error output</li>
+</ul>
+<h3 id="cut-截取字符串"><a href="#cut-截取字符串" class="headerlink" title="cut:截取字符串"></a>cut:截取字符串</h3><p>cut命令以行为单位分析,以字符串为单位截取.</p>
+<pre><code>cut -d &#39;分隔符&#39; -f fields #分隔字符,按段截取
+cut -c 字符区间 #以字符为单位,截取固定字符区间
+</code></pre><p>例子:</p>
+<pre><code>echo $PATH | cut -d &#39;:&#39; -f 3,5 #截取段3和段5
+last | cut -c 12- #每行从第12个字符开始截取
+last | cut -c 12-20 #每行截取第12~20字符
+</code></pre><h3 id="grep-截取行"><a href="#grep-截取行" class="headerlink" title="grep:截取行"></a>grep:截取行</h3><p>grep以行为单位分析,以行为单位截取.</p>
+<pre><code>grep [-] [--color=auto] &#39;搜寻字符串&#39; filename
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>将binary文件以text文件的方式搜寻数据</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>计算找到’搜寻字符串’的次数</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>忽略大小</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>顺便输出行号</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>反向选择，即显示出没有 ‘搜寻字符串’ 内容的行</td>
+</tr>
+<tr>
+<td>–color=auto</td>
+<td>高亮关键词</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sort-排序"><a href="#sort-排序" class="headerlink" title="sort:排序"></a>sort:排序</h3><p>排序,排序与语系的编码有关,建议使用LANG=C来让语系统一</p>
+<pre><code>sort [-] [file or stdin]
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-f</td>
+<td>忽略大小写</td>
+</tr>
+<tr>
+<td>-b</td>
+<td>忽略最前面的空格符部分</td>
+</tr>
+<tr>
+<td>-M</td>
+<td>以月份的名字来排序，例如 JAN, DEC 等等的排序方法</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>使用<strong>纯数字</strong>进行排序(默认是以文字型态来排序的)</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>反向排序</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>就是uniq,相同的数据中，仅出现一行代表</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>分隔符，默认是用 [tab] 键来分隔,多与-k连用</td>
+</tr>
+<tr>
+<td>-k</td>
+<td>以那个区间 (field) 来进行排序的意思</td>
+</tr>
+</tbody>
+</table>
+<h3 id="uniq-去重"><a href="#uniq-去重" class="headerlink" title="uniq:去重"></a>uniq:去重</h3><pre><code>uniq [-]
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-i</td>
+<td>忽略大小写</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>计数</td>
+</tr>
+</tbody>
+</table>
+<p>举例:</p>
+<pre><code>last | cut -d&#39; &#39; -f1 | sort |uniq 
+</code></pre><h3 id="wc-计数"><a href="#wc-计数" class="headerlink" title="wc:计数"></a>wc:计数</h3><pre><code>wc #列出行数,字数,字符数
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-l</td>
+<td>仅列出行</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>仅列出字数(英)</td>
+</tr>
+<tr>
+<td>-m</td>
+<td>字符数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tee-双向重导向"><a href="#tee-双向重导向" class="headerlink" title="tee:双向重导向"></a>tee:双向重导向</h3><p>tee可以让outout的同时也存一份到file中.</p>
+<pre><code>tee [-] file
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>append累加模式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tr-删除字符串或去重"><a href="#tr-删除字符串或去重" class="headerlink" title="tr:删除字符串或去重"></a>tr:删除字符串或去重</h3><pre><code>tr [-] str1 [str2] #无参数时,用str2替换str1
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-d</td>
+<td>删除string</td>
+</tr>
+<tr>
+<td>-s</td>
+<td>去掉重复的字符</td>
+</tr>
+</tbody>
+</table>
+<p>例如:</p>
+<pre><code>last | tr &#39;[a-z]&#39; &#39;[A-Z]&#39; #小写改大写
+</code></pre><h3 id="col-特殊符号转换"><a href="#col-特殊符号转换" class="headerlink" title="col:特殊符号转换"></a>col:特殊符号转换</h3><pre><code>col [-]
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-x</td>
+<td>将tab键转为对等的空格</td>
+</tr>
+<tr>
+<td>-b</td>
+<td>在文字内有(/)时,仅保留反斜杠后接的那个字符</td>
+</tr>
+</tbody>
+</table>
+<p>例如:</p>
+<pre><code>man col | col -b #去掉man-page的(^)符号
+</code></pre><h3 id="join-文件对比合并"><a href="#join-文件对比合并" class="headerlink" title="join:文件对比合并"></a>join:文件对比合并</h3><pre><code>jion [-] file1 file2
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-t</td>
+<td>分隔符(默认是空格),并且比对第一个字段的数据，<br>如果两个文件相同，则将两笔数据联成一行，且第一个字段放在第一个！</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>忽略大小写</td>
+</tr>
+<tr>
+<td>-1</td>
+<td>第一个文件要用那个字段来分析</td>
+</tr>
+<tr>
+<td>-2</td>
+<td>第二个文件要用那个字段来分析</td>
+</tr>
+</tbody>
+</table>
+<p>例如:</p>
+<pre><code>$head -n 3 /etc/passwd /etc/group
+
+==&gt; /etc/passwd &lt;==
+root:x:0:0:root:/root:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+==&gt; /etc/group &lt;==
+root:x:0:root
+bin:x:1:root,bin,daemon
+daemon:x:2:root,bin,daemon
+
+$join -t &#39;:&#39; -1 4 /etc/passwd -2 3 /etc/group
+
+0:root:x:0:root:/root:/bin/bash:root:x:root
+1:bin:x:1:bin:/bin:/sbin/nologin:bin:x:root,bin,daemon
+2:daemon:x:2:daemon:/sbin:/sbin/nologin:daemon:x:root,bin,daemon
+</code></pre><h3 id="paste-文件同行合并"><a href="#paste-文件同行合并" class="headerlink" title="paste:文件同行合并"></a>paste:文件同行合并</h3><pre><code>paste [-] file1 file2
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-d</td>
+<td>分隔符(默认是[tab]</td>
+</tr>
+<tr>
+<td>-</td>
+<td>file部分写成-,则表示来自stdinput</td>
+</tr>
+</tbody>
+</table>
+<p>例如:</p>
+<pre><code>paste /etc/passwd -
+</code></pre><h4 id="expand-TAB-转空格"><a href="#expand-TAB-转空格" class="headerlink" title="expand:[TAB]转空格"></a>expand:[TAB]转空格</h4><pre><code>expand [-t] file  #-t后面自定义一个[tab]相当于几个空格
+</code></pre><h4 id="split-分割"><a href="#split-分割" class="headerlink" title="split:分割"></a>split:分割</h4><pre><code>split [-] file PREFIX
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-b</td>
+<td>设置文件大小,后接单位如:b,k,m</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>以行数来分割,后接设置行数</td>
+</tr>
+<tr>
+<td>PREFIX</td>
+<td>前导文件名</td>
+</tr>
+</tbody>
+</table>
+<p>例子:</p>
+<pre><code>cd /tmp;split -b 300k /etc/termcap termcap
+cat termcap* &gt;&gt; termcapback #分割后的合并
+ls -al / | split -l 10 - lsroot #没有file时用-替代
+</code></pre><h3 id="xargs"><a href="#xargs" class="headerlink" title="xargs"></a>xargs</h3><p>将stdin转化成参数供cmd使用</p>
+<pre><code>xargs [-] cmd
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-0</td>
+<td>将stdin中的(例如` \ 空格键)特殊字符还原成一般字符</td>
+</tr>
+<tr>
+<td>-e</td>
+<td>EOF,后面接一个结束字符串</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>在运行每个命令的 argument 时,都会询问使用者</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>后面接次数，每次command命令运行时,要使用几个参数</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>当 xargs 后面没有接任何的命令时，默认执行 echo输出</li>
+<li>xargs可以将非线管命令转化成线管命令使用</li>
+</ul>
+<p>例子:</p>
+<pre><code>find /sbin -perm +7000 | xargs ls -l
+</code></pre><h3 id="减号"><a href="#减号" class="headerlink" title="-:减号"></a>-:减号</h3><p>在线管命令中,某些命令需要用到文件名,此时可以用(-)来代替stdin或stdout<br>例子:</p>
+<pre><code>tar -cvf - /home | tar -xvf -
+</code></pre><h2 id="date：时间日期"><a href="#date：时间日期" class="headerlink" title="date：时间日期"></a>date：时间日期</h2><ul>
+<li>前一个月：2015-04<pre><code>MONTH=`date -d &#39;-1 month&#39; +%Y-%m`
+</code></pre></li>
+<li>本月第一天：2015-05-01<pre><code>INMONTH=`date  +%Y-%m-01`
+</code></pre></li>
+<li>前一天：2015-05-14<pre><code>MODAY=`date -d &#39;-1 day&#39; +%Y-%m-%d`
+</code></pre></li>
+<li>第二天：2015-05-16<pre><code>NEXTDAY=`date -d &#39;1 day&#39; +%Y-%m-%d`
+</code></pre></li>
+<li>当天：2015-05-15<pre><code>DAY=`date +%Y-%m-%d`
+</code></pre></li>
+<li>当天：15<pre><code>INDAY=`date +%d`
+</code></pre></li>
+<li>当前时间：14:55:49<pre><code>TIME=`date +%H:%M%S`
+</code></pre></li>
+</ul>
+<h2 id="link-ln-make-link"><a href="#link-ln-make-link" class="headerlink" title="link/ln: make link"></a>link/ln: make link</h2><pre><code>sudo ln -s /usr/lib/node_modules/strongloop/bin/slc.js /usr/bin/slc
+</code></pre><h2 id="本文相关"><a href="#本文相关" class="headerlink" title="本文相关"></a>本文相关</h2><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="http://vbird.dic.ksu.edu.tw/linux_basic/0320bash.php" target="_blank" rel="external">鸟哥的Linux私房菜</a><h3 id="修订"><a href="#修订" class="headerlink" title="修订"></a>修订</h3>2015-12-29:第一版</li>
+</ul>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/Bash常用命令/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/Bash常用命令/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/用命令行删除文件不用那么小心啦/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/Homebrew/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/zsl-blog/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/zsl-blog/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/zsl-blog/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/zsl-blog/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/zsl-blog/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/zsl-blog/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

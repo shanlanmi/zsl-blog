@@ -1,0 +1,1505 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            AngularJS | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="img/favicon.png">
+    <link rel="icon" sizes="192x192" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="AngularJS | 张圣兰">
+    <meta property="og:image" content="img/favicon.png" />
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="AngularJS | 张圣兰">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/AngularJS/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "AngularJS",
+    "url": "https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/AngularJS/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/zsl-blog/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/zsl-blog/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/zsl-blog/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/zsl-blog/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/zsl-blog/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Intro"><span class="post-toc-number">1.</span> <span class="post-toc-text">Intro</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Modules"><span class="post-toc-number">2.</span> <span class="post-toc-text">Modules</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Load-the-Library"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Load the Library</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Define-a-a-module"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Define a a module</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Modules-and-Controllers-in-Files"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Modules and Controllers in Files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Functions-can-Pollute-the-Global-Namespace"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Functions can Pollute the Global Namespace</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Controller"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">Controller</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AngularJS-Directives"><span class="post-toc-number">3.</span> <span class="post-toc-text">AngularJS Directives</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AngularJS-Expressions"><span class="post-toc-number">4.</span> <span class="post-toc-text">AngularJS Expressions</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Writing"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Writing</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Difference-between-AngularJS-and-JavaScript"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Difference between AngularJS and JavaScript</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Angular-Controllers"><span class="post-toc-number">5.</span> <span class="post-toc-text">Angular Controllers</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AngularJS-Controllers"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">AngularJS Controllers</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Controller-Methods"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Controller Methods</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Angular-Scopes"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Angular Scopes</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Angular-Filters"><span class="post-toc-number">6.</span> <span class="post-toc-text">Angular Filters</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Filters-Reference"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">Filters Reference</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Adding-Filter"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">Adding Filter</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#undefined"><span class="post-toc-number"></span> <span class="post-toc-text">Price: {{ price | currency }}</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Filter-Input"><span class="post-toc-number">0.1.</span> <span class="post-toc-text">Filter Input</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Custom-Filters"><span class="post-toc-number">0.2.</span> <span class="post-toc-text">Custom Filters</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#AngularJS-HTML-ELement"><span class="post-toc-number">1.</span> <span class="post-toc-text">AngularJS HTML ELement</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Angular-Tables"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Angular Tables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Angular-Forms"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Angular Forms</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Angular-Select"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Angular Select</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Radiobuttons"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Radiobuttons</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Selectbox"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Selectbox</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Angular-Validation"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Angular Validation</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Angular-DOM"><span class="post-toc-number">2.</span> <span class="post-toc-text">Angular DOM</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#the-ng-disabled-directive"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">the ng-disabled directive</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-ng-show-Directive"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">The ng-show Directive</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-ng-hide-Directive"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">The ng-hide Directive</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Angular-Events"><span class="post-toc-number">3.</span> <span class="post-toc-text">Angular Events</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Angular-SQL"><span class="post-toc-number">4.</span> <span class="post-toc-text">Angular SQL</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Angular-Services"><span class="post-toc-number">5.</span> <span class="post-toc-text">Angular Services</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#location-service"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">location service</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-http-Service"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">The $http Service</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Methods"><span class="post-toc-number">5.2.1.</span> <span class="post-toc-text">Methods</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Properties"><span class="post-toc-number">5.2.2.</span> <span class="post-toc-text">Properties</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JSON"><span class="post-toc-number">5.2.3.</span> <span class="post-toc-text">JSON</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-timeout-Service"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">The $timeout Service</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-interval-Service"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">The $interval Service</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-Your-Own-Service"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">Create Your Own Service</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Use-a-Custom-Service-Inside-a-Filter"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">Use a Custom Service Inside a Filter</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#A-Suctom-Service-for-localStorage"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">A Suctom Service for localStorage</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Angular-API"><span class="post-toc-number">6.</span> <span class="post-toc-text">Angular API</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#AngularJS-Global-API"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">AngularJS Global API</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Converting"><span class="post-toc-number">6.1.1.</span> <span class="post-toc-text">Converting</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Comparing"><span class="post-toc-number">6.1.2.</span> <span class="post-toc-text">Comparing</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JSON-1"><span class="post-toc-number">6.1.3.</span> <span class="post-toc-text">JSON</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Basic"><span class="post-toc-number">6.1.4.</span> <span class="post-toc-text">Basic</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Angular-Includes"><span class="post-toc-number">7.</span> <span class="post-toc-text">Angular Includes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Angular-Animations"><span class="post-toc-number">8.</span> <span class="post-toc-text">Angular Animations</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#undefined"><span class="post-toc-number"></span> <span class="post-toc-text">Hide the DIV: </span></a>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                AngularJS
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=AngularJS&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/AngularJS/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=AngularJS&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/AngularJS/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/AngularJS/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/AngularJS/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=AngularJS&summary=&pics=https://shanlanmi.github.io/zsl-blogimg/favicon.png&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/AngularJS/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><ul>
+<li>AngularJS is a <strong>JavaScript</strong> <strong>framework</strong>. It can be added to an HTML page with a <code>&lt;script&gt;</code> tag.</li>
+<li>AngularJS extends HTML attributes with <strong>Directives</strong>, and binds data to HTML with <strong>Expressions</strong>.</li>
+</ul>
+<h2 id="Modules"><a href="#Modules" class="headerlink" title="Modules"></a>Modules</h2><ul>
+<li>An AngularJS module <strong>defines</strong> an application.</li>
+<li>The module is a container for the different <strong>parts</strong> of an application.</li>
+<li>The module is a container for the application <strong>controllers</strong>.</li>
+<li>Controllers <strong>always</strong> belong to a module.</li>
+<li>AngularJS MVVM<br><img src="https://s-media-cache-ak0.pinimg.com/736x/03/b8/b1/03b8b1f37dd3b9327fcd9025f2f33a51.jpg" alt=""></li>
+</ul>
+<h3 id="Load-the-Library"><a href="#Load-the-Library" class="headerlink" title="Load the Library"></a>Load the Library</h3><p>It is recommended that you load the AngularJS library either in the <code>&lt;head&gt;</code> or at the start of the <code>&lt;body&gt;</code>.<br>AngularJS starts <strong>automatically</strong> when the web page has loaded.</p>
+<h3 id="Define-a-a-module"><a href="#Define-a-a-module" class="headerlink" title="Define a a module"></a>Define a a module</h3><ul>
+<li>The [] parameter in the module definition can be used to define dependent modules.</li>
+<li>Without the [] parameter, you are <strong>not</strong> creating a new module, but retrieving an existing one.</li>
+</ul>
+<h3 id="Modules-and-Controllers-in-Files"><a href="#Modules-and-Controllers-in-Files" class="headerlink" title="Modules and Controllers in Files"></a>Modules and Controllers in Files</h3><p>It is common in AngularJS applications to put the <strong>module</strong> and the <strong>controllers</strong> in JavaScript files.</p>
+<h3 id="Functions-can-Pollute-the-Global-Namespace"><a href="#Functions-can-Pollute-the-Global-Namespace" class="headerlink" title="Functions can Pollute the Global Namespace"></a>Functions can Pollute the Global Namespace</h3><p>Global functions should be avoided in JavaScript. They can easily be overwritten or destroyed by other scripts.<br>AngularJS modules reduces this problem, by keeping <strong>all</strong> functions <strong>local</strong> to the module.</p>
+<h3 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h3><h2 id="AngularJS-Directives"><a href="#AngularJS-Directives" class="headerlink" title="AngularJS Directives"></a>AngularJS Directives</h2><p><a href="http://shanlanmi.top/2016/04/07/WebDevelop-2016-05-21-angularjsDirective/" target="_blank" rel="external">http://shanlanmi.top/2016/04/07/WebDevelop-2016-05-21-angularjsDirective/</a></p>
+<h2 id="AngularJS-Expressions"><a href="#AngularJS-Expressions" class="headerlink" title="AngularJS Expressions"></a>AngularJS Expressions</h2><ul>
+<li>AngularJS expressions are much like JavaScript expressions: They can contain <strong>literals</strong>, <strong>operators</strong>, and <strong>variables</strong>.</li>
+</ul>
+<h3 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h3><ol>
+<li>&#123;{ expression }&#125;</li>
+<li><code>ng-bind=&quot;expression&quot;</code></li>
+</ol>
+<h3 id="Difference-between-AngularJS-and-JavaScript"><a href="#Difference-between-AngularJS-and-JavaScript" class="headerlink" title="Difference between AngularJS and JavaScript"></a>Difference between AngularJS and JavaScript</h3><table>
+<thead>
+<tr>
+<th>Support</th>
+<th>AngularJS</th>
+<th>JavaScript </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Contain literals, operators, and variables</td>
+<td>&radic;</td>
+<td>&radic;</td>
+</tr>
+<tr>
+<td>Can be written inside HTML</td>
+<td>X</td>
+<td>&radic;</td>
+</tr>
+<tr>
+<td>Conditionals, loops, and exceptions</td>
+<td>&radic;</td>
+<td>X</td>
+</tr>
+<tr>
+<td>Filters</td>
+<td>&radic;</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Angular-Controllers"><a href="#Angular-Controllers" class="headerlink" title="Angular Controllers"></a>Angular Controllers</h2><p>AngularJS controllers <strong>control</strong> the data of AngularJS applications.<br>AngularJS controllers are regular JavaScript <strong>Objects</strong>.</p>
+<h3 id="AngularJS-Controllers"><a href="#AngularJS-Controllers" class="headerlink" title="AngularJS Controllers"></a>AngularJS Controllers</h3><p>AngularJS applications are controlled by controllers.<br>The ng-controller directive defines the application controller.<br>A controller is a <strong>JavaScript</strong> <strong>Object</strong>, created by a standard JavaScript <strong>object</strong> <strong>constructor</strong>.</p>
+<ul>
+<li><code>ng-app=&quot;myApp&quot;</code>: Defines a AngularJS application, the application runs inside the element.</li>
+<li><code>ng-controller</code>: Defines a AngularJS controller.</li>
+<li><code>myCtrl</code>: The <code>myCtrl</code> function is a JavaScript <strong>function</strong>.</li>
+<li><code>$scope</code>: The owner of application variables and functions.</li>
+</ul>
+<h3 id="Controller-Methods"><a href="#Controller-Methods" class="headerlink" title="Controller Methods"></a>Controller Methods</h3><p>A controller can also have methods (variables as functions):</p>
+<h3 id="Angular-Scopes"><a href="#Angular-Scopes" class="headerlink" title="Angular Scopes"></a>Angular Scopes</h3><p>The scope is the binding part between the HTML (view) and the JavaScript (controller).<br>The scope is an <strong>object</strong> with the available properties and methods.</p>
+<p><strong>How to Use the Scope?</strong><br>When you make a controller in AngularJS, you pass the $scope object as an <strong>argument</strong>:</p>
+<p><strong>Understanding the Scope</strong><br>If we consider an AngularJS application to consist of:</p>
+<ul>
+<li>View, which is the HTML.</li>
+<li>Model, which is the data available for the current view.</li>
+<li>Controller, which is the JavaScript function that makes/changes/removes/controls the data.<br>Then the scope is the Model.The scope is a JavaScript object with properties and methods, which are available for both the view and the controller.</li>
+</ul>
+<p><strong>Root Scope</strong></p>
+<p>If a variable has the same name in both the current scope and in the rootScope, the application use the one in the <strong>current</strong> scope.</p>
+<h2 id="Angular-Filters"><a href="#Angular-Filters" class="headerlink" title="Angular Filters"></a>Angular Filters</h2><h3 id="Filters-Reference"><a href="#Filters-Reference" class="headerlink" title="Filters Reference"></a>Filters Reference</h3><p>Filters can be added in AngularJS to <strong>format</strong> data.</p>
+<table>
+<thead>
+<tr>
+<th>Filter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>currency</td>
+<td>Format a number to a currency format.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Format a date to a specified format.</td>
+</tr>
+<tr>
+<td>filter</td>
+<td>Select a <strong>subset</strong> of items from an <strong>array</strong>.</td>
+</tr>
+<tr>
+<td>json</td>
+<td>Format an object to a JSON string.</td>
+</tr>
+<tr>
+<td>limitTo</td>
+<td>Limits an array, or a string, into a specified number of <strong>elements</strong>/characters.</td>
+</tr>
+<tr>
+<td>lowercase</td>
+<td>Format a string to lower case.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>Format a number to a string.</td>
+</tr>
+<tr>
+<td>orderBy</td>
+<td>Orders an array by an expression.</td>
+</tr>
+<tr>
+<td>uppercase</td>
+<td>Format a string to upper case.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Adding-Filter"><a href="#Adding-Filter" class="headerlink" title="Adding Filter"></a>Adding Filter</h3><ul>
+<li><strong>Adding Filters to Expressions</strong><br>Using the pipe character <code>|</code>, followed by a filter.<pre class="line-numbers language-HTML"><code class="language-HTML"><div ng-app="myApp" ng-controller="personCtrl">
+<p>The name is {{ lastName | uppercase }}</p>
+</div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><strong>Adding Filters to Directives</strong><pre class="line-numbers language-HTML"><code class="language-HTML"><div ng-app="myApp" ng-controller="namesCtrl">
+<ul>
+  <li ng-repeat="x in names | orderBy:'country'">
+    {{ x.name + ', ' + x.country }}
+  </li>
+</ul>
+</div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><strong>The currency Filter</strong><pre class="line-numbers language-HTML"><code class="language-HTML"><div ng-app="myApp" ng-controller="costCtrl">
+<h1>Price: {{ price | currency }}</h1>
+</div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><strong>The filter Filter</strong><br>The filter filter selects a subset of an array.<br>The filter filter can <strong>only</strong> be used on arrays, and it returns an array containing only the matching items.<pre class="line-numbers language-HTML"><code class="language-HTML"><div ng-app="myApp" ng-controller="namesCtrl">
+<ul>
+  <li ng-repeat="x in names | filter : 'i'">
+    {{ x }}
+  </li>
+</ul>
+</div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="Filter-Input"><a href="#Filter-Input" class="headerlink" title="Filter Input"></a>Filter Input</h3><ul>
+<li><strong>Filter an Array Based on User Input</strong><br>Type a letter in the input field, and the list will shrink/grow depending on the match:<pre class="line-numbers language-HTML"><code class="language-HTML"><div ng-app="myApp" ng-controller="namesCtrl">
+<p><input type="text" ng-model="test"></p>
+<ul>
+  <li ng-repeat="x in names | filter : test">
+    {{ x }}
+  </li>
+</ul>
+</div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><strong>Sort an Array Based on User Input</strong><br>By adding the <code>ng-click</code> directive on the table headers, we can run a function that changes the sorting order of the array:<pre class="line-numbers language-HTML"><code class="language-HTML"><div ng-app="myApp" ng-controller="namesCtrl">
+<table border="1" width="100%">
+  <tr>
+    <th ng-click="orderByMe('name')">Name</th>
+    <th ng-click="orderByMe('country')">Country</th>
+  </tr>
+  <tr ng-repeat="x in names | orderBy:myOrderBy">
+    <td>{{x.name}}</td>
+    <td>{{x.country}}</td>
+  </tr>
+</table>
+</div>
+<script>
+angular.module('myApp', []).controller('namesCtrl', function($scope) {
+  $scope.names = [
+    {name:'Jani',country:'Norway'},
+    {name:'Carl',country:'Sweden'},
+    {name:'Margareth',country:'England'},
+    {name:'Hege',country:'Norway'},
+    {name:'Joe',country:'Denmark'},
+    {name:'Gustav',country:'Sweden'},
+    {name:'Birgit',country:'Denmark'},
+    {name:'Mary',country:'England'},
+    {name:'Kai',country:'Norway'}
+  ];
+  $scope.orderByMe = function(x) {
+    $scope.myOrderBy = x;
+  }
+});
+</script>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="Custom-Filters"><a href="#Custom-Filters" class="headerlink" title="Custom Filters"></a>Custom Filters</h3><p>You can make your own filters by registering a new filter factory function with your module:</p>
+<h2 id="AngularJS-HTML-ELement"><a href="#AngularJS-HTML-ELement" class="headerlink" title="AngularJS HTML ELement"></a>AngularJS HTML ELement</h2><h3 id="Angular-Tables"><a href="#Angular-Tables" class="headerlink" title="Angular Tables"></a>Angular Tables</h3><p><strong>Display the Table Index ($index)</strong><br>To display the table index, add a <td> with $index:<br>AngularJS Example</td></p>
+<p><strong>Using $even and $odd</strong></p>
+<h3 id="Angular-Forms"><a href="#Angular-Forms" class="headerlink" title="Angular Forms"></a>Angular Forms</h3><p><strong>Input Controls</strong><br>Input controls are the HTML input elements:</p>
+<ul>
+<li>input elements</li>
+<li>select elements</li>
+<li>button elements</li>
+<li>textarea elements</li>
+</ul>
+<p><strong>Data-Binding</strong><br>Input controls provides data-binding by using the <code>ng-model</code> directive.</p>
+<h3 id="Angular-Select"><a href="#Angular-Select" class="headerlink" title="Angular Select"></a>Angular Select</h3><ol>
+<li><p><strong>Using ng-options to create a select</strong></p>
+</li>
+<li><p><strong>Using ng-repeat to create a select</strong></p>
+</li>
+</ol>
+<p>Dropdowns made with ng-options allows the selected value to be an <strong>object</strong>, while dropdowns made from ng-repeat has to be a <strong>string</strong>.</p>
+<p><strong>The Data Source as an Object</strong><br>Using an object as the data source, x represents the key, and y represents the value:</p>
+<p>The selected value will still be the value in a key-value pair, only this time it is an object:</p>
+<h3 id="Radiobuttons"><a href="#Radiobuttons" class="headerlink" title="Radiobuttons"></a>Radiobuttons</h3><p>Radio buttons with the same ng-model can have different values, but only the selected one will be used.</p>
+<h3 id="Selectbox"><a href="#Selectbox" class="headerlink" title="Selectbox"></a>Selectbox</h3><p><strong>An AngularJS Form Example</strong><br>First Name:<br>Last Name:<br>RESET<br>form = {“firstName”:”John”,”lastName”:”Doe”}<br>master = {“firstName”:”John”,”lastName”:”Doe”}<br>Application Code</p>
+<h3 id="Angular-Validation"><a href="#Angular-Validation" class="headerlink" title="Angular Validation"></a>Angular Validation</h3><p>AngularJS can validate input data.<br><strong>Form Validation</strong><br>Client-side validation cannot alone secure user input. Server side validation is also necessary.</p>
+<p><strong>E-mail</strong><br>Use the HTML5 type email to specify that the value must be an e-mail:</p>
+<p><strong>Form State and Input State</strong><br>They are all properties of the input/form field, and are either true or false.<br><strong>Input</strong> fields have the following states:</p>
+<ul>
+<li><code>$untouched</code>: The field has not been touched yet</li>
+<li><code>$touched</code>: The field has been touched</li>
+<li><code>$pristine</code>: The field has not been modified yet</li>
+<li><code>$dirty</code>: The field has been modified</li>
+<li><code>$invalid</code>: The field content is not valid</li>
+<li><code>$valid</code>: The field content is valid</li>
+</ul>
+<p><strong>Forms</strong> have the following states:</p>
+<ul>
+<li><code>$pristine</code>: No fields have been modified yet</li>
+<li><code>$dirty</code>: One or more have been modified</li>
+<li><code>$invalid</code>: The form content is not valid</li>
+<li><code>$valid</code>: The form content is valid</li>
+<li><code>$submitted</code>: The form is submitted</li>
+</ul>
+<p>Show an error message if the field has been touched AND is empty:</p>
+<p><strong>CSS Classes</strong></p>
+<ol>
+<li><p><strong>Input</strong> fields:</p>
+<ol>
+<li><code>ng-untouched</code>: The field has not been touched yet</li>
+<li><code>ng-touched</code>: The field has been touched</li>
+<li><code>ng-pristine</code>: The field has not been  modified yet</li>
+<li><code>ng-dirty</code>: The field has been modified</li>
+<li><code>ng-valid</code>: The field content is valid</li>
+<li><code>ng-invalid</code>: The field content is not valid</li>
+<li><code>ng-valid-key</code>: One key for each validation. Example: ng-valid-required, useful when there are more than one thing that must be validated</li>
+<li><code>ng-invalid-key</code>: Example: ng-invalid-required</li>
+</ol>
+</li>
+<li><p><strong>Forms</strong>:</p>
+<ol>
+<li><code>ng-pristine</code>: No fields has not been modified yet</li>
+<li><code>ng-dirty</code>: One or more fields has been modified</li>
+<li><code>ng-valid</code>: The form content is valid</li>
+<li><code>ng-invalid</code>: The form content is not valid</li>
+<li><code>ng-valid-key</code>: One key for each validation. Example: ng-valid-required, useful when there are more than one thing that must be validated</li>
+<li><code>ng-invalid-key</code>: Example: ng-invalid-required</li>
+</ol>
+</li>
+</ol>
+<p>The classes are removed if the value they represent is <strong>false</strong>.</p>
+<p><strong>Custom Validation</strong><br>To create your own validation function is a bit more tricky. You have to add a new <strong>directive</strong> to your application, and deal with the validation inside a function with certain specified arguments.<br>The field will only be valid if the value contains the character “e”:</p>
+<h2 id="Angular-DOM"><a href="#Angular-DOM" class="headerlink" title="Angular DOM"></a>Angular DOM</h2><p>AngularJS has directives for binding application data to the attributes of HTML DOM elements.</p>
+<h3 id="the-ng-disabled-directive"><a href="#the-ng-disabled-directive" class="headerlink" title="the ng-disabled directive"></a>the ng-disabled directive</h3><p>the ng-disabled directive binds angularjs application data to the <strong>disabled</strong> <strong>attribute</strong> of html elements.</p>
+<h3 id="The-ng-show-Directive"><a href="#The-ng-show-Directive" class="headerlink" title="The ng-show Directive"></a>The ng-show Directive</h3><p>The ng-show directive shows or hides an HTML element.</p>
+<h3 id="The-ng-hide-Directive"><a href="#The-ng-hide-Directive" class="headerlink" title="The ng-hide Directive"></a>The ng-hide Directive</h3><p>The ng-hide directive hides or shows an HTML element.</p>
+<h2 id="Angular-Events"><a href="#Angular-Events" class="headerlink" title="Angular Events"></a>Angular Events</h2><p><strong>AngularJS Events</strong><br>AngularJS has its own HTML events directives.</p>
+<table>
+<thead>
+<tr>
+<th>Directive</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ng-blur</td>
+<td>Specifies a behavior on blur events.</td>
+</tr>
+<tr>
+<td>ng-change</td>
+<td>Specifies an expression to evaluate when content is being changed by the user.</td>
+</tr>
+<tr>
+<td>ng-click</td>
+<td>Specifies an expression to evaluate when an element is being clicked.</td>
+</tr>
+<tr>
+<td>ng-copy</td>
+<td>Specifies a behavior on copy events.</td>
+</tr>
+<tr>
+<td>ng-cut</td>
+<td>Specifies a behavior on cut events.</td>
+</tr>
+<tr>
+<td>ng-dblclick</td>
+<td>Specifies a behavior on double-click events.</td>
+</tr>
+<tr>
+<td>ng-focus</td>
+<td>Specifies a behavior on focus events.</td>
+</tr>
+<tr>
+<td>ng-keydown</td>
+<td>Specifies a behavior on keydown events.</td>
+</tr>
+<tr>
+<td>ng-keypress</td>
+<td>Specifies a behavior on keypress events.</td>
+</tr>
+<tr>
+<td>ng-keyup</td>
+<td>Specifies a behavior on keyup events.</td>
+</tr>
+<tr>
+<td>ng-mousedown</td>
+<td>Specifies a behavior on mousedown events.</td>
+</tr>
+<tr>
+<td>ng-mouseenter</td>
+<td>Specifies a behavior on mouseenter events.</td>
+</tr>
+<tr>
+<td>ng-mouseleave</td>
+<td>Specifies a behavior on mouseleave events.</td>
+</tr>
+<tr>
+<td>ng-mousemove</td>
+<td>Specifies a behavior on mousemove events.</td>
+</tr>
+<tr>
+<td>ng-mouseover</td>
+<td>Specifies a behavior on mouseover events.</td>
+</tr>
+<tr>
+<td>ng-mouseup</td>
+<td>Specifies a behavior on mouseup events.</td>
+</tr>
+<tr>
+<td>ng-paste</td>
+<td>Specifies a behavior on paste events.</td>
+</tr>
+</tbody>
+</table>
+<p>An AngularJS event will <strong>not</strong> <strong>overwrite</strong> an HTML event, both events will be executed.</p>
+<p><strong>Mouse Events</strong></p>
+<p><strong>The ng-click Events</strong></p>
+<p><strong>Toggle, True/False</strong></p>
+<p><strong>$event Object</strong><br>You can pass the $event object as an argument when calling the function.<br>The $event object contains the browser’s event object:</p>
+<h2 id="Angular-SQL"><a href="#Angular-SQL" class="headerlink" title="Angular SQL"></a>Angular SQL</h2><p><strong>Server Code Examples</strong><br>The following section is a listing of the server code used to fetch SQL data.</p>
+<ol>
+<li>Using PHP and MySQL. Returning JSON.</li>
+<li>Using PHP and MS Access. Returning JSON.</li>
+<li>Using ASP.NET, VB, and MS Access. Returning JSON.</li>
+<li>Using ASP.NET, Razor, and SQL Lite. Returning JSON.</li>
+</ol>
+<p><strong>Cross-Site HTTP Requests</strong><br>Requests for data from a different server (than the requesting page), are called <strong>cross</strong>-<strong>site</strong> HTTP requests.<br>In modern browsers, cross-site HTTP requests <strong>from</strong> <strong>scripts</strong> are restricted to <strong>same</strong> <strong>site</strong> for security reasons.</p>
+<ol>
+<li><p>Server Code PHP and MySQL</p>
+</li>
+<li><p>Server Code PHP and MS Access</p>
+</li>
+<li><p>Server Code ASP.NET, VB and MS Access</p>
+</li>
+<li><p>Server Code ASP.NET, Razor C# and SQL Lite</p>
+</li>
+</ol>
+<h2 id="Angular-Services"><a href="#Angular-Services" class="headerlink" title="Angular Services"></a>Angular Services</h2><h3 id="location-service"><a href="#location-service" class="headerlink" title="location service"></a>location service</h3><p>The $location service has methods which return information about the location of the current web page:</p>
+<ul>
+<li>the $location service need to passed in to the controller as an argument. In order to use the service in the controller, it must be defined as a dependency.</li>
+</ul>
+<h3 id="The-http-Service"><a href="#The-http-Service" class="headerlink" title="The $http Service"></a>The $http Service</h3><ul>
+<li>$http is an AngularJS service for reading data from remote servers.</li>
+<li>The AngularJS $http service makes a <strong>request</strong> to the server, and returns a <strong>response</strong>.</li>
+</ul>
+<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods"></a>Methods</h4><ul>
+<li><code>.delete()</code></li>
+<li><code>.get()</code></li>
+<li><code>.head()</code></li>
+<li><code>.jsonp()</code></li>
+<li><code>.patch()</code></li>
+<li><code>.post()</code></li>
+<li><code>.put()</code></li>
+</ul>
+<h4 id="Properties"><a href="#Properties" class="headerlink" title="Properties"></a>Properties</h4><p>The response from the server is an object with these properties:</p>
+<ul>
+<li><code>.config</code>: the object used to generate the request.</li>
+<li><code>.data</code>: a string, or an object, carrying the response from the server.</li>
+<li><code>.headers</code>: a function to use to get header information.</li>
+<li><code>.status</code>: a number defining the HTTP status.</li>
+<li><code>.statusText</code>: a string defining the HTTP status.</li>
+</ul>
+<p>To handle errors, add one more functions to the .then method:</p>
+<h4 id="JSON"><a href="#JSON" class="headerlink" title="JSON"></a>JSON</h4><p>$http is an <strong>XMLHttpRequest</strong> <strong>object</strong> for requesting external data.</p>
+<h3 id="The-timeout-Service"><a href="#The-timeout-Service" class="headerlink" title="The $timeout Service"></a>The $timeout Service</h3><p>The $timeout service is AngularJS’ version of the window.setTimeout function.</p>
+<h3 id="The-interval-Service"><a href="#The-interval-Service" class="headerlink" title="The $interval Service"></a>The $interval Service</h3><p>The $interval service is AngularJS’ version of the window.setInterval function.</p>
+<h3 id="Create-Your-Own-Service"><a href="#Create-Your-Own-Service" class="headerlink" title="Create Your Own Service"></a>Create Your Own Service</h3><p>To create your own service, connect your service to the module:<br>Create a service named hexafy:</p>
+<h3 id="Use-a-Custom-Service-Inside-a-Filter"><a href="#Use-a-Custom-Service-Inside-a-Filter" class="headerlink" title="Use a Custom Service Inside a Filter"></a>Use a Custom Service Inside a Filter</h3><p>Once you have created a service, and connected it to your application, you can use the service in any controller, directive, filter, or even inside other services.<br>To use the service inside a filter, add it as a dependency when defining the filter:<br>The service hexafy used in the filter myFormat:</p>
+<h3 id="A-Suctom-Service-for-localStorage"><a href="#A-Suctom-Service-for-localStorage" class="headerlink" title="A Suctom Service for localStorage"></a>A Suctom Service for localStorage</h3><h2 id="Angular-API"><a href="#Angular-API" class="headerlink" title="Angular API"></a>Angular API</h2><p>API stands for Application Programming Interface.<br>The AngularJS Global API is a set of global JavaScript functions for performing common tasks like:</p>
+<ul>
+<li>Comparing objects</li>
+<li>Iterating objects</li>
+<li>Converting data</li>
+</ul>
+<h3 id="AngularJS-Global-API"><a href="#AngularJS-Global-API" class="headerlink" title="AngularJS Global API"></a>AngularJS Global API</h3><h4 id="Converting"><a href="#Converting" class="headerlink" title="Converting"></a>Converting</h4><table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angular.lowercase()</td>
+<td>Converts a string to lowercase</td>
+</tr>
+<tr>
+<td>angular.uppercase()</td>
+<td>Converts a string to uppercase</td>
+</tr>
+<tr>
+<td>angular.copy()</td>
+<td>Creates a deep copy of an object or an array</td>
+</tr>
+<tr>
+<td>angular.forEach()</td>
+<td>Executes a function for each element in an object or array</td>
+</tr>
+</tbody>
+</table>
+<p><strong>angular.lowercase()</strong></p>
+<h4 id="Comparing"><a href="#Comparing" class="headerlink" title="Comparing"></a>Comparing</h4><table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angular.isArray()</td>
+<td>Returns true if the reference is an array</td>
+</tr>
+<tr>
+<td>angular.isDate()</td>
+<td>Returns true if the reference is a date</td>
+</tr>
+<tr>
+<td>angular.isDefined()</td>
+<td>Returns true if the reference is defined</td>
+</tr>
+<tr>
+<td>angular.isElement()</td>
+<td>Returns true if the reference is a DOM element</td>
+</tr>
+<tr>
+<td>angular.isFunction()</td>
+<td>Returns true if the reference is a function</td>
+</tr>
+<tr>
+<td>angular.isNumber()</td>
+<td>Returns true if the reference is a number</td>
+</tr>
+<tr>
+<td>angular.isObject()</td>
+<td>Returns true if the reference is an object</td>
+</tr>
+<tr>
+<td>angular.isString()</td>
+<td>Returns true if the reference is a string</td>
+</tr>
+<tr>
+<td>angular.isUndefined()</td>
+<td>Returns true if the reference is undefined</td>
+</tr>
+<tr>
+<td>angular.equals()</td>
+<td>Returns true if two references are equal</td>
+</tr>
+</tbody>
+</table>
+<h4 id="JSON-1"><a href="#JSON-1" class="headerlink" title="JSON"></a>JSON</h4><table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angular.fromJSON()</td>
+<td>Deserializes a JSON string</td>
+</tr>
+<tr>
+<td>angular.toJSON()</td>
+<td>Serializes a JSON string</td>
+</tr>
+</tbody>
+</table>
+<h4 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h4><table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angular.bootstrap()</td>
+<td>Starts AngularJS manually</td>
+</tr>
+<tr>
+<td>angular.element()</td>
+<td>Wraps an HTML element as an jQuery element</td>
+</tr>
+<tr>
+<td>angular.module()</td>
+<td>Creates, registers, or retrieves an AngularJS module</td>
+</tr>
+</tbody>
+</table>
+<p>Below is a list of some common API functions:</p>
+<table>
+<thead>
+<tr>
+<th>API</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>angular.lowercase()</td>
+<td>Converts a string to lowercase</td>
+</tr>
+<tr>
+<td>angular.uppercase()</td>
+<td>Converts a string to uppercase</td>
+</tr>
+<tr>
+<td>angular.isString()</td>
+<td>Returns true if the reference is a string</td>
+</tr>
+<tr>
+<td>angular.isNumber()</td>
+<td>Returns true if the reference is a number</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Angular-Includes"><a href="#Angular-Includes" class="headerlink" title="Angular Includes"></a>Angular Includes</h2><p>With AngularJS, you can include HTML from an external file.</p>
+<p>Include the file in your web page, and all AngularJS code will be executed, even the code inside the included file</p>
+<p><strong>Include Cross Domains</strong><br>By default, the ng-include directive does <strong>not</strong> allow you to include files from other domains.<br>To include files from another domain, you can add a whitelist of legal files and/or domains in the config function of your application:</p>
+<h2 id="Angular-Animations"><a href="#Angular-Animations" class="headerlink" title="Angular Animations"></a>Angular Animations</h2><p>AngularJS provides animated transitions, with help from CSS.</p>
+<p><strong>AngularJS Animate library:</strong></p>
+<p>refer to the ngAnimate module in your application:</p>
+<ol>
+<li>Your application: has no name<pre class="line-numbers language-HTML"><code class="language-HTML"><body ng-app="ngAnimate">
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Your application has a name<pre class="line-numbers language-HTML"><code class="language-HTML"><body ng-app="myApp">
+<h1>Hide the DIV: <input type="checkbox" ng-model="myCheck"></h1>
+<div ng-hide="myCheck"></div>
+<script>
+var app = angular.module('myApp', ['ngAnimate']);
+</script>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<p>What Does ngAnimate Do?<br>The ngAnimate module adds and removes classes.<br>The ngAnimate module does <strong>not</strong> animate your HTML elements, but when ngAnimate notice certain events, like hide or show of an HTML element, the element gets some pre-defined classes which can be used to make animations.<br>The directives in AngularJS who add/remove classes are:</p>
+<ul>
+<li><code>ng-show</code>: Adds a ng-hide class value.</li>
+<li><code>ng-hide</code>: Removes a ng-hide class value.</li>
+<li><code>ng-class</code></li>
+<li><code>ng-view</code></li>
+<li><code>ng-include</code></li>
+<li><code>ng-repeat</code></li>
+<li><code>ng-if</code></li>
+<li><code>ng-switch</code></li>
+</ul>
+<p>In addition, during the animation, the HTML element will have a set of class values, which will be removed when the animation has finished. Example: the ng-hide directive will add these class values:</p>
+<ul>
+<li><code>ng-animate</code></li>
+<li><code>ng-hide-animate</code></li>
+<li><code>ng-hide-add (if the element will be hidden)</code></li>
+<li><code>ng-hide-remove (if the element will be showed)</code></li>
+<li><code>ng-hide-add-active (if the element will be hidden)</code></li>
+<li><code>ng-hide-remove-active (if the element will be showed)</code></li>
+</ul>
+<hr>
+<p><strong>本文相关</strong></p>
+<ol>
+<li>参考<br><a href="http://www.w3schools.com/angular/angular_ref_directives.asp" target="_blank" rel="external">AngularJS Reference - w3schools.com</a><br><a href="https://docs.angularjs.org/api" target="_blank" rel="external">AngularJS API Docs - AngularJS</a></li>
+<li>修订<br>2016:第一版</li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/CSS/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/浅谈事件冒泡与事件捕获-转载/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/zsl-blog/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/zsl-blog/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/zsl-blog/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/zsl-blog/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/zsl-blog/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/zsl-blog/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

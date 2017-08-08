@@ -1,0 +1,2505 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            Vim基本按键 | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="img/favicon.png">
+    <link rel="icon" sizes="192x192" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Vim基本按键 | 张圣兰">
+    <meta property="og:image" content="img/favicon.png" />
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Vim基本按键 | 张圣兰">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Vim基本按键/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "Vim基本按键",
+    "url": "https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Vim基本按键/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/zsl-blog/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/zsl-blog/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/zsl-blog/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/zsl-blog/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/zsl-blog/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Normal-Mode"><span class="post-toc-number">1.</span> <span class="post-toc-text">Normal Mode</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Moving-the-cursor"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Moving the cursor</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Moving-by-characters"><span class="post-toc-number">1.1.0.1.</span> <span class="post-toc-text">Moving by characters</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Moving-by-lines"><span class="post-toc-number">1.1.0.2.</span> <span class="post-toc-text">Moving by lines</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Register-vim-s-clipboard"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Register: vim`s clipboard</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Operatoer"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Operatoer</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Insert-Text"><span class="post-toc-number">1.1.3.</span> <span class="post-toc-text">Insert Text</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Replace-Text"><span class="post-toc-number">1.1.4.</span> <span class="post-toc-text">Replace Text</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Undo"><span class="post-toc-number">1.1.5.</span> <span class="post-toc-text">Undo</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Search"><span class="post-toc-number">1.1.6.</span> <span class="post-toc-text">Search</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Replace"><span class="post-toc-number">1.1.7.</span> <span class="post-toc-text">Replace</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Capital-and-Lowercass"><span class="post-toc-number">1.1.8.</span> <span class="post-toc-text">Capital and Lowercass</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Style"><span class="post-toc-number">1.1.9.</span> <span class="post-toc-text">Style</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Macro"><span class="post-toc-number">1.1.10.</span> <span class="post-toc-text">Macro</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Fold"><span class="post-toc-number">1.1.11.</span> <span class="post-toc-text">Fold</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Visual-Mode"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Visual Mode</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Command-Line"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Command Line</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Basic-command-line"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Basic command line</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#window"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">window</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Match"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">Match</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Basic-File-Manage"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">Basic File Manage</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#output"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">output</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#input-useless"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">input (useless)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#help"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">help</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#vimrc"><span class="post-toc-number">1.3.8.</span> <span class="post-toc-text">vimrc</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Shell"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Shell</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Vim基本按键
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Vim基本按键&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Vim基本按键/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Vim基本按键&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Vim基本按键/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Vim基本按键/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Vim基本按键/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=Vim基本按键&summary=&pics=https://shanlanmi.github.io/zsl-blogimg/favicon.png&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Vim基本按键/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Normal-Mode"><a href="#Normal-Mode" class="headerlink" title="Normal Mode"></a>Normal Mode</h1><h2 id="Moving-the-cursor"><a href="#Moving-the-cursor" class="headerlink" title="Moving the cursor"></a>Moving the cursor</h2><h4 id="Moving-by-characters"><a href="#Moving-by-characters" class="headerlink" title="Moving by characters"></a>Moving by characters</h4><table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h/j/k/l</td>
+<td>Left/down/up/right</td>
+</tr>
+<tr>
+<td>&#60;space&#62;</td>
+<td>Right</td>
+</tr>
+<tr>
+<td>&#60;ENTER&#62;</td>
+<td>Down</td>
+</tr>
+<tr>
+<td>w</td>
+<td>Forward to the start of word</td>
+</tr>
+<tr>
+<td>W</td>
+<td>Forward to the start of word, ignore punctuation</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Backward to  the start of word</td>
+</tr>
+<tr>
+<td>B</td>
+<td>Backward to  the start of word, ignore punctuation</td>
+</tr>
+<tr>
+<td>e</td>
+<td>Forward to the end of word</td>
+</tr>
+<tr>
+<td>E</td>
+<td>Forward to the end of word, ignore punctuation</td>
+</tr>
+<tr>
+<td>ge</td>
+<td>Backward to the end of word</td>
+</tr>
+<tr>
+<td>gE</td>
+<td>Backward to the end of word, ignore punctuation</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$ or &#60;END&#62;</td>
+<td>Move to the end of line</td>
+</tr>
+<tr>
+<td>g$ or &#60;END&#62;</td>
+<td>Move to the end of line in the screen</td>
+</tr>
+<tr>
+<td>0 or &#60;HOME&#62;</td>
+<td>Move to the start of line</td>
+</tr>
+<tr>
+<td>g0</td>
+<td>Move to the start of line in the screen</td>
+</tr>
+<tr>
+<td>^</td>
+<td>Move to the first character in the screen line</td>
+</tr>
+<tr>
+<td>g^</td>
+<td>Move to the first character in the screen line </td>
+</tr>
+<tr>
+<td>+ or &#60;Enter&#62;</td>
+<td>Lines downward, on the first non-blank character</td>
+</tr>
+<tr>
+<td>-</td>
+<td>Lines upward, on the first non-blank character</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>f[char]</td>
+<td>Find character on the right side</td>
+</tr>
+<tr>
+<td>F[char]</td>
+<td>Find character on the left side</td>
+</tr>
+<tr>
+<td>t[char]</td>
+<td>Till befor to the character on the left side</td>
+</tr>
+<tr>
+<td>T[char]</td>
+<td>Till befor to the character on the right side</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Find a matching ),], or }</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>;</td>
+<td>Do the finding moving again</td>
+</tr>
+<tr>
+<td>,</td>
+<td>Do the finding moving again on the other side</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: w,b,e,ge以标点和空格为边界划分词;W,B,E,eG,只以空格为边界划分词</p>
+<h4 id="Moving-by-lines"><a href="#Moving-by-lines" class="headerlink" title="Moving by lines"></a>Moving by lines</h4><table>
+<thead>
+<tr>
+<th>Hotkey</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>G</td>
+<td>Move to the bottom of the file</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>Move to the start of the file</td>
+</tr>
+<tr>
+<td>[n]G</td>
+<td>Move to the line in the file</td>
+</tr>
+<tr>
+<td>[n]%</td>
+<td>Move to the x% of the file</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>H</td>
+<td>Move to the top of screen</td>
+</tr>
+<tr>
+<td>M</td>
+<td>Move to the middle of screen</td>
+</tr>
+<tr>
+<td>L</td>
+<td>Move to the bottom of screen</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&#60;CTRL-U&#62;</td>
+<td>Scroll window <strong>U</strong>pwards by a half screem</td>
+</tr>
+<tr>
+<td>&#60;CTRL-D&#62;</td>
+<td>Scroll window <strong>D</strong>ownwards by a half screem</td>
+</tr>
+<tr>
+<td>&#60;CTRL-E&#62;</td>
+<td>Scroll window upwards by <strong>a line</strong> <strong>E</strong>xtra</td>
+</tr>
+<tr>
+<td>&#60;CTRL-Y&#62;</td>
+<td>Scroll window downward by <strong>a line</strong> <strong>E</strong>xtra</td>
+</tr>
+<tr>
+<td>&#60;CTRL-F&#62;</td>
+<td>Scroll window <strong>F</strong>orward by a page</td>
+</tr>
+<tr>
+<td>&#60;CTRL-B&#62;</td>
+<td>Scroll window <strong>B</strong>ackward by a page</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>zz</td>
+<td>Move the currently line to the middle of screen</td>
+</tr>
+<tr>
+<td>zt</td>
+<td>Move the currently line to the top of screen</td>
+</tr>
+<tr>
+<td>zb</td>
+<td>Move the currently line to the bottom of screen</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>(</td>
+<td>Go to the start of sentence </td>
+</tr>
+<tr>
+<td>)</td>
+<td>Go to the end of sentence</td>
+</tr>
+<tr>
+<td>{</td>
+<td>Go to the start of last section</td>
+</tr>
+<tr>
+<td>}</td>
+<td>Go to the end of last section</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>:makrks</td>
+<td>Check your mark</td>
+</tr>
+<tr>
+<td>m{a-z}</td>
+<td>Set mark on cursor(a~z for current file,A~Z for global file)</td>
+</tr>
+<tr>
+<td>50%m{mark}</td>
+<td>Set mark on 50% of file</td>
+</tr>
+<tr>
+<td>`[char]</td>
+<td>Jump to the mark</td>
+</tr>
+<tr>
+<td>`[0-9]</td>
+<td>Jump to the mark that last quit the vim</td>
+</tr>
+<tr>
+<td>``</td>
+<td>Jump to the last position</td>
+</tr>
+<tr>
+<td>`.</td>
+<td>To the position where the last change was made. </td>
+</tr>
+<tr>
+<td>`”</td>
+<td>To the position where the last change was made befor quit vim </td>
+</tr>
+<tr>
+<td>ctrl-0</td>
+<td>Go to the earier cursor position</td>
+</tr>
+<tr>
+<td>ctrl-i</td>
+<td>Go to the newer cursor position</td>
+</tr>
+<tr>
+<td>‘^</td>
+<td>To the position where the last inserted</td>
+</tr>
+<tr>
+<td>‘[</td>
+<td>To the start of the position where the last change or yank was made</td>
+</tr>
+<tr>
+<td>‘]</td>
+<td>To the end of the position where the last change or yank was made</td>
+</tr>
+<tr>
+<td>‘&lt;</td>
+<td>To the start of the position where the last selected in visual mode</td>
+</tr>
+<tr>
+<td>‘&gt;</td>
+<td>To the end of the position where the last selected in visual mode</td>
+</tr>
+<tr>
+<td>:jumps</td>
+<td>Ist your all jump</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: <code>cmd</code>+<code>行号</code>+<code>gg</code> 可以移动到绝对行，如<code>j22gg</code>移动到第22行。</p>
+<h3 id="Register-vim-s-clipboard"><a href="#Register-vim-s-clipboard" class="headerlink" title="Register: vim`s clipboard"></a>Register: vim`s clipboard</h3><p>command:</p>
+<table>
+<thead>
+<tr>
+<th>Register</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{a~z}</td>
+<td>Normal register name</td>
+</tr>
+<tr>
+<td>{A~Z}</td>
+<td>Append mode register name</td>
+</tr>
+<tr>
+<td>0</td>
+<td>Register for last copy</td>
+</tr>
+<tr>
+<td>{1~9}</td>
+<td>Register for last delete</td>
+</tr>
+<tr>
+<td>*</td>
+<td>System Selection</td>
+</tr>
+<tr>
+<td>+</td>
+<td>System Clipboard</td>
+</tr>
+<tr>
+<td>%</td>
+<td>Name of the current file</td>
+</tr>
+<tr>
+<td>#</td>
+<td>Nmae of the alternate file</td>
+</tr>
+<tr>
+<td>.</td>
+<td>Last inserted text</td>
+</tr>
+<tr>
+<td>:</td>
+<td>Last Ex command</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Last search pattern</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y</td>
+<td>Yank</td>
+</tr>
+<tr>
+<td>yy or Y</td>
+<td>To yank a whole line</td>
+</tr>
+<tr>
+<td>p</td>
+<td>Paste after the cursor</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Paste before the cursor</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:reg [name]</td>
+<td>Check the list of register</td>
+</tr>
+<tr>
+<td>:write &#62;&#62;logfile</td>
+<td>Insert to the logfile</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Operatoer"><a href="#Operatoer" class="headerlink" title="Operatoer"></a>Operatoer</h3><p>command:</p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>x</td>
+<td>Delete the cursor</td>
+</tr>
+<tr>
+<td>X</td>
+<td>Delete the left of cursor</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Delete</td>
+</tr>
+<tr>
+<td>dd</td>
+<td>To delete a whole line</td>
+</tr>
+<tr>
+<td>D</td>
+<td>D$</td>
+</tr>
+<tr>
+<td>c</td>
+<td>Change</td>
+</tr>
+<tr>
+<td>cc</td>
+<td>To change a whole line</td>
+</tr>
+<tr>
+<td>C</td>
+<td>C$</td>
+</tr>
+<tr>
+<td>y</td>
+<td>Yank</td>
+</tr>
+<tr>
+<td>yy or Y</td>
+<td>To yank a whole line</td>
+</tr>
+<tr>
+<td>p</td>
+<td>Paste after the cursor</td>
+</tr>
+<tr>
+<td>P</td>
+<td>Paste before the cursor</td>
+</tr>
+<tr>
+<td>r</td>
+<td>C1 and &#60;ESC&#62;</td>
+</tr>
+<tr>
+<td>s</td>
+<td>C a character</td>
+</tr>
+<tr>
+<td>S</td>
+<td>C the whole line</td>
+</tr>
+<tr>
+<td>[operator]i[bracket]</td>
+<td>Edit(c,d,y) the content in the bracktet<br>e.g.: <code>ci&lt;</code></td>
+</tr>
+<tr>
+<td>[operator]a[bracket]</td>
+<td>Edit(c,d,y) the content and the bracktet<br>e.g.: <code>ca&lt;</code></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Motion</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>l</td>
+<td>The next letter</td>
+</tr>
+<tr>
+<td>h</td>
+<td>The last letter</td>
+</tr>
+<tr>
+<td>w</td>
+<td>Until the start of the next word, excluding the next space</td>
+</tr>
+<tr>
+<td>b</td>
+<td>Until the start of the last word</td>
+</tr>
+<tr>
+<td>e</td>
+<td>To the end of the current word</td>
+</tr>
+<tr>
+<td>$</td>
+<td>To the end of the line</td>
+</tr>
+<tr>
+<td>aw</td>
+<td>Edit <strong>a</strong> <strong>w</strong>ord with blank</td>
+</tr>
+<tr>
+<td>iw</td>
+<td>Edit <strong>i</strong>nner word <strong>without</strong> blank</td>
+</tr>
+<tr>
+<td>as</td>
+<td>Edit <strong>a s</strong>entence with blank</td>
+</tr>
+<tr>
+<td>is</td>
+<td>Edit <strong>i</strong>nner <strong>s</strong>entence without blank</td>
+</tr>
+<tr>
+<td>G</td>
+<td>Until the end of file</td>
+</tr>
+<tr>
+<td>gg</td>
+<td>Untle the start of file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Insert-Text"><a href="#Insert-Text" class="headerlink" title="Insert Text"></a>Insert Text</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[n]i</td>
+<td>Insert befor the cursor</td>
+</tr>
+<tr>
+<td>I</td>
+<td>Insert at the start of line</td>
+</tr>
+<tr>
+<td>gl</td>
+<td>Insert text where last inserted</td>
+</tr>
+<tr>
+<td>a</td>
+<td>Insert (a)fter the cursor</td>
+</tr>
+<tr>
+<td>A</td>
+<td>Insert at the end of line</td>
+</tr>
+<tr>
+<td>o</td>
+<td>Open a line below and Insert </td>
+</tr>
+<tr>
+<td>O</td>
+<td>Open a line above and Insert </td>
+</tr>
+<tr>
+<td>:[n]r filename</td>
+<td>Insert the contents from other file</td>
+</tr>
+<tr>
+<td>:r!command</td>
+<td>Insert the shell output</td>
+</tr>
+<tr>
+<td>i&#60;C-r&#62;=</td>
+<td>Calc</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Replace-Text"><a href="#Replace-Text" class="headerlink" title="Replace Text"></a>Replace Text</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>r</td>
+<td>Replace one character</td>
+</tr>
+<tr>
+<td>R</td>
+<td>Replace more than one character</td>
+</tr>
+<tr>
+<td>&#60;CTRL-a&#62;</td>
+<td>Add [num] to the number</td>
+</tr>
+<tr>
+<td>&#60;CTRL-x&#62;</td>
+<td>Subtract [num] to the number</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Undo"><a href="#Undo" class="headerlink" title="Undo"></a>Undo</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>u</td>
+<td>Undo one step </td>
+</tr>
+<tr>
+<td>U</td>
+<td>Undo all step in the line</td>
+</tr>
+<tr>
+<td>&#60;CTRL-R&#62;</td>
+<td>To undo the undo’s</td>
+</tr>
+<tr>
+<td>:undolist</td>
+<td>List the leafs in the tree of changes</td>
+</tr>
+<tr>
+<td>:undo [n]</td>
+<td>Jump to after change number [n]</td>
+</tr>
+<tr>
+<td>:earlier <a href="/s/m/h/d">n</a></td>
+<td>Go to older text state by times or time<br>e.g.: <code>:earlier 4m</code>   </td>
+</tr>
+<tr>
+<td>:later <a href="/s/m/h/d">n</a></td>
+<td>Go to newer text state by times or time</td>
+</tr>
+<tr>
+<td>g-</td>
+<td>Go to older text state</td>
+</tr>
+<tr>
+<td>g+</td>
+<td>Go to newer text atate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Search"><a href="#Search" class="headerlink" title="Search"></a>Search</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>/[word]</td>
+<td>Search for forward</td>
+</tr>
+<tr>
+<td>?[word]</td>
+<td>Search for backward</td>
+</tr>
+<tr>
+<td>/[word]\</td>
+<td>Match word*</td>
+</tr>
+<tr>
+<td>/\[word]</td>
+<td>Match *word</td>
+</tr>
+<tr>
+<td>/[word]<code>$</code></td>
+<td>Match word$ (regexp)</td>
+</tr>
+<tr>
+<td>/^[word]</td>
+<td>Match ^word (regexp)</td>
+</tr>
+<tr>
+<td>.</td>
+<td>. (regexp)</td>
+</tr>
+<tr>
+<td>*</td>
+<td>Search the [word] which cursor on(forward)</td>
+</tr>
+<tr>
+<td>#</td>
+<td>Search the [word] which cursor on(backward)</td>
+</tr>
+<tr>
+<td>n</td>
+<td>Earch next</td>
+</tr>
+<tr>
+<td>N</td>
+<td>Search in the opposite direction</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>:vim/keyword/[g][j]file</td>
+<td>Grep in vim, % is the current file</td>
+</tr>
+<tr>
+<td>:copen or :cw</td>
+<td>Open the quickfix</td>
+</tr>
+<tr>
+<td>:set [no]wrapscan</td>
+<td>Set search [uncycling]cycling</td>
+</tr>
+<tr>
+<td>:set [no]ic</td>
+<td>Set [disable] ignore case in search patterns(default off)</td>
+</tr>
+<tr>
+<td>:set [no]hls</td>
+<td>Set [not] hightlighting of mathces</td>
+</tr>
+<tr>
+<td>:set is</td>
+<td>Instant search</td>
+</tr>
+<tr>
+<td>:nohl</td>
+<td>Not set hightlighting by once</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Replace"><a href="#Replace" class="headerlink" title="Replace"></a>Replace</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:[range]s/old/new&#60;Enter&#62;</td>
+<td>Substitute ‘new’ for the frist ‘old’</td>
+</tr>
+<tr>
+<td>:s/old/new/g</td>
+<td>Substitute ‘new’ for ‘old’ globally in the line</td>
+</tr>
+<tr>
+<td>:#,#s/old/new/g</td>
+<td>Substitute in line #,#</td>
+</tr>
+<tr>
+<td>:%s/old/new/g</td>
+<td>Substitute in the whole file</td>
+</tr>
+<tr>
+<td>:%s/old/new/gc</td>
+<td>Substitute in the whole file with a <strong>prompt</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong>range</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>%</td>
+<td>Whole file</td>
+</tr>
+<tr>
+<td>n1,n2</td>
+<td>Range is line_n1 to line_n2</td>
+</tr>
+<tr>
+<td>0</td>
+<td>The number of first line</td>
+</tr>
+<tr>
+<td>$</td>
+<td>The number of last line</td>
+</tr>
+<tr>
+<td>‘&#60;,’&#62;</td>
+<td>Range is visual selection</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Prompt</strong></p>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>y</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>n</td>
+<td>No</td>
+</tr>
+<tr>
+<td>a</td>
+<td>All</td>
+</tr>
+<tr>
+<td>q</td>
+<td>Quit,give up this one</td>
+</tr>
+<tr>
+<td>l</td>
+<td>Quit after replace this one</td>
+</tr>
+<tr>
+<td>CTRL-E</td>
+<td>Scroll up</td>
+</tr>
+<tr>
+<td>CTRL-Y</td>
+<td>Scroll down</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Match and command</strong></p>
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[range]g/pattern/command</td>
+<td>Match and command</td>
+</tr>
+<tr>
+<td>%g/^xyz/normal dd</td>
+<td>Match /^xyz/ and delete the line</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Capital-and-Lowercass"><a href="#Capital-and-Lowercass" class="headerlink" title="Capital and Lowercass"></a>Capital and Lowercass</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~</td>
+<td>Toggle between lowercase and capital</td>
+</tr>
+<tr>
+<td>guw</td>
+<td>Lowercase a word</td>
+</tr>
+<tr>
+<td>gUw</td>
+<td>Capital a word</td>
+</tr>
+<tr>
+<td>g~~</td>
+<td>G~ by a line</td>
+</tr>
+<tr>
+<td>guu</td>
+<td>Lowercase a line</td>
+</tr>
+<tr>
+<td>gUU</td>
+<td>Capital a line</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Style"><a href="#Style" class="headerlink" title="Style"></a>Style</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&lt;&lt;</td>
+<td>Shift lines one ‘shiftwidth’ leftwards</td>
+</tr>
+<tr>
+<td>&gt;&gt;</td>
+<td>Shift lines one ‘shiftwidth’ rightwards</td>
+</tr>
+<tr>
+<td>&gt;[motion]</td>
+<td>Shift some lines leftwards</td>
+</tr>
+<tr>
+<td>&lt;[motion]</td>
+<td>Shift some lines rightwards</td>
+</tr>
+<tr>
+<td>:ce(nter)</td>
+<td>Align center</td>
+</tr>
+<tr>
+<td>:le(ft)</td>
+<td>Align left</td>
+</tr>
+<tr>
+<td>:ri(ght)</td>
+<td>Align right</td>
+</tr>
+<tr>
+<td>{range}=</td>
+<td>Delelte shift</td>
+</tr>
+<tr>
+<td>gg=G</td>
+<td>Delete all shift</td>
+</tr>
+<tr>
+<td>J</td>
+<td>Join 2 lines into a line, separate by a space</td>
+</tr>
+<tr>
+<td>gJ</td>
+<td>Join 2 lines into a line</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Macro"><a href="#Macro" class="headerlink" title="Macro"></a>Macro</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>Repeat command(except ‘u’ or CTRL-R or :cmd)</td>
+</tr>
+<tr>
+<td>q{0-9a-zA-Z}</td>
+<td>Record macro</td>
+</tr>
+<tr>
+<td>q</td>
+<td>Stop recording</td>
+</tr>
+<tr>
+<td>@{0-9a-zA-Z}</td>
+<td>Execute the macro</td>
+</tr>
+<tr>
+<td>@@</td>
+<td>Repeat the previous macro</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Fold"><a href="#Fold" class="headerlink" title="Fold"></a>Fold</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:set fdm=marker</td>
+<td>Set fold mode: manual, indent, syntax, marker</td>
+</tr>
+<tr>
+<td>:mkview</td>
+<td>Save the fold information</td>
+</tr>
+<tr>
+<td>:loadview</td>
+<td>Load the fold information</td>
+</tr>
+<tr>
+<td>zf</td>
+<td>Create a fold</td>
+</tr>
+<tr>
+<td>zd or zD</td>
+<td>Delete folds</td>
+</tr>
+<tr>
+<td>zE</td>
+<td>Delete all flods</td>
+</tr>
+<tr>
+<td>zfap</td>
+<td></td>
+</tr>
+<tr>
+<td>zo</td>
+<td>Open a fold</td>
+</tr>
+<tr>
+<td>zO</td>
+<td>Open all folds on the cursor</td>
+</tr>
+<tr>
+<td>zc</td>
+<td>Close a fold</td>
+</tr>
+<tr>
+<td>zC</td>
+<td>Close all fold on the cursor</td>
+</tr>
+<tr>
+<td>za</td>
+<td>Toggle between closed and opend</td>
+</tr>
+<tr>
+<td>zA</td>
+<td>Toggle between closed and opend recursively</td>
+</tr>
+<tr>
+<td>zr</td>
+<td>Open the nesting fold</td>
+</tr>
+<tr>
+<td>zm</td>
+<td>Close the nesting fold</td>
+</tr>
+<tr>
+<td>zR</td>
+<td>Open all folds, foldenable will be set</td>
+</tr>
+<tr>
+<td>zM</td>
+<td>Close all folds, foldenable will be set</td>
+</tr>
+<tr>
+<td>[z</td>
+<td>Move to the start of the current open fold</td>
+</tr>
+<tr>
+<td>]z</td>
+<td>Move to the end of the current open fold</td>
+</tr>
+<tr>
+<td>zj</td>
+<td>Move downwards to the start of the next fold</td>
+</tr>
+<tr>
+<td>zk</td>
+<td>Move upwards to the end of the previous fold</td>
+</tr>
+<tr>
+<td>zi</td>
+<td>Enable/disable fold</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Visual-Mode"><a href="#Visual-Mode" class="headerlink" title="Visual Mode"></a>Visual Mode</h2><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>v</td>
+<td>Visual mode by character</td>
+</tr>
+<tr>
+<td>V</td>
+<td>Visual mode by lines</td>
+</tr>
+<tr>
+<td>CTRL-v</td>
+<td>Visual mode by squal</td>
+</tr>
+<tr>
+<td>o</td>
+<td>斜角切换</td>
+</tr>
+<tr>
+<td>O</td>
+<td>左右角切换</td>
+</tr>
+<tr>
+<td>gv</td>
+<td>重新选择刚才的区域</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Command-Line"><a href="#Command-Line" class="headerlink" title="Command Line"></a>Command Line</h2><h3 id="Basic-command-line"><a href="#Basic-command-line" class="headerlink" title="Basic command line"></a>Basic command line</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>&#60;C-w&#62;</td>
+<td>Delete a word</td>
+</tr>
+<tr>
+<td>&#60;C-u&#62;</td>
+<td>Clear the command</td>
+</tr>
+<tr>
+<td>&#60;C-b&#62;</td>
+<td>Move to the start of the line</td>
+</tr>
+<tr>
+<td>&#60;C-e&#62;</td>
+<td>Move to the end of the line</td>
+</tr>
+<tr>
+<td>&#60;Shift-Left&#62;</td>
+<td>Move left by words</td>
+</tr>
+<tr>
+<td>&#60;Shift-Right&#62;</td>
+<td>Move right by words</td>
+</tr>
+<tr>
+<td>@:</td>
+<td>Do again</td>
+</tr>
+<tr>
+<td>q:</td>
+<td>Edit command as vim mode</td>
+</tr>
+<tr>
+<td>q/ or q?</td>
+<td>Check search history</td>
+</tr>
+<tr>
+<td>&#60;C-f&#62;</td>
+<td>Switch to the command-line window</td>
+</tr>
+<tr>
+<td>!cmd</td>
+<td>Shell command</td>
+</tr>
+<tr>
+<td>!!</td>
+<td>Execute last shell command</td>
+</tr>
+<tr>
+<td>:r!cmd</td>
+<td>Insert shell cmd output</td>
+</tr>
+<tr>
+<td>:m,nw!cmd</td>
+<td>Execute the line n,m as a shell command</td>
+</tr>
+<tr>
+<td>:map</td>
+<td>Show map key</td>
+</tr>
+</tbody>
+</table>
+<h3 id="window"><a href="#window" class="headerlink" title="window"></a>window</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:[n]split</td>
+<td>上下视口,the height of window is [n]</td>
+</tr>
+<tr>
+<td>:sp or :split [two.c]</td>
+<td>指定file视口(默认是当前file多视口)</td>
+</tr>
+<tr>
+<td>:vsplit</td>
+<td>左右视口</td>
+</tr>
+<tr>
+<td>:vsplit two.c</td>
+<td>指定file视口,垂直分布</td>
+</tr>
+<tr>
+<td>:new</td>
+<td>Open a new window</td>
+</tr>
+<tr>
+<td>:vnew</td>
+<td>Open a new window by vertical</td>
+</tr>
+<tr>
+<td>&#60;CTRL-^&#62;</td>
+<td>Jump to another window</td>
+</tr>
+<tr>
+<td>:close</td>
+<td>Close the window,cann’t close the last window</td>
+</tr>
+<tr>
+<td>:only</td>
+<td>Close other window except current window</td>
+</tr>
+<tr>
+<td>:[w][q]all</td>
+<td>Close all windows</td>
+</tr>
+<tr>
+<td>&#60;CTRL-w&#62; +</td>
+<td>Make window heighter</td>
+</tr>
+<tr>
+<td>&#60;CTRL-w&#62; -</td>
+<td>Make window lower</td>
+</tr>
+<tr>
+<td>&#60;CTRL-w&#62; h(j,k,l)</td>
+<td>Active window by derection key</td>
+</tr>
+<tr>
+<td>&#60;CTRL-w&#62; t(b)</td>
+<td>Active top(button) window</td>
+</tr>
+<tr>
+<td>&#60;CTRL-w&#62; H(J,K,L)</td>
+<td>Move window by derection key</td>
+</tr>
+<tr>
+<td>&#60;CTRL-x&#62;</td>
+<td>Exchange current window with window N(default:next window)</td>
+</tr>
+<tr>
+<td>:vertical all</td>
+<td>Sort all windows by vertical</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Match"><a href="#Match" class="headerlink" title="Match"></a>Match</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:hi</td>
+<td>Show the color option</td>
+</tr>
+<tr>
+<td>:match Search /keyword/</td>
+<td>Hightlight the keyword</td>
+</tr>
+<tr>
+<td>:2match ErrorMsg /keyword/</td>
+<td>Hightlight the second keyword</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Basic-File-Manage"><a href="#Basic-File-Manage" class="headerlink" title="Basic File Manage"></a>Basic File Manage</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:f or &#60;CTRL-G&#62;</td>
+<td>Show your location in the file and the file status</td>
+</tr>
+<tr>
+<td>:f filename</td>
+<td>Change the filename</td>
+</tr>
+<tr>
+<td>:e filename</td>
+<td>Edit the file</td>
+</tr>
+<tr>
+<td>:e! filename</td>
+<td>Insert again without save</td>
+</tr>
+<tr>
+<td>:e# or &#60;CTRL-^&#62;</td>
+<td>Open the last edited file</td>
+</tr>
+<tr>
+<td>gf</td>
+<td>Open the pointe file</td>
+</tr>
+<tr>
+<td>:q</td>
+<td>Quit without save</td>
+</tr>
+<tr>
+<td>:r filename</td>
+<td>Insert the contents of the file</td>
+</tr>
+<tr>
+<td>:w filename</td>
+<td>Saves the whole file under the choosed name</td>
+</tr>
+<tr>
+<td>:wq or ZZ</td>
+<td>Save and quit the file</td>
+</tr>
+<tr>
+<td>:saveas file.c</td>
+<td>Save as ..</td>
+</tr>
+<tr>
+<td>:#,# w filename</td>
+<td>Save lines#~# as another file</td>
+</tr>
+<tr>
+<td>:ls</td>
+<td>Get a listing of your directory(Unix)</td>
+</tr>
+<tr>
+<td>:dir</td>
+<td>Get a listing of your directory(MS-DOS)</td>
+</tr>
+<tr>
+<td>:r !cmd</td>
+<td>Insert the output of the command</td>
+</tr>
+<tr>
+<td>:! cmd</td>
+<td>Shell mode </td>
+</tr>
+<tr>
+<td>:set modifiable</td>
+<td>Chang only_read to write</td>
+</tr>
+<tr>
+<td>:set write</td>
+<td>Chang only_read to write</td>
+</tr>
+<tr>
+<td>:cd path</td>
+<td>Change the Print Working directory</td>
+</tr>
+<tr>
+<td>:set autochdir</td>
+<td>Set the pwd by file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="output"><a href="#output" class="headerlink" title="output"></a>output</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:hardcopy</td>
+<td>Print the whole file</td>
+</tr>
+<tr>
+<td>:TOhtml</td>
+<td>Chang into HTML</td>
+</tr>
+<tr>
+<td>:source $VIMRUNTIME/syntax/2html.vim</td>
+<td>Chang into HTML</td>
+</tr>
+<tr>
+<td>:write main.c.html</td>
+<td>Open in the browser</td>
+</tr>
+<tr>
+<td>:set backup</td>
+<td>Backup the file witn (“.) append</td>
+</tr>
+<tr>
+<td>:set backupext=.bak</td>
+<td>Backup the file with (.bak) append</td>
+</tr>
+<tr>
+<td>:set writebackup</td>
+<td>Backup until file has saved(set backup is off)</td>
+</tr>
+<tr>
+<td>:set patchmode=.orig</td>
+<td>Backup the original version when edit the file</td>
+</tr>
+<tr>
+<td>:set (no)autowrite</td>
+<td>(not) auto save the file when quit</td>
+</tr>
+<tr>
+<td>:file move.c</td>
+<td>Change the file name,change into only_read</td>
+</tr>
+</tbody>
+</table>
+<h3 id="input-useless"><a href="#input-useless" class="headerlink" title="input (useless)"></a>input (useless)</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:hide edit</td>
+<td>Hide current file without save,and edit an other file </td>
+</tr>
+<tr>
+<td>:first</td>
+<td>Edit the first file,current file need saved</td>
+</tr>
+<tr>
+<td>:[n]next</td>
+<td>Edit the next file,current file need saved</td>
+</tr>
+<tr>
+<td>:[n]previous</td>
+<td>Edit the previous file,current file need saved</td>
+</tr>
+<tr>
+<td>:last</td>
+<td>Edit the last file,current file need saved</td>
+</tr>
+<tr>
+<td>:args</td>
+<td>Show the open_file list</td>
+</tr>
+<tr>
+<td>:args five.c six.c</td>
+<td>Edit a new list of files without restart vim again</td>
+</tr>
+<tr>
+<td>&#60;CTRL-^&#62;</td>
+<td>Quickly toggle between two files</td>
+</tr>
+<tr>
+<td>:n</td>
+<td>Edit next file</td>
+</tr>
+<tr>
+<td>:N</td>
+<td>Edit pervious file</td>
+</tr>
+<tr>
+<td>:files</td>
+<td>Display all editing file</td>
+</tr>
+</tbody>
+</table>
+<h3 id="help"><a href="#help" class="headerlink" title="help"></a>help</h3><table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:help</td>
+<td>Show help system</td>
+</tr>
+<tr>
+<td>:help &#60;HotKey&#62;(function)</td>
+<td>Show help windows for &#60;HotKey&#62;</td>
+</tr>
+<tr>
+<td>:help vimrc-intro</td>
+<td>Setting to “vimrc” file</td>
+</tr>
+<tr>
+<td>:cn</td>
+<td>Next help tips</td>
+</tr>
+<tr>
+<td>:cN</td>
+<td>Previous help tips</td>
+</tr>
+<tr>
+<td>:cfirst</td>
+<td>First help tips</td>
+</tr>
+<tr>
+<td>:clast</td>
+<td>Last help tips</td>
+</tr>
+<tr>
+<td>:copen</td>
+<td>Open Quickfix List</td>
+</tr>
+<tr>
+<td>:cclose</td>
+<td>Close Quickfix List</td>
+</tr>
+</tbody>
+</table>
+<h3 id="vimrc"><a href="#vimrc" class="headerlink" title="vimrc"></a>vimrc</h3><table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:set showmode</td>
+<td>Show work mode</td>
+</tr>
+<tr>
+<td>:set number</td>
+<td>Show the number of line</td>
+</tr>
+<tr>
+<td>:set nonumber</td>
+<td>Hide the number of line</td>
+</tr>
+<tr>
+<td>:ruler</td>
+<td>Show where is cursor</td>
+</tr>
+<tr>
+<td>:set setting&amp;</td>
+<td>&amp; means set default</td>
+</tr>
+<tr>
+<td>:set [no]list</td>
+<td>Show feed and tab</td>
+</tr>
+<tr>
+<td>:set listchars=eol:$,tab:&gt;</td>
+<td>Show custom char</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><table>
+<thead>
+<tr>
+<th>Command Line</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vim -R file</code></td>
+<td>Only_read,can write by (!)</td>
+</tr>
+<tr>
+<td><code>vim -M file</code></td>
+<td>Only_read,never write</td>
+</tr>
+<tr>
+<td><code>vim one.txt two.txt</code></td>
+<td>Edit more file at the same time</td>
+</tr>
+<tr>
+<td><code>vimdiff one.c two.c</code></td>
+<td>Find diffent between two files</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p><strong>本文相关</strong></p>
+<ol>
+<li>参考</li>
+</ol>
+<p><a href="http://www.cnblogs.com/jiqingwu/archive/2012/06/14/vim_notes.html#id79" target="_blank" rel="external">Vim 使用笔记</a><br><a href="http://vimdoc.sourceforge.net/htmldoc/fold.html#zf" target="_blank" rel="external">vimdoc</a></p>
+<ol>
+<li>修订<br>2016:第一版</li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/Vim基本按键/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/Vim基本按键/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/Bash正则表达式/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/Vim中的正则表达式小结/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/zsl-blog/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/zsl-blog/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/zsl-blog/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/zsl-blog/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/zsl-blog/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/zsl-blog/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>

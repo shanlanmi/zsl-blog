@@ -1,0 +1,1631 @@
+<!DOCTYPE html>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
+
+    <!-- Title -->
+    
+    <title>
+        
+            Shell文件管理相关命令 | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="img/favicon.png">
+    <link rel="icon" sizes="192x192" href="img/favicon.png">
+    <link rel="apple-touch-icon" href="img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="https://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Shell文件管理相关命令 | 张圣兰">
+    <meta property="og:image" content="img/favicon.png" />
+    <meta property="og:description" content="">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Shell文件管理相关命令 | 张圣兰">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Shell文件管理相关命令/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "Shell文件管理相关命令",
+    "url": "https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Shell文件管理相关命令/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/zsl-blog/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/zsl-blog/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/zsl-blog/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/zsl-blog/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/zsl-blog/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
+            <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+                
+
+                <!-- Main Container -->
+                <main class="material-layout__content" id="main">
+
+                    <!-- Top Anchor -->
+                    <div id="top"></div>
+
+                    
+                        <!-- Hamburger Button -->
+                        <button class="MD-burger-icon sidebar-toggle">
+                            <span class="MD-burger-layer"></span>
+                        </button>
+                    
+
+                    <!-- Post TOC -->
+
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
+
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#路径管理"><span class="post-toc-number">1.</span> <span class="post-toc-text">路径管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cd-目录切换"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">cd:目录切换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#pwd-显示当前所在目录"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">pwd:显示当前所在目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mkdir-新建目录"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">mkdir:新建目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#rmdir-删除空目录"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">rmdir:删除空目录</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件与目录管理"><span class="post-toc-number">2.</span> <span class="post-toc-text">文件与目录管理</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ls-文件与目录的检视"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">ls:文件与目录的检视</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#tree-显示文件树形结构"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">tree:显示文件树形结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cp-复制"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">cp:复制</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#rm-移除"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">rm:移除</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#mv-移动或更名"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">mv:移动或更名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#basename-取得文件名"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">basename:取得文件名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#dirname-取得目录名"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">dirname:取得目录名</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#rename-批量修改文件名"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">rename:批量修改文件名</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件内容查阅"><span class="post-toc-number">3.</span> <span class="post-toc-text">文件内容查阅</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#cat-列示文件内容"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">cat:列示文件内容</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#nl-添加行号列示文件"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">nl:添加行号列示文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#more-可翻页检视"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">more:可翻页检视</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#less-可翻页检视"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">less:可翻页检视</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#od-显示非纯文字档"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">od:显示非纯文字档</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数据截取"><span class="post-toc-number">4.</span> <span class="post-toc-text">数据截取</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#head-tail-数据撷取"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">head,tail:数据撷取</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#文件属性相关"><span class="post-toc-number">5.</span> <span class="post-toc-text">文件属性相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#touch-修改文件时间与建建新档"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">touch:修改文件时间与建建新档</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#umask-显示文件默认权限"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">umask:显示文件默认权限</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#file-观察文件类型"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">file:观察文件类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#chagrp-chown-chmod-文件权限修改"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">chagrp/chown/chmod: 文件权限修改</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#搜索"><span class="post-toc-number">6.</span> <span class="post-toc-text">搜索</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#which-运行档命令搜索"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">which:运行档命令搜索</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#whereis-特定文件搜索"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">whereis:特定文件搜索</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#locate-根据数据库检索文件"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">locate:根据数据库检索文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#find-文件检索"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">find:文件检索</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本文相关"><span class="post-toc-number">7.</span> <span class="post-toc-text">本文相关</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#参考"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">参考</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修订"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">修订</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', 'img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Shell文件管理相关命令
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Shell文件管理相关命令&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Shell文件管理相关命令/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Shell文件管理相关命令&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Shell文件管理相关命令/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Shell文件管理相关命令/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Shell文件管理相关命令/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=Shell文件管理相关命令&summary=&pics=https://shanlanmi.github.io/zsl-blogimg/favicon.png&url=https://shanlanmi.github.io/zsl-blog/zsl-blog/2016/07/21/Shell文件管理相关命令/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="路径管理"><a href="#路径管理" class="headerlink" title="路径管理"></a>路径管理</h2><h3 id="cd-目录切换"><a href="#cd-目录切换" class="headerlink" title="cd:目录切换"></a>cd:目录切换</h3><pre><code>cd directory
+</code></pre><ol>
+<li>默认<code>cd</code> &lt;==&gt; <code>cd ~</code>.</li>
+<li>绝对路径必须从根目录<code>/</code>写起.</li>
+<li>相对路径符号.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.</td>
+<td>当前目录</td>
+</tr>
+<tr>
+<td>..</td>
+<td>上一层目录</td>
+</tr>
+<tr>
+<td>-</td>
+<td>前一个工作目录</td>
+</tr>
+<tr>
+<td>~</td>
+<td>当前使用者HOME目录</td>
+</tr>
+<tr>
+<td>~account</td>
+<td>account的HOME目录</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pwd-显示当前所在目录"><a href="#pwd-显示当前所在目录" class="headerlink" title="pwd:显示当前所在目录"></a>pwd:显示当前所在目录</h3><p>pwd是print working directory的缩写.</p>
+<pre><code>pwb [-]
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-P</td>
+<td>显示链接档的真实目录</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mkdir-新建目录"><a href="#mkdir-新建目录" class="headerlink" title="mkdir:新建目录"></a>mkdir:新建目录</h3><pre><code>mkdir [-] [777] directory_name
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-m</td>
+<td>配置文件权限</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>递归创建目录</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rmdir-删除空目录"><a href="#rmdir-删除空目录" class="headerlink" title="rmdir:删除空目录"></a>rmdir:删除空目录</h3><pre><code>rmdir [-]
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-p</td>
+<td>递归删除空目录</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>删除目录及目录下所有文件</td>
+</tr>
+</tbody>
+</table>
+<h2 id="文件与目录管理"><a href="#文件与目录管理" class="headerlink" title="文件与目录管理"></a>文件与目录管理</h2><h3 id="ls-文件与目录的检视"><a href="#ls-文件与目录的检视" class="headerlink" title="ls:文件与目录的检视"></a>ls:文件与目录的检视</h3><p>默认显示非隐藏文件,并按档名排序.</p>
+<pre><code>ls [-] directory
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>文件列出</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>-a</td>
+<td>&lt;常用&gt;列出全部文件</td>
+</tr>
+<tr>
+<td>-A</td>
+<td>列出全部文件,但不包括.和..目录</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>仅列出目录本身,而不列出目录内的文件</td>
+</tr>
+<tr>
+<td>-R</td>
+<td>列出子目录内容</td>
+</tr>
+<tr>
+<td><strong>属性显示</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>-l</td>
+<td>&lt;常用&gt;列出文件属性详情</td>
+</tr>
+<tr>
+<td>-F</td>
+<td>显示文件数据结构:<br>* :可运行档;<br>/ :目录;<br>= :socket文件;<br>&#124; :FIFO文件;</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>列出inode号码</td>
+</tr>
+<tr>
+<td>-time</td>
+<td>显示access时间</td>
+</tr>
+<tr>
+<td>--full-time<br>BSD:-Tl</td>
+<td>显示完整的修改时间</td>
+</tr>
+<tr>
+<td>--time=atime<br>BSD:-ul</td>
+<td>显示最后访问时间</td>
+</tr>
+<tr>
+<td>--time=ctime<br>BSD:-Ul</td>
+<td>显示创建时间</td>
+</tr>
+<tr>
+<td><strong>文件排序</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>-f</td>
+<td>不排序(默认按档名排序)</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>反向排序</td>
+</tr>
+<tr>
+<td>-S</td>
+<td>按文件大小,从大到小排序</td>
+</tr>
+<tr>
+<td>-t</td>
+<td>按时间由近至远排序排序(默认按修改时间)</td>
+</tr>
+<tr>
+<td><strong>颜色标记</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>--color=auto<br>BSD:-G</td>
+<td>&lt;常用&gt;显示颜色</td>
+</tr>
+<tr>
+<td>--color=never</td>
+<td>不依照文件特性显示颜色</td>
+</tr>
+</tbody>
+</table>
+<h3 id="tree-显示文件树形结构"><a href="#tree-显示文件树形结构" class="headerlink" title="tree:显示文件树形结构"></a>tree:显示文件树形结构</h3><pre><code>tree
+</code></pre><h3 id="cp-复制"><a href="#cp-复制" class="headerlink" title="cp:复制"></a>cp:复制</h3><pre><code>cp [-] source1 [source2...] destination
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-a</td>
+<td>&lt;常用&gt;-pdr,BSD:-pPR</td>
+</tr>
+<tr>
+<td>-p</td>
+<td>&lt;常用&gt;连同文件的属性一起复制过去，而非使用默认属性</td>
+</tr>
+<tr>
+<td>-d<br>BSD:-P</td>
+<td>若source是连结档,则复制连结档而非文件本身</td>
+</tr>
+<tr>
+<td>-r<br>BSD:-R</td>
+<td>&lt;常用&gt;递归</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>&lt;常用&gt;覆盖目标文件复制,覆盖前提示</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>force,覆盖目标文件复制</td>
+</tr>
+<tr>
+<td>-l</td>
+<td>进行硬式连结(hard link)的连结档创建，而非复制文件本身；</td>
+</tr>
+<tr>
+<td>-s<br>BSD:<code>ln</code></td>
+<td>复制成为符号连结档 (symbolic link)</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>若 destination 比 source 旧,升级 destination </td>
+</tr>
+</tbody>
+</table>
+<ol>
+<li>若有多个source,destination必须为direction.</li>
+<li>文件权限改变,默认<code>cp</code>下,destination的拥有者权限为命令操作者.</li>
+</ol>
+<h3 id="rm-移除"><a href="#rm-移除" class="headerlink" title="rm:移除"></a>rm:移除</h3><pre><code>rm [-] file
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-f</td>
+<td>force</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>删除前提示</td>
+</tr>
+<tr>
+<td>-r</td>
+<td>递归</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mv-移动或更名"><a href="#mv-移动或更名" class="headerlink" title="mv:移动或更名"></a>mv:移动或更名</h3><pre><code>mv [-] source1 [source2...] destination
+mv old_file new_name  #rename
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-f</td>
+<td>force</td>
+</tr>
+<tr>
+<td>-i</td>
+<td>覆盖前提示</td>
+</tr>
+<tr>
+<td>-u</td>
+<td>若 destination 比 source 旧,升级 destination </td>
+</tr>
+</tbody>
+</table>
+<h3 id="basename-取得文件名"><a href="#basename-取得文件名" class="headerlink" title="basename:取得文件名"></a>basename:取得文件名</h3><pre><code>basename directory
+</code></pre><h3 id="dirname-取得目录名"><a href="#dirname-取得目录名" class="headerlink" title="dirname:取得目录名"></a>dirname:取得目录名</h3><pre><code>dirname directory
+</code></pre><h3 id="rename-批量修改文件名"><a href="#rename-批量修改文件名" class="headerlink" title="rename:批量修改文件名"></a>rename:批量修改文件名</h3><ol>
+<li>mac 下没有 rename 命令，需要用 brew 安装一个<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">$ brew install rename
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>使用<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">$ rename 's/old/new/' *.txt
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+更多用法：<br><a href="http://plasmasturm.org/code/rename/#TUTORIAL" target="_blank" rel="external">rename // plasmasturm.org</a></li>
+</ol>
+<h2 id="文件内容查阅"><a href="#文件内容查阅" class="headerlink" title="文件内容查阅"></a>文件内容查阅</h2><h3 id="cat-列示文件内容"><a href="#cat-列示文件内容" class="headerlink" title="cat:列示文件内容"></a>cat:列示文件内容</h3><p>cat意为concatenate.</p>
+<pre><code>cat [-] file
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-A</td>
+<td>-vET</td>
+</tr>
+<tr>
+<td>-v</td>
+<td>列出一些看不见的特殊字符</td>
+</tr>
+<tr>
+<td>-E</td>
+<td>显示断行符$,Windows的断行符为^MS</td>
+</tr>
+<tr>
+<td>-T</td>
+<td>将[TAB]显示为^I</td>
+</tr>
+<tr>
+<td>-b</td>
+<td>列出非空行行号</td>
+</tr>
+<tr>
+<td>-n</td>
+<td>显示所有行行号</td>
+</tr>
+</tbody>
+</table>
+<p><code>tac</code>为反向列示,命令符也和<code>cat</code>相反.</p>
+<h3 id="nl-添加行号列示文件"><a href="#nl-添加行号列示文件" class="headerlink" title="nl:添加行号列示文件"></a>nl:添加行号列示文件</h3><pre><code>nl [-] file
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-b</td>
+<td>显示非空行行号</td>
+</tr>
+<tr>
+<td>-b a</td>
+<td>显示所有行行号(类似 cat -n)</td>
+</tr>
+<tr>
+<td>-n ln</td>
+<td>行号在萤幕的最左方显示</td>
+</tr>
+<tr>
+<td>-n rn</td>
+<td>行号在自己栏位的最右方显示,且数位不加0补齐</td>
+</tr>
+<tr>
+<td>-n rz</td>
+<td>行号在自己栏位的最右方显示,且数位加0补齐</td>
+</tr>
+<tr>
+<td>-w</td>
+<td>行号栏位的占用的位数</td>
+</tr>
+</tbody>
+</table>
+<h3 id="more-可翻页检视"><a href="#more-可翻页检视" class="headerlink" title="more:可翻页检视"></a>more:可翻页检视</h3><pre><code>more file
+</code></pre><table>
+<thead>
+<tr>
+<th>HotKey</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[SPACE]</td>
+<td>向下翻一页</td>
+</tr>
+<tr>
+<td>b</td>
+<td>向上翻一页</td>
+</tr>
+<tr>
+<td>[ENTER]</td>
+<td>向下翻一行</td>
+</tr>
+<tr>
+<td>/word</td>
+<td>向下搜索字符串</td>
+</tr>
+<tr>
+<td>:f</td>
+<td>显示档名和目前行数</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出more模式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="less-可翻页检视"><a href="#less-可翻页检视" class="headerlink" title="less:可翻页检视"></a>less:可翻页检视</h3><pre><code>less file
+</code></pre><table>
+<thead>
+<tr>
+<th>HotKey</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>[SPACE]<br>[pagedown]</td>
+<td>向下翻一页</td>
+</tr>
+<tr>
+<td>[pageup]</td>
+<td>向上翻一页</td>
+</tr>
+<tr>
+<td>[ENTER]</td>
+<td>向下翻一行</td>
+</tr>
+<tr>
+<td>/word</td>
+<td>向下搜索字符串</td>
+</tr>
+<tr>
+<td>?word</td>
+<td>向上搜索字符串</td>
+</tr>
+<tr>
+<td>n</td>
+<td>向前搜索下一个</td>
+</tr>
+<tr>
+<td>N</td>
+<td>反向搜索下一个</td>
+</tr>
+<tr>
+<td>:f</td>
+<td>显示档名和目前行数</td>
+</tr>
+<tr>
+<td>q</td>
+<td>退出more模式</td>
+</tr>
+</tbody>
+</table>
+<h3 id="od-显示非纯文字档"><a href="#od-显示非纯文字档" class="headerlink" title="od:显示非纯文字档"></a>od:显示非纯文字档</h3><pre><code>od -t [-] file
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>利用默认的字节来输出；</td>
+</tr>
+<tr>
+<td>c</td>
+<td>使用 ASCII 字节来输出</td>
+</tr>
+<tr>
+<td>d[size]</td>
+<td>利用十进位(decimal)来输出数据，每个整数占用 size bytes ；</td>
+</tr>
+<tr>
+<td>f[size]</td>
+<td>利用浮点数值(floating)来输出数据，每个数占用 size bytes ；</td>
+</tr>
+<tr>
+<td>o[size]</td>
+<td>利用八进位(octal)来输出数据，每个整数占用 size bytes ；</td>
+</tr>
+<tr>
+<td>x[size]</td>
+<td>利用十六进位(hexadecimal)来输出数据，每个整数占用 size bytes ；</td>
+</tr>
+</tbody>
+</table>
+<p>例子:</p>
+<pre><code>od -t oCc /etc/issue
+</code></pre><h2 id="数据截取"><a href="#数据截取" class="headerlink" title="数据截取"></a>数据截取</h2><h3 id="head-tail-数据撷取"><a href="#head-tail-数据撷取" class="headerlink" title="head,tail:数据撷取"></a>head,tail:数据撷取</h3><pre><code>head [-] file
+tail [-] file
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-n 10</td>
+<td>显示行数,默认为10行</td>
+</tr>
+<tr>
+<td>-f</td>
+<td>tail将持续文档末尾新添加的内容</td>
+</tr>
+</tbody>
+</table>
+<p>例如:<br><code>head -n -100 file</code>从开头开始显示至倒数100行.<br><code>tail -n +100 file</code>从100行开始显示到最后.</p>
+<h2 id="文件属性相关"><a href="#文件属性相关" class="headerlink" title="文件属性相关"></a>文件属性相关</h2><h3 id="touch-修改文件时间与建建新档"><a href="#touch-修改文件时间与建建新档" class="headerlink" title="touch:修改文件时间与建建新档"></a>touch:修改文件时间与建建新档</h3><p>关于文件的三个时间:<br>mtime(modification time):内容编辑时间<br>ctime(status time):属性改变时间<br>atime(access time):读取时间</p>
+<pre><code>touch [-] file
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-m</td>
+<td>仅修改modification time</td>
+</tr>
+<tr>
+<td>-a</td>
+<td>仅修订access time</td>
+</tr>
+<tr>
+<td>-c</td>
+<td>仅修订文件时间, 不新建文件</td>
+</tr>
+<tr>
+<td>-t YYMMDDhhmm[.SS]</td>
+<td>修改时间</td>
+</tr>
+<tr>
+<td>-d [date]<br>BSD:--date=”date”</td>
+<td>修订日期</td>
+</tr>
+</tbody>
+</table>
+<p>例子:</p>
+<pre><code>touch -mt 201412110959 file
+touch -d &quot;2 days ago&quot; bashrc
+</code></pre><h3 id="umask-显示文件默认权限"><a href="#umask-显示文件默认权限" class="headerlink" title="umask:显示文件默认权限"></a>umask:显示文件默认权限</h3><pre><code>umask
+</code></pre><p>umask显示的是所缺权限,比如022则表示rwxr-xr-x</p>
+<pre><code>umask -S
+</code></pre><p>以易读的方式显示权限</p>
+<pre><code>umask 000
+</code></pre><p>设置默认文件权限<br>sudo chown -R $(whoami) ~/.npm</p>
+<h3 id="file-观察文件类型"><a href="#file-观察文件类型" class="headerlink" title="file:观察文件类型"></a>file:观察文件类型</h3><pre><code>file directory
+</code></pre><h3 id="chagrp-chown-chmod-文件权限修改"><a href="#chagrp-chown-chmod-文件权限修改" class="headerlink" title="chagrp/chown/chmod: 文件权限修改"></a>chagrp/chown/chmod: 文件权限修改</h3><p>1.文件权限属性：</p>
+<ol>
+<li>文档类型<ul>
+<li>d：目录</li>
+<li>-：文件</li>
+<li>l：link file</li>
+<li>b：可供储存的接口设备</li>
+<li>c：串行端口设备，如键盘、鼠标等</li>
+</ul>
+</li>
+<li><p>改变权限</p>
+<ul>
+<li>chgrp: 改变群组<pre><code>chgrp [-R] dir
+chgrp users install.log
+</code></pre></li>
+<li>chown：改变拥有者<pre><code>chown [-R] dir
+chown user:group install.log
+chown root:root install.log
+chown -R $USER:$GROUP dir
+</code></pre></li>
+<li>chmod：改变权限<pre><code>chmod [-R] rwx dir
+chmod 777 .bashrc
+chmod u=rwx,go=rx .bashrc
+</code></pre><code>chmod</code> + <code>u/g/o/a</code> + <code>+/-/=</code> + <code>r/w/x</code> + dir</li>
+</ul>
+</li>
+<li><p>查看组群</p>
+<pre><code>cat /etc/group
+</code></pre></li>
+<li>查看用户<pre><code>who # 查看当前用户
+id # 当前用户详情
+</code></pre></li>
+</ol>
+<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><h3 id="which-运行档命令搜索"><a href="#which-运行档命令搜索" class="headerlink" title="which:运行档命令搜索"></a>which:运行档命令搜索</h3><pre><code>which cmd  #列出搜索到的第一个命令所属
+which -a cmd  #列出所有命令所在文件
+</code></pre><p>因为which是根据PATH搜索的,所以使用者不同,搜索的结果不同.</p>
+<p>其他命令搜索:<a href="http://shanlanmi.top/2015/12/29/2015-12-29-bash/#type_3A_u67E5_u8BE2_u5185_u5EFA_u547D_u4EE4" target="_blank" rel="external">type</a></p>
+<h3 id="whereis-特定文件搜索"><a href="#whereis-特定文件搜索" class="headerlink" title="whereis:特定文件搜索"></a>whereis:特定文件搜索</h3><p>whereis可以找到可执行命令和manpage.</p>
+<pre><code>whereis [-] file_or_dir
+</code></pre><h3 id="locate-根据数据库检索文件"><a href="#locate-根据数据库检索文件" class="headerlink" title="locate:根据数据库检索文件"></a>locate:根据数据库检索文件</h3><p>locate是在系统数据库中查找文件,所以更新不一定即时,但是搜索速度快.<br><code>updatedb</code>可以手动更新数据库.</p>
+<pre><code>locate [-] keyword
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-i</td>
+<td>忽略大小写</td>
+</tr>
+<tr>
+<td>-d</td>
+<td>设置数据库</td>
+</tr>
+</tbody>
+</table>
+<p>使用中报错:</p>
+<pre><code>/usr/libexec/locate.updatedb: line 97: /var/db/locate.database: Permission denied
+</code></pre><p>原因分析:因为装了GNU的coreutils,而<code>locate.updatedb</code>脚本需要用OS X自带的mktemp,命令格式不一样报错.<br>解决方法:</p>
+<ol>
+<li>复制数据库文件<code>cp /usr/libexec/locate.updatedb ~/bin/updatedb</code>.</li>
+<li>然后打开<code>~/bin/updatedb</code>,把所有调用<code>mktemp</code>的地方改成<code>/usr/bin/mktemp</code>.</li>
+<li>设置<code>SEARCHPATHS=$HOME FCODES=$HOME/.locate.db ~/bin/updatedb</code></li>
+<li>设置alias</li>
+<li>更新设置<code>source ~/.zshrc</code>.</li>
+</ol>
+<h3 id="find-文件检索"><a href="#find-文件检索" class="headerlink" title="find:文件检索"></a>find:文件检索</h3><pre><code>find [PATH] [-] [action]
+</code></pre><table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>时间相关参数</strong></td>
+<td>-atime和-ctime用法同-mtime</td>
+</tr>
+<tr>
+<td>-mtime n</td>
+<td>在n天之前的”一天之内”被编辑过的文件</td>
+</tr>
+<tr>
+<td>-mtime +n</td>
+<td>在n天之前(不含n天)被编辑过的文件</td>
+</tr>
+<tr>
+<td>-mtime -n</td>
+<td>在n天之内(含n天)被编辑过的文件</td>
+</tr>
+<tr>
+<td>-newer file</td>
+<td>file为一个存在的文件,列出比file还要新的文件名</td>
+</tr>
+<tr>
+<td><strong>使用者或组群相关参数</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>-uid n</td>
+<td>使用者帐号ID号,即UID,记录在/etc/passwd中</td>
+</tr>
+<tr>
+<td>-gid n</td>
+<td>群组名称ID号,即GID,记录在/etc/group中</td>
+</tr>
+<tr>
+<td>-user name</td>
+<td>name为使用者名称</td>
+</tr>
+<tr>
+<td>-group name</td>
+<td>name为群组名称</td>
+</tr>
+<tr>
+<td>-nouser</td>
+<td>寻找拥有群组不存在于/etc/passwd中的文件</td>
+</tr>
+<tr>
+<td>-nogroup</td>
+<td>寻找拥有群组不存在于/etc/group中的文件</td>
+</tr>
+<tr>
+<td><strong>文件属性相关参数</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>-name filename</td>
+<td>按文件名搜寻.支持万用字节’filename’.</td>
+</tr>
+<tr>
+<td>-size [+-]n[ckMGTP]</td>
+<td>按文件SIZE搜索搜.<br>这个SIZE的规格有:c,k,M,G,T,P.<br>例如:<code>-size+50M</code>搜索大于50M的文件.</td>
+</tr>
+<tr>
+<td>-type TYPE</td>
+<td>按类型TYPE搜索.<br>类型主要有:一般正规文件(f),装置文件(b,c),目录(d),连结档(l),socket(s),及FIFO(p)等.</td>
+</tr>
+<tr>
+<td>-perm mode</td>
+<td>按文件权限属性搜索,这个mode值类似chmod的属性值,例如:-rwsr-xr-x 的属性为4755.</td>
+</tr>
+<tr>
+<td>-perm -mode</td>
+<td>搜寻文件权限包含mode权限的文件.<br>例如:要搜寻-rwxr–r–,即0744文件,使用-perm -0744,会搜到权限为-rwsr-xr-x,即4755的文件.</td>
+</tr>
+<tr>
+<td>-perm +mode</td>
+<td>搜寻文件权限包含任一mode权限的文件.<br>例如:要搜寻-rwxr-xr-xm即-perm +755文件,使用-perm -755,会搜到权限为-rw——-的文件.</td>
+</tr>
+<tr>
+<td><strong>额外动作</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>-exec cmd</td>
+<td>cmd为其他命令,用于搜索到的结果再处理<br>注意,后续命令不支持别名<br>例如:<code>find / -perm +777 -exec ls -l {} \;</code>,<code>{}</code>为find找到的内容,<code>\;</code>为exec的结束符号.</td>
+</tr>
+<tr>
+<td>-print</td>
+<td>打印到屏幕,默认动作.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="本文相关"><a href="#本文相关" class="headerlink" title="本文相关"></a>本文相关</h2><h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><ul>
+<li><a href="http://vbird.dic.ksu.edu.tw/linux_basic/0220filemanager.php#head" target="_blank" rel="external">鸟哥的Linux私房菜</a></li>
+<li><a href="http://roylez.herokuapp.com/2014/10/06/happy-locating.html?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">在Mac下幸福快乐的用locate</a></li>
+</ul>
+<h3 id="修订"><a href="#修订" class="headerlink" title="修订"></a>修订</h3><ol>
+<li>2016-01-10:第一版</li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/Shell文件管理相关命令/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://shanlanmi.github.io/zsl-blog/2016/07/21/Shell文件管理相关命令/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/Homebrew/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/zsl-blog/2016/07/21/Shell程序管理相关命令/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/zsl-blog/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/zsl-blog/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/zsl-blog/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
+                        <!-- Footer Top Button -->
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+
+                    
+
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/zsl-blog/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/zsl-blog/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/zsl-blog/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/zsl-blog/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/zsl-blog/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
+                </main>
+            </div>
+        </body>
+    
+</html>
