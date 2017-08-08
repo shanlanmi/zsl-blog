@@ -1,17 +1,292 @@
 <!DOCTYPE html>
-<html style="display: none;" <% if(config.language !== null) { %>lang="<%- config.language.substring(0,2) %>"<% } %>>
-    <%- partial('_partial/head') %>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
 
-    <% if(page.layout === 'gallery') { %>
-        <!-- Single Gallery Page -->
-        <%- partial('_widget/page-gallery') %>
-    <% } else { %>
-        <body id="scheme-<%= theme.scheme %>" class="lazy">
+    <!-- Title -->
+    
+    <title>
+        
+            CSS | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="描述">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="CSS | 张圣兰">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="描述">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="CSS | 张圣兰">
+    <meta name="twitter:description" content="描述">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://shanlanmi.github.io/zsl-blog/2016/07/21/CSS/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "CSS",
+    "url": "http://shanlanmi.github.io/zsl-blog/2016/07/21/CSS/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "描述",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                <% if(theme.scheme === 'Isolation') { %>
-                    <!-- Isolation Header -->
-                    <%- partial('_partial/isolate_info') %>
-                <% } %>
+                
 
                 <!-- Main Container -->
                 <main class="material-layout__content" id="main">
@@ -19,29 +294,2591 @@
                     <!-- Top Anchor -->
                     <div id="top"></div>
 
-                    <% if(theme.scheme === 'Paradox') { %>
+                    
                         <!-- Hamburger Button -->
                         <button class="MD-burger-icon sidebar-toggle">
                             <span class="MD-burger-layer"></span>
                         </button>
-                    <% } %>
+                    
 
-                    <%- body %>
+                    <!-- Post TOC -->
 
-                    <% if(theme.scheme === 'Paradox') { %>
-                        <%- partial('_partial/sidebar') %>
-                    <% } %>
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-                    <% if( (theme.scheme === 'Paradox') && (is_post() || is_home() || is_archive() || is_category() || (page.totop === true) ) ) { %>
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS-Selector"><span class="post-toc-number">1.</span> <span class="post-toc-text">CSS Selector</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#CSS-Properties"><span class="post-toc-number">2.</span> <span class="post-toc-text">CSS Properties</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Color-Properties"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Color Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Background-Properties"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Background Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Border-Properties"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Border Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Margin-and-Padding-Properties"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Margin and Padding Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Basic-Box-Properties"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">Basic Box Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Overflow-Properties"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">Overflow Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Text-Properties"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">Text Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Text-Decoration-Properties"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">Text Decoration Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Font-Properties"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">Font Properties</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#undefined"><span class="post-toc-number"></span> <span class="post-toc-text"></span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.</span> <span class="post-toc-text"></span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.1.</span> <span class="post-toc-text"></span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text"></span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-5"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.1.1.1.</span> <span class="post-toc-text"></span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-6"><a class="post-toc-link" href="#undefined"><span class="post-toc-number">1.1.1.1.1.</span> <span class="post-toc-text"></span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Writing-Modes-Properties"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Writing Modes Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Table-Properties"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Table Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Lists-and-Counters-Properties"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Lists and Counters Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Animation-Properties"><span class="post-toc-number">1.5.</span> <span class="post-toc-text">Animation Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Transform-Properties"><span class="post-toc-number">1.6.</span> <span class="post-toc-text">Transform Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Transitions-Properties"><span class="post-toc-number">1.7.</span> <span class="post-toc-text">Transitions Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Basic-User-Interface-Properties"><span class="post-toc-number">1.8.</span> <span class="post-toc-text">Basic User Interface Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Multi-column-Layout-Properties"><span class="post-toc-number">1.9.</span> <span class="post-toc-text">Multi-column Layout Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Paged-Media"><span class="post-toc-number">1.10.</span> <span class="post-toc-text">Paged Media</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generated-Content-for-Paged-Media"><span class="post-toc-number">1.11.</span> <span class="post-toc-text">Generated Content for Paged Media</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Filter-Effects-Properties"><span class="post-toc-number">1.12.</span> <span class="post-toc-text">Filter Effects Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Image-Values-and-Replaced-Content"><span class="post-toc-number">1.13.</span> <span class="post-toc-text">Image Values and Replaced Content</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Masking-Properties"><span class="post-toc-number">1.14.</span> <span class="post-toc-text">Masking Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Speech-Properties"><span class="post-toc-number">1.15.</span> <span class="post-toc-text">Speech Properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Marquee-Properties"><span class="post-toc-number">1.16.</span> <span class="post-toc-text">Marquee Properties</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Some-Syntax"><span class="post-toc-number">2.</span> <span class="post-toc-text">Some Syntax</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Comments"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Comments</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Cascade"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Cascade</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Short-hand"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Short hand</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Counters"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Counters</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Some-Example"><span class="post-toc-number">3.</span> <span class="post-toc-text">Some Example</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Navigation-Bar"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Navigation Bar</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tooltip"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Tooltip</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Gradients"><span class="post-toc-number">4.</span> <span class="post-toc-text">Gradients</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Linear-Gradients"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Linear Gradients</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Radial-Gradients"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Radial Gradients</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Responsive-Web-Design"><span class="post-toc-number">5.</span> <span class="post-toc-text">Responsive Web Design</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Add-CSS-to-HTML-elements-in-3-ways"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Add CSS to HTML elements in 3 ways:</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Link-to-diffrent-CSS-file"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Link to diffrent CSS file</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Media-Query"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">Media Query</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Vendor-specific-CSS-properties"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">Vendor-specific CSS properties</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Cascading-Order"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">Cascading Order</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-Viewport"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">The Viewport</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Grid-Vies"><span class="post-toc-number">5.7.</span> <span class="post-toc-text">Grid-Vies</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本文相关"><span class="post-toc-number">6.</span> <span class="post-toc-text">本文相关</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                CSS
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=CSS&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/CSS/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=CSS&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/CSS/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://shanlanmi.github.io/zsl-blog/2016/07/21/CSS/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://shanlanmi.github.io/zsl-blog/2016/07/21/CSS/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=CSS&summary=描述&pics=http://shanlanmi.github.io/zsl-blog/img/favicon.png&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/CSS/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="CSS-Selector"><a href="#CSS-Selector" class="headerlink" title="CSS Selector"></a>CSS Selector</h2><p>Syntax: <code>Selector { Property:Value; Property:Value; }</code></p>
+<p><strong>Tag Seletor</strong></p>
+<p>Use <code>id</code> to address a <strong>single</strong> element. Use <code>class</code> to address <strong>groups</strong> of elements.<br>Better, use <code>id</code> to address an element for JavaScript, use <code>class</code> to address some elements for css. </p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Example</th>
+<th>Example description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.class</code></td>
+<td><code>.intro</code></td>
+<td>Selects all elements with class=”intro”</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>#id</code></td>
+<td><code>#firstname</code></td>
+<td>Selects the element with id=”firstname”</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>*</code></td>
+<td><code>*</code></td>
+<td>Selects all elements</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Element Selector</strong></p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Example</th>
+<th>Example description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>element</code></td>
+<td><code>p</code></td>
+<td>Selects all <code>&lt;p&gt;</code> elements</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>element,element</code></td>
+<td><code>div, p</code></td>
+<td>Selects all <code>&lt;div&gt;</code> elements and all <code>&lt;p&gt;</code> elements</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>element element</code></td>
+<td><code>div p</code></td>
+<td>Selects all <code>&lt;p&gt;</code> elements inside <code>&lt;div&gt;</code> elements</td>
+<td>1</td>
+</tr>
+<tr>
+<td><code>element&gt;element</code></td>
+<td><code>div &gt; p</code></td>
+<td>Selects all <code>&lt;p&gt;</code> elements that are immediate children of <code>&lt;div&gt;</code> elements</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>element+element</code></td>
+<td><code>div + p</code></td>
+<td>Selects all <code>&lt;p&gt;</code> elements that are placed immediately after <code>&lt;div&gt;</code> elements</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>element1~element2</code></td>
+<td><code>p ~ ul</code></td>
+<td>Selects every <code>&lt;ul&gt;</code> element that are placed after <code>&lt;p&gt;</code> element</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>助记：</p>
+<ol>
+<li><code>&gt;</code>，有包含的意思，作为cild selector。</li>
+<li><code>+</code>，横线代表后面的意思，竖线代表一个的意思，意为选择紧接着后面的一个。</li>
+<li><code>~</code>，仅有横线，意为选择后面所有。</li>
+</ol>
+<p><strong>Attribute</strong></p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Example</th>
+<th>Example description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[attribute]</code></td>
+<td><code>[target]</code></td>
+<td>Selects all elements with a target attribute</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>[attribute=value]</code></td>
+<td><code>[target=_blank]</code></td>
+<td>Selects all elements with target=”_blank”</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>[attribute~=value]</code></td>
+<td><code>[title~=flower]</code></td>
+<td>Selects all elements with a title attribute containing <strong>the word</strong> “flower”</td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>[attribute*=value]</code></td>
+<td><code>a[href*=&quot;w3schools&quot;]</code></td>
+<td>Selects every <code>&lt;a&gt;</code> element whose href attribute value contains the <strong>string</strong> “w3schools”</td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>[attribute丨=value]</code></td>
+<td><code>[lang丨=en]</code></td>
+<td>Selects all elements with a lang attribute value <strong>starting with</strong> “en” <strong>word</strong></td>
+<td>2</td>
+</tr>
+<tr>
+<td><code>[attribute^=value]</code></td>
+<td><code>a[href^=&quot;https&quot;]</code></td>
+<td>Selects every <code>&lt;a&gt;</code> element whose href attribute value <strong>begins with</strong> “https” <strong>string</strong></td>
+<td>3</td>
+</tr>
+<tr>
+<td><code>[attribute$=value]</code></td>
+<td><code>a[href$=&quot;.pdf&quot;]</code></td>
+<td>Selects every <code>&lt;a&gt;</code> element whose href attribute value <strong>ends with</strong> “.pdf” <strong>word</strong></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p>Diffrents:</p>
+<ul>
+<li><code>~=</code>: Contain the word</li>
+<li><code>*=</code>: Contain the string</li>
+<li><code>|=</code>: Start with the word</li>
+<li><code>^=</code>: Start with the string</li>
+<li><code>$=</code>: End with the word</li>
+</ul>
+<p>Note: A whole word, either alone, like class=”top”, or followed by a hyphen( - ), like class=”top-text”.</p>
+<p>Using attribute selector to styling Forms:</p>
+<p><strong>Pseudo Classes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Example</th>
+<th>Example description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>:active</td>
+<td>a:active</td>
+<td>Selects the active link</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>input:checked</td>
+<td>Selects every checked <code>&lt;input&gt;</code> element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>input:disabled</td>
+<td>Selects every disabled <code>&lt;input&gt;</code> element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:empty</td>
+<td>p:empty</td>
+<td>Selects every <code>&lt;p&gt;</code> element that has no children</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:enabled</td>
+<td>input:enabled</td>
+<td>Selects every enabled <code>&lt;input&gt;</code> element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:first-child</td>
+<td>p:first-child</td>
+<td>Selects every <code>&lt;p&gt;</code> elements that is the first child of its parent</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:first-of-type</td>
+<td>p:first-of-type</td>
+<td>Selects every <code>&lt;p&gt;</code> element that is the first <code>&lt;p&gt;</code> element of its parent</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:focus</td>
+<td>input:focus</td>
+<td>Selects the <code>&lt;input&gt;</code> element that has focus</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:hover</td>
+<td>a:hover</td>
+<td>Selects links on mouse over</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:in-range</td>
+<td>input:in-range</td>
+<td>Selects <code>&lt;input&gt;</code> elements with a value within a specified range</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:invalid</td>
+<td>input:invalid</td>
+<td>Selects all <code>&lt;input&gt;</code> elements with an invalid value</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:lang(language)</td>
+<td>p:lang(it)</td>
+<td>Selects every <code>&lt;p&gt;</code> element with a lang attribute value starting with “it”</td>
+<td>2</td>
+</tr>
+<tr>
+<td>:last-child</td>
+<td>p:last-child</td>
+<td>Selects every <code>&lt;p&gt;</code> elements that is the last child of its parent</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:last-of-type</td>
+<td>p:last-of-type</td>
+<td>Selects every <code>&lt;p&gt;</code> element that is the last <code>&lt;p&gt;</code> element of its parent</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:link</td>
+<td>a:link</td>
+<td>Selects all unvisited links</td>
+<td>1</td>
+</tr>
+<tr>
+<td>:not(selector)</td>
+<td>:not(p)</td>
+<td>Selects every element that is not a <code>&lt;p&gt;</code> element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-child(n)</td>
+<td>p:nth-child(2)</td>
+<td>Selects every <code>&lt;p&gt;</code> element that is the second child of its parent</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-last-child(n)</td>
+<td>p:nth-last-child(2)</td>
+<td>Selects every <code>&lt;p&gt;</code> element that is the second child of its parent, counting from the last child</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-last-of-type(n)</td>
+<td>p:nth-last-of-type(2)</td>
+<td>Selects every <code>&lt;p&gt;</code> element that is the second <code>&lt;p&gt;</code> element of its parent, counting from the last child</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:nth-of-type(n)</td>
+<td>p:nth-of-type(2)</td>
+<td>Selects every <code>&lt;p&gt;</code> element that is the second <code>&lt;p&gt;</code> element of its parent</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:only-of-type</td>
+<td>p:only-of-type</td>
+<td>Selects every <code>&lt;p&gt;</code> element that is the only <code>&lt;p&gt;</code> element of its parent</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:only-child</td>
+<td>p:only-child</td>
+<td>Selects every <code>&lt;p&gt;</code> element that is the only child of its parent</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:optional</td>
+<td>input:optional</td>
+<td>Selects <code>&lt;input&gt;</code> elements with no “required” attribute</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:out-of-range</td>
+<td>input:out-of-range</td>
+<td>Selects <code>&lt;input&gt;</code> elements with a value outside a specified range</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:read-only</td>
+<td>input:read-only</td>
+<td>Selects <code>&lt;input&gt;</code> elements with a “readonly” attribute specified</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:read-write</td>
+<td>input:read-write</td>
+<td>Selects <code>&lt;input&gt;</code> elements with no “readonly” attribute</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:required</td>
+<td>input:required</td>
+<td>Selects <code>&lt;input&gt;</code> elements with a “required” attribute specified</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:root</td>
+<td>root</td>
+<td>Selects the document’s root element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:target</td>
+<td>#news:target</td>
+<td>Selects the current active #news element (clicked on a URL containing that anchor name)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:valid</td>
+<td>input:valid</td>
+<td>Selects all <code>&lt;input&gt;</code> elements with a valid value</td>
+<td>3</td>
+</tr>
+<tr>
+<td>:visited</td>
+<td>a:visited</td>
+<td>Selects all visited links</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Link style</strong></p>
+<ul>
+<li>Unvisited state: <code>a:link { color: green; }</code></li>
+<li>Visited state: <code>a:visited { color: red; }</code></li>
+<li>Hover state: <code>a:hover { color: yellow; }</code></li>
+<li>Focus state: <code>a:focus { color: blue; }</code></li>
+<li>Active state: <code>a:active { color: white; }</code><br>Some browers don’t support <em>focus</em> and <em>active</em>.<br>If links be in multiple states at the same time, the right ordering is <em>link, visited, focus, hover, active.</em></li>
+</ul>
+<p><strong>Pseudo Elements</strong></p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Example</th>
+<th>Example description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>::after</td>
+<td>p::after</td>
+<td>Insert content after every <code>&lt;p&gt;</code> element</td>
+<td>2</td>
+</tr>
+<tr>
+<td>::before</td>
+<td>p::before</td>
+<td>Insert content before every <code>&lt;p&gt;</code> element</td>
+<td>2</td>
+</tr>
+<tr>
+<td>::first-letter</td>
+<td>p::first-letter</td>
+<td>Selects the first letter of every <code>&lt;p&gt;</code> element</td>
+<td>1</td>
+</tr>
+<tr>
+<td>::first-line</td>
+<td>p::first-line</td>
+<td>Selects the first line of every <code>&lt;p&gt;</code> element</td>
+<td>1</td>
+</tr>
+<tr>
+<td>::selection</td>
+<td>p::selection</td>
+<td>Selects the portion of an element that is selected by a user</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<h2 id="CSS-Properties"><a href="#CSS-Properties" class="headerlink" title="CSS Properties"></a>CSS Properties</h2><p><strong>initial, inherit</strong></p>
+<h3 id="Color-Properties"><a href="#Color-Properties" class="headerlink" title="Color Properties"></a>Color Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#color">color</a></td>
+<td>Sets the color of text</td>
+<td>1</td>
+</tr>
+<tr>
+<td>opacity</td>
+<td>Sets the opacity level for an element<br><a><em>Value: number, %</em></a></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong><a id="color">Color Value</a></strong></p>
+<ol>
+<li>Color names<br> e.g. <code>background-color: color-name;</code><br> HTML supports <a href="http://www.w3schools.com/colors/colors_names.asp" target="_blank" rel="external">140 standard color names</a>.</li>
+<li>RGB Colors<br> RGB(Red, Green, Blue) color values can be rgb(0,0,0) ~ rgb(255,255,255) or rgb(0,0,0) ~ rgb(100%,100%,100%).<br> e.g. <code>background-color: rgb(201,102,0)</code></li>
+<li>RGBA Colors<br> RGBA(Red, Green, Blue, alpha) color values can be rgba(0,0,0,0.0) to rgba(255,255,255,1.0).</li>
+<li>Hexadecimal Colors<br> Hex color values in the form: #RRGGBB (R=red, G=green, B=Blue).<br> Hex color values betwwen 00 and FF (same as 0-255).<br> e.g. <code>background-color: #cc6600</code></li>
+<li>HSL Colors<br> HSL(Hue, Saturation, Lightness) color value can be hsl(0,0,0) to hsl(360,100%,100%).<br> Hue Value:<ul>
+<li>0 (or 360) is red</li>
+<li>120 is green</li>
+<li>240 is blue</li>
+</ul>
+</li>
+<li>HSLA Colors<br> HSLA(Hue, Saturation, Lightness, alpha) color value can be hsla(0,0,0,0.0) to hsla(360,100%,100%,1.0).</li>
+</ol>
+<p><strong>How to get rgb from hex code?</strong></p>
+<ol>
+<li>#cc6600 &lt;==&gt; rgb(cc, 66, 00)</li>
+<li>c=12,cc=12<em>16+12=204;66=16</em>6+6=102</li>
+<li>#cc6600 &lt;==&gt; rgb(204, 102, 0)</li>
+</ol>
+<p><strong>Opacity</strong><br>opacity:0.0(fully transparent) ~ 1.0(fully opaque).</p>
+<h3 id="Background-Properties"><a href="#Background-Properties" class="headerlink" title="Background Properties"></a>Background Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>background</td>
+<td>A shorthand for background properties<br><a><em>Order:color, image, position/size, repeat, origin, clip, attachment</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-attachment</td>
+<td>Sets whether a image is fixed or scrolls<br><a><em>Value: scroll, fixed, local</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/pr_background-blend-mode.asp" target="_blank" rel="external">background-blend-mode</a></td>
+<td>Specifies the blending mode of each background layer (color/image)</td>
+<td>3 </td>
+</tr>
+<tr>
+<td>background-color</td>
+<td>Specifies the background color of an element<br><a><em>Value: color, transparent</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-image</td>
+<td>Specifies one or <strong>more</strong> background images for an element<br><a><em>Value: url(top.gif), url(bottom.gif)</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-position</td>
+<td>Specifies the position of a background image<br><a><em>Value: two of direction, x% y%, xpos ypos</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-repeat</td>
+<td>Sets how a background image will be repeated<br><a><em>Value: no-repeat, repeat-x, repeat-y, inherit</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>background-clip</td>
+<td>Specifies the painting area of the background<br><a><em>Value: border-box, padding-box, content-box</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>background-origin</td>
+<td>Specifies where the background image(s) is/are positioned<br><a><em>Value: border-box, padding-box, content-box</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>background-size</td>
+<td>Specifies the size of the background image(s)<br><a><em>Value: auto, 10px 10px, 50% 50%, cover, contain</em></a></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Border-Properties"><a href="#Border-Properties" class="headerlink" title="Border Properties"></a>Border Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border</td>
+<td>Sets all the border properties in one declaration<br><a><em>Order: width style color</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>border-width</td>
+<td>Sets the width of the four borders<br><a><em>Value: medium, thin, thick, length</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>border-style</td>
+<td>Sets the style of the four borders<br><a><em>Value: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>border-color</td>
+<td>Sets the color of the four borders<br><a><em>Value: color, transparent</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>border-radius</td>
+<td>A shorthand property for setting all the four radius properties<br><a><em>Value: length, %</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>border-bottom<br>(top, left, right)</td>
+<td>Sets all the bottom border properties in one declaration*</td>
+<td>1</td>
+</tr>
+<tr>
+<td>border-bottom-width/style/color</td>
+<td>The same as border-width/style/color*</td>
+<td>1</td>
+</tr>
+<tr>
+<td>border-bottom/top-left/right-radius</td>
+<td>Defines the shape of the border of the corner<br><a><em>Value: 1px, 10%, 1em</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>border-image</td>
+<td>A shorthand property for setting all the border-image properties<br><a><em>Value: source slice width outset repeat</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>border-image-source</td>
+<td>Specifies the path to the image to be used as a border<br><a><em>Value: url(border.png)</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>border-image-slice</td>
+<td>Specifies how to slice the border image<br><a><em>Value: 10, 30%, 30% fill</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>border-image-width</td>
+<td>Specifies the widths of the image-border<br><a><em>Value: 1px 1px, 1 2, 20% 20%, auto</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>border-image-outset</td>
+<td>Specifies the border image area extends beyond the border box<br><a><em>Value: 1px 1px, 1 0</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>border-image-repeat</td>
+<td>Specifies whether the border image should be repeated or others<br><a><em>Value: stretch, repeat, round, space</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/css3_pr_box-shadow.asp" target="_blank" rel="external">box-shadow</a></td>
+<td>Attaches one or more drop-shadows to the box<br><a><em>Value: h-shadow v-shadow blur spread color, inset</em></a></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Margin-and-Padding-Properties"><a href="#Margin-and-Padding-Properties" class="headerlink" title="Margin and Padding Properties"></a>Margin and Padding Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>margin</td>
+<td>Sets all the margin properties in one declaration<br><a><em>Order: auto, length, %</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>margin-top/right/bottom/left</td>
+<td>Sets the top/right/bottom/left margin of an element<br><a><em>Value: auto, length, %</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>padding</td>
+<td>Sets all the padding properties in one declaration<br><a><em>Value: length, %</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>padding-top/right/bottom/left</td>
+<td>Sets the top padding of an element<br><a><em>Value: lenght, %</em></a></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>content &lt; padding &lt; border &lt; margin &lt; outline<br>The size of the collapsed margin is the largest margin.</p>
+<h3 id="Basic-Box-Properties"><a href="#Basic-Box-Properties" class="headerlink" title="Basic Box Properties"></a>Basic Box Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clear</td>
+<td>No floating elements allowed on the side of a specified<br><a><em>Value: none, left, right, both</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>clip</td>
+<td>Clips an absolutely positioned element<br><a><em>Value: auto, rect(top, right, bottom, left)</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/pr_class_display.asp" target="_blank" rel="external">display</a></td>
+<td>Specifies how a certain HTML element should be displayed</td>
+<td>1</td>
+</tr>
+<tr>
+<td>visibility</td>
+<td>Specifies whether or not an element is visible<br><a><em>Value: visible, hidden, collapse</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>float</td>
+<td>Specifies whether or not a box should float<br><a><em>Value: none, left, right</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>height</td>
+<td>Sets the height of an element<br><a><em>Value: auto, length, %</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>width</td>
+<td>Sets the width of an element<br><a><em>Value: auto, length, %</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>top/right/bottom/left</td>
+<td>Specifies the top/right/bottom/left position of a positioned element<br><a><em>Value: auto, length, %</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td><a href="#position">position</a></td>
+<td>Specifies the type of positioning method used for an element<br><a><em>Value: static, relative, absolute, fixed</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>vertical-align</td>
+<td>Sets the vertical alignment of an element<br><a><em>Value: baseline, sub, super, top, middle, bottom, text-top, text-bottom, length, %</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#zindex">z-index</a></td>
+<td>Sets the stack order of a positioned element<br><a><em>Value: auto, number</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>max-height</td>
+<td>Sets the maximum height of an element<br><a><em>Value: none, length, %</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>max-width</td>
+<td>Sets the maximum width of an element<br><a><em>Value: none, length, %</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>min-height</td>
+<td>Sets the minimum height of an element<br><a><em>Value: auto, length, %</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>min-width</td>
+<td>Sets the minimum width of an element<br><a><em>Value: auto, length, %</em></a></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong><a id="positon">position:</a></strong></p>
+<ul>
+<li>Static(default): not affected by the top, bottom, left, and right properties.</li>
+<li>relative: positioned relative to its normal position, affected by the top, bottom, left, right properties.</li>
+<li>fixed: positioned relative to the viewport.</li>
+<li>absolute: positioned relative to the nearest positioned ancestor.</li>
+</ul>
+<p><strong><a id="zindex">z-index</a></strong></p>
+<ul>
+<li>Larger z-index element placed on the top.</li>
+<li>Only elements which positioned with CSS using absolute, relative, or fixed positioning can have z-index.</li>
+<li>z-index can be -1</li>
+</ul>
+<h3 id="Overflow-Properties"><a href="#Overflow-Properties" class="headerlink" title="Overflow Properties"></a>Overflow Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>overflow</td>
+<td>Specifies what happens if content overflows an element’s box<br><a><em>Value: visible, hidden, scroll, auto</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>overflow-x</td>
+<td>Specifies whether or not to clip the left/right edges of the content<br><a><em>Value: visible, hidden, scroll, auto</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>overflow-y</td>
+<td>Specifies whether or not to clip the top/bottom edges of the content<br><a><em>Value: visible, hidden, scroll, auto</em></a></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Text-Properties"><a href="#Text-Properties" class="headerlink" title="Text Properties"></a>Text Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hanging-punctuation</td>
+<td>Specifies whether a punctuation character may be placed outside the line box</td>
+<td>3</td>
+</tr>
+<tr>
+<td>hyphens</td>
+<td>Sets how to split words to improve the layout of paragraphs</td>
+<td>3</td>
+</tr>
+<tr>
+<td>letter-spacing</td>
+<td>Increases or decreases the space between characters in a text<br><a><em>Value: normal, length</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>line-break</td>
+<td>Specifies how/if to break lines</td>
+<td>3</td>
+</tr>
+<tr>
+<td>line-height</td>
+<td>Sets the line height<br><a><em>Value: normal, number, length, %</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>tab-size</td>
+<td>Specifies the length of the tab-character<br><a><em>Value: number, length</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>text-align</td>
+<td>Specifies the horizontal alignment of text<br><a><em>Value: left, right, center, justify</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-align-last</td>
+<td>Describes how the last line of a block or a line right before a forced line break<br> is aligned when text-align is “justify”<br><a><em>Value: auto, left, right, center, justify, start, end</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>text-combine-upright</td>
+<td>Specifies the combination of multiple characters into the space of a single character</td>
+<td>3</td>
+</tr>
+<tr>
+<td>text-indent</td>
+<td>Specifies the indentation of the first line in a text-block<br><a><em>Value: length, %</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-justify</td>
+<td>Specifies the justification method used when text-align is “justify”</td>
+<td>3</td>
+</tr>
+<tr>
+<td>text-transform</td>
+<td>Controls the capitalization of text<br><a><em>Value: none, capitalize, uppercase, lowercase</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>white-space</td>
+<td>Specifies how white-space inside an element is handled<br><a><em>Value: normal, nowrap, pre, pre-line, pre-wrap</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>word-break</td>
+<td>Specifies line breaking rules for non-CJK scripts<br><a><em>Value: normal, break-all, keep-all</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>word-spacing</td>
+<td>Increases or decreases the space between words in a text<br><a><em>Value: normal, length</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>word-wrap</td>
+<td>Allows long, unbreakable words to be broken and wrap to the next line<br><a><em>Value: normal, break-word</em></a></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Text-Decoration-Properties"><a href="#Text-Decoration-Properties" class="headerlink" title="Text Decoration Properties"></a>Text Decoration Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text-decoration</td>
+<td>Specifies the decoration added to text<br><a><em>Value: none, underline, overline, line-through</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>text-decoration-color</td>
+<td>Specifies the color of the text-decoration<br><a><em>Value: color</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>text-decoration-line</td>
+<td>Specifies the type of line in a text-decoration<br><a><em>Value: none, underline, overline, line-through</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>text-decoration-style</td>
+<td>Specifies the style of the line in a text decoration<br><a><em>Value: solid, double, dotted, dashed, wavy</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/css3_pr_text-shadow.asp" target="_blank" rel="external">text-shadow</a></td>
+<td>Adds shadow to text<br><a><em>Value: h-shadow v-shadow blur-radius color</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>text-underline-position</td>
+<td>Specifies the position of the underline</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Font-Properties"><a href="#Font-Properties" class="headerlink" title="Font Properties"></a>Font Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/css3_pr_font-face_rule.asp" target="_blank" rel="external">@font-face</a></td>
+<td>A rule that allows websites to download and use fonts other than the “web-safe” fonts<br><a><em>Value: font-family src</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>@font-feature-values</td>
+<td>Allows authors to use a common name in font-variant-alternate for feature activated differently in OpenType</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font</td>
+<td>Sets all the font properties in one declaration<br><a><em>Order: font-style, font-variant, font-weight, font-size/line-height, font-family</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-style</td>
+<td>Specifies the font style for text<br><a><em>Value: normal, italic, oblique</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-weight</td>
+<td>Specifies the weight of a font<br><a><em>Value: normal, bold, bolder, lighter, number</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td><a href="#font-family">font-family</a></td>
+<td>Specifies the font family for text</td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-feature-settings</td>
+<td>Allows control over advanced typographic features in OpenType fonts</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-kerning</td>
+<td>Controls the usage of the kerning information (how letters are spaced)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-language-override</td>
+<td>Controls the usage of language-specific glyphs in a typeface</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-size</td>
+<td>Specifies the font size of text<br><a><em>Value: xx-small, x-small, small, medium, large, x-large, xx-large, smaller, larger, length</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-size-adjust</td>
+<td>Preserves the readability of text when font fallback occurs</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-stretch</td>
+<td>Selects a normal, condensed, or expanded face from a font family</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-synthesis</td>
+<td>Controls which missing typefaces (bold or italic) may be synthesized by the browser</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-variant</td>
+<td>Specifies whether or not a text should be displayed in a small-caps font<br><a><em>Value: normal, small-caps</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>font-variant-alternates</td>
+<td>Controls the usage of alternate glyphs associated to alternative names defined in @font-feature-values</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-variant-caps</td>
+<td>Controls the usage of alternate glyphs for capital letters</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-variant-east-asian</td>
+<td>Controls the usage of alternate glyphs for East Asian scripts (e.g Japanese and Chinese)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-variant-ligatures</td>
+<td>Controls which ligatures and contextual forms are used in textual content of the elements it applies to</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-variant-numeric</td>
+<td>Controls the usage of alternate glyphs for numbers, fractions, and ordinal markers</td>
+<td>3</td>
+</tr>
+<tr>
+<td>font-variant-position</td>
+<td>Controls the usage of alternate glyphs of smaller size positioned as superscript or subscript regarding the baseline of the font</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Using Your Font：</strong></p>
+<p>Font Formats:</p>
+<ul>
+<li>TTF (TrueType Fonts)</li>
+<li>OTF (OpenType Fonts)</li>
+<li>WOFF (The Web Open Font Format)</li>
+<li>WOFF 2.0 (The Web Open Font Format)</li>
+<li>EOT (Embedded OpenType Fonts)</li>
+<li>SVG Fonts</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Font format</th>
+<th>IE</th>
+<th>Chrome</th>
+<th>Firefox</th>
+<th>Safari</th>
+<th>Opera</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TTF/OTF</td>
+<td>9.0*</td>
+<td>4.0</td>
+<td>3.5</td>
+<td>3.1</td>
+<td>10.0</td>
+</tr>
+<tr>
+<td>WOFF</td>
+<td>9.0</td>
+<td>5.0</td>
+<td>3.6</td>
+<td>5.1</td>
+<td>11.1</td>
+</tr>
+<tr>
+<td>WOFF2</td>
+<td>X</td>
+<td>36.0</td>
+<td>35.0*</td>
+<td>X</td>
+<td>26.0</td>
+</tr>
+<tr>
+<td>SVG</td>
+<td>X</td>
+<td>4.0</td>
+<td>X</td>
+<td>3.2</td>
+<td>9.0</td>
+</tr>
+<tr>
+<td>EOT</td>
+<td>6.0</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+<td>X</td>
+</tr>
+</tbody>
+</table>
+<p><strong><a id="font-family">font-family</a></strong></p>
+<p>There are 5 font families: sans-serif, serif, monospace, cursive, fantasy.<br>Each font-family contains a set of fonts that share common characterisitcs.</p>
+<ol>
+<li><p>Style font-family:</p>
+<pre><code> body { font-family: Verdana, Geneva, Arial, sans-serif; }
+                     ----------------------   -----------
+                                 |                |
+ A list of fonts from the same family    Always put family name
+</code></pre><p> The order of using:Verdana &gt; Geneva &gt; Arial &gt; the default sans-serif</p>
+</li>
+<li><p>How to add a Web Font to your page?</p>
+<ol>
+<li>Find a font.</li>
+<li>Make sure you have all the formats of the font you need.</li>
+<li>Place your font files on the Web.<ol>
+<li>Place your font files on the Web.</li>
+<li>use font services coming online.(like: http://www.wickedlysmart.com/)</li>
+</ol>
+</li>
+<li>Add the @font-face property to your CSS.<pre class="line-numbers language-CSS"><code class="language-CSS"> @font-face {
+   font-family: "Your Font Name";
+   src: url("http://wickedlysmart.com/xxx.ttf"),
+        url("http://wickedlysmart.com/xxx.ttf");
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+</li>
+<li><p>What is diffrent between font-families?</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Font families</th>
+<th>Diffrent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>serif</td>
+<td>newspaper print</td>
+</tr>
+<tr>
+<td>sans-serif</td>
+<td>more readable on computer screens</td>
+</tr>
+<tr>
+<td>monospace</td>
+<td>same width characters</td>
+</tr>
+<tr>
+<td>cursive</td>
+<td>handwritten</td>
+</tr>
+<tr>
+<td>fantasy</td>
+<td>decorative</td>
+</tr>
+</tbody>
+</table>
+<p><strong><a id="font-size">font-size</a></strong></p>
+<figcaption>14px;</code> means font-size should be 14 pixels high.<br><code>font-size: 150%;</code> means font-size should be 150% of parent font size.<br><code>font-size: 1.2em;</code> means font size should be 1.2 times parent font size.<br><code>font-size: small;</code> font-size has xx-small, x-small, small, medium, large, x-large, xx-large, is about 20% larger than the previous size.</p></figcaption><pre class="line-numbers language-font-size:"><code class="language-font-size:"><p>Specify font size:</p>
+<ol>
+<li>Choose samll or medium in your body rule.</li>
+<li>Choose percentages or em in other elements.</li>
+<li>Be careful not to use pixel sizes, because some browsers have problems resizing those.(like IE)</li>
+</ol>
+<p>Default font size:</p>
+<ol>
+<li>Default body font size is 16 pixels.</li>
+<li><code><h1></code>:200% default font size.</li>
+<li><code><h2></code>:150% default font size.</li>
+<li><code><h3></code>:120% default font size.</li>
+<li><code><h4></code>:100% default font size.</li>
+<li><code><h5></code>:90% default font size.</li>
+<li><code><h6></code>:60% default font size.</li>
+</ol>
+<p><strong>Set the size of font in placeholder</strong></p>
+<h3 id="Writing-Modes-Properties"><a href="#Writing-Modes-Properties" class="headerlink" title="Writing Modes Properties"></a>Writing Modes Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>direction</td>
+<td>Specifies the text direction/writing direction<br><a><em>Value: ltr, rtl</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>text-orientation</td>
+<td>Defines the orientation of the text in a line</td>
+<td>3</td>
+</tr>
+<tr>
+<td>text-combine-upright</td>
+<td>Specifies the combination of multiple characters into the space of a single character</td>
+<td>3</td>
+</tr>
+<tr>
+<td>unicode-bidi</td>
+<td>Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document<br><a><em>Value: normal, embed, bidi-override</em></a></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Table-Properties"><a href="#Table-Properties" class="headerlink" title="Table Properties"></a>Table Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>border-collapse</td>
+<td>Specifies whether or not table borders should be collapsed<br><a><em>Value: separate, collapse</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>border-spacing</td>
+<td>Specifies the distance between the borders of adjacent cells<br><a><em>Value: length</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>caption-side</td>
+<td>Specifies the placement of a table caption<br><a><em>Value: top, bottom</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>empty-cells</td>
+<td>Specifies whether or not to display borders and background on empty cells in a table<br><a><em>Value: show, hide</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>table-layout</td>
+<td>Sets the layout algorithm to be used for a table<br><a><em>Value: auto, fixed</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>width/height</td>
+<td>sets the width/height of the table<br><a><em>Value: length, %</em></a></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>使用 collapse 后，只能单独设置 border-bottom 和 border-right（因为覆盖顺序问题）。</li>
+<li>若把 border 属性设置在 td 元素内，则无法单独设置 th 样式。</li>
+</ul>
+<h3 id="Lists-and-Counters-Properties"><a href="#Lists-and-Counters-Properties" class="headerlink" title="Lists and Counters Properties"></a>Lists and Counters Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/pr_gen_counter-increment.asp" target="_blank" rel="external">counter-increment</a></td>
+<td>Increments one or more counters</td>
+<td>2</td>
+</tr>
+<tr>
+<td>counter-reset</td>
+<td>Creates or resets one or more counters<br><a><em>Value: none, name, number</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>list-style</td>
+<td>Sets all the properties for a list in one declaration<br><a><em>Value: list-style-type list-style-position list-style-image</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>list-style-image</td>
+<td>Specifies an image as the list-item marker<br><a><em>Value: none, url</em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>list-style-position</td>
+<td>Specifies if the list-item markers should appear inside or outside the content flow<br><a><em>Value: </em></a></td>
+<td>1</td>
+</tr>
+<tr>
+<td>list-style-type</td>
+<td>Specifies the type of list-item marker<br><a><em>Value: inside, outside</em></a></td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>Hoverable Table<br><code>tr:hover {background-color: #f5f5f5}</code></p>
+<p>Striped Tables<br><code>tr:nth-child(even) { background-color: #f2f2f2 }</code></p>
+<p>horizontal scroll bar</p>
+<h3 id="Animation-Properties"><a href="#Animation-Properties" class="headerlink" title="Animation Properties"></a>Animation Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/css3_pr_animation-keyframes.asp" target="_blank" rel="external">@keyframes</a></td>
+<td>Specifies the animation code<br>Syntax: @keyframes animationname {keyframes-selector {css-styles;}}</td>
+<td>3</td>
+</tr>
+<tr>
+<td>animation</td>
+<td>A shorthand property for all the animation properties (except animation-play-state and animation-fill-mode)<br><a><em>Value: name duration timing-function delay iteration-count direction fill-mode play-state</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>animation-delay</td>
+<td>Specifies a delay for the start of an animation<br><a><em>Value: time</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>animation-direction</td>
+<td>Specifies whether or not the animation should play in reverse on alternate cycles<br><a><em>Value: normal, reverse, alternate, alternate-reverse</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>animation-duration</td>
+<td>Specifies how many seconds or milliseconds an animation takes to complete one cycle<br><a><em>Value: time</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>animation-fill-mode</td>
+<td>Specifies a style for the element when the animation is not playing (when it is finished, or when it has a delay)<br><a><em>Value: none, forwards, backwards, both</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>animation-iteration-count</td>
+<td>Specifies the number of times an animation should be played<br><a><em>Value: number, infinite</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>animation-name</td>
+<td>Specifies the name of the @keyframes animation<br><a><em>Value: keyframename, none</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>animation-play-state</td>
+<td>Specifies whether the animation is running or paused<br><a><em>Value: paused, running</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>animation-timing-function</td>
+<td>Specifies the speed curve of an animation<br><a><em>Value: linear, ease, ease-in, ease-out, ease-in-out, step-start, step-end, steps(int,start, end), cubic-bezier(n,n,n,n)</em></a></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Transform-Properties"><a href="#Transform-Properties" class="headerlink" title="Transform Properties"></a>Transform Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>backface-visibility</td>
+<td>Defines whether or not an element should be visible when not facing the screen<br><a><em>Value: visible, hidden</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>perspective</td>
+<td>Specifies the perspective on how 3D elements are viewed<br><a><em>Value: length</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>perspective-origin</td>
+<td>Specifies the bottom position of 3D elements<br><a><em>Value: x-axis y-axis</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank" rel="external">transform(2d)</a></td>
+<td>Applies a 2D transformation to an element<br><a><em>Value: translate(), rotate(), scale(), skew(), skewX(), skewY(), matrix(scaleX,skewY,skewX,scaleY,translateX,translateY)</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/css3_pr_transform.asp" target="_blank" rel="external">transform(3d)</a></td>
+<td>Applies a 3D transformation to an element<br><a><em>Value: translate3d(), translateX(), translateY(), translateZ(), rotate3d(), rotateX(), rotateY(), rotateZ(), scale3d(), scaleX(), scaleY(), scaleZ(), matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>transform-origin</td>
+<td>Allows you to change the position on transformed elements<br><a><em>Value: x-axis y-axis z-axis</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>transform-style</td>
+<td>Specifies how nested elements are rendered in 3D space<br><a><em>Value: flat, preserve-3d</em></a></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Transitions-Properties"><a href="#Transitions-Properties" class="headerlink" title="Transitions Properties"></a>Transitions Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>transition</td>
+<td>A shorthand property for setting the four transition properties<br><a><em>Value: property duration timing-function delay</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>transition-property</td>
+<td>Specifies the name of the CSS property the transition effect is for<br><a><em>Value: none, all, property</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>transition-duration</td>
+<td>Specifies how many seconds or milliseconds a transition effect takes to complete<br><a><em>Value: time</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/css3_pr_transition-timing-function.asp" target="_blank" rel="external">transition-timing-function</a></td>
+<td>Specifies the speed curve of the transition effect</td>
+<td>3</td>
+</tr>
+<tr>
+<td>transition-delay</td>
+<td>Specifies when the transition effect will start<br><a><em>Value: time</em></a></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Basic-User-Interface-Properties"><a href="#Basic-User-Interface-Properties" class="headerlink" title="Basic User Interface Properties"></a>Basic User Interface Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>box-sizing</td>
+<td>Tells the browser what the sizing properties (width and height) should include<br><a><em>Value: content-box, border-box</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>content</td>
+<td>Used with the :before and :after pseudo-elements, to insert generated content<br><a><em>Value: normal, none, counter, attr, string, open-quote, close-quote, no-open-quote, no-close-quote, url</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>cursor</td>
+<td>Specifies the type of cursor to be displayed<br><a><em>Value: value</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>ime-mode</td>
+<td>Controls the state of the input method editor for text fields</td>
+<td>3</td>
+</tr>
+<tr>
+<td>nav-up/right/down/left</td>
+<td>Specifies where to navigate when using the arrow-up/right/down/left navigation key</td>
+<td>3</td>
+</tr>
+<tr>
+<td>nav-index</td>
+<td>Specifies the tabbing order for an element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>outline</td>
+<td>Sets all the outline properties in one declaration<br><a><em>Value: color, style, width</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>outline-color</td>
+<td>Sets the color of an outline<br><a><em>Value: invert, color</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>outline-offset</td>
+<td>Offsets an outline, and draws it beyond the border edge<br><a><em>Value: length</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>outline-style</td>
+<td>Sets the style of an outline<br><a><em>Value: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>outline-width</td>
+<td>Sets the width of an outline<br><a><em>Value: medium, thin, thick, length</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>resize</td>
+<td>Specifies whether or not an element is resizable by the user<br><a><em>Value: none, both, horizontal, vertical</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>text-overflow</td>
+<td>Specifies what should happen when text overflows the containing element<br><a><em>Value: clip, ellipsis, string</em></a></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Multi-column-Layout-Properties"><a href="#Multi-column-Layout-Properties" class="headerlink" title="Multi-column Layout Properties"></a>Multi-column Layout Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>break-after</td>
+<td>Specifies the page-, column-, or region-break behavior after the generated box</td>
+<td>3</td>
+</tr>
+<tr>
+<td>break-before</td>
+<td>Specifies the page-, column-, or region-break behavior before the generated box</td>
+<td>3</td>
+</tr>
+<tr>
+<td>break-inside</td>
+<td>Specifies the page-, column-, or region-break behavior inside the generated box</td>
+<td>3</td>
+</tr>
+<tr>
+<td>column-count</td>
+<td>Specifies the number of columns an element should be divided into<br><a><em>Value: auto, number</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>column-fill</td>
+<td>Specifies how to fill columns</td>
+<td>3</td>
+</tr>
+<tr>
+<td>column-gap</td>
+<td>Specifies the gap between the columns<br><a><em>Value: length, normal</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>column-rule</td>
+<td>A shorthand property for setting all the column-rule properties<br><a><em>Value: column-rule-width column-rule-style column-rule-color</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>column-rule-color</td>
+<td>Specifies the color of the rule between columns<br><a><em>Value: color</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>column-rule-style</td>
+<td>Specifies the style of the rule between columns<br><a><em>Value: none, hidden, dotted, dashed, solid, double, groove, ridge, inset, outset</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>column-rule-width</td>
+<td>Specifies the width of the rule between columns<br><a><em>Value: medium, thin, thick, length</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>column-span</td>
+<td>Specifies how many columns an element should span across<br><a><em>Value: 1, all</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>column-width</td>
+<td>Specifies the width of the columns<br><a><em>Value: auto, length</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>columns</td>
+<td>A shorthand property for setting column-width and column-count<br><a><em>Value: auto, column-width column-count</em></a></td>
+<td>3</td>
+</tr>
+<tr>
+<td>widows</td>
+<td>Sets the minimum number of lines that must be left at the top of a page when a page break occurs inside an element</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Paged-Media"><a href="#Paged-Media" class="headerlink" title="Paged Media"></a>Paged Media</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>orphans</td>
+<td>Sets the minimum number of lines that must be left at the bottom of a page when a page break occurs inside an element</td>
+<td>2</td>
+</tr>
+<tr>
+<td>page-break-after</td>
+<td>Sets the page-breaking behavior after an element<br><a><em>Value: auto, always, avoid, left, right</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>page-break-before</td>
+<td>Sets the page-breaking behavior before an element<br><a><em>Value: auto, always, avoid, left, right</em></a></td>
+<td>2</td>
+</tr>
+<tr>
+<td>page-break-inside</td>
+<td>Sets the page-breaking behavior inside an element<br><a><em>Value: auto, avoid</em></a></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Generated-Content-for-Paged-Media"><a href="#Generated-Content-for-Paged-Media" class="headerlink" title="Generated Content for Paged Media"></a>Generated Content for Paged Media</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>marks</td>
+<td>Adds crop and/or cross marks to the document</td>
+<td>3</td>
+</tr>
+<tr>
+<td>quotes</td>
+<td>Sets the type of quotation marks for embedded quotations<br><a><em>Value: none, string</em></a></td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Filter-Effects-Properties"><a href="#Filter-Effects-Properties" class="headerlink" title="Filter Effects Properties"></a>Filter Effects Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="http://www.w3schools.com/cssref/css3_pr_filter.asp" target="_blank" rel="external">filter</a></td>
+<td>Defines effects (e.g. blurring or color shifting) on an element before the element is displayed</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Image-Values-and-Replaced-Content"><a href="#Image-Values-and-Replaced-Content" class="headerlink" title="Image Values and Replaced Content"></a>Image Values and Replaced Content</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image-orientation</td>
+<td>Specifies a rotation in the right or clockwise direction that a user agent applies to an image (This property is likely going to be deprecated and its functionality moved to HTML)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>image-rendering</td>
+<td>Gives a hint to the browser about what aspects of an image are most important to preserve when the image is scaled</td>
+<td>3</td>
+</tr>
+<tr>
+<td>image-resolution</td>
+<td>Specifies the intrinsic resolution of all raster images used in/on the element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>object-fit</td>
+<td>Specifies how the contents of a replaced element should be fitted to the box established by its used height and width</td>
+<td>3</td>
+</tr>
+<tr>
+<td>object-position</td>
+<td>Specifies the alignment of the replaced element inside its box</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The  images width Property</strong><br><code>width: 100%;</code>: The image can be sacled up to be larger than its orignal size.<br><code>max-width: 100%;</code>: The image will scale donw, but never scale up to be larger than its original size.<br><code>min-device-width</code>: Only checks the device width.<br><code>min-width</code>: Checks the device width and the browser window width.</p>
+<h3 id="Masking-Properties"><a href="#Masking-Properties" class="headerlink" title="Masking Properties"></a>Masking Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mask</td>
+<td></td>
+<td>3</td>
+</tr>
+<tr>
+<td>mask-type</td>
+<td></td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Speech-Properties"><a href="#Speech-Properties" class="headerlink" title="Speech Properties"></a>Speech Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>mark</td>
+<td>A shorthand property for setting the mark-before and mark-after properties</td>
+<td>3</td>
+</tr>
+<tr>
+<td>mark-after</td>
+<td>Allows named markers to be attached to the audio stream</td>
+<td>3</td>
+</tr>
+<tr>
+<td>mark-before</td>
+<td>Allows named markers to be attached to the audio stream</td>
+<td>3</td>
+</tr>
+<tr>
+<td>phonemes</td>
+<td>Specifies a phonetic pronunciation for the text contained by the corresponding element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>rest</td>
+<td>A shorthand property for setting the rest-before and rest-after properties</td>
+<td>3</td>
+</tr>
+<tr>
+<td>rest-after</td>
+<td>Specifies a rest or prosodic boundary to be observed after speaking an element’s content</td>
+<td>3</td>
+</tr>
+<tr>
+<td>rest-before</td>
+<td>Specifies a rest or prosodic boundary to be observed before speaking an element’s content</td>
+<td>3</td>
+</tr>
+<tr>
+<td>voice-balance</td>
+<td>Specifies the balance between left and right channels</td>
+<td>3</td>
+</tr>
+<tr>
+<td>voice-duration</td>
+<td>Specifies how long it should take to render the selected element’s content</td>
+<td>3</td>
+</tr>
+<tr>
+<td>voice-pitch</td>
+<td>Specifies the average pitch (a frequency) of the speaking voice</td>
+<td>3</td>
+</tr>
+<tr>
+<td>voice-pitch-range</td>
+<td>Specifies variation in average pitch</td>
+<td>3</td>
+</tr>
+<tr>
+<td>voice-rate</td>
+<td>Controls the speaking rate</td>
+<td>3</td>
+</tr>
+<tr>
+<td>voice-stress</td>
+<td>Indicates the strength of emphasis to be applied</td>
+<td>3</td>
+</tr>
+<tr>
+<td>voice-volume</td>
+<td>Refers to the amplitude of the waveform output by the speech synthesises</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Marquee-Properties"><a href="#Marquee-Properties" class="headerlink" title="Marquee Properties"></a>Marquee Properties</h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>CSS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>marquee-direction</td>
+<td>Sets the direction of the moving content</td>
+<td>3</td>
+</tr>
+<tr>
+<td>marquee-play-count</td>
+<td>Sets how many times the content move</td>
+<td>3</td>
+</tr>
+<tr>
+<td>marquee-speed</td>
+<td>Sets how fast the content scrolls</td>
+<td>3</td>
+</tr>
+<tr>
+<td>marquee-style</td>
+<td>Sets the style of the moving content</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Some-Syntax"><a href="#Some-Syntax" class="headerlink" title="Some Syntax"></a>Some Syntax</h2><h3 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h3><h3 id="Cascade"><a href="#Cascade" class="headerlink" title="Cascade"></a>Cascade</h3><p>The color property in element is judged on the top of specificity.<br>To calculate the specificity:</p>
+<ol>
+<li>If the selector have any ids, +100</li>
+<li>If the selector have any classes or pseudo-classes, +10</li>
+<li>If the selector have any element name, +1</li>
+</ol>
+<h3 id="Short-hand"><a href="#Short-hand" class="headerlink" title="Short hand"></a>Short hand</h3><pre><code>padding-top: 0px;
+padding-right: 20px;
+padding-buttom: 30px;
+padding-left: 10px;
+    ||
+    \/
+padding: 0px 20px 30px 10px;
+顺时针顺序
+
+margin-top: 0px;
+margin-right: 20px;
+margin-bottom: 0px;
+margin-left: 20px;
+    ||
+    \/
+margin: 0px 20px; 
+/* 0px(top+bottom) and 20px(right+left) */
+
+border-width: thin;
+border-style: solid;
+border-color: #007e7e;
+    ||
+    \/
+border: thin solid #007e7e;
+border: width style color;
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre><p>Long form more readable,shorthands less typing.</p>
+<h3 id="Counters"><a href="#Counters" class="headerlink" title="Counters"></a>Counters</h3><ul>
+<li><code>counter-reset</code> - Creates or resets a counter</li>
+<li><code>counter-increment</code> - Increments a counter value</li>
+<li><code>content</code> - Inserts generated content</li>
+<li><code>conter()</code> or <code>counters()</code> function - Adds the value of counter to an element</li>
+</ul>
+<h2 id="Some-Example"><a href="#Some-Example" class="headerlink" title="Some Example"></a>Some Example</h2><h3 id="Navigation-Bar"><a href="#Navigation-Bar" class="headerlink" title="Navigation Bar"></a>Navigation Bar</h3><p>There are two ways to create a horizontal navigation bar.</p>
+<ol>
+<li>Inline List Items<br><code>li { display: inline; }</code></li>
+<li>Floating List Items<br><code>li { float: left; }</code></li>
+</ol>
+<p>Border Dividers<br><code>li { border-right: 1px solid #bbb; }</code><br><code>li:last-child { border-right: none; }</code></p>
+<p>Basic Dropdown</p>
+<h3 id="Tooltip"><a href="#Tooltip" class="headerlink" title="Tooltip"></a>Tooltip</h3><p><strong>Basic Tooltip</strong></p>
+<p><strong>Positioning Tooltips</strong></p>
+<p><strong>Tooltip Arrows</strong></p>
+<p><strong>Fade In Tooltip</strong></p>
+<h2 id="Gradients"><a href="#Gradients" class="headerlink" title="Gradients"></a>Gradients</h2><p>Gradients let you display smooth transitions between two or more specified colors.</p>
+<h3 id="Linear-Gradients"><a href="#Linear-Gradients" class="headerlink" title="Linear Gradients"></a>Linear Gradients</h3><ul>
+<li>Basic<ul>
+<li>Syntax: <code>background: linear-gradient(direction, color1, color2);</code></li>
+<li>e.g. <code>background: linear-gradient(to right, blue, yellow);</code></li>
+<li><code>to bottom</code> is default.</li>
+</ul>
+</li>
+<li>Diagonal<ul>
+<li>Syntax: <code>background: linear-gradient(diagonal, color1, color2);</code></li>
+<li>e.g. <code>background: linear-gradient(to bottom right, blue, yellow);</code></li>
+</ul>
+</li>
+<li>Angles<ul>
+<li>Syntax: <code>background: linear-gradient(angle, color1, color2);</code></li>
+<li>e.g. <code>background: linear-gradient(-90deg, blue, yellow);</code></li>
+</ul>
+</li>
+<li>Multiple<ul>
+<li>Syntax: <code>background: linear-gradient(direction, color1, color2, color3...);</code></li>
+<li>e.g. <code>background: linear-gradient(left, red, orange, yellow, green, blue, indigo, violet);</code></li>
+</ul>
+</li>
+<li>Transparency<ul>
+<li>Syntax: <code>background: linear-gradient(direction, rbga1, rbga2);</code></li>
+<li>e.g. <code>background: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));</code></li>
+</ul>
+</li>
+<li>Repeating<ul>
+<li>Syntax: <code>background: repeating-linear-gradient(angle, color1, color2 %, color3 %);</code></li>
+<li>e.g. <code>background: repeating-linear-gradient(45deg, red, yellow 7%, green 10%);</code></li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong> <code>background: red;</code> For browsers that do not support gradients.</p>
+<h3 id="Radial-Gradients"><a href="#Radial-Gradients" class="headerlink" title="Radial Gradients"></a>Radial Gradients</h3><ul>
+<li>Basic<ul>
+<li>Syntax: <code>background: radial-gradient(shape size at position, color1 %, color2 %,...);</code></li>
+<li>e.g. <code>background: radial-gradient(red 5%, yellow 15%, green 60%);</code></li>
+</ul>
+</li>
+<li>Shape<ul>
+<li>Syntax: <code>background: radial-gradient(circle/ellipse, color1 %, color2 %,...);</code></li>
+</ul>
+</li>
+<li>Diffrent Size Keywords<ul>
+<li>Syntax: <code>background: radial-gradient(Size, color1 %, color2 %,...);</code></li>
+<li>Size: closest-side, farthest-side, closest-corner, farthest-corner</li>
+</ul>
+</li>
+<li>Repeating<ul>
+<li>Syntax: <code>background: repeating-radial-gradient(color1, color2, color3...);</code></li>
+<li>e.g. <code>background: repeating-radial-gradient(red, yellow 10%, green 15%);</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="Responsive-Web-Design"><a href="#Responsive-Web-Design" class="headerlink" title="Responsive Web Design"></a>Responsive Web Design</h2><p>RWD makes your web page look good on all devices.<br>RWD uses only HTML and CSS.<br>RWD is not a program or a JavaScript.</p>
+<h3 id="Add-CSS-to-HTML-elements-in-3-ways"><a href="#Add-CSS-to-HTML-elements-in-3-ways" class="headerlink" title="Add CSS to HTML elements in 3 ways:"></a>Add CSS to HTML elements in 3 ways:</h3><ol>
+<li>Inline - using a <strong>style attribute</strong>.</li>
+</ol>
+<ol>
+<li>Internal - using a <code>&lt;style&gt;</code> element in <code>&lt;head&gt;</code> section.</li>
+</ol>
+<ol>
+<li>External - using <strong>external CSS files</strong><br> You can link more than one CSS file.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Mean</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>link</td>
+<td>Link in external information.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>A CSS stylesheet(in HTML5,it’s optional).</td>
+</tr>
+<tr>
+<td>rel</td>
+<td>The relationship between the HTML file and the thing you’re linking to.</td>
+</tr>
+<tr>
+<td>href</td>
+<td>The href of stylesheet.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Link-to-diffrent-CSS-file"><a href="#Link-to-diffrent-CSS-file" class="headerlink" title="Link to diffrent CSS file"></a>Link to diffrent CSS file</h3><ol>
+<li><p>Link the stylesheet by width.</p>
+<ol>
+<li>Syntax:<br> <code>&lt;link rel=&quot;stylesheet&quot; media=&quot;mediatype and|not|only (expressions)&quot; href=&quot;print.css&quot;&gt;</code></li>
+<li>Smartphone:<br> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;smartphone.CSS&quot;</code><br><code>media=&quot;screen and (max-device-width: 480 px)&quot;&gt;</code></li>
+<li>Tablet with portrait:<br> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;tablet-portrait.CSS&quot;</code><br><code>media=&quot;screen and (max-device-width: 1024px) and (orientation:portrait)&quot;&gt;</code></li>
+<li>Tablet with landscape:<br> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;tablet-landscape.CSS&quot;</code><br><code>media=&quot;screen and (max-device-width: 1024px) and (orientation:landscape)&quot;&gt;</code></li>
+<li>TV:<br> <code>&lt;link rel=&quot;stylesheet&quot; href=&quot;tv.CSS&quot;</code><br><code>media=&quot;screen and (max-device-width: 2650px)&quot;&gt;</code></li>
+</ol>
+</li>
+<li><p>Link the styelsheet by devices.<br> <code>&lt;link type=&quot;text/CSS&quot; href=&quot;CSSfile.CSS&quot; rel=&quot;stylesheet&quot; media=&quot;screen&quot;&gt;</code></p>
+<ol>
+<li><code>all</code>: all media type devices</li>
+<li><code>screen</code>: computer screen</li>
+<li><code>handheld</code>: smartphone</li>
+<li><code>print</code>: printer</li>
+</ol>
+</li>
+</ol>
+<h3 id="Media-Query"><a href="#Media-Query" class="headerlink" title="Media Query"></a>Media Query</h3><p><a href="http://www.w3schools.com/cssref/css3_pr_mediaquery.asp" target="_blank" rel="external">Media Reference</a></p>
+<h3 id="Vendor-specific-CSS-properties"><a href="#Vendor-specific-CSS-properties" class="headerlink" title="Vendor-specific CSS properties"></a>Vendor-specific CSS properties</h3><p>Specific CSS by diffrent browser.</p>
+<h3 id="Cascading-Order"><a href="#Cascading-Order" class="headerlink" title="Cascading Order"></a>Cascading Order</h3><p>Cascading order high to low:</p>
+<ol>
+<li>Inline styl</li>
+<li>External and internal style sheets<br> The stylesheets on the bottom taking precedence.</li>
+<li>Browser default</li>
+</ol>
+<h3 id="The-Viewport"><a href="#The-Viewport" class="headerlink" title="The Viewport"></a>The Viewport</h3><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</code></pre>
+<ol>
+<li><p>Do NOT use large fixed width elements<br> For example, if an image is displayed at a width wider than the viewport it can cause the viewport to scroll horizontally. Remember to adjust this content to fit within the width of the viewport.</p>
+</li>
+<li><p>Do NOT let the content rely on a particular viewport width to render well<br> Since screen dimensions and width in CSS pixels vary widely between devices, content should not rely on a particular viewport width to render well.</p>
+</li>
+<li><p>Use CSS media queries to apply different styling for small and large screens<br> Setting large absolute CSS widths for page elements, will cause the element to be too wide for the viewport on a smaller device. Instead, consider using relative width values, such as width: 100%. Also, be careful of using large absolute positioning values. It may cause the element to fall outside the viewport on small devices.</p>
+</li>
+</ol>
+<h3 id="Grid-Vies"><a href="#Grid-Vies" class="headerlink" title="Grid-Vies"></a><a href="http://www.w3schools.com/css/tryit.asp?filename=tryresponsive_col-s" target="_blank" rel="external">Grid-Vies</a></h3><p>Split the veiw into 12 columns.</p>
+<hr>
+<h2 id="本文相关"><a href="#本文相关" class="headerlink" title="本文相关"></a>本文相关</h2><ol>
+<li>参考<br> <a href="http://www.baidu.com/link?url=Of1cxhU6uvQgdpge9Bl3LVAzOkQVnvf1eG866ayfmDjlqDBafF493zpTEK6Jwhhfthoy2BU-dZRfGKMcVP8ucK&amp;wd=&amp;eqid=8b33082a00015eab0000000556a9c6ad" target="_blank" rel="external"><em>Head.First.HTML.and.CSS</em></a><br> <a href="http://www.w3schools.com/css/default.asp" target="_blank" rel="external">CSS Tutorial - w3schools.com</a></li>
+<li>修订<br> 2016-01-28:第一版<br> 2016-02-15:整合了 <em>w3schools.com</em> 部分内容<br>2016-03-25:flex 部分从本文中移除，作为单独主题重写。</li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/CSS/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/CSS/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/21/三栏布局的实践方法/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/21/浅谈事件冒泡与事件捕获-转载/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033dev@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a></li><li><a class="sidebar_archives-link" href="/archives/1904/01/">一月 1904<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
                         <!-- Footer Top Button -->
-                        <%- partial('_partial/footer_top')  %>
-                    <% } %>
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
-                    <%- partial('_partial/footer') %>
+                    
 
-                    <%- partial('_partial/import_js') %>
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
                 </main>
             </div>
         </body>
-    <% } %>
+    
 </html>

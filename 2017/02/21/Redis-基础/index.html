@@ -1,17 +1,292 @@
 <!DOCTYPE html>
-<html style="display: none;" <% if(config.language !== null) { %>lang="<%- config.language.substring(0,2) %>"<% } %>>
-    <%- partial('_partial/head') %>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
 
-    <% if(page.layout === 'gallery') { %>
-        <!-- Single Gallery Page -->
-        <%- partial('_widget/page-gallery') %>
-    <% } else { %>
-        <body id="scheme-<%= theme.scheme %>" class="lazy">
+    <!-- Title -->
+    
+    <title>
+        
+            Redis 基础 | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="描述">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="Redis 基础 | 张圣兰">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="描述">
+    
+
+    
+        <meta property="article:published_time" content="2月 21, 2017" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="Redis 基础 | 张圣兰">
+    <meta name="twitter:description" content="描述">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://shanlanmi.github.io/zsl-blog/2017/02/21/Redis-基础/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "Redis 基础",
+    "url": "http://shanlanmi.github.io/zsl-blog/2017/02/21/Redis-基础/index.html",
+    "datePublished": "2月 21, 2017",
+    "dateModified": "8月 08, 2017",
+    "description": "描述",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                <% if(theme.scheme === 'Isolation') { %>
-                    <!-- Isolation Header -->
-                    <%- partial('_partial/isolate_info') %>
-                <% } %>
+                
 
                 <!-- Main Container -->
                 <main class="material-layout__content" id="main">
@@ -19,29 +294,972 @@
                     <!-- Top Anchor -->
                     <div id="top"></div>
 
-                    <% if(theme.scheme === 'Paradox') { %>
+                    
                         <!-- Hamburger Button -->
                         <button class="MD-burger-icon sidebar-toggle">
                             <span class="MD-burger-layer"></span>
                         </button>
-                    <% } %>
+                    
 
-                    <%- body %>
+                    <!-- Post TOC -->
 
-                    <% if(theme.scheme === 'Paradox') { %>
-                        <%- partial('_partial/sidebar') %>
-                    <% } %>
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-                    <% if( (theme.scheme === 'Paradox') && (is_post() || is_home() || is_archive() || is_category() || (page.totop === true) ) ) { %>
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Redis"><span class="post-toc-number">1.</span> <span class="post-toc-text">Redis</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Redis-vs-Memcached"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Redis vs Memcached</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Memcached"><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">Memcached</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Redis-1"><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">Redis</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#准备"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#存储结构"><span class="post-toc-number">1.2.1.</span> <span class="post-toc-text">存储结构</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内存存储与持久化"><span class="post-toc-number">1.2.2.</span> <span class="post-toc-text">内存存储与持久化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#功能丰富"><span class="post-toc-number">1.2.3.</span> <span class="post-toc-text">功能丰富</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#生存时间"><span class="post-toc-number">1.2.3.1.</span> <span class="post-toc-text">生存时间</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#与memcached比较"><span class="post-toc-number">1.2.3.2.</span> <span class="post-toc-text">与memcached比较</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#语句"><span class="post-toc-number">1.2.4.</span> <span class="post-toc-text">语句</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#启动和停止Reids"><span class="post-toc-number">1.2.5.</span> <span class="post-toc-text">启动和停止Reids</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Redis的可执行文件"><span class="post-toc-number">1.2.5.1.</span> <span class="post-toc-text">Redis的可执行文件</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#启动Redis"><span class="post-toc-number">1.2.5.2.</span> <span class="post-toc-text">启动Redis</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#停止Redis"><span class="post-toc-number">1.2.5.3.</span> <span class="post-toc-text">停止Redis</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Redis-cli"><span class="post-toc-number">1.2.6.</span> <span class="post-toc-text">Redis-cli</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#发送命令"><span class="post-toc-number">1.2.6.1.</span> <span class="post-toc-text">发送命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#收到回复"><span class="post-toc-number">1.2.6.2.</span> <span class="post-toc-text">收到回复</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#多数据库"><span class="post-toc-number">1.2.7.</span> <span class="post-toc-text">多数据库</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#入门"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">入门</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本命令"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">基本命令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符串类型"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">字符串类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命令"><span class="post-toc-number">1.3.2.1.</span> <span class="post-toc-text">命令</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#实践"><span class="post-toc-number">1.3.2.2.</span> <span class="post-toc-text">实践</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#散列类型"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">散列类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命令-1"><span class="post-toc-number">1.3.3.1.</span> <span class="post-toc-text">命令</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#列表类型"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">列表类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命令-2"><span class="post-toc-number">1.3.4.1.</span> <span class="post-toc-text">命令</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#集合类型"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">集合类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命令-3"><span class="post-toc-number">1.3.5.1.</span> <span class="post-toc-text">命令</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#有序集合类型"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">有序集合类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#命令-4"><span class="post-toc-number">1.3.6.1.</span> <span class="post-toc-text">命令</span></a></li></ol></li></ol></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                Redis 基础
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>2月 21, 2017</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Redis 基础&url=http://shanlanmi.github.io/zsl-blog/2017/02/21/Redis-基础/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Redis 基础&url=http://shanlanmi.github.io/zsl-blog/2017/02/21/Redis-基础/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://shanlanmi.github.io/zsl-blog/2017/02/21/Redis-基础/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://shanlanmi.github.io/zsl-blog/2017/02/21/Redis-基础/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=Redis 基础&summary=描述&pics=http://shanlanmi.github.io/zsl-blog/img/favicon.png&url=http://shanlanmi.github.io/zsl-blog/2017/02/21/Redis-基础/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h1 id="Redis"><a href="#Redis" class="headerlink" title="Redis"></a>Redis</h1><h2 id="Redis-vs-Memcached"><a href="#Redis-vs-Memcached" class="headerlink" title="Redis vs Memcached"></a>Redis vs Memcached</h2><h3 id="Memcached"><a href="#Memcached" class="headerlink" title="Memcached"></a>Memcached</h3><ul>
+<li>Memcached is older and more stable, it has far <strong>lesser</strong> <strong>bugs.</strong></li>
+<li>Memcached’s system is more <strong>effective</strong> because it uses less memory for metadata.</li>
+<li>There is <strong>only</strong> <strong>one</strong> data type used by Memcached which is <strong>String.</strong></li>
+<li>Memcached is easy to <strong>scale.</strong></li>
+</ul>
+<h3 id="Redis-1"><a href="#Redis-1" class="headerlink" title="Redis"></a>Redis</h3><ul>
+<li>you can set key names and values to be 512MB each, compared to Memcached’s 250 bytes for key names and limits value to 1MB with only plain strings.</li>
+<li>For cache eviction, is has 6 different methods that it uses to properly evict what you want.</li>
+<li>The data from the previous session is saved and stored.</li>
+</ul>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h2><h3 id="存储结构"><a href="#存储结构" class="headerlink" title="存储结构"></a>存储结构</h3><ul>
+<li>字符串类型</li>
+<li>散列类型</li>
+<li>列表类型</li>
+<li>集合类型</li>
+<li>有序集合类型</li>
+</ul>
+<h3 id="内存存储与持久化"><a href="#内存存储与持久化" class="headerlink" title="内存存储与持久化"></a>内存存储与持久化</h3><h3 id="功能丰富"><a href="#功能丰富" class="headerlink" title="功能丰富"></a>功能丰富</h3><h4 id="生存时间"><a href="#生存时间" class="headerlink" title="生存时间"></a>生存时间</h4><h4 id="与memcached比较"><a href="#与memcached比较" class="headerlink" title="与memcached比较"></a>与memcached比较</h4><h3 id="语句"><a href="#语句" class="headerlink" title="语句"></a>语句</h3><pre><code>HGET post: 1 title
+</code></pre><h3 id="启动和停止Reids"><a href="#启动和停止Reids" class="headerlink" title="启动和停止Reids"></a>启动和停止Reids</h3><h4 id="Redis的可执行文件"><a href="#Redis的可执行文件" class="headerlink" title="Redis的可执行文件"></a>Redis的可执行文件</h4><table>
+<thead>
+<tr>
+<th style="text-align:left">文件名</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"> redis-server</td>
+<td style="text-align:left">Redis发服务器</td>
+</tr>
+<tr>
+<td style="text-align:left"> redis-cli</td>
+<td style="text-align:left">Redis 命令行客户端</td>
+</tr>
+<tr>
+<td style="text-align:left"> redis-benchmark</td>
+<td style="text-align:left">Redis 性能测试工具</td>
+</tr>
+<tr>
+<td style="text-align:left"> redis-check-aof</td>
+<td style="text-align:left">AOF文件修复工具</td>
+</tr>
+<tr>
+<td style="text-align:left"> redis-check-dump</td>
+<td style="text-align:left">RDB文件检查工具</td>
+</tr>
+<tr>
+<td style="text-align:left"> redis-sentinel</td>
+<td style="text-align:left">Sentinel 服务器</td>
+</tr>
+</tbody>
+</table>
+<h4 id="启动Redis"><a href="#启动Redis" class="headerlink" title="启动Redis"></a>启动Redis</h4><ul>
+<li>直接启动(运用开发)<pre><code>$ redis-server
+$ redis-server --port 6379
+</code></pre></li>
+<li>通过初始化脚本启动Redis<ol>
+<li>定制初始化文件<ol>
+<li>将Redis源代码目录下的utils文件夹中的redis_init<em>script文件移入<code>/etc/init.d</code>目录, 文件名为redis</em>端口号</li>
+<li>修改该脚本的第六行的REDISPORT变量为相同值</li>
+</ol>
+</li>
+<li>建立需要的文件夹<ul>
+<li><code>/etc/redis</code>: 存放Redis的配置文件</li>
+<li><code>/var/redis/端口号</code>: 存放Redis的持久化文件</li>
+</ul>
+</li>
+<li>修改配置文件<ol>
+<li>复制配置文件模板到<code>/etc/redis</code>目录中, 以端口号命名(如”6379.conf”)</li>
+<li>修改<code>daemonize</code> =&gt; <code>yes</code>                     : 是Redis以守护进程模式运行</li>
+<li>修改<code>pidfile</code> =&gt; <code>/var/run/redis_端口号.pid</code> : 设置Redis的PID文件位置</li>
+<li>修改<code>port</code> =&gt; 端口号                         : 设置Redis监听的端口号</li>
+<li>修改<code>dir</code> =&gt; <code>/var/redis/端口号</code>             : 设置持久化文件存放位置</li>
+</ol>
+</li>
+<li>启动<ul>
+<li>常规启动服务<pre><code>$ /etc/init.d/redis_端口号
+</code></pre></li>
+<li>随系统启动服务<pre><code>$ sudo update-rc.d redis_端口号 defaults
+</code></pre></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h4 id="停止Redis"><a href="#停止Redis" class="headerlink" title="停止Redis"></a>停止Redis</h4><p>强制中止Redis可以影响将内存的数据同步到硬盘中, 最好使用Redis的命令来中止</p>
+<pre><code>$ redis-cli SHUTDOWN
+</code></pre><h3 id="Redis-cli"><a href="#Redis-cli" class="headerlink" title="Redis-cli"></a>Redis-cli</h3><h4 id="发送命令"><a href="#发送命令" class="headerlink" title="发送命令"></a>发送命令</h4><ul>
+<li>自定义地址和端口<pre><code>$ redis-cli -h 127.0.0.1 -p 6379
+</code></pre></li>
+<li>ping<pre><code>$ redis-cli ping
+</code></pre></li>
+<li>进入交互模式<pre><code>$ redis-cli
+</code></pre><h4 id="收到回复"><a href="#收到回复" class="headerlink" title="收到回复"></a>收到回复</h4></li>
+</ul>
+<ol>
+<li>状态回复<pre><code>&gt; ping
+pong
+</code></pre></li>
+<li>错误回复<pre><code>&gt; ERRORCOMMEND
+(error) ERR unknown command &#39;ERRORCOMMEND
+</code></pre></li>
+<li>整数回复<pre><code>&gt; INCR foo
+(integer) 1
+</code></pre></li>
+<li>字符串回复<pre><code>&gt; GET foo
+&quot;1&quot;
+</code></pre>1．多行字符串回复<pre><code>&gt; KEYS *
+1) &quot;bar&quot;
+2) &quot;foo
+</code></pre><h3 id="多数据库"><a href="#多数据库" class="headerlink" title="多数据库"></a>多数据库</h3></li>
+</ol>
+<h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><h3 id="基本命令"><a href="#基本命令" class="headerlink" title="基本命令"></a>基本命令</h3><ol>
+<li><p><code>KEYS</code>: 获取键名列表</p>
+<pre class="line-numbers language-redis"><code class="language-redis">KEYS pattern
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li><code>?</code>: 匹配一个字符。</li>
+<li><code>*</code>: 匹配任意个(包括0个)字符。</li>
+<li><code>[]</code>: 匹配范围内的字符, 用<code>-</code>符号表示区间。</li>
+<li><code>\x</code>: 匹配字符x, 用于转义符。</li>
+</ul>
+</li>
+<li><p><code>EXISTS</code>: 判断键名是否存在<br>存在则返回1, 不存在则返回0。</p>
+<pre class="line-numbers language-redis"><code class="language-redis">EXISTS key
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><code>DEL</code>: 删除键<br>返回值是删除键的个数。<pre><code>DEL key [key]
+</code></pre><code>DEL</code>命令不支持通配符, 所有可以采用如下变通<pre><code>$ redis-cli KEYS &quot;user:*&quot; | xargs redis-cli DEL
+$ redis-cli DEL `redis-cli KEYS &quot;user:*&quot;`
+</code></pre></li>
+<li><code>TYPE</code>: 获得键值的数据类型<br>返回值可能是string（字符串类型）, hash（散列类型）, list（列表类型）, set（集合类型）, zset（有序集合类型）。例如：<pre><code>TYPE key
+</code></pre></li>
+</ol>
+<h3 id="字符串类型"><a href="#字符串类型" class="headerlink" title="字符串类型"></a>字符串类型</h3><ul>
+<li>可以储存任何形式的字符串, 包括二进制数据。</li>
+<li>一个字符串类型键允许存储数据的最大容量是512MB。</li>
+</ul>
+<h4 id="命令"><a href="#命令" class="headerlink" title="命令"></a>命令</h4><ol>
+<li><code>GET</code>: 取值<br>当键不存在时, 返回空<pre><code>GET key
+</code></pre></li>
+<li><code>SET</code>: 赋值<pre><code>SET key value
+</code></pre></li>
+<li><p><code>INCR</code>: 递增数字<br>当要操作的键不存在时, 默认值为0, 所以第一次递增后的结果是1。<br>当键值不是整数是, Redis会提示错误。</p>
+<pre><code>INCR key
+# 参数指定一次增加的数值
+INCR key increment
+
+redis&gt; INCRBY bar 2
+</code></pre></li>
+<li><code>DECR</code>: 减少指定的整数<pre><code>DECR key
+DECRBY key decrement
+</code></pre></li>
+<li><p><code>INCRBYFLOAT</code>: 增加指定浮点数<br>INCRBYFLOAT命令类似INCRBY命令，差别是前者可以递增一个双精度浮点数。</p>
+<pre><code>INCRBYFLOAT key increment
+
+redis&gt; INCRBYFLOAT bar 2.7
+redis&gt; INCRBYFLOAT bar 5E+4
+</code></pre></li>
+<li><code>APPEND</code>: 向尾部追加值<pre><code>APPEND key value
+</code></pre></li>
+<li><code>STRLEN</code>: 获取字符串长度<pre><code>STRLEN key
+</code></pre></li>
+<li><code>MGET</code>: 同时获得/设置多个键值<pre><code>MGET key [key ...]
+MSET key value [key value ...]
+</code></pre></li>
+<li><code>GETBIT</code>: 位操作<pre><code>GETBIT key offset
+SETBIT key offset value
+BITCOUNT key [start] [end]
+BITOP operation destkey key [key …]
+</code></pre></li>
+</ol>
+<h4 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h4><ol>
+<li>文章访问量统计<ul>
+<li>Redis的键命名:”对象类型:对象ID:对象属性”, 多单词使用<code>.</code>来分隔<br>例如: <code>user:1:friends</code> 来储存用户1的好友列表</li>
+<li>使用”对象类型(复数):count”来储存对象的数量<br>例如: <code>users:count</code></li>
+<li>伪代码:<pre><code># 首先获得新文章的 ID
+$postID = INCR posts:count
+# 将博客文章的诸多元素序列化成字符串
+$serializedPost = serialize($title, $content, $author, $time)
+# 把序列化后的字符串存一个入字符串类型的键中
+SET post:$postID:data, $serializedPost
+获取文章数据的伪代码如下（以访问ID为42的文章为例）：
+# 从 Redis 中读取文章数据
+$serializedPost = GET post:42:data
+# 将文章数据反序列化成文章的各个元素
+$title, $content, $author, $time = unserialize($serializedPost)
+# 获取并递增文章的访问数量
+$count = INCR post:42:page.view
+</code></pre></li>
+</ul>
+</li>
+</ol>
+<h3 id="散列类型"><a href="#散列类型" class="headerlink" title="散列类型"></a>散列类型</h3><ul>
+<li>字段值只能是字符串。</li>
+<li>一个散列类型键可以包含232-1个字段。</li>
+</ul>
+<h4 id="命令-1"><a href="#命令-1" class="headerlink" title="命令"></a>命令</h4><ol>
+<li><code>HSET</code>: 赋值<br>HSET命令用来给字段赋值，而HGET命令用来获得字段的值。<pre><code>HSET key field value
+HMSET key field value [field value …]
+</code></pre></li>
+<li><p><code>HGET</code>: 取值</p>
+<pre><code>HGET key field
+HMGET key field [field …]
+HGETALL key
+
+# e.g.
+redis&gt; HGETALL car
+1) &quot;price&quot;
+2) &quot;500&quot;
+3) &quot;name&quot;
+4) &quot;BMW
+</code></pre><p><code>HGETALL</code>返回的结果很不直观, 多数Redis客户端会做编程语言中对象的封装。</p>
+</li>
+<li><code>HEXISTS</code>: 判断字段是否存在<pre><code>HEXISTS key field
+</code></pre></li>
+<li><code>HSETNX</code>: 当字段不存在时赋值<br>HSETNX 命令与HSET命令类似，区别在于如果字段已经存在，HSETNX命令将不执行任何操作。<pre><code>HSETNX key field value
+</code></pre></li>
+<li><code>HINCRBY</code>: 增加数字<pre><code>HINCRBY key field increment
+</code></pre></li>
+<li><code>HDEL</code>: 删除字段<pre><code>HDEL key field [field ...]
+</code></pre>1．<code>HKEYS</code>/<code>HVALS</code>: 只获取字段名或字段值<pre><code>HKEYS key
+HVALS key
+</code></pre>1．<code>HLEN</code>: 获得字段数量<pre><code>HLEN key
+</code></pre></li>
+</ol>
+<h3 id="列表类型"><a href="#列表类型" class="headerlink" title="列表类型"></a>列表类型</h3><ul>
+<li>列表类型（list）可以存储一个有序的字符串列表。</li>
+<li>列表类型内部是使用双向链表（double linked list）实现的，所以向列表两端添加元素的时间复杂度为O(1)，获取越接近两端的元素速度就越快。</li>
+</ul>
+<h4 id="命令-2"><a href="#命令-2" class="headerlink" title="命令"></a>命令</h4><p>1．<code>LPUSH</code>/<code>RPUSH</code>: 向列表两端增加元素</p>
+<ul>
+<li>LPUSH命令用来向列表左边增加元素，返回值表示增加元素后列表的长度。</li>
+<li>LPUSH命令还支持同时增加多个元素。<pre><code>LPUSH key value [value …]
+RPUSH key value [value …]
+</code></pre>1．<code>LPOP</code>/<code>RPOP</code>: 从列表两端弹出元素<br><code>LPOP</code>命令执行两步操作：第一步是将列表左边的元素从列表中移除，第二步是返回被移除的元素值。<pre><code>LPOP key
+RPOP key
+</code></pre><ol>
+<li><code>LLEN</code>: 获取列表中元素的个数<pre><code>LLEN key
+</code></pre></li>
+<li><code>LRANGE</code>: 获取列表片段</li>
+</ol>
+</li>
+<li>LRANGE命令在取得列表片段的同时<strong>不会</strong>像LPOP一样删除该片段。</li>
+<li>LRANGE返回的值包含最右边的元素。</li>
+<li>LRANGE命令也支持负索引，表示从右边开始计算序数，如”−1”表示最右边第一个元素，”-2”表示最右边第二个元素，依次类推。<pre><code>LRANGE key start stop
+</code></pre><ol>
+<li><code>LREM</code>: 删除列表中指定的值</li>
+</ol>
+</li>
+<li>LREM命令会删除列表中前count个值为value的元素，返回值是实际删除的元素个数。</li>
+<li>根据count值的不同，LREM命令的执行方式会略有差异。<ul>
+<li>当<code>count &gt; 0</code>时 LREM 命令会从列表左边开始删除前 count 个值为 value的元素。</li>
+<li>当<code>count &lt; 0</code>时 LREM 命令会从列表右边开始删除前 count 个值为 value 的元素。</li>
+<li>当<code>count = 0</code>是 LREM命令会删除所有值为 value的元素。例如：<pre><code>LREM key count value
+</code></pre>1．<code>LINDEX</code>: 获得指定索引的元素值<pre><code>LINDEX key index
+</code></pre>1．<code>LSET</code>: 设置指定索引的元素值<pre><code>LSET key index value
+</code></pre>1．<code>LTRIM</code>: 只保留列表指定片段</li>
+</ul>
+</li>
+<li>LTRIM 命令可以删除指定索引范围之外的所有元素，其指定列表范围的方法和LRANGE命令相同。<pre><code>LTRIM key start end
+</code></pre>LTRIM命令常和LPUSH命令一起使用来限制列表中元素的数量。<br>比如记录日志时我们希望只保留最近的100条日志，则每次加入新元素时调用一次LTRIM命令即可：<pre><code>LPUSH logs $newLog
+LTRIM logs 0 99
+</code></pre>1．<code>LINSERT</code>: 向列表中插入元素<pre><code>LINSERT key BEFORE|AFTER pivot value
+</code></pre>1．将元素从一个列表转到另一个列表</li>
+<li>RPOPLPUSH是个很有意思的命令，从名字就可以看出它的功能：先执行RPOP命令再执行LPUSH命令。</li>
+<li>当source和destination相同时, RPOPLPUSH命令会不断地将队尾的元素移到队首, 借助这个特性我们可以实现一个网站监控系统: 使用一个队列存储需要监控的网址, 然后监控程序不断地使用 RPOPLPUSH 命令循环取出一个网址来测试可用性。这里使用RPOPLPUSH命令的好处在于在程序执行过程中仍然可以不断地向网址列表中加入新网址, 而且整个系统容易扩展, 允许多个客户端同时处理队列。<pre><code>RPOPLPUSH source destination
+</code></pre></li>
+</ul>
+<h3 id="集合类型"><a href="#集合类型" class="headerlink" title="集合类型"></a>集合类型</h3><p>集合类型和列表类型有很相似的地方, 但是又如下不同:</p>
+<ul>
+<li>有序性: 列表有序, 集合无序。</li>
+<li>唯一性: 列表没有唯一性, 集合有唯一性。</li>
+</ul>
+<h4 id="命令-3"><a href="#命令-3" class="headerlink" title="命令"></a>命令</h4><p>1．<code>SADD</code>/<code>SREM</code>: 增加/删除元素</p>
+<ul>
+<li>命令返回成功加入的元素数量<pre><code>SADD key member [member …]
+SREM key member [member …]
+</code></pre><ol>
+<li>获得集合中的所有元素<pre><code>SMEMBERS key
+</code></pre></li>
+<li>判断元素是否在集合中<pre><code>SISMEMBER key member
+</code></pre></li>
+<li><code>SDIFF</code>: 差集运算</li>
+</ol>
+</li>
+<li>集合A, 集合B的差集表示为A-B, 代表所有属于A且不属于B构成的集合。</li>
+<li>多集合: A-B-C, 代表先求A-B的差集, 再用结果求和C的差集。<pre><code>SDIFF key [key ..]
+</code></pre><ol>
+<li><code>SINTER</code>: 交集运算</li>
+</ol>
+</li>
+<li>集合A与集合B的交集表示为A ∩ B，代表所有属于A 且属于B的元素构成的集合。<pre><code>SINTER key [key ..]
+</code></pre><ol>
+<li><code>SUNION</code>: 并集运算</li>
+</ol>
+</li>
+<li>集合A与集合B的并集表示为A∪B，代表所有属于A 或属于B的元素构成的集合。<pre><code>SUNION key [key ..]
+</code></pre><ol>
+<li><code>SCARD</code>: 获得集合中元素个数<pre><code>SCARD key
+</code></pre></li>
+<li>进行集合运算并将结果存储</li>
+</ol>
+</li>
+<li><code>SDIFFSTORE</code>而命令和<code>SDIFF</code>命令功能一样, 唯一的区别就是前者不会直接返回运算结果, 而是将结果存储在destination键中。<pre><code>SDIFFSTORE destination key [key …]
+SINTERSTORE destination key [key …]
+SUNIONSTORE destination key [key …]
+</code></pre><ol>
+<li><code>SRANDMEMBER</code>: 随机获得集合中的元素<pre><code>SRANDOMEMBER key [count]
+</code></pre>根据count的正负不同, 具体表现也不同:</li>
+</ol>
+</li>
+</ul>
+<ol>
+<li>当count为正数时, 会随机获得count个不重复的元素。</li>
+<li>当count为正数且大于集合中元素的个数时, 返回集合中全部元素。</li>
+<li>当count为负数时, 会随机获得count个可重复的元素。<ol>
+<li><code>SPOP</code>: 从集合中弹出一个元素<pre><code>SPOP key
+</code></pre></li>
+</ol>
+</li>
+</ol>
+<h3 id="有序集合类型"><a href="#有序集合类型" class="headerlink" title="有序集合类型"></a>有序集合类型</h3><p>有序集合类型在某些方面和列表类型有些相似:</p>
+<ul>
+<li>二者都是有序的。</li>
+<li>二者都可以获得某一范围的元素。<br>但是二者有着很大的区别，这使得它们的应用场景也是不同的:</li>
+<li>列表类型是通过链表实现的，获取靠近两端的数据速度极快，而当元素增多后，访问中间数据的速度会较慢，所以它更加适合实现如新鲜事或日志这样很少访问中间元素的应用。</li>
+<li>有序集合类型是使用散列表和跳跃表（Skip list）实现的，所以即使读取位于中间部分的数据速度也很快（时间复杂度是O(log(N))）。</li>
+<li>列表中不能简单地调整某个元素的位置，但是有序集合可以（通过更改这个元素的分数）。</li>
+<li>有序集合要比列表类型更耗费内存。</li>
+</ul>
+<h4 id="命令-4"><a href="#命令-4" class="headerlink" title="命令"></a>命令</h4><p>1．<code>ZADD</code>: 增加元素</p>
+<pre><code>  ZADD key score member [score member …]
+</code></pre><ol>
+<li><code>ZSCORE</code>: 获取元素的分数<pre><code>ZSCORE key member
+</code></pre></li>
+<li><code>ZRANGE</code>: 获得排名在某个范围的元素列表<pre><code>ZRANGE key start stop [WITHSCORES]
+ZREVRANGE key start stop [WITHSCORES]
+</code></pre></li>
+<li><code>ZRANGEBYSCORE</code>: 获得指定分数范围的元素<pre><code>ZRANGEBYSCORE key min max [WITHSCORES] [LIMIT offset count]
+</code></pre></li>
+<li><code>ZCARD</code>: 获得集合中元素的数量<pre><code>ZCARD key
+</code></pre></li>
+<li><code>ZCOUNT</code>: 获得指定分数范围内的元素个数<pre><code>ZCOUNT key min max
+</code></pre></li>
+<li><code>ZREM</code>: 删除一个或多个元素<pre><code>ZREM key member [member ..]
+</code></pre></li>
+<li><code>ZREMRANGEBYRANK</code>: 按照排名范围删除元素<pre><code>ZREMRANGEBYRANK key start stop
+</code></pre></li>
+<li><code>ZREMRANGEBYSCORE</code>: 安装分数范围删除元素<pre><code>ZREMRANGEBYSCORE key min max
+</code></pre></li>
+<li><code>ZRANK</code>: 获得元素的排名<pre><code>ZRANK key member
+ZREVRANK key member
+</code></pre></li>
+<li><code>ZINTERSTORE</code>: 计算有序集合的交集<br>ZINTERSTORE命令用来计算多个有序集合的交集并将结果存储在destination键中（同样以有序集合类型存储），返回值为destination键中的元素个数。<pre><code>ZINTERSTORE destination numkeys key [key …] [WEIGHTS weight [weight …]] [AGGREGATE SUM|MIN|MAX]
+</code></pre></li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://shanlanmi.github.io/zsl-blog/2017/02/21/Redis-基础/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://shanlanmi.github.io/zsl-blog/2017/02/21/Redis-基础/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2017/02/23/javascript-block/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/02/19/Memcached-vs-Redis/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033dev@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a></li><li><a class="sidebar_archives-link" href="/archives/1904/01/">一月 1904<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
                         <!-- Footer Top Button -->
-                        <%- partial('_partial/footer_top')  %>
-                    <% } %>
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
-                    <%- partial('_partial/footer') %>
+                    
 
-                    <%- partial('_partial/import_js') %>
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
                 </main>
             </div>
         </body>
-    <% } %>
+    
 </html>

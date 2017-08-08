@@ -1,17 +1,292 @@
 <!DOCTYPE html>
-<html style="display: none;" <% if(config.language !== null) { %>lang="<%- config.language.substring(0,2) %>"<% } %>>
-    <%- partial('_partial/head') %>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
 
-    <% if(page.layout === 'gallery') { %>
-        <!-- Single Gallery Page -->
-        <%- partial('_widget/page-gallery') %>
-    <% } else { %>
-        <body id="scheme-<%= theme.scheme %>" class="lazy">
+    <!-- Title -->
+    
+    <title>
+        
+            AngularJS - Directive | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="描述">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="AngularJS - Directive | 张圣兰">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="描述">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="AngularJS - Directive | 张圣兰">
+    <meta name="twitter:description" content="描述">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS-Directive/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "AngularJS - Directive",
+    "url": "http://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS-Directive/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "描述",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                <% if(theme.scheme === 'Isolation') { %>
-                    <!-- Isolation Header -->
-                    <%- partial('_partial/isolate_info') %>
-                <% } %>
+                
 
                 <!-- Main Container -->
                 <main class="material-layout__content" id="main">
@@ -19,29 +294,1209 @@
                     <!-- Top Anchor -->
                     <div id="top"></div>
 
-                    <% if(theme.scheme === 'Paradox') { %>
+                    
                         <!-- Hamburger Button -->
                         <button class="MD-burger-icon sidebar-toggle">
                             <span class="MD-burger-layer"></span>
                         </button>
-                    <% } %>
+                    
 
-                    <%- body %>
+                    <!-- Post TOC -->
 
-                    <% if(theme.scheme === 'Paradox') { %>
-                        <%- partial('_partial/sidebar') %>
-                    <% } %>
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-                    <% if( (theme.scheme === 'Paradox') && (is_post() || is_home() || is_archive() || is_category() || (page.totop === true) ) ) { %>
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#什么时候用-directive？"><span class="post-toc-number">1.</span> <span class="post-toc-text">什么时候用 directive？</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#directive"><span class="post-toc-number">2.</span> <span class="post-toc-text">directive</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#内置-directive"><span class="post-toc-number">3.</span> <span class="post-toc-text">内置 directive</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#内置directive-列表"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">内置directive 列表</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#The-ng-init-Directive"><span class="post-toc-number">3.1.1.</span> <span class="post-toc-text">The ng-init Directive</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#The-ng-model-Directive"><span class="post-toc-number">3.1.2.</span> <span class="post-toc-text">The ng-model Directive</span></a></li></ol></li></ol></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#undefined"><span class="post-toc-number"></span> <span class="post-toc-text">Status</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ng-repeat"><span class="post-toc-number">0.1.</span> <span class="post-toc-text">ng-repeat</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ng-form"><span class="post-toc-number">0.2.</span> <span class="post-toc-text">ng-form</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ng-class"><span class="post-toc-number">0.3.</span> <span class="post-toc-text">ng-class</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#ng-style"><span class="post-toc-number">0.4.</span> <span class="post-toc-text">ng-style</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义-directive"><span class="post-toc-number">1.</span> <span class="post-toc-text">自定义 directive</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建指令"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">创建指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#召唤指令"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">召唤指令</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#指令属性"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">指令属性</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Restrict"><span class="post-toc-number">1.3.1.</span> <span class="post-toc-text">Restrict</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#replace-和-transclude"><span class="post-toc-number">1.3.2.</span> <span class="post-toc-text">replace 和 transclude</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#template，templateUrl，-templateCache"><span class="post-toc-number">1.3.3.</span> <span class="post-toc-text">template，templateUrl，$templateCache</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#compile-和-link-操作元素，添加-CSS-样式，绑定时间"><span class="post-toc-number">1.3.4.</span> <span class="post-toc-text">compile 和 link 操作元素，添加 CSS 样式，绑定时间</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#Scope"><span class="post-toc-number">1.3.5.</span> <span class="post-toc-text">Scope</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#require"><span class="post-toc-number">1.3.6.</span> <span class="post-toc-text">require</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#priority"><span class="post-toc-number">1.3.7.</span> <span class="post-toc-text">priority</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#controller"><span class="post-toc-number">1.3.8.</span> <span class="post-toc-text">controller</span></a></li></ol></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#交互"><span class="post-toc-number">2.</span> <span class="post-toc-text">交互</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#指定与控制器之间的交互"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">指定与控制器之间的交互</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#指令间的交互"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">指令间的交互</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#一个-Accordion-的实例"><span class="post-toc-number">3.</span> <span class="post-toc-text">一个 Accordion 的实例</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                AngularJS - Directive
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=AngularJS - Directive&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS-Directive/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=AngularJS - Directive&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS-Directive/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS-Directive/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS-Directive/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=AngularJS - Directive&summary=描述&pics=http://shanlanmi.github.io/zsl-blog/img/favicon.png&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS-Directive/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="什么时候用-directive？"><a href="#什么时候用-directive？" class="headerlink" title="什么时候用 directive？"></a>什么时候用 directive？</h2><p>由于 AngularJS 采用了双向数据绑定（model 和 view），所以多数情况下可以直接对数据做处理，无需操作 DOM。但是一定还是存在需要操作 DOM 的时候，我理解directive 为直接和 DOM 打交道而存在的。<br>几种使用 directive 的情况：</p>
+<ol>
+<li>各种操作 DOM。</li>
+<li>绑定各种数据（通用指令）。</li>
+<li>使用第三方组件。</li>
+</ol>
+<h2 id="directive"><a href="#directive" class="headerlink" title="directive"></a>directive</h2><h2 id="内置-directive"><a href="#内置-directive" class="headerlink" title="内置 directive"></a>内置 directive</h2><h3 id="内置directive-列表"><a href="#内置directive-列表" class="headerlink" title="内置directive 列表"></a>内置directive 列表</h3><table>
+<thead>
+<tr>
+<th>Directive</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ng-app</td>
+<td>Defines the root element of an application.</td>
+</tr>
+<tr>
+<td>ng-bind</td>
+<td>Binds the content of an HTML element to application data.</td>
+</tr>
+<tr>
+<td>ng-bind-html</td>
+<td>Binds the innerHTML of an HTML element to application data, <br>and also removes dangerous code from the HTML string.</td>
+</tr>
+<tr>
+<td>ng-bind-template</td>
+<td>Specifies that the text content should be replaced with a template.</td>
+</tr>
+<tr>
+<td>ng-checked</td>
+<td>Specifies if an element is checked or not.</td>
+</tr>
+<tr>
+<td>ng-class</td>
+<td>Specifies CSS classes on HTML elements.</td>
+</tr>
+<tr>
+<td>ng-class-even</td>
+<td>Same as ng-class, but will only take effect on even rows.</td>
+</tr>
+<tr>
+<td>ng-class-odd</td>
+<td>Same as ng-class, but will only take effect on odd rows.</td>
+</tr>
+<tr>
+<td>ng-cloak</td>
+<td>Prevents flickering when your application is being loaded.</td>
+</tr>
+<tr>
+<td>ng-controller</td>
+<td>Defines the controller object for an application.</td>
+</tr>
+<tr>
+<td>ng-csp</td>
+<td>Changes the content security policy.</td>
+</tr>
+<tr>
+<td>ng-disabled</td>
+<td>Specifies if an element is disabled or not.</td>
+</tr>
+<tr>
+<td>ng-form</td>
+<td>Specifies an HTML form to inherit controls from.</td>
+</tr>
+<tr>
+<td>ng-hide</td>
+<td>Hides or shows HTML elements.</td>
+</tr>
+<tr>
+<td>ng-href</td>
+<td>Specifies a url for the <a> element.</a></td>
+</tr>
+<tr>
+<td>ng-if</td>
+<td>Removes the HTML element if a condition is false.</td>
+</tr>
+<tr>
+<td>ng-include</td>
+<td>Includes HTML in an application.</td>
+</tr>
+<tr>
+<td>ng-init</td>
+<td>Defines initial values for an application.</td>
+</tr>
+<tr>
+<td>ng-jq</td>
+<td>Specifies that the application must use a library, like jQuery.</td>
+</tr>
+<tr>
+<td>ng-list</td>
+<td>Converts text into a list (array).</td>
+</tr>
+<tr>
+<td>ng-model</td>
+<td>Binds the value of HTML controls to application data.</td>
+</tr>
+<tr>
+<td>ng-model-options</td>
+<td>Specifies how updates in the model are done.</td>
+</tr>
+<tr>
+<td>ng-non-bindable</td>
+<td>Specifies that no data binding can happen in this element, or it’s children.</td>
+</tr>
+<tr>
+<td>ng-open</td>
+<td>Specifies the open attribute of an element.</td>
+</tr>
+<tr>
+<td>ng-options</td>
+<td>Specifies <code>&lt;options&gt;</code> in a <code>&lt;select&gt;</code> list.</td>
+</tr>
+<tr>
+<td>ng-pluralize</td>
+<td>Specifies a message to display according to en-us localization rules.</td>
+</tr>
+<tr>
+<td>ng-readonly</td>
+<td>Specifies the readonly attribute of an element.</td>
+</tr>
+<tr>
+<td>ng-repeat</td>
+<td>Defines a template for each data in a collection.</td>
+</tr>
+<tr>
+<td>ng-required</td>
+<td>Specifies the required attribute of an element.</td>
+</tr>
+<tr>
+<td>ng-selected</td>
+<td>Specifies the selected attribute of an element.</td>
+</tr>
+<tr>
+<td>ng-show</td>
+<td>Shows or hides HTML elements.</td>
+</tr>
+<tr>
+<td>ng-src</td>
+<td>Specifies the src attribute for the <code>&lt;img&gt;</code> element.</td>
+</tr>
+<tr>
+<td>ng-srcset</td>
+<td>Specifies the srcset attribute for the <code>&lt;img&gt;</code> element.</td>
+</tr>
+<tr>
+<td>ng-style</td>
+<td>Specifies the style attribute for an element.</td>
+</tr>
+<tr>
+<td>ng-submit</td>
+<td>Specifies expressions to run on onsubmit events.</td>
+</tr>
+<tr>
+<td>ng-switch</td>
+<td>Specifies a condition that will be used to show/hide child elements.</td>
+</tr>
+<tr>
+<td>ng-transclude</td>
+<td>Specifies a point to insert transcluded elements.</td>
+</tr>
+<tr>
+<td>ng-value</td>
+<td>Specifies the value of an input element.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="The-ng-init-Directive"><a href="#The-ng-init-Directive" class="headerlink" title="The ng-init Directive"></a>The ng-init Directive</h4><ul>
+<li>初始化 AngularJS 的变量。</li>
+<li>多数情况下，用 controller 或 module 来定义变量更好。</li>
+</ul>
+<h4 id="The-ng-model-Directive"><a href="#The-ng-model-Directive" class="headerlink" title="The ng-model Directive"></a>The ng-model Directive</h4><p><code>ng-model</code>指令同时提供：</p>
+<ul>
+<li>view 和 model 的双向数据绑定<ul>
+<li>用<code>ng-bind</code>绑定元素的 innerHTML <pre class="line-numbers language-HTML"><code class="language-HTML"><p ng-bind="firstname"></p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>用&#123;{ }&#125; 作为表达式来绑定<pre class="line-numbers language-HTML"><code class="language-HTML"><p>First name: {{firstname}}</p>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li><code>ng-model</code>指令绑定 HTML 控件到应用数据。（input，select，textarea）<pre class="line-numbers language-HTML"><code class="language-HTML"><div ng-app="myApp" ng-controller="myCtrl">
+    Name: <input ng-model="name">
+</div>
+<div>{{name}}</div>
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.name = "John Doe";
+});
+</script>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>强制刷新双向绑定数据（用于由非 angular 库内函数修改数据，未同步刷新的情况）<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">angular.element(document.getElementById("myid")).scope().val = 999;
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">var event = document.createEvent('HTMLEvents');
+event.initEvent('change', true, false);
+el.dispatchEvent(event);
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li>格式合法性检查（number，email，require）<pre class="line-numbers language-HTML"><code class="language-HTML"><form ng-app="" name="myForm">
+    Email:
+    <input type="email" name="myAddress" ng-model="text">
+    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+</form>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>数据状态检查（invalid，dirty，touched，error）<pre class="line-numbers language-HTML"><code class="language-HTML"><form ng-app="" name="myForm" ng-init="myText = 'post@myweb.com'">
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" required>
+    <h1>Status</h1>
+    {{myForm.myAddress.$valid}}
+    {{myForm.myAddress.$dirty}}
+    {{myForm.myAddress.$touched}}
+</form>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>Valid: Boolean，检查值是否符合规则。</li>
+<li>Dirty: Boolean，值是否变过。</li>
+<li>Touched: Boolean，检查值是否被 focus 过。</li>
+</ul>
+</li>
+<li>为HTML element 提供 CSS 的 class<pre class="line-numbers language-HTML"><code class="language-HTML"><style>
+input.ng-invalid {
+    background-color: lightblue;
+}
+</style>
+<body>
+<form ng-app="" name="myForm">
+    Enter your name:
+    <input name="myAddress" ng-model="text" required>
+</form>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>ng-empty</li>
+<li>ng-not-empty</li>
+<li>ng-touched</li>
+<li>ng-untouched</li>
+<li>ng-valid</li>
+<li>ng-invalid</li>
+<li>ng-dirty</li>
+<li>ng-pending</li>
+<li>ng-pristine</li>
+</ul>
+</li>
+<li>绑定 HTML element HTML forms</li>
+</ul>
+<h3 id="ng-repeat"><a href="#ng-repeat" class="headerlink" title="ng-repeat"></a>ng-repeat</h3><ul>
+<li>The ng-repeat directive actually <strong>clones</strong> HTML elements once for each item in a collection.</li>
+<li>AngularJS is perfect for database CRUD (Create Read Update Delete) applications. Just imagine if these objects were records from a database.</li>
+</ul>
+<ul>
+<li><code>ng-repeat</code>会自动生成<code>$$hashKey</code>，此变量为 AngularJS 的私有变量，几种应对它的方法：<ol>
+<li>在使用<code>ng-repeat</code>时，消除<code>$$hashKey</code>的产生。<pre><code>ng-repeat=“item in listName track by $index&quot;
+</code></pre></li>
+<li>利用<code>delete obj.property</code>来手动删除<code>$$hashKey</code></li>
+<li>在 post 请求时，用<code>angular.toJson(obj)</code> 代替 <code>JSON.stringify(obj)</code> 来消除 <code>$$hashKey</code>.</li>
+</ol>
+</li>
+</ul>
+<h3 id="ng-form"><a href="#ng-form" class="headerlink" title="ng-form"></a>ng-form</h3><ol>
+<li>HTML 原生的 form 表单不能嵌套,而 Angular封装之后的 form 可以嵌套</li>
+<li>AngularJS 为 form 扩展了自动效验，防止重复提交等功能</li>
+<li>AngularJS 为 input元素的 type 进行了扩展，一共提供了以下10种类型<br>text, number, url, email, radio, checkbox, hidden, button, submit, reset</li>
+<li>AngularJS 为表单内置了4种 CSS 样式<br>ng-valid，ng-invalid, ng-pristine, ng-dirty</li>
+<li>内置效验器<br>require, minlength, maxlength</li>
+</ol>
+<h3 id="ng-class"><a href="#ng-class" class="headerlink" title="ng-class"></a>ng-class</h3><ol>
+<li>Using String Syntax<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"><input type='text' ng-model='textType'>
+<div ng-class='textType'>Look! I'm Words!</div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>Using Array Syntax<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"><input type="text" ng-model="styleOne">
+<input type="text" ng-model="styleTwo">
+<div ng-class="[styleOne, styleTwo]">Look! I'm Words!</div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p>Using Evaluated Expression<br>若变量或表达式为 true，则前面的 class 类名生效。</p>
+<pre class="line-numbers language-JavaScript"><code class="language-JavaScript"><input type="checkbox" ng-model="awesome"> Are You Awesome?
+<input type="checkbox" ng-model="giant"> Are You a Giant?
+
+<!-- add the class 'text-success' if the variable 'awesome' is true -->
+<div ng-class="{ 'text-success': awesome, 'text-large': giant }">
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Using the Ternary Operator<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">ng-class="$even ? 'even-row' : 'odd-row'"
+ng-class="{ 'text-info': $even, 'text-danger': $odd }"
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li><p>ngClass as a class</p>
+<pre class="line-numbers language-HTML"><code class="language-HTML"><div class="item ng-class:type;">Stuff Goes Here</div>
+
+<div class="item ng-class:[styleOne, styleTwo];">Stuff Goes Here</div>
+
+<div class="item ng-class:{ 'text-error': wrong };">Stuff Goes Here</div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>ngClass as a attribute<pre class="line-numbers language-HTML"><code class="language-HTML"><div class="item" ng-class="type">Stuff Goes Here</div>
+<div class="item" ng-class="[styleOne, styleTwo]">Stuff Goes Here</div>
+<div class="item" ng-class="{ 'text-error': wrong }">Stuff Goes Here</div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h3 id="ng-style"><a href="#ng-style" class="headerlink" title="ng-style"></a>ng-style</h3><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span> <span class="token attr-name">ng-</span><span class="token style-attr language-css"><span class="token attr-name"><span class="token attr-name">style</span></span><span class="token punctuation">="</span><span class="token attr-value">myObj</span><span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Welcome<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-JS"><code class="language-JS">var app = angular.module("myApp", []);
+app.controller("myCtrl", function($scope) {
+    $scope.myObj = {
+        "color" : "white",
+        "background-color" : "coral",
+        "font-size" : "60px",
+        "padding" : "50px"
+    }
+});
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="自定义-directive"><a href="#自定义-directive" class="headerlink" title="自定义 directive"></a>自定义 directive</h2><h3 id="创建指令"><a href="#创建指令" class="headerlink" title="创建指令"></a>创建指令</h3><ul>
+<li>用<code>.directive</code>创建指令。</li>
+<li>不要命令指令为<code>ng-*</code>，会很内置指令重复。</li>
+<li>尽量不要用单个单词命令指令，避免重复和升级标准后的冲突。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Defined</th>
+<th>Also Can</th>
+<th>Best Practice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DOM</td>
+<td>someName</td>
+<td>some-name</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>some-name</td>
+<td>some-name</td>
+</tr>
+<tr>
+<td>JavaScript</td>
+<td>somename</td>
+<td>someName</td>
+</tr>
+</tbody>
+</table>
+<h3 id="召唤指令"><a href="#召唤指令" class="headerlink" title="召唤指令"></a>召唤指令</h3><ul>
+<li>Element name<pre class="line-numbers language-HTML"><code class="language-HTML"><w3-test-directive></w3-test-directive>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Attribute<pre class="line-numbers language-HTML"><code class="language-HTML"><div w3-test-directive></div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Class<pre class="line-numbers language-HTML"><code class="language-HTML"><div class="w3-test-directive"></div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Comment<pre class="line-numbers language-HTML"><code class="language-HTML"><!-- directive: w3-test-directive -->
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="指令属性"><a href="#指令属性" class="headerlink" title="指令属性"></a>指令属性</h3><h4 id="Restrict"><a href="#Restrict" class="headerlink" title="Restrict"></a>Restrict</h4><p>限定指令的召唤类型</p>
+<ul>
+<li>A: Attribute (default)<pre class="line-numbers language-HTML"><code class="language-HTML"><div my-menu></div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>E: Element name (default)<pre class="line-numbers language-HTML"><code class="language-HTML"><my-menu></my-menu>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>C: Class<pre class="line-numbers language-HTML"><code class="language-HTML"><div class="my-menu"></div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>M: Comment<pre class="line-numbers language-HTML"><code class="language-HTML"><!-- directive:my-menu -->
+<div></div>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="replace-和-transclude"><a href="#replace-和-transclude" class="headerlink" title="replace 和 transclude"></a>replace 和 transclude</h4><ul>
+<li><code>replace:true</code>: 指令会替换元素内部的内容</li>
+<li><code>transclude:true</code>: 将元素内部的内容嵌套在 ng-transclude 处<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">myModule.directive("hello", function($templateCache) {
+    return {
+        restrict: 'AECM',
+        transclude: true
+        template: "<div>Hello everyone!<div ng-transclude></div></div>"
+    }
+});
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="template，templateUrl，-templateCache"><a href="#template，templateUrl，-templateCache" class="headerlink" title="template，templateUrl，$templateCache"></a>template，templateUrl，$templateCache</h4><ul>
+<li>template：加载片段代码<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">template: "<div>app</div>",
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>templateUrl：加载 html 文件<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">templateUrl: "app.html",
+templateUrl:function(tElement, tAttrs) { return tAttrs.xx+"xx.html" },
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+</li>
+<li>$templateCache：加载缓存代码<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">var myModule = angular.module("MyModule", []);
+//注射器加载完所有模块时，此方法执行一次
+myModule.run(function($templateCache){
+  $templateCache.put("hello.html","<div>Hello everyone!!!!!!</div>");
+});
+myModule.directive("hello", function($templateCache) {
+    return {
+        restrict: 'AECM',
+        template: $templateCache.get("hello.html"),
+        replace: true
+    }
+});
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="compile-和-link-操作元素，添加-CSS-样式，绑定时间"><a href="#compile-和-link-操作元素，添加-CSS-样式，绑定时间" class="headerlink" title="compile 和 link 操作元素，添加 CSS 样式，绑定时间"></a>compile 和 link 操作元素，添加 CSS 样式，绑定时间</h4><ul>
+<li><p><strong>compile 和 link 的工作顺序</strong></p>
+<ol>
+<li>加载阶段<ol>
+<li>加载 angular.js, 找到 ng-app, 确定应用的边界</li>
+</ol>
+</li>
+<li>编译阶段<ol>
+<li>遍历 DOM, 找到所有指令</li>
+<li>根据指定中的 template,replace,transclude 转换 DOM 结构</li>
+<li>若存在 compile 函数,则调用(会覆盖原先的 compile 函数)</li>
+</ol>
+</li>
+<li>链接阶段<ol>
+<li>对每一条指定运行 link 函数</li>
+<li>link 函数一般用来操作 DOM，绑定事件</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p><strong>compile</strong><br>在compile函数内部，只对DOM进行操作，返回函数等效于使用link配置，返回对象的话包含两个函数：</p>
+<ul>
+<li>preLink会在编译阶段之后、指令连接到子元素之前运行</li>
+<li>postLink会在所有子元素指令都链接之后才运行</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><strong>link</strong><br>link函数会访问scope对象，其返回一个postLink函数。如果在compile中返回了post，那么link选项就会被忽略</li>
+</ul>
+<ul>
+<li><strong>注意：</strong></li>
+</ul>
+<ol>
+<li>compile 函数用来对模板的自身进行转换，而 link 函数负责在模型和视图之间进行动态关联</li>
+<li>作用域在链接阶段才会被绑定到编译之后的 link 函数上</li>
+<li>compile函数仅仅在编译阶段运行一次，而指令的每一个实例，link 函数都会执行一次</li>
+<li>compile 可以返回 preLink 和 postLink 函数，而 link 函数只会返回 postLink 函数</li>
+<li>如果需要修改 DOM 结构，应该在 postLink 中来做这件事，而如果在 preLink 中做这件事会导致错误</li>
+<li>大多数时候我们只需要编写 link 函数即可</li>
+</ol>
+<h4 id="Scope"><a href="#Scope" class="headerlink" title="Scope"></a>Scope</h4><p>设置和父级 scope 的绑定关系，默认值为 false<br><strong>独立作用域</strong></p>
+<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">  scope: {},    // 独立作用域
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p><strong>scope 的绑定策略</strong></p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>@</td>
+<td>把当前属性作为<strong>字符串</strong>传递。<br>你还可以绑定来自外层 scope 的值，在属性值中插入<code>{&amp;#123:&amp;#125;}</code>即可</td>
+</tr>
+<tr>
+<td>=</td>
+<td>与父 scope 中的属性进行双向绑定,传递对象</td>
+</tr>
+<tr>
+<td>&amp;</td>
+<td>传递一个来自父 scope 的函数，稍后调用</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><code>@</code>的用法</p>
+<pre class="line-numbers language-HTML"><code class="language-HTML"><drink flavor="{{ctrlFlavor}}"></drink>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">var myModule = angular.module("MyModule", []);
+myModule.controller('MyCtrl', ['$scope', function($scope){
+  $scope.ctrlFlavor="百威";
+}])
+myModule.directive("drink", function() {
+    return {
+      restrict:'AE',
+        scope:{
+          flavor:'@'
+        },
+        template:"<div>{{flavor}}</div>"
+        //,
+        //link:function(scope,element,attrs){
+        //  scope.flavor=attrs.flavor;
+        //}
+    }
+});
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>=</code>的用法</p>
+<pre class="line-numbers language-HTML"><code class="language-HTML"><input type="text" ng-model="ctrlFlavor">
+<drink flavor="ctrlFlavor"></drink>  <!-- 不用花括号 -->
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">var myModule = angular.module("MyModule", []);
+myModule.controller('MyCtrl', ['$scope', function($scope){
+  $scope.ctrlFlavor="百威";
+}]);
+myModule.directive("drink", function() {
+    return {
+      restrict:'AE',
+        scope:{
+          flavor:'='
+        },
+        template:'<input type="text" ng-model="flavor"/>'
+    }
+});
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li><p><code>&amp;</code>的用法</p>
+<pre class="line-numbers language-HTML"><code class="language-HTML"><greeting greet="sayHello(name)"></greeting>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">var myModule = angular.module("MyModule", []);
+myModule.controller('MyCtrl', ['$scope', function($scope){
+  $scope.sayHello=function(name){
+    alert("Hello "+name);
+  }
+}])
+myModule.directive("greeting", function() {
+    return {
+      restrict:'AE',
+        scope:{
+          greet:'&'
+        },
+        template:'<input type="text" ng-model="userName" /><br/>'+
+             '<button class="btn btn-default" ng-click="greet({name:userName})">Greeting</button><br/>'
+    }
+});
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h4 id="require"><a href="#require" class="headerlink" title="require"></a>require</h4><p>依赖其他指令，其他指令可以作为 link 的第四个参数<br>require 的前缀：</p>
+<ul>
+<li>无前缀：在当前元素中查找控制器</li>
+<li><code>^</code>: 在当前元素和父元素中查找控制器</li>
+<li><code>^^</code>：在父元素中查找控制器</li>
+<li><code>?</code>: 在当前指令中找控制器，若没有找到，返回 null</li>
+<li><code>?^</code>: 组合使用<code>?</code>和<code>^</code></li>
+</ul>
+<h4 id="priority"><a href="#priority" class="headerlink" title="priority"></a>priority</h4><ul>
+<li>多个指令的优先级，值为 number。</li>
+<li><code>ng-repeat</code>的优先级为1000</li>
+<li><code>ng-init</code>的优先级为450；</li>
+</ul>
+<h4 id="controller"><a href="#controller" class="headerlink" title="controller"></a>controller</h4><p>可以向控制器中注入如下服务,让指令和指令之间可以交互.</p>
+<ul>
+<li>controller 为 sting，则将字符串作为控制器函数的名称。<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">angular.module('myApp', []) 
+.directive('myDirective', function() { 
+restrict: 'A', // 始终需要
+controller: 'SomeController' 
+}) 
+// 应用中其他的地方，可以是同一个文件或被index.html包含的另一个文件
+angular.module('myApp') 
+.controller('SomeController', function($scope, $element, $attrs, $transclude) { 
+// 控制器逻辑放在这里
+});
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>controller 为 function，则定义为匿名函数可以注入任何服务<pre class="line-numbers language-JavaScript"><code class="language-JavaScript">angular.module('myApp',[]) 
+.directive('myDirective', function() { 
+restrict: 'A', 
+controller: 
+function($scope, $element, $attrs, $transclude) { 
+// 控制器逻辑放在这里
+} 
+});
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>一些特殊服务的注入：<ul>
+<li>$scope: 与指令元素相关联的当前作用域</li>
+<li>$element: 当前指令对应的元素</li>
+<li>$attrs: 由当前元素的属性组成的对象</li>
+<li>$transclude: 嵌入链接函数会与对应的嵌入作用域进行预绑定。transclude链接函数是实际被执行用来克隆元素和操作DOM的函数。</li>
+</ul>
+</li>
+</ul>
+<h2 id="交互"><a href="#交互" class="headerlink" title="交互"></a>交互</h2><h3 id="指定与控制器之间的交互"><a href="#指定与控制器之间的交互" class="headerlink" title="指定与控制器之间的交互"></a>指定与控制器之间的交互</h3><h3 id="指令间的交互"><a href="#指令间的交互" class="headerlink" title="指令间的交互"></a>指令间的交互</h3><h2 id="一个-Accordion-的实例"><a href="#一个-Accordion-的实例" class="headerlink" title="一个 Accordion 的实例"></a>一个 Accordion 的实例</h2><hr>
+<p><strong>本文相关</strong></p>
+<ol>
+<li>参考<br><a href="http://read.lingyu.wang/the-complete-book-on-angularjs/directive-detail.html" target="_blank" rel="external">指令详解 | 天镶的读书笔记</a><br><a href="http://www.cnblogs.com/cunjieliu/p/4055519.html" target="_blank" rel="external">你知道用AngularJs怎么定义指令吗？ - 雷锋叔叔Touch - 博客园</a><br><a href="https://blog.coding.net/blog/angularjs-directive-isolate-scope" target="_blank" rel="external">AngularJS Directive 隔离 Scope 数据交互 - Coding 博客</a></li>
+<li>修订<br>2016:第一版</li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS-Directive/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/AngularJS-Directive/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/21/DOM操作性能优化/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/21/移动前端不得不了解的html5-head-头标签/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033dev@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a></li><li><a class="sidebar_archives-link" href="/archives/1904/01/">一月 1904<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
                         <!-- Footer Top Button -->
-                        <%- partial('_partial/footer_top')  %>
-                    <% } %>
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
-                    <%- partial('_partial/footer') %>
+                    
 
-                    <%- partial('_partial/import_js') %>
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
                 </main>
             </div>
         </body>
-    <% } %>
+    
 </html>

@@ -1,17 +1,292 @@
 <!DOCTYPE html>
-<html style="display: none;" <% if(config.language !== null) { %>lang="<%- config.language.substring(0,2) %>"<% } %>>
-    <%- partial('_partial/head') %>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
 
-    <% if(page.layout === 'gallery') { %>
-        <!-- Single Gallery Page -->
-        <%- partial('_widget/page-gallery') %>
-    <% } else { %>
-        <body id="scheme-<%= theme.scheme %>" class="lazy">
+    <!-- Title -->
+    
+    <title>
+        
+            DOM | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="描述">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="DOM | 张圣兰">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="描述">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="DOM | 张圣兰">
+    <meta name="twitter:description" content="描述">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://shanlanmi.github.io/zsl-blog/2016/07/21/DOM/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "DOM",
+    "url": "http://shanlanmi.github.io/zsl-blog/2016/07/21/DOM/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "描述",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                <% if(theme.scheme === 'Isolation') { %>
-                    <!-- Isolation Header -->
-                    <%- partial('_partial/isolate_info') %>
-                <% } %>
+                
 
                 <!-- Main Container -->
                 <main class="material-layout__content" id="main">
@@ -19,29 +294,1522 @@
                     <!-- Top Anchor -->
                     <div id="top"></div>
 
-                    <% if(theme.scheme === 'Paradox') { %>
+                    
                         <!-- Hamburger Button -->
                         <button class="MD-burger-icon sidebar-toggle">
                             <span class="MD-burger-layer"></span>
                         </button>
-                    <% } %>
+                    
 
-                    <%- body %>
+                    <!-- Post TOC -->
 
-                    <% if(theme.scheme === 'Paradox') { %>
-                        <%- partial('_partial/sidebar') %>
-                    <% } %>
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-                    <% if( (theme.scheme === 'Paradox') && (is_post() || is_home() || is_archive() || is_category() || (page.totop === true) ) ) { %>
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#What-is-DOM"><span class="post-toc-number">1.</span> <span class="post-toc-text">What is DOM?</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Document"><span class="post-toc-number">2.</span> <span class="post-toc-text">Document</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Finding-HTML-Elements"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">Finding HTML Elements</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Changing-HTML-Elements"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">Changing HTML Elements</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Adding-and-Deleting-Elements"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">Adding and Deleting Elements</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Finding-HTML-Objects"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">Finding HTML Objects</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Elements"><span class="post-toc-number">3.</span> <span class="post-toc-text">Elements</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Animations"><span class="post-toc-number">4.</span> <span class="post-toc-text">Animations</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Events"><span class="post-toc-number">5.</span> <span class="post-toc-text">Events</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Reacting-to-Events"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Reacting to Events</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Assign-Events"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Assign Events</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-Onload-Events"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">The Onload Events</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-Onchange-Event"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">The Onchange Event</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-Mouse-and-Keyboard-Events"><span class="post-toc-number">5.5.</span> <span class="post-toc-text">The Mouse and Keyboard Events</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Pass-the-Event-Object"><span class="post-toc-number">5.6.</span> <span class="post-toc-text">Pass the Event Object</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#EventListener"><span class="post-toc-number">6.</span> <span class="post-toc-text">EventListener</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-addEventListener-method"><span class="post-toc-number">6.1.</span> <span class="post-toc-text">The addEventListener() method</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Syntax"><span class="post-toc-number">6.2.</span> <span class="post-toc-text">Syntax</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Add-an-Evenet-Handler-to-the-Window-Object"><span class="post-toc-number">6.3.</span> <span class="post-toc-text">Add an Evenet Handler to the Window Object</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Passing-Parameters"><span class="post-toc-number">6.4.</span> <span class="post-toc-text">Passing Parameters</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Event-Bubbling-or-Event-Capturing"><span class="post-toc-number">6.5.</span> <span class="post-toc-text">Event Bubbling or Event Capturing?</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-removeEventListener-method"><span class="post-toc-number">6.6.</span> <span class="post-toc-text">The removeEventListener() method</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Browser-Support"><span class="post-toc-number">6.7.</span> <span class="post-toc-text">Browser Support</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Navigation"><span class="post-toc-number">7.</span> <span class="post-toc-text">Navigation</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Nodes"><span class="post-toc-number">7.1.</span> <span class="post-toc-text">Nodes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Node-Relationships"><span class="post-toc-number">7.2.</span> <span class="post-toc-text">Node Relationships</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Navigating-Between-Nodes"><span class="post-toc-number">7.3.</span> <span class="post-toc-text">Navigating Between Nodes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Child-Nodes-and-Node-Values"><span class="post-toc-number">7.4.</span> <span class="post-toc-text">Child Nodes and Node Values</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Root-Nodes"><span class="post-toc-number">7.5.</span> <span class="post-toc-text">Root Nodes</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-nodeName-Property"><span class="post-toc-number">7.6.</span> <span class="post-toc-text">The nodeName Property</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-nodeValue-Property"><span class="post-toc-number">7.7.</span> <span class="post-toc-text">The nodeValue Property</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#The-nodeType-Property"><span class="post-toc-number">7.8.</span> <span class="post-toc-text">The nodeType Property</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Nodes-1"><span class="post-toc-number">8.</span> <span class="post-toc-text">Nodes</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Creating-New-HTML-ELements-Nodes"><span class="post-toc-number">8.1.</span> <span class="post-toc-text">Creating New HTML ELements (Nodes)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Creatint-New-HTML-Elements-InsertBefore"><span class="post-toc-number">8.2.</span> <span class="post-toc-text">Creatint New HTML Elements (InsertBefore)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Removing-Existing-HTML-Elements"><span class="post-toc-number">8.3.</span> <span class="post-toc-text">Removing Existing HTML Elements</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Replacing-HTML-Elements"><span class="post-toc-number">8.4.</span> <span class="post-toc-text">Replacing HTML Elements</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Nodelist"><span class="post-toc-number">9.</span> <span class="post-toc-text">Nodelist</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML-DOM-Node-List"><span class="post-toc-number">9.1.</span> <span class="post-toc-text">HTML DOM Node List</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#HTML-DOM-Node-List-Length"><span class="post-toc-number">9.2.</span> <span class="post-toc-text">HTML DOM Node List Length</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Attributes"><span class="post-toc-number">10.</span> <span class="post-toc-text">Attributes</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#本文相关"><span class="post-toc-number">11.</span> <span class="post-toc-text">本文相关</span></a></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                DOM
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=DOM&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/DOM/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=DOM&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/DOM/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://shanlanmi.github.io/zsl-blog/2016/07/21/DOM/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://shanlanmi.github.io/zsl-blog/2016/07/21/DOM/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=DOM&summary=描述&pics=http://shanlanmi.github.io/zsl-blog/img/favicon.png&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/DOM/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="What-is-DOM"><a href="#What-is-DOM" class="headerlink" title="What is DOM?"></a>What is DOM?</h2><ul>
+<li>DOM = Document Object Model</li>
+<li>DOM is a W3C standard.</li>
+<li>DOM standard is separated into 3 different parts:<ul>
+<li>Core DOM - standard model for all document types</li>
+<li>XML DOM - standard model for XML documents</li>
+<li>HTML DOM - standard model for HTML documents<br>The HTML DOM is a standard for how to get, change, add, or delete HTML elements.<ul>
+<li>The HTML elements as objects</li>
+<li>The properties of all HTML elements</li>
+<li>The methods to access all HTML elements</li>
+<li>The events for all HTML elements</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>What JavsScript can do in HTML?</strong></p>
+<ul>
+<li>JavaScript can change all the HTML elements in the page</li>
+<li>JavaScript can change all the HTML attributes in the page</li>
+<li>JavaScript can change all the CSS styles in the page</li>
+<li>JavaScript can remove existing HTML elements and attributes</li>
+<li>JavaScript can add new HTML elements and attributes</li>
+<li>JavaScript can react to all existing HTML events in the page</li>
+<li><p>JavaScript can create new HTML events in the page</p>
+</li>
+<li><p>In the DOM, all HTML elements are a <strong>node</strong> which defined as <strong>objects</strong>.</p>
+<ul>
+<li>A property is a value that you can get or set (like changing the content of an HTML element).</li>
+<li>A method is an action you can do (like add or deleting an HTML element).</li>
+</ul>
+</li>
+</ul>
+<h2 id="Document"><a href="#Document" class="headerlink" title="Document"></a>Document</h2><h3 id="Finding-HTML-Elements"><a href="#Finding-HTML-Elements" class="headerlink" title="Finding HTML Elements"></a><strong>Finding HTML Elements</strong></h3><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>getELement*</td>
+<td></td>
+</tr>
+<tr>
+<td>document.getElementById(id)</td>
+<td>Find an element by element id</td>
+</tr>
+<tr>
+<td>document.getElement<em>s</em>ByTagName(name)</td>
+<td>Find elements by tag name, and return a <em>live</em> <em>HTMLCollection</em></td>
+</tr>
+<tr>
+<td>document.getElement<em>s</em>ByClassName(name)</td>
+<td>Find elements by class name, and return a <em>live</em> <em>HTMLCollection</em></td>
+</tr>
+<tr>
+<td>document.getElement<em>s</em>ByName()</td>
+<td>Returns a <em>live</em> <em>NodeList</em> containing all elements with a specified name</td>
+</tr>
+<tr>
+<td>document.activeElement</td>
+<td>Returns the currently focused element in the document</td>
+</tr>
+<tr>
+<td>querySelector*</td>
+<td></td>
+</tr>
+<tr>
+<td>document.querySelector()</td>
+<td>Returns the <em>first</em> element that matches a specified CSS selector(s) in the document</td>
+</tr>
+<tr>
+<td>document.querySelectorAll()</td>
+<td>Returns a <em>static</em> <em>NodeList</em> containing all elements that matches a specified CSS selector(s) in the document</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Finding HTML elements by id<br>  <code>JS Finds the element with id=&quot;intro&quot;
+  var myElement = document.getElementById(&quot;intro&quot;);</code><ul>
+<li>If the element is found, the method will return the element as an object in myElement.</li>
+<li>If the element is not found, myElement will contain null.</li>
+</ul>
+</li>
+<li>Finding HTML elements by tag name<br>  <code>JS Finds all p element inside id=&quot;main&quot;
+  var x = document.getELementById(&quot;main&quot;);
+  var y = document.getElementByTagName(&quot;p&quot;);</code></li>
+<li>Finding HTML elements by class name<br>  <code>JS Finds all elements with class=&quot;intro&quot;
+  var x = document.getElementsByClassName(&quot;intro&quot;);</code></li>
+<li><p>Finding HTML elements by CSS selectors<br>  If you want to find all HTML elements that matches a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelectorAll() method.<br>  ```JS Finds all p elements with class=”intro”<br>  var x = document.querySelectorAll(“p.intro”);<br>  document.querySelectorAll(“p.intro”)[0].innerHTML = “Good”;</p>
+<p>$ = function (e) { return document.querySelector(e); };<br>$(‘#idName’).onclick = function;<br>  ```</p>
+</li>
+<li>Fnding HTML elements by HTML object collections<br>  ```JS Displays all element in the form “frm1”<br>  var x = document.forms[“frm1”];<br>  var text = “”;<br>  var i;<br>  for (i = 0; i &lt; x.length; i++) {<pre><code>  text += x.elements[i].value + &quot;&lt;br&gt;&quot;;
+</code></pre>  }<br>  document.getElementById(“demo”).innerHTML = text;<br>  ```</li>
+</ul>
+<h3 id="Changing-HTML-Elements"><a href="#Changing-HTML-Elements" class="headerlink" title="Changing HTML Elements"></a><strong>Changing HTML Elements</strong></h3><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element.innerHTML =  new html content</td>
+<td>Change the inner HTML of an element</td>
+</tr>
+<tr>
+<td>element.attribute = new value</td>
+<td>Change the attribute value of an HTML element</td>
+</tr>
+<tr>
+<td>element.setAttribute(attribute, value)</td>
+<td>Change the attribute value of an HTML element</td>
+</tr>
+<tr>
+<td>element.style.property = new style</td>
+<td>Change the style of an HTML element</td>
+</tr>
+<tr>
+<td>document.write()</td>
+<td>Writes HTML expressions or JavaScript code to a document</td>
+</tr>
+<tr>
+<td>document.writeln()</td>
+<td>Same as write(), but adds a newline character after each statement</td>
+</tr>
+</tbody>
+</table>
+<p>Never use <code>document.write()</code> after the document is loaded. It will overwrite the document.</p>
+<p><a href="http://www.w3schools.com/jsref/dom_obj_style.asp" target="_blank" rel="external">HTML DOM Style Object</a></p>
+<h3 id="Adding-and-Deleting-Elements"><a href="#Adding-and-Deleting-Elements" class="headerlink" title="Adding and Deleting Elements"></a><strong>Adding and Deleting Elements</strong></h3><table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document.adoptNode()</td>
+<td>Adopts a node from another document</td>
+</tr>
+<tr>
+<td>document.createElement(element)</td>
+<td>Create an HTML element</td>
+</tr>
+<tr>
+<td>document.createAttribute()</td>
+<td>Creates an attribute node</td>
+</tr>
+<tr>
+<td>document.createComment()</td>
+<td>Creates a Comment node with the specified text</td>
+</tr>
+<tr>
+<td>document.createDocumentFragment()</td>
+<td>Creates an empty DocumentFragment node</td>
+</tr>
+<tr>
+<td>document.createTextNode()</td>
+<td>Creates a Text node</td>
+</tr>
+<tr>
+<td>document.importNode()</td>
+<td>Imports a node from another document</td>
+</tr>
+<tr>
+<td>document.normalize()</td>
+<td>Removes empty Text nodes, and joins adjacent nodes</td>
+</tr>
+<tr>
+<td>document.normalizeDocument()</td>
+<td>Removes empty Text nodes, and joins adjacent nodes</td>
+</tr>
+<tr>
+<td>document.appendChild(element)</td>
+<td>Add an HTML element</td>
+</tr>
+<tr>
+<td>document.removeChild(element)</td>
+<td>Remove an HTML element</td>
+</tr>
+<tr>
+<td>document.replaceChild(element)</td>
+<td>Replace an HTML element</td>
+</tr>
+<tr>
+<td>document.write(text)</td>
+<td>Write into the HTML output stream</td>
+</tr>
+<tr>
+<td>document.open()</td>
+<td>Opens an HTML output stream to collect output from document.write()</td>
+</tr>
+<tr>
+<td>document.close()</td>
+<td>Closes the output stream previously opened with document.open()</td>
+</tr>
+<tr>
+<td>document.renameNode()</td>
+<td>Renames the specified node</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Finding-HTML-Objects"><a href="#Finding-HTML-Objects" class="headerlink" title="Finding HTML Objects"></a><strong>Finding HTML Objects</strong></h3><table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Description</th>
+<th>DOM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>document.anchors</td>
+<td>Returns all <code>&lt;a&gt;</code> elements that have a name attribute</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.applets</td>
+<td>Returns all <code>&lt;applet&gt;</code> elements (Deprecated in HTML5)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.baseURI</td>
+<td>Returns the absolute base URI of the document</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.body</td>
+<td>Returns the <code>&lt;body&gt;</code> element</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.cookie</td>
+<td>Returns the document’s cookie</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.doctype</td>
+<td>Returns the document’s doctype</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.documentElement</td>
+<td>Returns the <code>&lt;html&gt;</code> element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.documentMode</td>
+<td>Returns the mode used by the browser</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.documentURI</td>
+<td>Returns the URI of the document</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.domain</td>
+<td>Returns the domain name of the document server</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.domConfig</td>
+<td>Obsolete. Returns the DOM configuration</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.embeds</td>
+<td>Returns all <code>&lt;embed&gt;</code> elements</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.forms</td>
+<td>Returns all <code>&lt;form&gt;</code> elements</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.head</td>
+<td>Returns the <code>&lt;head&gt;</code> element</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.hasFocus()</td>
+<td>Returns a Boolean value indicating whether the document has focus</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.querySelector()</td>
+<td>Returns the first element that matches a specified CSS selector(s) in the document</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.querySelectorAll()</td>
+<td>Returns a static NodeList containing all elements that matches a specified CSS selector(s) in the document</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.images</td>
+<td>Returns all <code>&lt;img&gt;</code> elements</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.implementation</td>
+<td>Returns the DOM implementation</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.inputEncoding</td>
+<td>Returns the document’s encoding (character set)</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.lastModified</td>
+<td>Returns the date and time the document was updated</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.links</td>
+<td>Returns all <code>&lt;area&gt;</code> and <code>&lt;a&gt;</code> elements that have a href attribute</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.readyState</td>
+<td>Returns the (loading) status of the document</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.referrer</td>
+<td>Returns the URI of the referrer (the linking document)</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.scripts</td>
+<td>Returns all <code>&lt;script&gt;</code> elements</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.strictErrorChecking</td>
+<td>Returns if error checking is enforced</td>
+<td>3</td>
+</tr>
+<tr>
+<td>document.title</td>
+<td>Returns the <code>&lt;title&gt;</code> element</td>
+<td>1</td>
+</tr>
+<tr>
+<td>document.URL</td>
+<td>Returns the complete URL of the document</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.w3schools.com/jsref/dom_obj_document.asp" target="_blank" rel="external">DOM-document</a></p>
+<h2 id="Elements"><a href="#Elements" class="headerlink" title="Elements"></a>Elements</h2><table>
+<thead>
+<tr>
+<th>Property / Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>element.clientHeight</td>
+<td>Returns the height of an element, including padding</td>
+</tr>
+<tr>
+<td>element.clientLeft</td>
+<td>Returns the width of the left border of an element</td>
+</tr>
+<tr>
+<td>element.clientTop</td>
+<td>Returns the width of the top border of an element</td>
+</tr>
+<tr>
+<td>element.clientWidth</td>
+<td>Returns the width of an element, including padding</td>
+</tr>
+<tr>
+<td>element.offsetHeight</td>
+<td>Returns the height of an element, including padding, border and scrollbar</td>
+</tr>
+<tr>
+<td>element.offsetWidth</td>
+<td>Returns the width of an element, including padding, border and scrollbar</td>
+</tr>
+<tr>
+<td>element.offsetLeft</td>
+<td>Returns the horizontal offset position of an element</td>
+</tr>
+<tr>
+<td>element.offsetParent</td>
+<td>Returns the offset container of an element</td>
+</tr>
+<tr>
+<td>element.offsetTop</td>
+<td>Returns the vertical offset position of an element</td>
+</tr>
+<tr>
+<td>element.scrollHeight</td>
+<td>Returns the entire height of an element, including padding</td>
+</tr>
+<tr>
+<td>element.scrollLeft</td>
+<td>Sets or returns the number of pixels an element’s content is scrolled horizontally</td>
+</tr>
+<tr>
+<td>element.scrollTop</td>
+<td>Sets or returns the number of pixels an element’s content is scrolled vertically</td>
+</tr>
+<tr>
+<td>element.scrollWidth</td>
+<td>Returns the entire width of an element, including padding</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>element.getElementsByClassName()</td>
+<td>Returns a collection of all child elements with the specified class name</td>
+</tr>
+<tr>
+<td>element.getElementsByTagName()</td>
+<td>Returns a collection of all child elements with the specified tag name</td>
+</tr>
+<tr>
+<td>element.querySelector()</td>
+<td>Returns the first child element that matches a specified CSS selector(s) of an element</td>
+</tr>
+<tr>
+<td>element.querySelectorAll()</td>
+<td>Returns all child elements that matches a specified CSS selector(s) of an element</td>
+</tr>
+<tr>
+<td>element.children</td>
+<td>Returns a collection of an element’s child element (excluding text and comment nodes)</td>
+</tr>
+<tr>
+<td>element.childNodes</td>
+<td>Returns a collection of an element’s child nodes (including text and comment nodes)</td>
+</tr>
+<tr>
+<td>element.firstChild</td>
+<td>Returns the first child node of an element</td>
+</tr>
+<tr>
+<td>element.firstElementChild</td>
+<td>Returns the first child element of an element</td>
+</tr>
+<tr>
+<td>element.lastChild</td>
+<td>Returns the last child node of an element</td>
+</tr>
+<tr>
+<td>element.lastElementChild</td>
+<td>Returns the last child element of an element</td>
+</tr>
+<tr>
+<td>element.nextSibling</td>
+<td>Returns the next node at the same node tree level</td>
+</tr>
+<tr>
+<td>element.nextElementSibling</td>
+<td>Returns the next element at the same node tree level</td>
+</tr>
+<tr>
+<td>element.parentNode</td>
+<td>Returns the parent node of an element</td>
+</tr>
+<tr>
+<td>element.parentElement</td>
+<td>Returns the parent element node of an element</td>
+</tr>
+<tr>
+<td>element.previousSibling</td>
+<td>Returns the previous node at the same node tree level</td>
+</tr>
+<tr>
+<td>element.previousElementSibling</td>
+<td>Returns the previous element at the same node tree level</td>
+</tr>
+<tr>
+<td>element.ownerDocument</td>
+<td>Returns the root element (document object) for an element</td>
+</tr>
+<tr>
+<td>element.hasAttribute()</td>
+<td>Returns true if an element has the specified attribute, otherwise false</td>
+</tr>
+<tr>
+<td>element.hasAttributes()</td>
+<td>Returns true if an element has any attributes, otherwise false</td>
+</tr>
+<tr>
+<td>element.hasChildNodes()</td>
+<td>Returns true if an element has any child nodes, otherwise false</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>element.accessKey</td>
+<td>Sets or returns the accesskey attribute of an element</td>
+</tr>
+<tr>
+<td>element.attributes</td>
+<td>Returns a NamedNodeMap of an element’s attributes</td>
+</tr>
+<tr>
+<td>element.childElementCount</td>
+<td>Returns the number of child elements an element has</td>
+</tr>
+<tr>
+<td>element.classList</td>
+<td>Returns the class name(s) of an element</td>
+</tr>
+<tr>
+<td>element.className</td>
+<td>Sets or returns the value of the class attribute of an element</td>
+</tr>
+<tr>
+<td>element.getAttribute()</td>
+<td>Returns the specified attribute value of an element node</td>
+</tr>
+<tr>
+<td>element.getAttributeNode()</td>
+<td>Returns the specified attribute node</td>
+</tr>
+<tr>
+<td>element.nodeName</td>
+<td>Returns the name of a node</td>
+</tr>
+<tr>
+<td>element.nodeType</td>
+<td>Returns the node type of a node</td>
+</tr>
+<tr>
+<td>element.nodeValue</td>
+<td>Sets or returns the value of a node</td>
+</tr>
+<tr>
+<td>element.id</td>
+<td>Sets or returns the value of the id attribute of an element</td>
+</tr>
+<tr>
+<td>element.innerHTML</td>
+<td>Sets or returns the content of an element</td>
+</tr>
+<tr>
+<td>element.lang</td>
+<td>Sets or returns the value of the lang attribute of an element</td>
+</tr>
+<tr>
+<td>element.namespaceURI</td>
+<td>Returns the namespace URI of an element</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>element.appendChild()</td>
+<td>Adds a new child node, to an element, as the last child node</td>
+</tr>
+<tr>
+<td>element.insertBefore()</td>
+<td>Inserts a new child node <strong>before</strong> a specified, existing, child node</td>
+</tr>
+<tr>
+<td>element.insertAdjacentHTML(‘afterend’, htmlString)</td>
+<td>Inserts a new child node <strong>after</strong> a specified, existing, child node</td>
+</tr>
+<tr>
+<td>element.addEventListener()</td>
+<td>Attaches an event handler to the specified element</td>
+</tr>
+<tr>
+<td>element.blur()</td>
+<td>Removes focus from an element</td>
+</tr>
+<tr>
+<td>element.click()</td>
+<td>Simulates a mouse-click on an element</td>
+</tr>
+<tr>
+<td>element.cloneNode()</td>
+<td>Clones an element</td>
+</tr>
+<tr>
+<td>element.compareDocumentPosition()</td>
+<td>Compares the document position of two elements</td>
+</tr>
+<tr>
+<td>element.contains()</td>
+<td>Returns true if a node is a descendant of a node, otherwise false</td>
+</tr>
+<tr>
+<td>element.contentEditable</td>
+<td>Sets or returns whether the content of an element is editable or not</td>
+</tr>
+<tr>
+<td>element.dir</td>
+<td>Sets or returns the value of the dir attribute of an element</td>
+</tr>
+<tr>
+<td>element.focus()</td>
+<td>Gives focus to an element</td>
+</tr>
+<tr>
+<td>element.getFeature()</td>
+<td>Returns an object which implements the APIs of a specified feature</td>
+</tr>
+<tr>
+<td>element.isContentEditable</td>
+<td>Returns true if the content of an element is editable, otherwise false</td>
+</tr>
+<tr>
+<td>element.isDefaultNamespace()</td>
+<td>Returns true if a specified namespaceURI is the default, otherwise false</td>
+</tr>
+<tr>
+<td>element.isEqualNode()</td>
+<td>Checks if two elements are equal</td>
+</tr>
+<tr>
+<td>element.isSameNode()</td>
+<td>Checks if two elements are the same node</td>
+</tr>
+<tr>
+<td>element.isSupported()</td>
+<td>Returns true if a specified feature is supported on the element</td>
+</tr>
+<tr>
+<td>element.normalize()</td>
+<td>Joins adjacent text nodes and removes empty text nodes in an element</td>
+</tr>
+<tr>
+<td>element.removeAttribute()</td>
+<td>Removes a specified attribute from an element</td>
+</tr>
+<tr>
+<td>element.removeAttributeNode()</td>
+<td>Removes a specified attribute node, and returns the removed node</td>
+</tr>
+<tr>
+<td>element.removeChild()</td>
+<td>Removes a child node from an element</td>
+</tr>
+<tr>
+<td>element.replaceChild()</td>
+<td>Replaces a child node in an element</td>
+</tr>
+<tr>
+<td>element.removeEventListener()</td>
+<td>Removes an event handler that has been attached with the addEventListener() method</td>
+</tr>
+<tr>
+<td>element.setAttribute()</td>
+<td>Sets or changes the specified attribute, to the specified value</td>
+</tr>
+<tr>
+<td>element.setAttributeNode()</td>
+<td>Sets or changes the specified attribute node</td>
+</tr>
+<tr>
+<td>element.style</td>
+<td>Sets or returns the value of the style attribute of an element</td>
+</tr>
+<tr>
+<td>element.tabIndex</td>
+<td>Sets or returns the value of the tabindex attribute of an element</td>
+</tr>
+<tr>
+<td>element.tagName</td>
+<td>Returns the tag name of an element</td>
+</tr>
+<tr>
+<td>element.textContent</td>
+<td>Sets or returns the textual content of a node and its descendants</td>
+</tr>
+<tr>
+<td>element.title</td>
+<td>Sets or returns the value of the title attribute of an element</td>
+</tr>
+<tr>
+<td>element.toString()</td>
+<td>Converts an element to a string</td>
+</tr>
+<tr>
+<td>nodelist.item()</td>
+<td>Returns the node at the specified index in a NodeList</td>
+</tr>
+<tr>
+<td>nodelist.length</td>
+<td>Returns the number of nodes in a NodeList</td>
+</tr>
+<tr>
+<td>[].indexOf.call(obj.parentNode.children, obj)</td>
+<td>Returns the index of the obj in the parentNode</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.w3schools.com/jsref/dom_obj_all.asp" target="_blank" rel="external">DOM-element</a></p>
+<h2 id="Animations"><a href="#Animations" class="headerlink" title="Animations"></a>Animations</h2><ul>
+<li>The container element should be created with style = “position: relative”.</li>
+<li>The animation element should be created with style = “position: absolute”.</li>
+</ul>
+<h2 id="Events"><a href="#Events" class="headerlink" title="Events"></a>Events</h2><p>Events:</p>
+<ul>
+<li>An element is clicked on</li>
+<li>The page has loaded</li>
+<li>Input fields are changed</li>
+</ul>
+<h3 id="Reacting-to-Events"><a href="#Reacting-to-Events" class="headerlink" title="Reacting to Events"></a>Reacting to Events</h3><p>Example of HTML events:</p>
+<ul>
+<li>When a user clicks the mouse</li>
+<li>When a web page has loaded</li>
+<li>When an image has been loaded</li>
+<li>When the mouse moves over an element</li>
+<li>When an input field is changed</li>
+<li>When an HTML form is submitted</li>
+<li>When a user strokes a key</li>
+</ul>
+<h3 id="Assign-Events"><a href="#Assign-Events" class="headerlink" title="Assign Events"></a>Assign Events</h3><ul>
+<li>Assigning 2 不要<code>()</code>。</li>
+<li>Assigning 2 在低版本的浏览器中不支持。</li>
+<li><code>oclick = displayDate</code> 意为将<strong>函数内容</strong>附在 click 事件上，待触发后执行。</li>
+<li><code>oclick = displayDate()</code> 意为将<strong>函数运行结果</strong>附在 click 事件上，待触发后执行。</li>
+</ul>
+<h3 id="The-Onload-Events"><a href="#The-Onload-Events" class="headerlink" title="The Onload Events"></a>The Onload Events</h3><p>The onload event can be used to check the visitor’s browser type and browser version, and load the proper version of the web page based on the information.<br>The onload and onunload events can be used to deal with cookies.</p>
+<h3 id="The-Onchange-Event"><a href="#The-Onchange-Event" class="headerlink" title="The Onchange Event"></a>The Onchange Event</h3><h3 id="The-Mouse-and-Keyboard-Events"><a href="#The-Mouse-and-Keyboard-Events" class="headerlink" title="The Mouse and Keyboard Events"></a>The Mouse and Keyboard Events</h3><ul>
+<li>onmouseover</li>
+<li>onmouseout</li>
+<li>onmousedown</li>
+<li>onmouseup</li>
+<li>onclick</li>
+<li>onfocus</li>
+<li>onkeydown</li>
+</ul>
+<h3 id="Pass-the-Event-Object"><a href="#Pass-the-Event-Object" class="headerlink" title="Pass the Event Object"></a>Pass the Event Object</h3><p>When the event call a function, it will passes an event object.</p>
+<p>The <code>target</code> property tells us what element generated the event. </p>
+<p><a href="http://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank" rel="external">DOM Event Object</a></p>
+<h2 id="EventListener"><a href="#EventListener" class="headerlink" title="EventListener"></a>EventListener</h2><h3 id="The-addEventListener-method"><a href="#The-addEventListener-method" class="headerlink" title="The addEventListener() method"></a>The addEventListener() method</h3><ul>
+<li>The <strong>addEventListener</strong>() method attaches an event handler to the specified element.</li>
+<li>The <strong>addEventListener</strong>() method attaches an event handler to an element without <strong>overwriting</strong> <strong>existing</strong> event handlers.</li>
+<li>You can add many event handlers to one element.</li>
+<li>You can add many event handlers of the <strong>same</strong> <strong>type</strong> to one element, i.e two “click” events.</li>
+<li>You can add event listeners to any DOM object not only HTML elements. i.e the window object.</li>
+<li>The <strong>addEventListener</strong>() method makes it easier to control how the event reacts to bubbling.</li>
+<li>When using the <strong>addEventListener</strong>() method, the JavaScript is separated from the HTML markup, for better readability and allows you to add event listeners even when you do not control the HTML markup.</li>
+<li>You can easily remove an event listener by using the <strong>removeEventListener</strong>() method.</li>
+</ul>
+<h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><p>The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.<br>Note that you don’t use “on” prefix for event, use “click” instead of “onclick”.</p>
+<h3 id="Add-an-Evenet-Handler-to-the-Window-Object"><a href="#Add-an-Evenet-Handler-to-the-Window-Object" class="headerlink" title="Add an Evenet Handler to the Window Object"></a>Add an Evenet Handler to the Window Object</h3><h3 id="Passing-Parameters"><a href="#Passing-Parameters" class="headerlink" title="Passing Parameters"></a>Passing Parameters</h3><h3 id="Event-Bubbling-or-Event-Capturing"><a href="#Event-Bubbling-or-Event-Capturing" class="headerlink" title="Event Bubbling or Event Capturing?"></a>Event Bubbling or Event Capturing?</h3><ul>
+<li>Event propagation is a way of defining the element order when an event occurs. If you have a <p> element inside a <div> element, and the user clicks on the <p> element, which element’s “click” event should be handled first?</p></div></p></li>
+<li>Bubbling(default): the inner event is handled first and then the outer.</li>
+<li>Capturing: the outer event is handled first and then the inner</li>
+<li>With the addEventListener() method you can specify the propagation type by using the “useCapture” parameter:<pre class="line-numbers language-JS"><code class="language-JS">  addEventListener(event, function, useCapture);
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="The-removeEventListener-method"><a href="#The-removeEventListener-method" class="headerlink" title="The removeEventListener() method"></a>The removeEventListener() method</h3><h3 id="Browser-Support"><a href="#Browser-Support" class="headerlink" title="Browser Support"></a>Browser Support</h3><p><a href="http://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank" rel="external">DOM Event Object Reference</a></p>
+<h2 id="Navigation"><a href="#Navigation" class="headerlink" title="Navigation"></a>Navigation</h2><h3 id="Nodes"><a href="#Nodes" class="headerlink" title="Nodes"></a>Nodes</h3><p>Everything in an HTML document is a node<br>With the HTML DOM, all nodes in the node tree can be access by JavaScript<br>New nodes can be created, and all nodes can be modified or deleted.</p>
+<h3 id="Node-Relationships"><a href="#Node-Relationships" class="headerlink" title="Node Relationships"></a>Node Relationships</h3><p>Relationships:</p>
+<ul>
+<li>Root: the top node in node tree.</li>
+<li>Every node has exactly one parent, except the root.</li>
+<li>A node can have a number of children.</li>
+<li>Siblings are nodes with the same parent</li>
+</ul>
+<ul>
+<li><code>&lt;html&gt;</code> is the root node, and it has no parent.</li>
+<li><code>&lt;html&gt;</code> is the parent of <code>&lt;head&gt;</code> and <code>&lt;body&gt;</code>.</li>
+<li><code>&lt;head&gt;</code> is the first child of <code>&lt;html&gt;</code>.</li>
+<li><code>&lt;body&gt;</code> is the last child of <code>&lt;html&gt;</code>.</li>
+<li><code>&lt;h1&gt;</code> and <code>&lt;p&gt;</code> are siblings.</li>
+<li><code>&lt;h1&gt;</code> is the previous sibling of <code>&lt;p&gt;</code>, and <code>&lt;p&gt;</code> is the next sibling of <code>&lt;h1&gt;</code>.</li>
+</ul>
+<h3 id="Navigating-Between-Nodes"><a href="#Navigating-Between-Nodes" class="headerlink" title="Navigating Between Nodes"></a>Navigating Between Nodes</h3><p>You can use the following node properties to navigate between nodes with JavaScript:</p>
+<ul>
+<li>parentNode</li>
+<li>childNodes[nodeNumber]</li>
+<li>firstChild</li>
+<li>lastChild</li>
+<li>nextSibling</li>
+<li>previousSibling</li>
+</ul>
+<p>The value of the text node can be accessed by the node’s <strong>innerHTML</strong> property or the <strong>nodeValue</strong>.</p>
+<h3 id="Child-Nodes-and-Node-Values"><a href="#Child-Nodes-and-Node-Values" class="headerlink" title="Child Nodes and Node Values"></a>Child Nodes and Node Values</h3><h3 id="Root-Nodes"><a href="#Root-Nodes" class="headerlink" title="Root Nodes"></a>Root Nodes</h3><p>There two special properties that allow access to the full document:</p>
+<ul>
+<li>document.body - The body of the document</li>
+<li>document.documentElement - The full document</li>
+</ul>
+<h3 id="The-nodeName-Property"><a href="#The-nodeName-Property" class="headerlink" title="The nodeName Property"></a>The nodeName Property</h3><p>The nodeName property specifies the name of a node.</p>
+<ul>
+<li>nodeName is read-only</li>
+<li>nodeName of an element node is the same as the tag name</li>
+<li>nodeName of an attribute node is the attribute name</li>
+<li>nodeName of a text node is always #text</li>
+<li>nodeName of the document node is always #document<br>Note: nodeName always contains the uppercase tag name of an HTML element.</li>
+</ul>
+<h3 id="The-nodeValue-Property"><a href="#The-nodeValue-Property" class="headerlink" title="The nodeValue Property"></a>The nodeValue Property</h3><p>The nodeValue property specifies the value of a node.</p>
+<ul>
+<li>nodeValue for element nodes is undefined</li>
+<li>nodeValue for text nodes is the text itself</li>
+<li>nodeValue for attribute nodes is the attribute value</li>
+</ul>
+<h3 id="The-nodeType-Property"><a href="#The-nodeType-Property" class="headerlink" title="The nodeType Property"></a>The nodeType Property</h3><p>The nodeType property returns the type of node. nodeType is read only.<br>The most important node types are:</p>
+<table>
+<thead>
+<tr>
+<th>Element type</th>
+<th>NodeType</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Element</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Text</td>
+<td>3</td>
+</tr>
+<tr>
+<td>Comment</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Document</td>
+<td>9</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Nodes-1"><a href="#Nodes-1" class="headerlink" title="Nodes"></a>Nodes</h2><h3 id="Creating-New-HTML-ELements-Nodes"><a href="#Creating-New-HTML-ELements-Nodes" class="headerlink" title="Creating New HTML ELements (Nodes)"></a>Creating New HTML ELements (Nodes)</h3><h3 id="Creatint-New-HTML-Elements-InsertBefore"><a href="#Creatint-New-HTML-Elements-InsertBefore" class="headerlink" title="Creatint New HTML Elements (InsertBefore)"></a>Creatint New HTML Elements (InsertBefore)</h3><h3 id="Removing-Existing-HTML-Elements"><a href="#Removing-Existing-HTML-Elements" class="headerlink" title="Removing Existing HTML Elements"></a>Removing Existing HTML Elements</h3><p>To remove an HTML element, you must know the parent of the element.</p>
+<p>The method <code>node.remove()</code> is implemented in the DOM 4 specification.<br>But because of poor browser support, you should not use it.<br>A common way to find parent</p>
+<h3 id="Replacing-HTML-Elements"><a href="#Replacing-HTML-Elements" class="headerlink" title="Replacing HTML Elements"></a>Replacing HTML Elements</h3><h2 id="Nodelist"><a href="#Nodelist" class="headerlink" title="Nodelist"></a>Nodelist</h2><h3 id="HTML-DOM-Node-List"><a href="#HTML-DOM-Node-List" class="headerlink" title="HTML DOM Node List"></a>HTML DOM Node List</h3><p>The <code>getElementsByTagName()</code> method returns a <strong>node</strong> <strong>list</strong>.</p>
+<h3 id="HTML-DOM-Node-List-Length"><a href="#HTML-DOM-Node-List-Length" class="headerlink" title="HTML DOM Node List Length"></a>HTML DOM Node List Length</h3><ul>
+<li>A node list is not an array!</li>
+<li>A node list may look like an array, but it is not. You can loop through the node list and refer to its nodes like an array. However, you cannot use Array Methods, like valueOf() or join() on the node list.</li>
+<li>Using Array methods like: <code>[].indexOf.call(array,str);</code></li>
+</ul>
+<h2 id="Attributes"><a href="#Attributes" class="headerlink" title="Attributes"></a>Attributes</h2><table>
+<thead>
+<tr>
+<th>Property / Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>attr.isId</td>
+<td>Returns true if the attribute is of type Id, otherwise it returns false</td>
+</tr>
+<tr>
+<td>attr.name</td>
+<td>Returns the name of an attribute</td>
+</tr>
+<tr>
+<td>attr.value</td>
+<td>Sets or returns the value of the attribute</td>
+</tr>
+<tr>
+<td>attr.specified</td>
+<td>Returns true if the attribute has been specified, otherwise it returns false</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>nodemap.getNamedItem()</td>
+<td>Returns a specified attribute node from a NamedNodeMap</td>
+</tr>
+<tr>
+<td>nodemap.item()</td>
+<td>Returns the attribute node at a specified index in a NamedNodeMap</td>
+</tr>
+<tr>
+<td>nodemap.length</td>
+<td>Returns the number of attribute nodes in a NamedNodeMap</td>
+</tr>
+<tr>
+<td>nodemap.removeNamedItem()</td>
+<td>Removes a specified attribute node</td>
+</tr>
+<tr>
+<td>nodemap.setNamedItem()</td>
+<td>Sets the specified attribute node (by name)</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.w3schools.com/jsref/dom_obj_attributes.asp" target="_blank" rel="external">DOM-Attribute</a></p>
+<h2 id="本文相关"><a href="#本文相关" class="headerlink" title="本文相关"></a>本文相关</h2><ol>
+<li>参考<br><a href="http://www.w3schools.com/js/default.asp" target="_blank" rel="external">w3schools - JavaScript Tutorial</a></li>
+<li>修订<br>2016:第一版</li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/DOM/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/DOM/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/21/用-CSS-实现-Tabs-标签切换/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/21/DOM操作性能优化/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033dev@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a></li><li><a class="sidebar_archives-link" href="/archives/1904/01/">一月 1904<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
                         <!-- Footer Top Button -->
-                        <%- partial('_partial/footer_top')  %>
-                    <% } %>
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
-                    <%- partial('_partial/footer') %>
+                    
 
-                    <%- partial('_partial/import_js') %>
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
                 </main>
             </div>
         </body>
-    <% } %>
+    
 </html>

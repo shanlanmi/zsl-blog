@@ -1,17 +1,292 @@
 <!DOCTYPE html>
-<html style="display: none;" <% if(config.language !== null) { %>lang="<%- config.language.substring(0,2) %>"<% } %>>
-    <%- partial('_partial/head') %>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
 
-    <% if(page.layout === 'gallery') { %>
-        <!-- Single Gallery Page -->
-        <%- partial('_widget/page-gallery') %>
-    <% } else { %>
-        <body id="scheme-<%= theme.scheme %>" class="lazy">
+    <!-- Title -->
+    
+    <title>
+        
+            BootStrap | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="描述">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="BootStrap | 张圣兰">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="描述">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="BootStrap | 张圣兰">
+    <meta name="twitter:description" content="描述">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://shanlanmi.github.io/zsl-blog/2016/07/21/BootStrap/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "BootStrap",
+    "url": "http://shanlanmi.github.io/zsl-blog/2016/07/21/BootStrap/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "描述",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                <% if(theme.scheme === 'Isolation') { %>
-                    <!-- Isolation Header -->
-                    <%- partial('_partial/isolate_info') %>
-                <% } %>
+                
 
                 <!-- Main Container -->
                 <main class="material-layout__content" id="main">
@@ -19,29 +294,1424 @@
                     <!-- Top Anchor -->
                     <div id="top"></div>
 
-                    <% if(theme.scheme === 'Paradox') { %>
+                    
                         <!-- Hamburger Button -->
                         <button class="MD-burger-icon sidebar-toggle">
                             <span class="MD-burger-layer"></span>
                         </button>
-                    <% } %>
+                    
 
-                    <%- body %>
+                    <!-- Post TOC -->
 
-                    <% if(theme.scheme === 'Paradox') { %>
-                        <%- partial('_partial/sidebar') %>
-                    <% } %>
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-                    <% if( (theme.scheme === 'Paradox') && (is_post() || is_home() || is_archive() || is_category() || (page.totop === true) ) ) { %>
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Basic-Bootstrap-Page"><span class="post-toc-number">1.</span> <span class="post-toc-text">Basic Bootstrap Page</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Grids"><span class="post-toc-number">2.</span> <span class="post-toc-text">Grids</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Components"><span class="post-toc-number">3.</span> <span class="post-toc-text">Components</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Typography"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">Typography</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tables"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">Tables</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Images"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">Images</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Jumbotron"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">Jumbotron</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Wells"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">Wells</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Alerts"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">Alerts</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Buttons"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">Buttons</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Button-Groups"><span class="post-toc-number">3.8.</span> <span class="post-toc-text">Button Groups</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Glyphicons"><span class="post-toc-number">3.9.</span> <span class="post-toc-text">Glyphicons</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Badges-Labels"><span class="post-toc-number">3.10.</span> <span class="post-toc-text">Badges/Labels</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Progress-Bars"><span class="post-toc-number">3.11.</span> <span class="post-toc-text">Progress Bars</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Pagination"><span class="post-toc-number">3.12.</span> <span class="post-toc-text">Pagination</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#List-Groups"><span class="post-toc-number">3.13.</span> <span class="post-toc-text">List Groups</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Panels"><span class="post-toc-number">3.14.</span> <span class="post-toc-text">Panels</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Dropdowns"><span class="post-toc-number">3.15.</span> <span class="post-toc-text">Dropdowns</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Collapse"><span class="post-toc-number">3.16.</span> <span class="post-toc-text">Collapse</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tabs-and-Pills"><span class="post-toc-number">3.17.</span> <span class="post-toc-text">Tabs and Pills</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Navbar"><span class="post-toc-number">3.18.</span> <span class="post-toc-text">Navbar</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Forms"><span class="post-toc-number">3.19.</span> <span class="post-toc-text">Forms</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Carousel"><span class="post-toc-number">3.20.</span> <span class="post-toc-text">Carousel</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Modal"><span class="post-toc-number">3.21.</span> <span class="post-toc-text">Modal</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Tooltip"><span class="post-toc-number">3.22.</span> <span class="post-toc-text">Tooltip</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Popover"><span class="post-toc-number">3.23.</span> <span class="post-toc-text">Popover</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Scrollspy"><span class="post-toc-number">3.24.</span> <span class="post-toc-text">Scrollspy</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Affix"><span class="post-toc-number">3.25.</span> <span class="post-toc-text">Affix</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#本文相关"><span class="post-toc-number">3.26.</span> <span class="post-toc-text">本文相关</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                BootStrap
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=BootStrap&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/BootStrap/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=BootStrap&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/BootStrap/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://shanlanmi.github.io/zsl-blog/2016/07/21/BootStrap/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://shanlanmi.github.io/zsl-blog/2016/07/21/BootStrap/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=BootStrap&summary=描述&pics=http://shanlanmi.github.io/zsl-blog/img/favicon.png&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/BootStrap/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="Basic-Bootstrap-Page"><a href="#Basic-Bootstrap-Page" class="headerlink" title="Basic Bootstrap Page"></a>Basic Bootstrap Page</h2><p>A Basic Bootstrap Pages:</p>
+<ul>
+<li>Require the HTML5 doctype<pre class="line-numbers language-html"><code class="language-html"><span class="token doctype">&lt;!DOCTYPE html></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Mobile-first styles<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>viewport<span class="token punctuation">"</span></span> <span class="token attr-name">content</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>width<span class="token punctuation">=</span>device-width, initial-scale<span class="token punctuation">=</span>1<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<code>width=device-width</code>: sets the width of the page to follow the <strong>screen</strong>-<strong>width</strong> of the device.<br><code>initial-scale=1</code>: sets the initial <strong>zoom</strong> <strong>level</strong> when the page is first loaded by the browser.</li>
+<li>Latest compiled and minified CSS<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- Bootstrap中文网加速服务 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>link</span> <span class="token attr-name">rel</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>stylesheet<span class="token punctuation">"</span></span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>jQuery library, need include <strong>before</strong> <code>bootstrap.min.js</code><pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- Bootstrap中文网加速服务 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://cdn.bootcss.com/jquery/1.12.1/jquery.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Latest compiled JavaScript<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token comment" spellcheck="true">&lt;!-- Bootstrap中文网加速服务 --></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Containers<br>Bootstrap also requires a containing element to wrap site contents.<br>There are two container classes to choose from:<ol>
+<li><code>.container</code> class provides a responsive <strong>fixed</strong> <strong>width</strong> container</li>
+<li><code>.container-fluid</code> class provides a <strong>full</strong> <strong>width</strong> container, spanning the entire width of the viewport<br>Note: Containers are <strong>not</strong> <strong>nestable</strong>.</li>
+</ol>
+</li>
+</ul>
+<p><a href="http://www.bootcdn.cn" target="_blank" rel="external">BootCDN加速服务</a></p>
+<h2 id="Grids"><a href="#Grids" class="headerlink" title="Grids"></a>Grids</h2><p><strong>System</strong></p>
+<ul>
+<li>Bootstrap’s grid system allows up to <strong>12</strong> <strong>columns</strong> across the page.</li>
+<li>You can group the columns together to create wider columns.</li>
+<li>Bootstrap’s grid system is responsive.</li>
+<li>Grid columns should add up to <strong>twelve</strong> for a row.</li>
+</ul>
+<p><strong>Grid Classes</strong></p>
+<ul>
+<li>xs (for phones)</li>
+<li>sm (for tablets)</li>
+<li>md (for desktops)</li>
+<li>lg (for larger desktops)</li>
+</ul>
+<p>Tip: Each class scales up, so if you wish to set the same widths for xs and sm, you only need to specify xs. </p>
+<p><strong>Grid System Rules</strong></p>
+<ul>
+<li>Rows must be placed within a <code>.container</code> (fixed-width) or <code>.container-fluid</code> (full-width) for proper alignment and padding</li>
+<li>Use <code>.row</code> to create horizontal groups of columns</li>
+<li>Content should be placed within columns, and only columns may be <strong>immediate</strong> children of rows</li>
+<li>Predefined classes like <code>.row</code> and <code>.col-sm-4</code> are available for quickly making grid layouts</li>
+<li>Columns create gutters (gaps between column content) via padding. That padding is offset in rows for the first and last column via negative margin on <code>.row</code>s</li>
+<li>Grid columns are created by specifying the number of 12 available columns you wish to span. For example, three equal columns would use three <code>.col-sm-4</code></li>
+</ul>
+<p><strong>Basic Structure of a Bootstrap Grid</strong></p>
+<p><strong>Grid Options</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Extra small devices<br>Phones (&lt;768px)</th>
+<th>Small devices<br>Tablets (&gt;=768px)</th>
+<th>Medium devices<br>Desktops (&gt;=992px)</th>
+<th>Large devices<br>Desktops (&gt;=1200px)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Grid behaviour</td>
+<td>Horizontal at all times</td>
+<td>Collapsed to start, horizontal above breakpoints</td>
+<td>Collapsed to start, horizontal above breakpoints</td>
+<td>Collapsed to start, horizontal above breakpoints</td>
+</tr>
+<tr>
+<td>Container width</td>
+<td>None (auto)</td>
+<td>750px</td>
+<td>970px</td>
+<td>1170px</td>
+</tr>
+<tr>
+<td>Class prefix</td>
+<td>.col-xs-</td>
+<td>.col-sm-</td>
+<td>.col-md-</td>
+<td>.col-lg-</td>
+</tr>
+<tr>
+<td>Number of columns</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Column width</td>
+<td>Auto</td>
+<td>~62px</td>
+<td>~81px</td>
+<td>~97px</td>
+</tr>
+<tr>
+<td>Gutter width</td>
+<td>30px (15px on each side of a column)</td>
+<td>30px (15px on each side of a column)</td>
+<td>30px (15px on each side of a column)</td>
+<td>30px (15px on each side of a column)</td>
+</tr>
+<tr>
+<td>Nestable</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Offsets</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Column ordering</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Nested Columns</strong></p>
+<p><strong>Clear Floats</strong></p>
+<p><strong>Offsetting Columns</strong><br>Move columns to the right using <code>.col-md-offset-*</code> classes.<br>These classes increase the left margin of a column by * columns. </p>
+<p><strong>Push And Pull - Change Column Ordering</strong><br>Change the order of the grid columns with <code>.col-md-push-*</code> and <code>.col-md-pull-*</code> classes.</p>
+<h2 id="Components"><a href="#Components" class="headerlink" title="Components"></a>Components</h2><h3 id="Typography"><a href="#Typography" class="headerlink" title="Typography"></a>Typography</h3><p><strong>Default Setting</strong></p>
+<pre class="line-numbers language-css"><code class="language-css">  <span class="token selector">* </span><span class="token punctuation">{</span>
+  <span class="token property">font-size</span><span class="token punctuation">:</span> <span class="token number">14</span>px<span class="token punctuation">;</span>
+  <span class="token property">line-height</span><span class="token punctuation">:</span> <span class="token number">1.428</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token selector">p </span><span class="token punctuation">{</span> <span class="token property">margin-bottom</span><span class="token punctuation">:</span> <span class="token number">10</span>px<span class="token punctuation">;</span> <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_css_text.asp" target="_blank" rel="external">Bootstrap CSS Typography Reference</a></p>
+<h3 id="Tables"><a href="#Tables" class="headerlink" title="Tables"></a>Tables</h3><p><strong><code>&lt;table&gt;</code> Classes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.table</td>
+<td>Adds basic styling (light padding and only horizontal dividers) to any <code>&lt;table&gt;</code></td>
+</tr>
+<tr>
+<td>.table-striped</td>
+<td>Adds zebra-striping to any table row within <code>&lt;tbody&gt;</code> (not available in IE8)</td>
+</tr>
+<tr>
+<td>.table-bordered</td>
+<td>Adds border on all sides of the table and cells</td>
+</tr>
+<tr>
+<td>.table-hover</td>
+<td>Enables a hover state on table rows within a <code>&lt;tbody&gt;</code></td>
+</tr>
+<tr>
+<td>.table-condensed</td>
+<td>Makes table more compact by cutting cell <strong>padding</strong> in <strong>half</strong></td>
+</tr>
+</tbody>
+</table>
+<p><strong><code>&lt;tr&gt;</code>, <code>&lt;th&gt;</code> and <code>&lt;td&gt;</code> Classes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.active</td>
+<td>Applies the hover color to a particular row or cell</td>
+</tr>
+<tr>
+<td>.success</td>
+<td>Indicates a successful or positive action</td>
+</tr>
+<tr>
+<td>.info</td>
+<td>Indicates a neutral informative change or action</td>
+</tr>
+<tr>
+<td>.warning</td>
+<td>Indicates a warning that might need attention</td>
+</tr>
+<tr>
+<td>.danger</td>
+<td>Indicates a dangerous or potentially negative action</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsive Tables</strong><br>The table will then <strong>scroll</strong> <strong>horizontally</strong> on small devices (under 768px). When viewing on anything larger than 768px wide, there is no difference:</p>
+<h3 id="Images"><a href="#Images" class="headerlink" title="Images"></a>Images</h3><p><strong><code>&lt;img&gt;</code> Classes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.img-rounded</td>
+<td>Adds rounded corners to an image (not available in IE8)</td>
+</tr>
+<tr>
+<td>.img-circle</td>
+<td>Shapes the image to a circle (not available in IE8)</td>
+</tr>
+<tr>
+<td>.img-responsive</td>
+<td>Applies max-width: 100%, height: auto, and display:block to the image</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Responsive Embeds</strong></p>
+<ul>
+<li>Also let videos or slideshows scale properly on any device.</li>
+<li>Classes can be applied directly to <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;video&gt;</code>, and <code>&lt;object&gt;</code> elements.</li>
+</ul>
+<h3 id="Jumbotron"><a href="#Jumbotron" class="headerlink" title="Jumbotron"></a>Jumbotron</h3><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.jumbotron</td>
+<td>Creates a grey box with some information</td>
+</tr>
+<tr>
+<td>.page-header</td>
+<td>Creates a page header</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<h3 id="Wells"><a href="#Wells" class="headerlink" title="Wells"></a>Wells</h3><table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.well</td>
+<td>Adds a <strong>rounded</strong> border around an element with a <strong>gray</strong> background color and some padding</td>
+</tr>
+<tr>
+<td>.well-sm</td>
+<td>Change the size to small</td>
+</tr>
+<tr>
+<td>.well-lg</td>
+<td>Change the size to lager</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Alerts"><a href="#Alerts" class="headerlink" title="Alerts"></a>Alerts</h3><p><strong>The Alert Plugin Classes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.alert</td>
+<td>Creates an alert message <strong>box</strong></td>
+</tr>
+<tr>
+<td>.alert-success</td>
+<td>Indicates a successful or positive action</td>
+</tr>
+<tr>
+<td>.alert-info</td>
+<td>Contextual button for informational alert messages</td>
+</tr>
+<tr>
+<td>.alert-warning</td>
+<td>Indicates caution should be taken with this action</td>
+</tr>
+<tr>
+<td>.alert-danger</td>
+<td>Indicates a dangerous or potentially negative action</td>
+</tr>
+<tr>
+<td>.close</td>
+<td>Styles the close button for the alert message (floats right with a specified font-size, color, etc.)</td>
+</tr>
+<tr>
+<td>.fade in</td>
+<td>adds a fading effect when closing the alert message</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Closing Alerts</strong></p>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_alert.asp" target="_blank" rel="external">Bootstrap JS Alert</a></p>
+<h3 id="Buttons"><a href="#Buttons" class="headerlink" title="Buttons"></a>Buttons</h3><p>The classes below can be used to style any <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.btn</td>
+<td>Adds basic styling to any button</td>
+</tr>
+<tr>
+<td><span style="background-color:white;">.btn-default</span></td>
+<td>Indicates a default/standard button</td>
+</tr>
+<tr>
+<td><span style="background-color:#327ab7;color:white;">.btn-primary</span></td>
+<td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+</tr>
+<tr>
+<td> <span style="background-color:#5cb85c;color:white;">.btn-success</span></td>
+<td>Indicates a successful or positive action</td>
+</tr>
+<tr>
+<td> <span style="background-color:#5bc0de;color:white;">.btn-info</span></td>
+<td>Contextual button for informational alert messages</td>
+</tr>
+<tr>
+<td> <span style="background-color:#f0ad4e;color:white;">.btn-warning</span></td>
+<td>Indicates caution should be taken with this action</td>
+</tr>
+<tr>
+<td> <span style="background-color:#d9534f;color:white;">.btn-danger</span></td>
+<td>Indicates a dangerous or potentially negative action</td>
+</tr>
+<tr>
+<td>.btn-link</td>
+<td>Makes a button look like a link (will still have button behavior)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>.btn-lg</td>
+<td>Makes a large button</td>
+</tr>
+<tr>
+<td>.btn-md</td>
+<td>Makes a medium button</td>
+</tr>
+<tr>
+<td>.btn-sm</td>
+<td>Makes a small button</td>
+</tr>
+<tr>
+<td>.btn-xs</td>
+<td>Makes an extra small button</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>.btn-lg</td>
+<td>Makes a large button</td>
+</tr>
+<tr>
+<td>.btn-block</td>
+<td>Makes a block-level button (spans the full width of the parent element)</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>.active</td>
+<td>Makes the button appear pressed</td>
+</tr>
+<tr>
+<td>.disabled</td>
+<td>Makes the button disabled</td>
+</tr>
+</tbody>
+</table>
+<h3 id="Button-Groups"><a href="#Button-Groups" class="headerlink" title="Button Groups"></a>Button Groups</h3><p><strong>Creat a button group</strong></p>
+<p>Use class <code>.btn-group-*</code> to style the all bottons in the group.</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.btn-group-vertical</td>
+<td>Create a vertical botton group</td>
+</tr>
+<tr>
+<td>.btn-group-justified</td>
+<td>Span the entire width of the screen</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: For <code>&lt;button&gt;</code> elements with <code>btn-group-justified</code>, you must wrap each button in a .btn-group class:</p>
+<p><strong>Nesting Button Group &amp; Dropdown Menus</strong></p>
+<p><strong>Split Button Dropdowns</strong></p>
+<h3 id="Glyphicons"><a href="#Glyphicons" class="headerlink" title="Glyphicons"></a>Glyphicons</h3><p>Syntax:</p>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_glyphs.asp" target="_blank" rel="external">Glyphicons Reference</a></p>
+<h3 id="Badges-Labels"><a href="#Badges-Labels" class="headerlink" title="Badges/Labels"></a>Badges/Labels</h3><p><strong>Badges</strong><br>Badges are numerical indicators of how many items are associated with a link<br>Syntax:</p>
+<p><strong>labels</strong><br>Syntax:</p>
+<p>Label classes: default, primary, success, info, warning, danger</p>
+<h3 id="Progress-Bars"><a href="#Progress-Bars" class="headerlink" title="Progress Bars"></a>Progress Bars</h3><p><strong>Basic Progress Bar</strong></p>
+<ul>
+<li><code>aria-*</code> attributes will help peolpe using screen readers.</li>
+</ul>
+<p><strong>Bar With Label</strong></p>
+<ul>
+<li>Colored bar:<ul>
+<li><code>.progress-bar-success</code></li>
+<li><code>.progress-bar-info</code></li>
+<li><code>.progress-bar-warning</code></li>
+<li><code>.progress-bar-danger</code></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.progress-bar-striped</td>
+<td>Adds stripes to the progress bars</td>
+</tr>
+<tr>
+<td>.active</td>
+<td>Animates the progress bar</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Stacked Progress Bars</strong></p>
+<h3 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h3><p>Breadcrumb and Pagination</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.pagination</td>
+<td>Provides pagination links</td>
+</tr>
+<tr>
+<td>.active</td>
+<td>Indicates the <strong>current</strong> page</td>
+</tr>
+<tr>
+<td>.disabled</td>
+<td>Indicates an <strong>unclickable</strong> link</td>
+</tr>
+<tr>
+<td>.pager</td>
+<td>Provides simple pagination links (Previous/Next)</td>
+</tr>
+<tr>
+<td>.previous</td>
+<td>Aligns the .pager previous button to the <strong>left</strong></td>
+</tr>
+<tr>
+<td>.next</td>
+<td>Aligns the .pager next button to the <strong>right</strong></td>
+</tr>
+<tr>
+<td>.pagination-sm</td>
+<td>Used together with the .pagination class to provide smaller pagination links</td>
+</tr>
+<tr>
+<td>.pagination-lg</td>
+<td>Used together with the .pagination class to provide larger pagination links</td>
+</tr>
+<tr>
+<td>.breadcrumb</td>
+<td>Makes a breadcrumb</td>
+</tr>
+</tbody>
+</table>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_navs.asp" target="_blank" rel="external">Pagination Reference</a></p>
+<h3 id="List-Groups"><a href="#List-Groups" class="headerlink" title="List Groups"></a>List Groups</h3><p>Syntax:</p>
+<ul>
+<li>The items in a list group can also be hyperlinks, use <code>&lt;div&gt;</code> instead of <code>&lt;ul&gt;</code> and <code>&lt;a&gt;</code> instead of <code>&lt;li&gt;</code>.</li>
+<li>Supports: <code>.badge</code>, <code>.active</code>, <code>.disabled</code>, <code>.list-group-item-success</code>, <code>list-group-item-info</code>, <code>list-group-item-warning</code>, <code>.list-group-item-danger</code>, <code>.list-group-item-heading</code>, <code>.list-group-item-text</code></li>
+</ul>
+<h3 id="Panels"><a href="#Panels" class="headerlink" title="Panels"></a>Panels</h3><p>Syntax:</p>
+<ul>
+<li>Supports: <code>.panel-heading</code>, <code>.panel-footer</code>, <code>.panel-default</code>, <code>.panel-primary</code>, <code>.panel-success</code>, <code>.panel-info</code>, <code>.panel-warning</code>, <code>.panel-danger</code></li>
+</ul>
+<p><strong>Panel Group</strong></p>
+<h3 id="Dropdowns"><a href="#Dropdowns" class="headerlink" title="Dropdowns"></a>Dropdowns</h3><p><strong>Basic Dropdowns</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.dropdown</td>
+<td>Indicates a dropdown menu</td>
+</tr>
+<tr>
+<td>.dropdown-menu</td>
+<td>Builds the dropdown menu</td>
+</tr>
+<tr>
+<td>.dropdown-menu-right</td>
+<td>Right-aligns a dropdown menu</td>
+</tr>
+<tr>
+<td>.dropdown-header</td>
+<td>Adds a header inside the dropdown menu</td>
+</tr>
+<tr>
+<td>.dropup</td>
+<td>Indicates a dropup menu</td>
+</tr>
+<tr>
+<td>.disabled</td>
+<td>Disables an item in the dropdown menu</td>
+</tr>
+<tr>
+<td>.divider</td>
+<td>Separates items inside the dropdown menu with a horizontal line</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Supports: <code>dropdown-header</code>, <code>dropdown-disabled</code></li>
+</ul>
+<p>Example:</p>
+<p><strong>Via data-* Attributes</strong></p>
+<p><strong>Dropdown Accessibility</strong></p>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_dropdown.asp" target="_blank" rel="external">Dorpdown Reference</a></p>
+<h3 id="Collapse"><a href="#Collapse" class="headerlink" title="Collapse"></a>Collapse</h3><p><strong>Basic Collapse</strong><br>Syntax:</p>
+<ul>
+<li>For <code>&lt;a&gt;</code> element, using <code>href</code> install of the <code>data-target</code>.<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>#demo<span class="token punctuation">"</span></span> <span class="token attr-name">data-toggle</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>collapse<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>Collapsible<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Setting show the content by dafault by add the <code>.in</code> class.<pre class="line-numbers language-html"><code class="language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>demo<span class="token punctuation">"</span></span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>collapse in<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+</ul>
+<p><strong>Collapsible Panel</strong></p>
+<p><strong>Accordion</strong><br>Use the <code>data-parent</code> attribute to make sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_collapse.asp" target="_blank" rel="external">Collapse Reference</a></p>
+<h3 id="Tabs-and-Pills"><a href="#Tabs-and-Pills" class="headerlink" title="Tabs and Pills"></a>Tabs and Pills</h3><p><strong>Tabs and Pills Classes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.nav nav-tabs</td>
+<td>Creates navigation tabs</td>
+</tr>
+<tr>
+<td>.nav nav-pills</td>
+<td>Creates navigation pills</td>
+</tr>
+<tr>
+<td>.nav nav-pills nav-stacked</td>
+<td>Creates vertical navigation pills</td>
+</tr>
+<tr>
+<td>.nav-justified</td>
+<td>Makes navigation tabs/pills equal widths of their parent,<br>at screens wider than 768px. On smaller screens, the nav tabs/pills are stacked</td>
+</tr>
+<tr>
+<td>.disabled</td>
+<td>Indicates a disabled (unclickable) tab/pill</td>
+</tr>
+<tr>
+<td>.tab-content</td>
+<td>Together with <code>.tab-pane</code> and <code>data-toggle=&quot;tab&quot;</code> (<code>data-toggle=&quot;pill&quot;</code> for pills), it makes the tab/pill toggable</td>
+</tr>
+<tr>
+<td>.tab-pane</td>
+<td>Together with <code>.tab-content</code> and <code>data-toggle=&quot;tab&quot;</code> (<code>data-toggle=&quot;pill&quot;</code> for pills), it makes the tab/pill toggable</td>
+</tr>
+</tbody>
+</table>
+<p>On a small screen, the pills will automatically adjust itself into a single-column layout.</p>
+<p><strong>Tabs With Dropdown Menu</strong></p>
+<p><strong>Toggleable / Dynamic Tabs/Pills</strong></p>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_comp_navs.asp" target="_blank" rel="external">Tabs and Pills Reference</a></p>
+<h3 id="Navbar"><a href="#Navbar" class="headerlink" title="Navbar"></a>Navbar</h3><p>Example:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.navbar-inverse</td>
+<td>Sets the style of navigation to black</td>
+</tr>
+<tr>
+<td>.navbar-fixed-top</td>
+<td>Makes the navigation bar fixed at the top</td>
+</tr>
+<tr>
+<td>.navbar-fixed-bottom</td>
+<td>Makes the navigation bar stay at the bottom</td>
+</tr>
+<tr>
+<td>.navbar-right</td>
+<td>Places the bar button at right side</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Collapsing The Navigation Bar</strong></p>
+<h3 id="Forms"><a href="#Forms" class="headerlink" title="Forms"></a>Forms</h3><p>All textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements with class .form-control have a width of 100%.</p>
+<ul>
+<li>Bootstrap provides three types of form layouts:<ul>
+<li>Vertical form (this is default)</li>
+<li>Horizontal form<ul>
+<li>Add class <code>.form-horizontal</code> to the <code>&lt;form&gt;</code> element</li>
+<li>Add class <code>.control-label</code> to the <code>&lt;label&gt;</code> element</li>
+</ul>
+</li>
+<li>Inline form <ul>
+<li>Add class <code>.form-inline</code> to the <code>&lt;form&gt;</code> element</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Standard rules for all three form layouts:<ul>
+<li>Always use <code>&lt;form role=&quot;form&quot;&gt;</code> (helps improve accessibility for people using screen readers)</li>
+<li>Wrap labels and form controls in <code>&lt;div class=&quot;form-group&quot;&gt;</code> (needed for optimum spacing)</li>
+<li>Add class <code>.form-control</code> to all textual <code>&lt;input&gt;</code>, <code>&lt;textarea&gt;</code>, and <code>&lt;select&gt;</code> elements</li>
+</ul>
+</li>
+</ul>
+<p><strong>Bootstrap Form Control</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.form-control</td>
+<td>input element</td>
+</tr>
+<tr>
+<td>.comment</td>
+<td>textarea element</td>
+</tr>
+<tr>
+<td>.checkbox</td>
+<td>checkbox element</td>
+</tr>
+<tr>
+<td>.checkbox-inline</td>
+<td>checkbox element</td>
+</tr>
+<tr>
+<td>.radio</td>
+<td>radio element</td>
+</tr>
+<tr>
+<td>.radio-inline</td>
+<td>radico element</td>
+</tr>
+<tr>
+<td>.form-control-static</td>
+<td>Inserts plain text next to a form label within a horizontal form</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Select List</strong></p>
+<p><strong>Bootstrap Form Control States</strong></p>
+<ul>
+<li>Input Focus - The outline of the input is removed and a box-shadow is applied on focus</li>
+<li>Disabled Inputs - Add a <code>disabled</code> attribute to disable an input field</li>
+<li>Disabled Fieldsets - Add a <code>disabled</code> attribute to a fieldset to disable all controls within</li>
+<li>Readonly Inputs - Add a <code>readonly</code> attribute to an input to prevent user input</li>
+<li>Validation States - Bootstrap includes validation styles for error, warning, and success messages. To use, add <code>.has-warning</code>, <code>.has-error</code>, or <code>.has-success</code> to the parent element</li>
+<li>Icons - You can add feedback icons with the <code>.has-feedback</code> class and an icon</li>
+<li>Hidden Labels - Add a <code>.sr-only</code> class on non-visible labels</li>
+</ul>
+<p><strong>Bootstrap Input Sizing</strong></p>
+<ul>
+<li>Height: .<code>input-lg</code>, <code>.input-sm</code></li>
+<li>Width: <code>.col-lg-*</code>, <code>.col-sm-*</code></li>
+</ul>
+<p><strong>Help Text</strong><br>Use the <code>.help-block</code> class to add a block level help text in forms.</p>
+<h3 id="Carousel"><a href="#Carousel" class="headerlink" title="Carousel"></a>Carousel</h3><p><a href="http://www.w3schools.com/bootstrap/bootstrap_carousel.asp" target="_blank" rel="external">Carousel Reference</a></p>
+<h3 id="Modal"><a href="#Modal" class="headerlink" title="Modal"></a>Modal</h3><p><strong>The Modal Plugin Classes</strong></p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>.modal</td>
+<td>Creates a modal</td>
+</tr>
+<tr>
+<td>.modal-content</td>
+<td>Styles the modal properly with border, background-color, etc. Use this class to add the modal’s header, body, and footer.</td>
+</tr>
+<tr>
+<td>.modal-header</td>
+<td>Defines the style for the header of the modal</td>
+</tr>
+<tr>
+<td>.modal-body</td>
+<td>Defines the style for the body of the modal</td>
+</tr>
+<tr>
+<td>.modal-footer</td>
+<td>Defines the style for the footer in the modal.<br> Note: This area is right-aligned by default. To change this, overwrite CSS with text-align:left/center</td>
+</tr>
+<tr>
+<td>.modal-sm</td>
+<td>Specifies a small modal, add with class <code>.modal-dialog</code></td>
+</tr>
+<tr>
+<td>.modal-lg</td>
+<td>Specifies a large modal, add with class <code>.modal-dialog</code></td>
+</tr>
+<tr>
+<td>.fade</td>
+<td>Adds an animation/transition effect which fades the modal in and out</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example</strong></p>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp" target="_blank" rel="external">Modal Reference</a></p>
+<h3 id="Tooltip"><a href="#Tooltip" class="headerlink" title="Tooltip"></a>Tooltip</h3><p>The Tooltip plugin is small pop-up box that appears when the user moves the mouse <strong>pointer</strong> <strong>over</strong> an element.<br><strong>Create a Tooltip</strong></p>
+<p><strong>Positioning Tooltips</strong></p>
+<ul>
+<li>data-placement=”top”</li>
+<li>data-placement=”bottom”</li>
+<li>data-placement=”left”</li>
+<li>data-placement=”right”</li>
+<li>data-placement=”auto left”</li>
+</ul>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_tooltip.asp" target="_blank" rel="external">Tooltip Reference</a></p>
+<h3 id="Popover"><a href="#Popover" class="headerlink" title="Popover"></a>Popover</h3><p>The Poppver is a pop-up box that appears when the user clicks on an element.<br><strong>Create a Popover</strong></p>
+<p><strong>Positioning Popovers</strong></p>
+<ul>
+<li>data-placement=”top”</li>
+<li>data-placement=”bottom”</li>
+<li>data-placement=”left”</li>
+<li>data-placement=”right”</li>
+<li>data-placement=”auto left”</li>
+</ul>
+<p><strong>Closing Popovers</strong></p>
+<ul>
+<li><code>data-trigger=&quot;focus&quot;</code>: Close the popover when clicking outside the element</li>
+<li><code>data-trigger=&quot;hover&quot;</code>: Displays the popover when the mouse pointer over the element</li>
+</ul>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_popover.asp" target="_blank" rel="external">Popover Reference</a></p>
+<h3 id="Scrollspy"><a href="#Scrollspy" class="headerlink" title="Scrollspy"></a>Scrollspy</h3><p>The Scrollspy plugin is used to automatically update links in a navigation list based on scroll position.</p>
+<p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_scrollspy.asp" target="_blank" rel="external">Scrollspy Reference</a></p>
+<h3 id="Affix"><a href="#Affix" class="headerlink" title="Affix"></a>Affix</h3><p><a href="http://www.w3schools.com/bootstrap/bootstrap_ref_js_affix.asp" target="_blank" rel="external">Affix Reference</a></p>
+<hr>
+<h3 id="本文相关"><a href="#本文相关" class="headerlink" title="本文相关"></a>本文相关</h3><ol>
+<li>参考<br><a href="http://getbootstrap.com/components/" target="_blank" rel="external">Bootstrap</a><br><a href="http://www.w3schools.com/bootstrap/default.asp:" target="_blank" rel="external">W3Schools - Bootstrap</a></li>
+<li>修订<br>2016:第一版</li>
+</ol>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/BootStrap/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/BootStrap/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/21/BOM/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/21/BrowserSync，迅捷从免F5开始-转载/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033dev@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a></li><li><a class="sidebar_archives-link" href="/archives/1904/01/">一月 1904<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
                         <!-- Footer Top Button -->
-                        <%- partial('_partial/footer_top')  %>
-                    <% } %>
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
-                    <%- partial('_partial/footer') %>
+                    
 
-                    <%- partial('_partial/import_js') %>
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
                 </main>
             </div>
         </body>
-    <% } %>
+    
 </html>

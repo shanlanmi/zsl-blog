@@ -1,17 +1,292 @@
 <!DOCTYPE html>
-<html style="display: none;" <% if(config.language !== null) { %>lang="<%- config.language.substring(0,2) %>"<% } %>>
-    <%- partial('_partial/head') %>
+<html style="display: none;" lang="zh">
+    <head>
+    <meta charset="utf-8">
+    <!--
+        © Material Theme
+        https://github.com/viosey/hexo-theme-material
+        Version: 1.4.0 -->
+    <script>window.materialVersion = "1.4.0"</script>
 
-    <% if(page.layout === 'gallery') { %>
-        <!-- Single Gallery Page -->
-        <%- partial('_widget/page-gallery') %>
-    <% } else { %>
-        <body id="scheme-<%= theme.scheme %>" class="lazy">
+    <!-- Title -->
+    
+    <title>
+        
+            jQuery | 
+        
+        张圣兰
+    </title>
+
+    <!-- dns prefetch -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    <!-- Meta & Info -->
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="张圣兰">
+    <meta name="description" itemprop="description" content="描述">
+    <meta name="keywords" content="">
+
+    <!-- Site Verification -->
+    
+    
+
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+
+    <!--iOS -->
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="张圣兰">
+
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://shanlanmi.github.io/zsl-blog">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="jQuery | 张圣兰">
+    <meta property="og:image" content="/img/favicon.png" />
+    <meta property="og:description" content="描述">
+    
+
+    
+        <meta property="article:published_time" content="7月 21, 2016" />
+        <meta property="article:modified_time" content="8月 08, 2017" />
+    
+
+    <!-- The Twitter Card protocol -->
+    <meta name="twitter:title" content="jQuery | 张圣兰">
+    <meta name="twitter:description" content="描述">
+    <meta name="twitter:image" content="/img/favicon.png">
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="http://shanlanmi.github.io/zsl-blog" />
+
+    <!-- Add canonical link for SEO -->
+    
+        <link rel="canonical" href="http://shanlanmi.github.io/zsl-blog/2016/07/21/jQuery/index.html" />
+    
+
+    <!-- Structured-data for SEO -->
+    
+        
+
+
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "张圣兰",
+        "logo": "/img/favicon.png"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "张圣兰",
+        "image": {
+            "@type": "ImageObject",
+            "url": "/img/favicon.png"
+        },
+        "description": "我的文字安放于此"
+    },
+    "headline": "jQuery",
+    "url": "http://shanlanmi.github.io/zsl-blog/2016/07/21/jQuery/index.html",
+    "datePublished": "7月 21, 2016",
+    "dateModified": "8月 08, 2017",
+    "description": "描述",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://shanlanmi.github.io/zsl-blog"
+    }
+}
+</script>
+
+
+    
+
+    <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+
+    <!-- Import lsloader -->
+    <script>(function(){window.lsloader={jsRunSequence:[],jsnamemap:{},cssnamemap:{}};lsloader.removeLS=function(key){try{localStorage.removeItem(key)}catch(e){}};lsloader.setLS=function(key,val){try{localStorage.setItem(key,val)}catch(e){}};lsloader.getLS=function(key){var val="";try{val=localStorage.getItem(key)}catch(e){val=""}return val};versionString="/*"+materialVersion+"*/";lsloader.clean=function(){try{var keys=[];for(var i=0;i<localStorage.length;i++){keys.push(localStorage.key(i))}keys.forEach(function(key){var data=lsloader.getLS(key);if(data&&data.indexOf(versionString)===-1){lsloader.removeLS(key)}})}catch(e){}};lsloader.clean();lsloader.load=function(jsname,jspath,cssonload){cssonload=cssonload||function(){};var code;code=this.getLS(jsname);if(code&&code.indexOf(versionString)===-1){this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}if(code){var versionNumber=code.split(versionString)[0];if(versionNumber!=jspath){console.log("reload:"+jspath);this.removeLS(jsname);this.requestResource(jsname,jspath,cssonload);return}code=code.split(versionString)[1];if(/\.js?.+$/.test(versionNumber)){this.jsRunSequence.push({name:jsname,code:code});this.runjs(jspath,jsname,code)}else{document.getElementById(jsname).appendChild(document.createTextNode(code));cssonload()}}else{this.requestResource(jsname,jspath,cssonload)}};lsloader.requestResource=function(name,path,cssonload){var that=this;if(/\.js?.+$/.test(path)){this.iojs(path,name,function(path,name,code){that.setLS(name,path+versionString+code);that.runjs(path,name,code)})}else if(/\.css?.+$/.test(path)){this.iocss(path,name,function(code){document.getElementById(name).appendChild(document.createTextNode(code));that.setLS(name,path+versionString+code)},cssonload)}};lsloader.iojs=function(path,jsname,callback){var that=this;that.jsRunSequence.push({name:jsname,code:""});try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(path,jsname,xhr.response);return}}that.jsfallback(path,jsname)}};xhr.send(null)}catch(e){that.jsfallback(path,jsname)}};lsloader.iocss=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.iofonts=function(path,jsname,callback,cssonload){var that=this;try{var xhr=new XMLHttpRequest;xhr.open("get",path,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){callback(xhr.response);cssonload();return}}that.cssfallback(path,jsname,cssonload)}};xhr.send(null)}catch(e){that.cssfallback(path,jsname,cssonload)}};lsloader.runjs=function(path,name,code){if(!!name&&!!code){for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code=code}}}if(!!this.jsRunSequence[0]&&!!this.jsRunSequence[0].code&&this.jsRunSequence[0].status!="failed"){var script=document.createElement("script");script.appendChild(document.createTextNode(this.jsRunSequence[0].code));script.type="text/javascript";document.getElementsByTagName("head")[0].appendChild(script);this.jsRunSequence.shift();if(this.jsRunSequence.length>0){this.runjs()}}else if(!!this.jsRunSequence[0]&&this.jsRunSequence[0].status=="failed"){var that=this;var script=document.createElement("script");script.src=this.jsRunSequence[0].path;script.type="text/javascript";this.jsRunSequence[0].status="loading";script.onload=function(){that.jsRunSequence.shift();if(that.jsRunSequence.length>0){that.runjs()}};document.body.appendChild(script)}};lsloader.tagLoad=function(path,name){this.jsRunSequence.push({name:name,code:"",path:path,status:"failed"});this.runjs()};lsloader.jsfallback=function(path,name){if(!!this.jsnamemap[name]){return}else{this.jsnamemap[name]=name}for(var k in this.jsRunSequence){if(this.jsRunSequence[k].name==name){this.jsRunSequence[k].code="";this.jsRunSequence[k].status="failed";this.jsRunSequence[k].path=path}}this.runjs()};lsloader.cssfallback=function(path,name,cssonload){if(!!this.cssnamemap[name]){return}else{this.cssnamemap[name]=1}var link=document.createElement("link");link.type="text/css";link.href=path;link.rel="stylesheet";link.onload=link.onerror=cssonload;var root=document.getElementsByTagName("script")[0];root.parentNode.insertBefore(link,root)};lsloader.runInlineScript=function(scriptId,codeId){var code=document.getElementById(codeId).innerText;this.jsRunSequence.push({name:scriptId,code:code});this.runjs()};lsloader.loadCombo=function(jslist){var updateList="";var requestingModules={};for(var k in jslist){var LS=this.getLS(jslist[k].name);if(!!LS){var version=LS.split(versionString)[0];var code=LS.split(versionString)[1]}else{var version=""}if(version==jslist[k].path){this.jsRunSequence.push({name:jslist[k].name,code:code,path:jslist[k].path})}else{this.jsRunSequence.push({name:jslist[k].name,code:null,path:jslist[k].path,status:"comboloading"});requestingModules[jslist[k].name]=true;updateList+=(updateList==""?"":";")+jslist[k].path}}var that=this;if(!!updateList){var xhr=new XMLHttpRequest;xhr.open("get",combo+updateList,true);xhr.onreadystatechange=function(){if(xhr.readyState==4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){if(xhr.response!=""){that.runCombo(xhr.response,requestingModules);return}}else{for(var i in that.jsRunSequence){if(requestingModules[that.jsRunSequence[i].name]){that.jsRunSequence[i].status="failed"}}that.runjs()}}};xhr.send(null)}this.runjs()};lsloader.runCombo=function(comboCode,requestingModules){comboCode=comboCode.split("/*combojs*/");comboCode.shift();for(var k in this.jsRunSequence){if(!!requestingModules[this.jsRunSequence[k].name]&&!!comboCode[0]){this.jsRunSequence[k].status="comboJS";this.jsRunSequence[k].code=comboCode[0];this.setLS(this.jsRunSequence[k].name,this.jsRunSequence[k].path+versionString+comboCode[0]);comboCode.shift()}}this.runjs()}})();</script>
+
+    <!-- Import CSS & jQuery -->
+    
+        <style id="css/material.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/material.min.css","/css/material.min.css?fJTiM/K1J3dWIruo3pxtAw==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        <style id="css/style.min.css"></style><script>if(typeof window.lsLoadCSSMaxNums === "undefined")window.lsLoadCSSMaxNums = 0;window.lsLoadCSSMaxNums++;lsloader.load("css/style.min.css","/css/style.min.css?oCSEO3ST+aEypEwttTDI9g==",function(){if(typeof window.lsLoadCSSNums === "undefined")window.lsLoadCSSNums = 0;window.lsLoadCSSNums++;if(window.lsLoadCSSNums == window.lsLoadCSSMaxNums)document.documentElement.style.display="";})</script>
+        
+        
+            <style>
+    
+    
+    
+    
+    
+    
+    
+    .footer-sns-github {
+        background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgY2xhc3M9Imljb24iIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGQ9Ik0xMzguNCA3OGMtNi40IDEuNC0yNi40IDE0LjItMzYgMjIuOC04IDcuMi0yMiAyOS44LTI0LjQgMzkuMi0xLjYgNi40LTIgMTEzLjItMS42IDM2OCAuNiAyOTkuNCAxIDM1OS44IDMuNCAzNjQgMTEgMjAuMiAyMS42IDMyLjQgMzcuMiA0MyAxNS42IDEwLjYgMTcuMiAxMS4yIDM0LjIgMTMuMiAxMC42IDEuMiA2My40IDEuNiAxMjcuNiAxLjRsMTA5LjYtLjYgNi02LjggNi4yLTYuOC0xLjItMjUuMmMtLjgtMTUuOC0uMi0zMy40IDEuNC00Ny4yIDMtMjUuNCAxLjQtMzYuMi02LTQzLjItNS00LjYtNi4yLTQuOC0zMC42LTQuMi0yNy42LjgtMjQgMS42LTY4LjgtMTYtOC42LTMuNC0yMi42LTE4LTI4LjQtMjkuOC0xMS40LTIyLjgtMjctNDUtMzkuMi01NS42LTE0LTEyLjItMTkuOC0yMC44LTE5LjgtMjguNiAwLTExLjYgMTMuNi0xMi42IDMzLjItMi40IDE2LjYgOC44IDIwLjggMTIuNCA0MC44IDM2LjIgMjQuMiAyOC42IDMxIDMzLjYgNTQgMzkuNiAxNS4yIDQgNDIuMiAzIDUxLjQtMS44IDktNC42IDE4LTE1LjIgMjQuNC0yOS4yIDExLjQtMjQuMiA3LjQtMzEuMi0yMC42LTM2LjgtOS44LTItMjkuMi04LTQzLjQtMTMuNC00MC40LTE1LjgtNjQuNi0zNy40LTg1LjQtNzYuMi0xMS42LTIxLjgtMTUuNC0zMy0xOC4yLTUzLjYtNC4yLTMyLjItNC44LTYwLjItMS40LTg0IDMuNC0yMy44IDYuOC0zMi44IDIwLjItNTQgNC02IDguOC0xNS42IDExLTIxLjQgMy44LTEwIDMuOC0xMS42IDEtMzAtNS4yLTM0LjItMy4yLTUyLjQgNy42LTcwLjIgNy4yLTEyLjIgMTUtMTcuMiAyNC4yLTE1LjggMTIuOCAyLjIgNTIgMTcuNCA2Ni44IDI2LjIgMjYgMTUgMjkgMTUuNCA4Mi40IDcuMiAyNC42LTMuOCAzMy44LTQuMiA2MC0zLjIgMTcgLjYgNDEuNCAzIDU0IDUuMiAzOC40IDYuNiA0OS42IDUuMiA3My0xMCA2LjYtNC4yIDE3LjQtOS40IDI0LTExLjYgNi42LTIuMiAxNi01LjggMjEtOC4yIDEzLTYgMjgtNS42IDM1LjYuOCAxMi40IDEwLjQgMTguNiA0MS40IDE0LjQgNzEuNi00LjQgMzAuNi0zIDM5LjQgOC40IDUzLjggMy40IDQuNCAxMS4yIDE5LjIgMTcuNCAzMy4yTDc3NSA0NDN2NzhsLTEwIDI4Yy0xNS4yIDQzLjItMzYuOCA3My4yLTY2LjIgOTIuOC0xMy40IDguOC01NyAyNS40LTc2LjggMjktMjguMiA1LjItMzMuMiAxMi42LTIyIDMyLjIgMTEuMiAxOS40IDEyLjQgMzIuOCAxMS42IDEyOS42bC0uNiA4NS44IDUuNCA0LjZjMy42IDMgOS4yIDUuMiAxNiA2IDUuOC44IDYwLjIgMSAxMjAuNi42IDEwOC40LS42IDExMC4yLS42IDExOS01IDI0LTExLjYgNDAtMjcuNCA1MS42LTUwLjZsNS40LTExIC42LTM0N2MuNC0yMjMtLjItMzUzLjQtMS40LTM2NS0yLTE3LTIuNi0xOC42LTEzLTM0LTEwLjYtMTUuNC0yMi44LTI2LjItNDMuMi0zNy4yLTQuMi0yLjQtNjQuNi0yLjgtMzY2LTMuMi0xOTguNiAwLTM2NCAuNC0zNjcuNiAxLjR6Ii8+PC9zdmc+);
+    }
+    
+    
+    
+    
+    
+</style>
+
+        
+        <!-- Config CSS -->
+
+<!-- Other Styles -->
+<style>
+  body, html {
+    font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+  }
+
+  a {
+    color: #00838F;
+  }
+
+  .mdl-card__media,
+  #search-label,
+  #search-form-label:after,
+  #scheme-Paradox .hot_tags-count,
+  #scheme-Paradox .sidebar_archives-count,
+  #scheme-Paradox .sidebar-colored .sidebar-header,
+  #scheme-Paradox .sidebar-colored .sidebar-badge{
+    background-color: #0097A7 !important;
+  }
+
+  /* Sidebar User Drop Down Menu Text Color */
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+  #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus {
+    color: #0097A7 !important;
+  }
+
+  #post_entry-right-info,
+  .sidebar-colored .sidebar-nav li:hover > a,
+  .sidebar-colored .sidebar-nav li:hover > a i,
+  .sidebar-colored .sidebar-nav li > a:hover,
+  .sidebar-colored .sidebar-nav li > a:hover i,
+  .sidebar-colored .sidebar-nav li > a:focus i,
+  .sidebar-colored .sidebar-nav > .open > a,
+  .sidebar-colored .sidebar-nav > .open > a:hover,
+  .sidebar-colored .sidebar-nav > .open > a:focus,
+  #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a {
+    color: #0097A7 !important;
+  }
+
+  .toTop {
+    background: #757575 !important;
+  }
+
+  .material-layout .material-post>.material-nav,
+  .material-layout .material-index>.material-nav,
+  .material-nav a {
+    color: #757575;
+  }
+
+  #scheme-Paradox .MD-burger-layer {
+    background-color: #757575;
+  }
+
+  #scheme-Paradox #post-toc-trigger-btn {
+    color: #757575;
+  }
+
+  .post-toc a:hover {
+    color: #00838F;
+    text-decoration: underline;
+  }
+
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+      body{
+        background-color: #F5F5F5;
+      }
+
+      /* blog_info bottom background */
+      #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+        background-color: #fff;
+      }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+      .fade {
+        transition: all 800ms linear;
+        -webkit-transform: translate3d(0,0,0);
+        -moz-transform: translate3d(0,0,0);
+        -ms-transform: translate3d(0,0,0);
+        -o-transform: translate3d(0,0,0);
+        transform: translate3d(0,0,0);
+        opacity: 1;
+      }
+
+      .fade.out{
+        opacity: 0;
+      }
+    </style>
+
+
+<!-- Import Font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+
+
+        <script>lsloader.load("js/jquery.min.js","/js/jquery.min.js?qcusAULNeBksqffqUM2+Ig==")</script>
+    
+    
+    <script>function Queue(){this.dataStore=[];this.offer=b;this.poll=d;this.execNext=a;this.debug=false;this.startDebug=c;function b(e){if(this.debug){console.log("Offered a Queued Function.")}if(typeof e==="function"){this.dataStore.push(e)}else{console.log("You must offer a function.")}}function d(){if(this.debug){console.log("Polled a Queued Function.")}return this.dataStore.shift()}function a(){var e=this.poll();if(e!==undefined){if(this.debug){console.log("Run a Queued Function.")}e()}}function c(){this.debug=true}}var queue=new Queue();</script>
+
+    <!-- Analytics -->
+    
+
+    <!-- Custom Head -->
+    
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+
+
+    
+        <body id="scheme-Paradox" class="lazy">
             <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
-                <% if(theme.scheme === 'Isolation') { %>
-                    <!-- Isolation Header -->
-                    <%- partial('_partial/isolate_info') %>
-                <% } %>
+                
 
                 <!-- Main Container -->
                 <main class="material-layout__content" id="main">
@@ -19,29 +294,1467 @@
                     <!-- Top Anchor -->
                     <div id="top"></div>
 
-                    <% if(theme.scheme === 'Paradox') { %>
+                    
                         <!-- Hamburger Button -->
                         <button class="MD-burger-icon sidebar-toggle">
                             <span class="MD-burger-layer"></span>
                         </button>
-                    <% } %>
+                    
 
-                    <%- body %>
+                    <!-- Post TOC -->
 
-                    <% if(theme.scheme === 'Paradox') { %>
-                        <%- partial('_partial/sidebar') %>
-                    <% } %>
+    
+    <!-- Back Button -->
+    <!--
+    <div class="material-back" id="backhome-div" tabindex="0">
+        <a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon"
+           href="#" onclick="window.history.back();return false;"
+           target="_self"
+           role="button"
+           data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons" role="presentation">arrow_back</i>
+            <span class="mdl-button__ripple-container">
+                <span class="mdl-ripple"></span>
+            </span>
+        </a>
+    </div>
+    -->
 
-                    <% if( (theme.scheme === 'Paradox') && (is_post() || is_home() || is_archive() || is_category() || (page.totop === true) ) ) { %>
+    <!-- Left aligned menu below button -->
+    <button id="post-toc-trigger-btn"
+        class="mdl-button mdl-js-button mdl-button--icon">
+        <i class="material-icons">format_list_numbered</i>
+    </button>
+
+    
+    <ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect" for="post-toc-trigger-btn" style="max-height:80vh; overflow-y:scroll;">
+        <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jQuery-Library"><span class="post-toc-number">1.</span> <span class="post-toc-text">jQuery Library</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jQuery-Base-Syntax"><span class="post-toc-number">2.</span> <span class="post-toc-text">jQuery Base Syntax</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jQuery-Selectors"><span class="post-toc-number">3.</span> <span class="post-toc-text">jQuery Selectors</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jQuery-Events"><span class="post-toc-number">4.</span> <span class="post-toc-text">jQuery Events</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Event-Reference"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">Event Reference</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Attaches-an-event-handler"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">Attaches an event handler</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Attaches-more-event-handler-on-Method"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">Attaches more event handler - on( ) Method</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#jQuery-Effects"><span class="post-toc-number">5.</span> <span class="post-toc-text">jQuery Effects</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Callback-Functions"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">Callback Functions</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Chaining"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">Chaining</span></a></li></ol></li></ol>
+        <!--
+        <li class="mdl-menu__item">
+            Some Action
+        </li>
+        -->
+    </ul>
+    
+
+
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+    <!-- Paradox Post Header -->
+    
+        
+            <!-- Random Thumbnail -->
+            <div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+            <script type="text/ls-javascript" id="post-thumbnail-script">
+    var randomNum = Math.floor(Math.random() * 19 + 1);
+
+    $('.post_thumbnail-random').attr('data-original', '/img/random/material-' + randomNum + '.png');
+    $('.post_thumbnail-random').addClass('lazy');
+</script>
+
+        
+    
+            <p class="article-headline-p">
+                jQuery
+            </p>
+        </div>
+
+
+
+
+
+                
+                    <!-- Paradox Post Info -->
+                    <div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>张圣兰</strong>
+        <span>7月 21, 2016</span>
+    </div>
+
+    <div class="section-spacer"></div>
+
+    <!-- Favorite -->
+    <!--
+        <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+            <i class="material-icons" role="presentation">favorite</i>
+            <span class="visuallyhidden">favorites</span>
+        </button>
+    -->
+
+    <!-- Qrcode -->
+    
+
+    <!-- Tags (bookmark) -->
+    
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+
+    
+
+    <!-- Share Weibo -->
+    
+        <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=jQuery&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/jQuery/index.html&pic=&searchPic=false&style=simple" target="_blank">
+            <li class="mdl-menu__item">
+                分享到微博
+            </li>
+        </a>
+    
+
+    <!-- Share Twitter -->
+    
+        <a class="post_share-link" href="https://twitter.com/intent/tweet?text=jQuery&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/jQuery/index.html&via=张圣兰" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Twitter
+            </li>
+        </a>
+    
+
+    <!-- Share Facebook -->
+    
+        <a class="post_share-link" href="https://www.facebook.com/sharer/sharer.php?u=http://shanlanmi.github.io/zsl-blog/2016/07/21/jQuery/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Facebook
+            </li>
+        </a>
+    
+
+    <!-- Share Google+ -->
+    
+        <a class="post_share-link" href="https://plus.google.com/share?url=http://shanlanmi.github.io/zsl-blog/2016/07/21/jQuery/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 Google+
+            </li>
+        </a>
+    
+
+    <!-- Share LinkedIn -->
+    
+
+    <!-- Share QQ -->
+    
+        <a class="post_share-link" href="http://connect.qq.com/widget/shareqq/index.html?site=张圣兰&title=jQuery&summary=描述&pics=http://shanlanmi.github.io/zsl-blog/img/favicon.png&url=http://shanlanmi.github.io/zsl-blog/2016/07/21/jQuery/index.html" target="_blank">
+            <li class="mdl-menu__item">
+                分享到 QQ
+            </li>
+        </a>
+    
+
+    <!-- Share Telegram -->
+    
+</ul>
+
+</div>
+
+                
+
+                <!-- Post Content -->
+                <div id="post-content" class="mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+    
+        <h2 id="jQuery-Library"><a href="#jQuery-Library" class="headerlink" title="jQuery Library"></a>jQuery Library</h2><ol>
+<li><strong>Download with host jQuery</strong><pre class="line-numbers language-HTML"><code class="language-HTML"><head>
+<srcipt src="jquery-1.12.0.min.js></scirpt>
+<link rel="stylesheet" href="/css/prism-solarizedlight.css" type="text/css">
+<link rel="stylesheet" href="/css/prism-line-numbers.css" type="text/css"></head>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<ul>
+<li>The jQuery library is a single JavaScript file, you need reference it.</li>
+<li>Place the downloaded file in the same directory as the pages where you wish to use it.</li>
+</ul>
+<ol>
+<li><p><strong>Includde from Google CDN</strong></p>
+<ul>
+<li>CDN = Content Delivery Network</li>
+<li>Using the hosted jQuery from Google or Microsoft will leads to <strong>faster</strong> loading time.<pre class="line-numbers language-HTML"><code class="language-HTML"><head>
+<srcipt src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js">
+</srcip>
+</head>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>Includde from Miscrosoft CDN</strong></p>
+<pre class="line-numbers language-HTML"><code class="language-HTML"><head>
+<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.12.0.min.js"></script>
+</head>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ol>
+<h2 id="jQuery-Base-Syntax"><a href="#jQuery-Base-Syntax" class="headerlink" title="jQuery Base Syntax"></a>jQuery Base Syntax</h2><ul>
+<li><strong>Syntax</strong>:<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"selector"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">method</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>To prevent any jQuery code from running before the document is finished loading (is ready).<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>document<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">ready</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">//jQuery methods go here...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>The <strong>shorter</strong> method for the document ready event:<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+   <span class="token comment" spellcheck="true">// jQuery methods go here...</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>You can put your jQuery functions in a separate .js file.</li>
+</ul>
+<h2 id="jQuery-Selectors"><a href="#jQuery-Selectors" class="headerlink" title="jQuery Selectors"></a>jQuery Selectors</h2><p>jQuery selectors are based on the existing CSS Selectors, and it has some own custom selectors.</p>
+<table>
+<thead>
+<tr>
+<th>Selector</th>
+<th>Example</th>
+<th>Descript</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>*</td>
+<td>$(“*”)</td>
+<td><strong>All</strong> elements</td>
+</tr>
+<tr>
+<td>&#35;id</td>
+<td>$(“#lastname”)</td>
+<td>The element with id=”lastname”</td>
+</tr>
+<tr>
+<td>.class</td>
+<td>$(“.intro”)</td>
+<td>All elements with class=”intro”</td>
+</tr>
+<tr>
+<td>.class,.class</td>
+<td>$(“.intro,.demo”)</td>
+<td>All elements with the class “intro” <strong>or</strong> “demo”</td>
+</tr>
+<tr>
+<td>element</td>
+<td>$(“p”)</td>
+<td>All <code>&lt;p&gt;</code> elements</td>
+</tr>
+<tr>
+<td>el1,el2,el3</td>
+<td>$(“h1,div,p”)</td>
+<td>All <code>&lt;h1&gt;</code>, <code>&lt;div&gt;</code> <strong>and</strong> <code>&lt;p&gt;</code> elements</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>:first</td>
+<td>$(“p:first”)</td>
+<td>The first <code>&lt;p&gt;</code> element</td>
+</tr>
+<tr>
+<td>:last</td>
+<td>$(“p:last”)</td>
+<td>The last <code>&lt;p&gt;</code> element</td>
+</tr>
+<tr>
+<td>:even</td>
+<td>$(“tr:even”)</td>
+<td>All even <code>&lt;tr&gt;</code> elements</td>
+</tr>
+<tr>
+<td>:odd</td>
+<td>$(“tr:odd”)</td>
+<td>All odd <code>&lt;tr&gt;</code> elements</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>:first-child</td>
+<td>$(“p:first-child”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the <strong>first</strong> <strong>child</strong> of their parent</td>
+</tr>
+<tr>
+<td>:first-of-type</td>
+<td>$(“p:first-of-type”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the <strong>first</strong> <code>&lt;p&gt;</code> element of their parent</td>
+</tr>
+<tr>
+<td>:last-child</td>
+<td>$(“p:last-child”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the <strong>last</strong> <strong>child</strong> of their parent</td>
+</tr>
+<tr>
+<td>:last-of-type</td>
+<td>$(“p:last-of-type”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the <strong>last</strong> <code>&lt;p&gt;</code> element of their parent</td>
+</tr>
+<tr>
+<td>:nth-child(n)</td>
+<td>$(“p:nth-child(2)”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the 2nd <strong>child</strong> of their parent</td>
+</tr>
+<tr>
+<td>:nth-last-child(n)</td>
+<td>$(“p:nth-last-child(2)”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the 2nd <strong>child</strong> of their parent, counting from the last child</td>
+</tr>
+<tr>
+<td>:nth-of-type(n)</td>
+<td>$(“p:nth-of-type(2)”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the 2nd <code>&lt;p&gt;</code> <strong>element</strong> of their parent</td>
+</tr>
+<tr>
+<td>:nth-last-of-type(n)</td>
+<td>$(“p:nth-last-of-type(2)”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the 2nd <code>&lt;p&gt;</code> <strong>element</strong> of their parent, counting from the last child</td>
+</tr>
+<tr>
+<td>:only-child</td>
+<td>$(“p:only-child”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the <strong>only</strong> child of their parent</td>
+</tr>
+<tr>
+<td>:only-of-type</td>
+<td>$(“p:only-of-type”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are the only child, of its <strong>type</strong>, of their parent</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>parent &gt; child</td>
+<td>$(“div &gt; p”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are a <strong>direct</strong> <strong>child</strong> of a <code>&lt;div&gt;</code> element</td>
+</tr>
+<tr>
+<td>parent descendant</td>
+<td>$(“div p”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are <strong>descendants</strong> of a <code>&lt;div&gt;</code> element</td>
+</tr>
+<tr>
+<td>element + next</td>
+<td>$(“div + p”)</td>
+<td>The <code>&lt;p&gt;</code> element that are <strong>next</strong> to each <code>&lt;div&gt;</code> elements</td>
+</tr>
+<tr>
+<td>element ~ siblings</td>
+<td>$(“div ~ p”)</td>
+<td>All <code>&lt;p&gt;</code> elements that are <strong>siblings</strong> of a <code>&lt;div&gt;</code> element</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>:eq(index)</td>
+<td>$(“ul li:eq(3)”)</td>
+<td>The fourth element in a list (index starts at <strong>0</strong>)</td>
+</tr>
+<tr>
+<td>:gt(no)</td>
+<td>$(“ul li:gt(3)”)</td>
+<td>List elements with an index <strong>greater</strong> than 3</td>
+</tr>
+<tr>
+<td>:lt(no)</td>
+<td>$(“ul li:lt(3)”)</td>
+<td>List elements with an index <strong>less</strong> than 3</td>
+</tr>
+<tr>
+<td>:not(selector)</td>
+<td>$(“input:not(:empty)”)</td>
+<td>All input elements that are <strong>not</strong> empty</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>:header</td>
+<td>$(“:header”)</td>
+<td>All header elements <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> …</td>
+</tr>
+<tr>
+<td>:animated</td>
+<td>$(“:animated”)</td>
+<td>All animated elements</td>
+</tr>
+<tr>
+<td>:focus</td>
+<td>$(“:focus”)</td>
+<td>The element that currently has focus</td>
+</tr>
+<tr>
+<td>:contains(text)</td>
+<td>$(“:contains(‘Hello’)”)</td>
+<td>All elements which contains the text “Hello”</td>
+</tr>
+<tr>
+<td>:has(selector)</td>
+<td>$(“div:has(p)”)</td>
+<td>All <code>&lt;div&gt;</code> elements that have a <code>&lt;p&gt;</code> element</td>
+</tr>
+<tr>
+<td>:empty</td>
+<td>$(“:empty”)</td>
+<td>All elements that are empty</td>
+</tr>
+<tr>
+<td>:parent</td>
+<td>$(“:parent”)</td>
+<td>All elements that are a parent of another element</td>
+</tr>
+<tr>
+<td>:hidden</td>
+<td>$(“p:hidden”)</td>
+<td>All hidden <code>&lt;p&gt;</code> elements</td>
+</tr>
+<tr>
+<td>:visible</td>
+<td>$(“table:visible”)</td>
+<td>All visible tables</td>
+</tr>
+<tr>
+<td>:root</td>
+<td>$(“:root”)</td>
+<td>The document’s root element</td>
+</tr>
+<tr>
+<td>:lang(language)</td>
+<td>$(“p:lang(de)”)</td>
+<td>All <code>&lt;p&gt;</code> elements with a lang attribute value starting with “de”</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>[attribute]</td>
+<td>$(“[href]”)</td>
+<td>All elements with a href attribute</td>
+</tr>
+<tr>
+<td>[attribute=value]</td>
+<td>$(“[href=’default.htm’]”)</td>
+<td>All elements with a href attribute value equal to “default.htm”</td>
+</tr>
+<tr>
+<td>[attribute!=value]</td>
+<td>$(“[href!=’default.htm’]”)</td>
+<td>All elements with a href attribute value not equal to “default.htm”</td>
+</tr>
+<tr>
+<td>[attribute$=value]</td>
+<td>$(“[href$=’.jpg’]”)</td>
+<td>All elements with a href attribute value ending with “.jpg”</td>
+</tr>
+<tr>
+<td>[attribute丨=value]</td>
+<td>$(“[title丨=’Tomorrow’]”)</td>
+<td>All elements with a title attribute value equal to ‘Tomorrow’, or starting with ‘Tomorrow’ followed by a hyphen<code>-</code></td>
+</tr>
+<tr>
+<td>[attribute^=value]</td>
+<td>$(“[title^=’Tom’]”)</td>
+<td>All elements with a title attribute value starting with “Tom”</td>
+</tr>
+<tr>
+<td>[attribute~=value]</td>
+<td>$(“[title~=’hello’]”)</td>
+<td>All elements with a title attribute value containing the <strong>specific</strong> word “hello”</td>
+</tr>
+<tr>
+<td>[attribute*=value]</td>
+<td>$(“[title*=’hello’]”)</td>
+<td>All elements with a title attribute value containing the word “hello”</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>:input</td>
+<td>$(“:input”)</td>
+<td>All input elements</td>
+</tr>
+<tr>
+<td>:text</td>
+<td>$(“:text”)</td>
+<td>All input elements with type=”text”</td>
+</tr>
+<tr>
+<td>:password</td>
+<td>$(“:password”)</td>
+<td>All input elements with type=”password”</td>
+</tr>
+<tr>
+<td>:radio</td>
+<td>$(“:radio”)</td>
+<td>All input elements with type=”radio”</td>
+</tr>
+<tr>
+<td>:checkbox</td>
+<td>$(“:checkbox”)</td>
+<td>All input elements with type=”checkbox”</td>
+</tr>
+<tr>
+<td>:submit</td>
+<td>$(“:submit”)</td>
+<td>All input elements with type=”submit”</td>
+</tr>
+<tr>
+<td>:reset</td>
+<td>$(“:reset”)</td>
+<td>All input elements with type=”reset”</td>
+</tr>
+<tr>
+<td>:button</td>
+<td>$(“:button”)</td>
+<td>All input elements with type=”button”</td>
+</tr>
+<tr>
+<td>:image</td>
+<td>$(“:image”)</td>
+<td>All input elements with type=”image”</td>
+</tr>
+<tr>
+<td>:file</td>
+<td>$(“:file”)</td>
+<td>All input elements with type=”file”</td>
+</tr>
+<tr>
+<td>:enabled</td>
+<td>$(“:enabled”)</td>
+<td>All enabled input elements</td>
+</tr>
+<tr>
+<td>:disabled</td>
+<td>$(“:disabled”)</td>
+<td>All disabled input elements</td>
+</tr>
+<tr>
+<td>:selected</td>
+<td>$(“:selected”)</td>
+<td>All selected input elements</td>
+</tr>
+<tr>
+<td>:checked</td>
+<td>$(“:checked”)</td>
+<td>All checked input elements</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<p>[More jQuery Selectors Reference][selector]</p>
+<h2 id="jQuery-Events"><a href="#jQuery-Events" class="headerlink" title="jQuery Events"></a>jQuery Events</h2><h3 id="Event-Reference"><a href="#Event-Reference" class="headerlink" title="Event Reference"></a>Event Reference</h3><table>
+<thead>
+<tr>
+<th>Method / Property</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Document Events</em></td>
+<td></td>
+</tr>
+<tr>
+<td>focus()</td>
+<td>Attaches/Triggers the focus event</td>
+</tr>
+<tr>
+<td>blur()</td>
+<td>Attaches/Triggers the blur event</td>
+</tr>
+<tr>
+<td>focusin()</td>
+<td>Attaches an event when an element (or any elements inside it) gets focus. </td>
+</tr>
+<tr>
+<td>focusout()</td>
+<td>Attaches an event when an element (or any elements inside it) loses focus.</td>
+</tr>
+<tr>
+<td>off()</td>
+<td>Removes event handlers attached with the on() method</td>
+</tr>
+<tr>
+<td>one()</td>
+<td>Adds one or more event handlers to selected elements. This handler can only be triggered once per element</td>
+</tr>
+<tr>
+<td>$.proxy()</td>
+<td>Takes an existing <em>function</em> and returns a new one with a particular context</td>
+</tr>
+<tr>
+<td>ready()</td>
+<td>Specifies a function to execute when the DOM is fully loaded</td>
+</tr>
+<tr>
+<td>resize()</td>
+<td>Attaches/Triggers the resize event</td>
+</tr>
+<tr>
+<td>scroll()</td>
+<td>Attaches/Triggers the scroll event</td>
+</tr>
+<tr>
+<td>select()</td>
+<td>Attaches/Triggers the select event</td>
+</tr>
+<tr>
+<td>submit()</td>
+<td>Attaches/Triggers the submit event</td>
+</tr>
+<tr>
+<td>trigger()</td>
+<td>Triggers all events bound to the selected elements</td>
+</tr>
+<tr>
+<td>triggerHandler()</td>
+<td>Triggers all functions bound to a specified event for the selected elements, <br>triggerHandler() will <em>prevent</em> the default action.</td>
+</tr>
+<tr>
+<td>unbind()</td>
+<td>Removes an added event handler from selected elements</td>
+</tr>
+<tr>
+<td>undelegate()</td>
+<td>Removes an event handler to selected elements, now or in the future</td>
+</tr>
+<tr>
+<td>unload()</td>
+<td><em>Deprecated in version 1.8</em>. Attaches an event handler to the unload event</td>
+</tr>
+<tr>
+<td><em>Mouse Events</em></td>
+<td></td>
+</tr>
+<tr>
+<td>click()</td>
+<td>Attaches/Triggers the click event</td>
+</tr>
+<tr>
+<td>dblclick()</td>
+<td>Attaches/Triggers the double click event</td>
+</tr>
+<tr>
+<td>hover()</td>
+<td>Attaches two event handlers to the hover event</td>
+</tr>
+<tr>
+<td>mousedown()</td>
+<td>Attaches/Triggers the mousedown event</td>
+</tr>
+<tr>
+<td>mouseenter()</td>
+<td>Attaches/Triggers the mouseenter event</td>
+</tr>
+<tr>
+<td>mouseleave()</td>
+<td>Attaches/Triggers the mouseleave event</td>
+</tr>
+<tr>
+<td>mousemove()</td>
+<td>Attaches/Triggers the mousemove event</td>
+</tr>
+<tr>
+<td>mouseout()</td>
+<td>Attaches/Triggers the mouseout event</td>
+</tr>
+<tr>
+<td>mouseover()</td>
+<td>Attaches/Triggers the mouseover event</td>
+</tr>
+<tr>
+<td>mouseup()</td>
+<td>Attaches/Triggers the mouseup event</td>
+</tr>
+<tr>
+<td><em>Keyboard Events</em></td>
+<td></td>
+</tr>
+<tr>
+<td>change()</td>
+<td>Attaches/Triggers the change event</td>
+</tr>
+<tr>
+<td>keydown()</td>
+<td>Attaches/Triggers the keydown event</td>
+</tr>
+<tr>
+<td>keypress()</td>
+<td>Attaches/Triggers the keypress event</td>
+</tr>
+<tr>
+<td>keyup()</td>
+<td>Attaches/Triggers the keyup event</td>
+</tr>
+<tr>
+<td><em>Property</em></td>
+<td></td>
+</tr>
+<tr>
+<td>event.currentTarget</td>
+<td>The current DOM element within the event bubbling phase</td>
+</tr>
+<tr>
+<td>[event.data][eventData]</td>
+<td>Contains the optional data passed to an event method when the current executing handler is bound</td>
+</tr>
+<tr>
+<td>[on()][methodOn]</td>
+<td>Attaches event handlers to elements, use <code>on()</code> instead of <code>bind()</code> or <code>delegate()</code></td>
+</tr>
+<tr>
+<td>event.delegateTarget</td>
+<td>Returns the element where the currently-called jQuery event handler was attached</td>
+</tr>
+<tr>
+<td>event.preventDefault()</td>
+<td>Prevents the default action of the event</td>
+</tr>
+<tr>
+<td>event.isDefaultPrevented()</td>
+<td>Returns whether event.preventDefault() was called for the event object</td>
+</tr>
+<tr>
+<td>event.stopImmediatePropagation()</td>
+<td>Prevents other event handlers from being called</td>
+</tr>
+<tr>
+<td>event.isImmediatePropagationStopped()</td>
+<td>Returns whether event.stopImmediatePropagation() was called for the event object</td>
+</tr>
+<tr>
+<td>event.stopPropagation()</td>
+<td>Prevents the event from bubbling up the DOM tree, preventing any parent handlers from being notified of the event</td>
+</tr>
+<tr>
+<td>event.isPropagationStopped()</td>
+<td>Returns whether event.stopPropagation() was called for the event object</td>
+</tr>
+<tr>
+<td>[event.namespace][eventNamespace]</td>
+<td>Returns the namespace specified when the event was triggered</td>
+</tr>
+<tr>
+<td>event.pageX</td>
+<td>Returns the mouse position relative to the left edge of the document</td>
+</tr>
+<tr>
+<td>event.pageY</td>
+<td>Returns the mouse position relative to the top edge of the document</td>
+</tr>
+<tr>
+<td>event.relatedTarget</td>
+<td>Returns which element being entered or exited on mouse movement.</td>
+</tr>
+<tr>
+<td>event.result</td>
+<td>Contains the last/previous value returned by an event handler triggered by the specified event</td>
+</tr>
+<tr>
+<td>event.target</td>
+<td>Returns which DOM element triggered the event</td>
+</tr>
+<tr>
+<td>event.timeStamp</td>
+<td>Returns the number of milliseconds since January 1, 1970, when the event is triggered</td>
+</tr>
+<tr>
+<td>event.type</td>
+<td>Returns which event type was triggered</td>
+</tr>
+<tr>
+<td>event.which</td>
+<td>Returns which keyboard key or mouse button was pressed for the event</td>
+</tr>
+<tr>
+<td><em>Removed</em></td>
+<td></td>
+</tr>
+<tr>
+<td>die()</td>
+<td><em>Removed in version 1.9.</em> Removes all event handlers added with the live() method</td>
+</tr>
+<tr>
+<td>error()</td>
+<td><em>Deprecated in version 1.8</em>. Attaches/Triggers the error event</td>
+</tr>
+<tr>
+<td>live()</td>
+<td><em>Removed in version 1.9</em>. Adds one or more event handlers to current, or future, selected elements</td>
+</tr>
+<tr>
+<td>load()</td>
+<td><em>Deprecated in version 1.8</em>. Attaches an event handler to the load event</td>
+</tr>
+<tr>
+<td>toggle()</td>
+<td><em>Removed in version 1.9</em>. Attaches two or more functions to toggle between for the click event</td>
+</tr>
+</tbody>
+</table>
+<p><a id="eventData"><strong>The event.data Property</strong></a></p>
+<p><a id="eventDelegateTarget"><strong>The event.delegateTarget Property</strong></a></p>
+<p><a id="stopPropagation"><strong>The event.stopPropagation Property</strong></a></p>
+<p>多重 event 触发，只触发 stopPropagation 标记的动作。</p>
+<p><a id="evnetNamespace"><strong>The event.namespace Property</strong></a></p>
+<p>[More jQuery Events Reference][events]</p>
+<h3 id="Attaches-an-event-handler"><a href="#Attaches-an-event-handler" class="headerlink" title="Attaches an event handler"></a>Attaches an event handler</h3><h3 id="Attaches-more-event-handler-on-Method"><a href="#Attaches-more-event-handler-on-Method" class="headerlink" title="Attaches more event handler - on( ) Method"></a><a id="methodOn">Attaches more event handler - on( ) Method</a></h3><p>Syntax:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span>event<span class="token punctuation">,</span>childSelector<span class="token punctuation">,</span>data<span class="token punctuation">,</span><span class="token keyword">function</span><span class="token punctuation">,</span>map<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>Example:</p>
+<pre class="line-numbers language-javascript"><code class="language-javascript">  <span class="token comment" spellcheck="true">// one method</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token string">"click"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+      <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  Try it yourself »
+  Attach multiple event handlers to a <span class="token operator">&lt;</span>p<span class="token operator">></span> element<span class="token punctuation">:</span>
+
+  <span class="token comment" spellcheck="true">// more methods</span>
+  <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">on</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      mouseenter<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"background-color"</span><span class="token punctuation">,</span> <span class="token string">"lightgray"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+      mouseleave<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"background-color"</span><span class="token punctuation">,</span> <span class="token string">"lightblue"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span> 
+      click<span class="token punctuation">:</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+          <span class="token function">$</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"background-color"</span><span class="token punctuation">,</span> <span class="token string">"yellow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">}</span> 
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="jQuery-Effects"><a href="#jQuery-Effects" class="headerlink" title="jQuery Effects"></a>jQuery Effects</h2><ul>
+<li>Syntax:<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">effect</span><span class="token punctuation">(</span>speed<span class="token punctuation">,</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+</li>
+<li>Speed Value: “slow”, “fast”, milliseconds.</li>
+<li>Callback function is executed after the current effect is finished.<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"buttom"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"p"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">hide</span><span class="token punctuation">(</span><span class="token string">"slow"</span><span class="token punctuation">,</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">"The paragraph is now hidden."</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Method Chaining<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"#p1"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">css</span><span class="token punctuation">(</span><span class="token string">"color"</span><span class="token punctuation">,</span> <span class="token string">"red"</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">slideUp</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span>
+    <span class="token punctuation">.</span><span class="token function">slideDown</span><span class="token punctuation">(</span><span class="token number">2000</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>hide()</td>
+<td>Hides the selected elements</td>
+</tr>
+<tr>
+<td>show()</td>
+<td>Shows the selected elements</td>
+</tr>
+<tr>
+<td>toggle()</td>
+<td>Toggles between the hide() and show() methods</td>
+</tr>
+<tr>
+<td>fadeIn()</td>
+<td>Fades in the selected elements</td>
+</tr>
+<tr>
+<td>fadeOut()</td>
+<td>Fades out the selected elements</td>
+</tr>
+<tr>
+<td>fadeTo()</td>
+<td>Fades in/out the selected elements to a given opacity, fadeTo(speed,opacity,callback);</td>
+</tr>
+<tr>
+<td>fadeToggle()</td>
+<td>Toggles between the fadeIn() and fadeOut() methods</td>
+</tr>
+<tr>
+<td>slideDown()</td>
+<td>Slides-down (shows) the selected elements</td>
+</tr>
+<tr>
+<td>slideUp()</td>
+<td>Slides-up (hides) the selected elements</td>
+</tr>
+<tr>
+<td>slideToggle()</td>
+<td>Toggles between the slideUp() and slideDown() methods</td>
+</tr>
+<tr>
+<td>[animate()][animate]</td>
+<td>Runs a custom animation on the selected elements</td>
+</tr>
+<tr>
+<td>stop()</td>
+<td>Stops the currently running animation for the selected elements, <br>stop(stopAll, goToEnd);</td>
+</tr>
+<tr>
+<td>finish()</td>
+<td>Stops, removes and completes all queued animations for the selected elements</td>
+</tr>
+<tr>
+<td>queue()</td>
+<td>Shows the queued functions on the selected elements</td>
+</tr>
+<tr>
+<td>clearQueue()</td>
+<td>Removes all remaining queued functions from the selected elements</td>
+</tr>
+<tr>
+<td>delay()</td>
+<td>Sets a delay for all queued functions on the selected elements</td>
+</tr>
+<tr>
+<td>dequeue()</td>
+<td>Removes the next function from the queue, and then executes the function</td>
+</tr>
+</tbody>
+</table>
+<p>[jQuery Effect Methods][effect]</p>
+<p><a id="animate"><strong>The Animation Effect</strong></a></p>
+<ul>
+<li>Syntax:<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span>selector<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>params<span class="token punctuation">}</span><span class="token punctuation">,</span>speed<span class="token punctuation">,</span>callback<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ul>
+<li>By default, all HTML elements have a static position, remember to set the position property before before moved animation.</li>
+<li>All property names must be camel-cased, e.g. paddingLeft, marginRight.</li>
+<li>If you want to animate color, you need to download the [Color Animations Plugin][colorAnimations].</li>
+</ul>
+</li>
+<li>Multiple Properties<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"buttom"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        left<span class="token punctuation">:</span> <span class="token string">'250px'</span><span class="token punctuation">,</span>
+        opacity<span class="token punctuation">:</span> <span class="token string">'0.5'</span><span class="token punctuation">,</span>
+        height<span class="token punctuation">:</span> <span class="token string">'150px'</span><span class="token punctuation">,</span> 
+        width<span class="token punctuation">:</span> <span class="token string">'150px'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Relative Values by <code>+=</code> or <code>-=</code><pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"buttom"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        left<span class="token punctuation">:</span> <span class="token string">'250px'</span><span class="token punctuation">,</span>
+        height<span class="token punctuation">:</span> <span class="token string">'+=150px'</span><span class="token punctuation">,</span>
+        width<span class="token punctuation">:</span> <span class="token string">'+=150px'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Pre-defined Values as “slow”, “hide”, or “toggle”<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"buttom"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+        height<span class="token punctuation">:</span> <span class="token string">'toggle'</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+<li>Queue Functionality one by one<pre class="line-numbers language-javascript"><code class="language-javascript"><span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"button"</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">click</span><span class="token punctuation">(</span><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+    <span class="token keyword">var</span> div <span class="token operator">=</span> <span class="token function">$</span><span class="token punctuation">(</span><span class="token string">"div"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    div<span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>height<span class="token punctuation">:</span> <span class="token string">'300px'</span><span class="token punctuation">,</span> opacity<span class="token punctuation">:</span> <span class="token string">'0.4'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"slow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span> 
+    div<span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>width<span class="token punctuation">:</span> <span class="token string">'300px'</span><span class="token punctuation">,</span> opacity<span class="token punctuation">:</span> <span class="token string">'0.8'</span><span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token string">"slow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    div<span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>heigh<span class="token punctuation">:</span> <span class="token string">'100px'</span><span class="token punctuation">,</span> opacity<span class="token punctuation">:</span> <span class="token string">'0.4'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"slow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    div<span class="token punctuation">.</span><span class="token function">animate</span><span class="token punctuation">(</span><span class="token punctuation">{</span>widht<span class="token punctuation">:</span> <span class="token string">'100px'</span><span class="token punctuation">,</span> opacity<span class="token punctuation">:</span> <span class="token string">'0.8'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token string">"slow"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+</li>
+</ul>
+<h3 id="Callback-Functions"><a href="#Callback-Functions" class="headerlink" title="Callback Functions"></a>Callback Functions</h3><ul>
+<li>A callback function is executed after the current effect is 100% finished.<br>JavaScript statements are executed line by line. However, with effects, the next line of code can be run even though the effect is not finished. This can create errors.<br>To prevent this, you can create a callback function.<br>A callback function is executed after the current effect is finished.<br>Typical syntax:</li>
+</ul>
+<h3 id="Chaining"><a href="#Chaining" class="headerlink" title="Chaining"></a>Chaining</h3><ul>
+<li>Chaining allows us to run multiple jQuery methods (on the same element) within a single statement.</li>
+<li>To chain an action, you simply append the action to the previous action.</li>
+<li>This way, browsers do not have to find the same element(s) more than once.</li>
+</ul>
+<p><strong>Too Long Line</strong><br>When chaining, the line of code could become quite long. However, jQuery is <strong>not</strong> very strict on the syntax; you can format it like you want, including line breaks and indentations.</p>
+<p>alert(“Text: “ + $(“#test”).text());<br>alert(“HTML: “ + $(“#test”).html());<br>alert(“Value: “ +$(“test”).val());<br>alert($(“#test”).attr(“href”));</p>
+<p>$(“#btn1”).click(function(){<br>    $(“#test1”).text(function(i, origText){<br>        return “Old text: “ + origText + “ New text: Hello world!<br>        (index: “ + i + “)”;<br>    });<br>});</p>
+<p>$(“#btn2”).click(function(){<br>    $(“#test2”).html(function(i, origText){<br>        return “Old html: “ + origText + “ New html: Hello <b>world!</b><br>        (index: “ + i + “)”;<br>    });<br>});</p>
+<p>$(“button”).click(function(){<br>    $(“#w3s”).attr({<br>        “href” : “http://www.w3schools.com/jquery”,<br>        “title” : “W3Schools jQuery Tutorial”<br>    });<br>});</p>
+<p>$(“button”).click(function(){<br>    $(“#w3s”).attr(“href”, function(i, origValue){<br>        return origValue + “/jquery”;<br>    });<br>});</p>
+<p>function appendText() {<br>    var txt1 = “</p><p>Text.</p>“;               // Create element with HTML<br>    var txt2 = $(“<p></p>“).text(“Text.”);   // Create with jQuery<br>    var txt3 = document.createElement(“p”);  // Create with DOM<br>    txt3.innerHTML = “Text.”;<br>    $(“p”).append(txt1, txt2, txt3);         // Append the new elements<br>}<p></p>
+<p>$(“p”).remove(“.test”);<br>$(“p”).remove(“.test, .demo”);</p>
+<p>css({“propertyname”:”value”,”propertyname”:”value”,…});<br>$(“p”).css({“background-color”: “yellow”, “font-size”: “200%”})</p>
+<p>$(selector).load(URL,data,callback);</p>
+<p>$(“button”).click(function(){<br>    $(“#div1”).load(“demo_test.txt #p1”, function(responseTxt, statusTxt, xhr){<br>        if(statusTxt == “success”)<br>            alert(“External content loaded successfully!”);<br>        if(statusTxt == “error”)<br>            alert(“Error: “ + xhr.status + “: “ + xhr.statusText);<br>    });<br>});</p>
+<p>$.get(URL,callback);</p>
+<p>$(“button”).click(function(){<br>    $.get(“demo_test.asp”, function(data, status){<br>        alert(“Data: “ + data + “\nStatus: “ + status);<br>    });<br>});</p>
+<p>$.post(URL,data,callback);</p>
+<p>$(“button”).click(function(){<br>    $.post(“demo_test_post.asp”,<br>    {<br>        name: “Donald Duck”,<br>        city: “Duckburg”<br>    },<br>    function(data, status){<br>        alert(“Data: “ + data + “\nStatus: “ + status);<br>    });<br>});</p>
+<p>$.noConflict();<br>jQuery(document).ready(function(){<br>    jQuery(“button”).click(function(){<br>        jQuery(“p”).text(“jQuery is still working!”);<br>    });<br>});</p>
+<p>var jq = $.noConflict();<br>jq(document).ready(function(){<br>    jq(“button”).click(function(){<br>        jq(“p”).text(“jQuery is still working!”);<br>    });<br>});</p>
+<p>$.noConflict();<br>jQuery(document).ready(function($){<br>    $(“button”).click(function(){<br>        $(“p”).text(“jQuery is still working!”);<br>    });<br>});</p>
+
+    
+
+    
+</div>
+
+
+                
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用 DISQUS -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/jQuery/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://shanlanmi.github.io/zsl-blog/2016/07/21/jQuery/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+<script type="text/ls-javascript" id="disqus-thread-script">
+    queue.offer(function() {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document;
+                var s = d.createElement('script');
+                s.src = '//shanlanmi.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', + new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        });
+</script>
+
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    <!-- Prev Nav -->
+    
+        <a href="/2016/07/21/集成测试-Angular-protractor/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/07/21/Some-Usefule-Event/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+
+        </div>
+    </div>
+
+
+
+                    
+                        <!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay"></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored sidebar-fixed-left" role="navigation">
+    <div id="sidebar-main">
+        <!-- Sidebar Header -->
+        <div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+        <i class="material-icons">clear_all</i>
+        <span class="mdl-button__ripple-container">
+            <span class="mdl-ripple">
+            </span>
+        </span>
+    </button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="张圣兰's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        zsl9033dev@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+
+        <!-- Sidebar Navigation  -->
+        <ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+            
+                <li>
+                    <a href="mailto:zsl9033@gmail.com" target="_blank" title="Email Me">
+                        
+                            <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    
+        <li id="sidebar-first-li">
+            <a href="/">
+                
+                    <i class="material-icons sidebar-material-icons">home</i>
+                
+                主页
+            </a>
+        </li>
+        
+    
+
+    <!-- Archives  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">inbox</i>
+                
+                    归档
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+            <li>
+                <a class="sidebar_archives-link" href="/archives/2017/07/">七月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/06/">六月 2017<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/05/">五月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/04/">四月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/03/">三月 2017<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/02/">二月 2017<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2017/01/">一月 2017<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/12/">十二月 2016<span class="sidebar_archives-count">25</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/11/">十一月 2016<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/10/">十月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/09/">九月 2016<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/08/">八月 2016<span class="sidebar_archives-count">9</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/07/">七月 2016<span class="sidebar_archives-count">88</span></a></li><li><a class="sidebar_archives-link" href="/archives/1904/01/">一月 1904<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Categories  -->
+    
+        <li class="dropdown">
+            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+                
+                    <i class="material-icons sidebar-material-icons">chrome_reader_mode</i>
+                
+                分类
+                <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+                <li>
+                <a class="sidebar_archives-link" href="/categories/AWS/">AWS<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/AngularJS/">AngularJS<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Blog/">Blog<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/categories/CSS/">CSS<span class="sidebar_archives-count">22</span></a></li><li><a class="sidebar_archives-link" href="/categories/Database/">Database<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/categories/DevDependent/">DevDependent<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/Editor/">Editor<span class="sidebar_archives-count">6</span></a></li><li><a class="sidebar_archives-link" href="/categories/HTML/">HTML<span class="sidebar_archives-count">8</span></a></li><li><a class="sidebar_archives-link" href="/categories/JavaScirpt/">JavaScirpt<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Learn/">Learn<span class="sidebar_archives-count">2</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/">Mac<span class="sidebar_archives-count">21</span></a></li><li><a class="sidebar_archives-link" href="/categories/Mac/ShortKey/">ShortKey<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/categories/NodeJS/">NodeJS<span class="sidebar_archives-count">12</span></a></li><li><a class="sidebar_archives-link" href="/categories/Productivity/">Productivity<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Project/">Project<span class="sidebar_archives-count">11</span></a></li><li><a class="sidebar_archives-link" href="/categories/Python/">Python<span class="sidebar_archives-count">1</span></a></li><li><a class="sidebar_archives-link" href="/categories/Request/">Request<span class="sidebar_archives-count">3</span></a></li><li><a class="sidebar_archives-link" href="/categories/Shell/">Shell<span class="sidebar_archives-count">16</span></a></li><li><a class="sidebar_archives-link" href="/categories/Test/">Test<span class="sidebar_archives-count">2</span></a>
+            </ul>
+        </li>
+        
+    
+
+    <!-- Pages  -->
+    
+
+    <!-- Article Number  -->
+    
+</ul>
+
+
+        <!-- Sidebar Footer -->
+        <!--
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持和动力。 :)
+-->
+
+<!-- Sidebar Divider -->
+
+    <div class="sidebar-divider"></div>
+
+
+<!-- Theme Material -->
+
+    <a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+        <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+            主题 - Material
+            <span class="sidebar-badge badge-circle">i</span>
+        </div>
+    </a>
+
+
+<!-- Help & Support -->
+<!--
+
+-->
+
+<!-- Feedback -->
+<!--
+
+-->
+
+<!-- About Theme -->
+<!--
+
+-->
+
+    </div>
+
+    <!-- Sidebar Image -->
+    
+
+</aside>
+
+                    
+
+                    
                         <!-- Footer Top Button -->
-                        <%- partial('_partial/footer_top')  %>
-                    <% } %>
+                        <div id="back-to-top" class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 
-                    <%- partial('_partial/footer') %>
+                    
 
-                    <%- partial('_partial/import_js') %>
+                    <!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+    
+        <!-- Paradox Footer Left Section -->
+        <div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+
+    <!-- Facebook -->
+    
+
+    <!-- Google + -->
+    
+
+    <!-- Weibo -->
+    
+
+    <!-- Instagram -->
+    
+
+    <!-- Tumblr -->
+    
+
+    <!-- Github -->
+    
+        <a href="http://github.com/shanlanmi" target="_blank">
+            <button class="mdl-mini-footer--social-btn social-btn footer-sns-github">
+                <span class="visuallyhidden">Github</span>
+            </button><!--
+     --></a>
+    
+
+    <!-- LinkedIn -->
+    
+
+    <!-- Zhihu -->
+    
+
+    <!-- Bilibili -->
+    
+
+    <!-- Telegram -->
+    
+</div>
+
+
+        <!--Copyright-->
+        <div id="copyright">
+            Copyright&nbsp;©<script type="text/javascript">var fd = new Date();document.write("&nbsp;" + fd.getFullYear() + "&nbsp;");</script>张圣兰
+        </div>
+
+        <!-- Paradox Footer Right Section -->
+
+        <!--
+        I am glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+        It will not impact the appearance and can give developers a lot of support :)
+
+        很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+        它不会影响美观并可以给开发者很大的支持。 :)
+        -->
+
+        <div class="mdl-mini-footer--right-section">
+            <div>
+                <div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+                <div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+            </div>
+        </div>
+    
+</footer>
+
+
+                    <!-- Import File -->
+
+
+    <script>lsloader.load("js/lazyload.min.js","/js/lazyload.min.js?1BcfzuNXqV+ntF6gq+5X3Q==")</script>
+    <script>lsloader.load("js/js.min.js","/js/js.min.js?oAl/+lvaqTFV31JXTmbrNA==")</script>
+
+
+
+    <script>lsloader.load("js/nprogress.js","/js/nprogress.js?pl3Qhb9lvqR1FlyLUna1Yw==")</script>
+
+
+<script type="text/ls-javascript" id="NProgress-script">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    $('#nprogress .bar').css({
+        'background': '#29d'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #29d, 0 0 15px #29d'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#29d',
+        'border-left-color': '#29d'
+    });
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+    
+        <script>lsloader.load("js/smoothscroll.js","/js/smoothscroll.js?lOy/ACj5suSNi7ZVFVbpFQ==")</script>
+    
+
+
+
+
+
+
+
+   <!-- 使用 DISQUS js 代码 -->
+<script id="dsq-count-scr" src="//shanlanmi.disqus.com/count.js" async></script>
+
+
+
+
+
+<!-- UC Browser Compatible -->
+<script>
+	var agent = navigator.userAgent.toLowerCase();
+	if(agent.indexOf('ucbrowser')>0) {
+		document.write('<link rel="stylesheet" href="/css/uc.css">');
+	   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+	}
+</script>
+
+<!-- Window Load-->
+<script type="text/ls-javascript" id="window-load">
+    $(window).on('load', function() {
+        // Post_Toc parent position fixed
+        $('.post-toc-wrap').parent('.mdl-menu__container').css('position', 'fixed');
+    });
+</script>
+
+<!-- MathJax Load-->
+
+<script type="text/ls-javascript" id="lazy-load">
+    // Offer LazyLoad
+    queue.offer(function(){
+        $('.lazy').lazyload({
+            effect : 'show'
+        });
+    });
+
+    // Start Queue
+    $(document).ready(function(){
+        setInterval(function(){
+            queue.execNext();
+        },200);
+    });
+</script>
+
+<!-- Bing Background -->
+
+
+<script>
+    (function(){
+        var scriptList = document.querySelectorAll('script[type="text/ls-javascript"]')
+
+        for (var i = 0; i < scriptList.length; ++i) {
+            var item = scriptList[i];
+            lsloader.runInlineScript(item.id,item.id);
+        }
+    })()
+console.log('\n %c © Material Theme | Version: 1.4.0 | https://github.com/viosey/hexo-theme-material %c \n', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-left-radius:5px;border-bottom-left-radius:5px;', 'color:#455a64;background:#e0e0e0;padding:5px 0;border-top-right-radius:5px;border-bottom-right-radius:5px;');
+</script>
+
                 </main>
             </div>
         </body>
-    <% } %>
+    
 </html>
