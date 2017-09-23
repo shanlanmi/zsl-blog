@@ -1,7 +1,7 @@
 ----
 title: Homebrew
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 之前 homebrew 稀里糊涂装好的，但是每次安装包都需要`sudo`，不然就提示`permission denied`，所以想重新安装下，顺带重新看看 brew 还有哪些命令。

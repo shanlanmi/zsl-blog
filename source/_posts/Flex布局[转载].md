@@ -1,7 +1,7 @@
 ----
 title: Flex布局[转载]
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - CSS
 ----
 ## Flex 布局教程：语法篇

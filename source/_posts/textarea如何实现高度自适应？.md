@@ -1,7 +1,7 @@
 ----
 title: textarea如何实现高度自适应？
 date: 2016-12-21 05:19:57
-categories:
+tags:
 - CSS
 ----
 ## 方法一：利用`contenteditable` 属性

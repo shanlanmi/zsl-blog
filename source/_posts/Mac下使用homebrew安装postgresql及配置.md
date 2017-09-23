@@ -1,7 +1,7 @@
 ----
 title: Mac下使用homebrew安装postgresql及配置
 date: 2017-01-03 20:16:15
-categories:
+tags:
 - DevDependent
 ----
 安装 postgreSql

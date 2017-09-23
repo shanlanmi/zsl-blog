@@ -1,7 +1,7 @@
 ----
 title: Chrome 启动项修改
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - Project
 ----
 ## Chrome 启动项修改方法

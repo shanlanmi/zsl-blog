@@ -1,7 +1,7 @@
 ----
 title: rm 排除指定文件的批量删除
 date: 2016-08-09 15:50:20
-categories:
+tags:
 - Shell
 ----
 ## rm 排除指定文件的批量删除

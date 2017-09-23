@@ -1,7 +1,7 @@
 ----
 title: Shell Scripts
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 # Shell Script概要

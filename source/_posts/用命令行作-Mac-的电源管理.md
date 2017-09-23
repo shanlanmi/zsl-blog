@@ -1,7 +1,7 @@
 ----
 title: 用命令行作 Mac 的电源管理
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 ### 常用命令

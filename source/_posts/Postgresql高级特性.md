@@ -1,7 +1,7 @@
 ----
 title: Postgresql高级特性
 date: 2017-01-19 17:32:53
-categories:
+tags:
 - Database
 ----
 ## 继承

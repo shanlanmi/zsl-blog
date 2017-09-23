@@ -1,7 +1,7 @@
 ----
 title: devtool
 date: 2016-10-31 15:36:00
-categories:
+tags:
 - NodeJS
 ----
 ## Install

@@ -1,7 +1,7 @@
 ----
 title: OSX下Caps Lock改键方案
 date: 2016-07-21 18:29:45
-categories:
+tags:
 - Mac
 ----
 ## OSX下Caps Lock改键方案

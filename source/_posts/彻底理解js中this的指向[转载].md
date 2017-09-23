@@ -1,7 +1,7 @@
 ----
 title: 彻底理解js中this的指向[转载]
 date: 2016-07-21 06:40:40
-categories:
+tags:
 - JavaScirpt
 ----
 彻底理解js中this的指向，不必硬背。

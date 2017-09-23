@@ -1,7 +1,7 @@
 ----
 title: Mac中的搜索神器Alfred
 date: 2016-07-21 18:25:51
-categories:
+tags:
 - Mac
 ----
 前言

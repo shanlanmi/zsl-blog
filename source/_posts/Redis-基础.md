@@ -1,8 +1,8 @@
 ----
 title: Redis 基础
 date: 2017-02-21 04:29:58
-categories:
-- DevDependent
+tags:
+- Database
 ----
 # Redis
 ## Redis vs Memcached

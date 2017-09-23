@@ -1,7 +1,7 @@
 ----
 title: loopback
 date: 2016-11-23 12:58:32
-categories:
+tags:
 - NodeJS
 ----
 ## slc

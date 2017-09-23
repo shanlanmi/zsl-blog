@@ -1,7 +1,7 @@
 ----
 title: vscode shortcut
 date: 2017-07-12 16:05:12
-categories:
+tags:
 - Editor
 ----
 # vscode shortkey
@@ -48,6 +48,7 @@ Short Key           | Feature
 `Opt+Left/Rgiht`    | 向前/向后
 `Shift+Opt+Up/Down` | 向上向下复制一行
 `(Shift)+F8`        | 跳转到上/下一个Error或Warning
+`Ctrl+Opt+n`        | 运行代码
 
 
 ### 查询与替换

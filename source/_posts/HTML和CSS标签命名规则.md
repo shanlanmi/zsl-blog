@@ -1,7 +1,7 @@
 ----
 title: HTML和CSS标签命名规则
 date: 2016-08-15 10:47:45
-categories:
+tags:
 - CSS
 ----
 

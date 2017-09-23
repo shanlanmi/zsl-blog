@@ -1,7 +1,7 @@
 ----
 title: shell脚本删除当前文件夹下所有文件
 date: 2016-07-26 11:35:47
-categories:
+tags:
 - Shell
 ----
 ## shell脚本删除当前文件夹下所有文件

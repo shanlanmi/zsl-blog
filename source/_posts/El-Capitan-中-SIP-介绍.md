@@ -1,7 +1,7 @@
 ----
 title: El Capitan 中 SIP 介绍
 date: 2016-08-19 05:43:32
-categories:
+tags:
 - Mac
 ----
 # El Capitan 中 SIP 介绍

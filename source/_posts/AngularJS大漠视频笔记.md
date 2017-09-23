@@ -1,7 +1,7 @@
 ----
 title: AngularJS大漠视频笔记
 date: 2016-07-21 12:44:34
-categories:
+tags:
 - AngularJS
 ----
 ## 第1章 快速上手

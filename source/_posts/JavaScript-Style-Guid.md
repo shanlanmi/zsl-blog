@@ -1,7 +1,7 @@
 ----
 title: JavaScript Style Guid
 date: 2016-07-21 06:40:40
-categories:
+tags:
 - JavaScirpt
 ----
 ## Strict Mode

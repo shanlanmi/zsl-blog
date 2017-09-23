@@ -1,7 +1,7 @@
 ----
 title: 验证 s3-uploader 的 policy 和 signature 是否正确的方法
 date: 2016-12-16 19:00:55
-categories:
+tags:
 - DevDependent
 ----
 ## 官方文档

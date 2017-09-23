@@ -1,7 +1,7 @@
 ----
 title: Ionic - Android 开发
 date: 2016-07-21 12:44:34
-categories:
+tags:
 - AngularJS
 ----
 ## 开发环境搭设

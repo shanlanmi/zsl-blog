@@ -1,7 +1,7 @@
 ----
 title: 在线求助man page和info page
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 ## man page

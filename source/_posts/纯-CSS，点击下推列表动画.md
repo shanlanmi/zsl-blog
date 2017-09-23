@@ -1,10 +1,9 @@
 ----
 title: 纯 CSS，点击下推列表动画
 date: 2016-10-26 17:47:20
-categories:
+tags:
 - CSS
 ----
-
 1. 采用 transition 属性来做。
 1. 动画对 opacity 属性有影响。
 1. 若想对 height 属性有影响，则需要 height 有固定值。

@@ -1,7 +1,7 @@
 ----
 title: Jekyll Blog 日常管理
 date: 2016-07-21 13:36:38
-categories:
+tags:
 - Blog
 ----
 ### 文件结构

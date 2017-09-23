@@ -1,7 +1,7 @@
 ----
 title: FFmpeg 常见用法整理
 date: 2016-07-21 18:25:51
-categories:
+tags:
 - Mac
 ----
 ## 基本语法

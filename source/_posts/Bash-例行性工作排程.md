@@ -1,7 +1,7 @@
 ----
 title: Bash 例行性工作排程
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 title: 例行性工作排程

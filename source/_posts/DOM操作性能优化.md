@@ -1,7 +1,7 @@
 ----
 title: DOM操作性能优化
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - JavaScirpt
 ----
 ## 为什么要减少 DOM 请求？

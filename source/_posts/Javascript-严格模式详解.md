@@ -1,7 +1,7 @@
 ----
 title: Javascript 严格模式详解
 date: 2017-01-25 14:11:05
-categories:
+tags:
 - JavaScirpt
 ----
 # Javascript 严格模式详解

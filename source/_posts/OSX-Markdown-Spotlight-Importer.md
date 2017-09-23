@@ -1,7 +1,7 @@
 ----
 title: OSX Markdown Spotlight Importer
 date: 2016-08-13 22:02:13
-categories:
+tags:
 - Mac
 ----
 # OSX Markdown Spotlight Importer

@@ -1,7 +1,7 @@
 ----
 title: Object 转化成 Array
 date: 2017-01-22 16:46:56
-categories:
+tags:
 - JavaScirpt
 ----
 - object to array

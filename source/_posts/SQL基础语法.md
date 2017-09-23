@@ -1,7 +1,7 @@
 ----
 title: SQL基础语法
 date: 2016-11-17 11:20:52
-categories:
+tags:
 - Database
 ----
 # 语法

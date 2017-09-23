@@ -1,7 +1,7 @@
 ----
 title: Vim中的正则表达式小结
 date: 2016-07-21 18:29:45
-categories:
+tags:
 - Editor
 ----
 ## 替换模式

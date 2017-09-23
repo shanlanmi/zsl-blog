@@ -1,7 +1,7 @@
 ----
 title: Mac 如何配置java_home环境变量
 date: 2016-12-09 14:17:15
-categories:
+tags:
 - DevDependent
 ----
 ## 如何在多个java版本间切换

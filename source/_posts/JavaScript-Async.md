@@ -1,7 +1,7 @@
 ----
 title: JavaScript Async
 date: 2016-08-12 09:27:54
-categories:
+tags:
 - Request
 ----
 ## Events

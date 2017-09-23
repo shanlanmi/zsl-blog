@@ -1,7 +1,7 @@
 ----
 title: Environment
 date: 2016-12-01 15:53:54
-categories:
+tags:
 - NodeJS
 ----
 1. Set environment

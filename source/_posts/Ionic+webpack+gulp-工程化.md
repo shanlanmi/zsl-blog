@@ -1,7 +1,7 @@
 ----
 title: Ionic+webpack+gulp 工程化
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - AngularJS
 ----
 ## 工程化思路

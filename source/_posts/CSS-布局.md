@@ -1,7 +1,7 @@
 ----
 title: CSS 布局
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - CSS
 ----
 ### width 和 height

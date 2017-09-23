@@ -1,7 +1,7 @@
 ----
 title: 多层嵌套的 ng-repeat 中，ng-show 的使用问题
 date: 2016-10-25 18:38:34
-categories:
+tags:
 - AngularJS
 ----
 因为在`ng-repeat`命令下会创建多个子 scope，而 `ng-show`的判断值必须挂在 controller 的`$scope`下，所以需要调用如下命令来把ng-repeat 的 `scope` 挂在 `$scope` 下：

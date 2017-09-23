@@ -1,7 +1,7 @@
 ----
 title: Github 常见开发情况处理
 date: 2016-12-23 21:32:02
-categories:
+tags:
 - Project
 ----
 ### 开发到一半,需要 merge 下远程的代码

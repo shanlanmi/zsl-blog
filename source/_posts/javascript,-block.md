@@ -1,7 +1,7 @@
 ----
 title: javascript, block
 date: 2017-02-23 14:57:08
-categories:
+tags:
 - JavaScirpt
 ----
 ```js

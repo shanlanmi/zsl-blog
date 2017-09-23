@@ -1,7 +1,7 @@
 ----
 title: BEM：CSS naming
 date: 2016-08-15 17:27:03
-categories:
+tags:
 - CSS
 ----
 ## BEM: CSS naming

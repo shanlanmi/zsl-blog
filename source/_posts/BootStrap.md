@@ -1,7 +1,7 @@
 ----
 title: BootStrap
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - CSS
 ----
 ## Basic Bootstrap Page

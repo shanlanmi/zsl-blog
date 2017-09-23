@@ -1,7 +1,7 @@
 ----
 title: font-size auto resize by width
 date: 2016-11-01 18:21:12
-categories:
+tags:
 - CSS
 ----
 

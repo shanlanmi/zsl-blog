@@ -1,7 +1,7 @@
 ----
 title: Play spotlight with markdown
 date: 2016-12-26 16:25:30
-categories:
+tags:
 - Mac
 ----
 

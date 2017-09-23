@@ -1,7 +1,7 @@
 ----
 title: CSS3 Checkboxes and Radio Buttons
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - CSS
 ----
 ### 先写 html

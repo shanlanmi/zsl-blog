@@ -1,7 +1,7 @@
 ----
 title: Github命令速查
 date: 2016-07-21 06:39:42
-categories:
+tags:
 - Project
 ----
 ### 几个名词

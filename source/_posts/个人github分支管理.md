@@ -1,8 +1,7 @@
 ----
 title: 个人github分支管理
 date: 2017-03-02 09:53:36
-top: true
-categories:
+tags:
 - Project
 ----
 Github的个人分支管理策略

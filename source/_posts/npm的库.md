@@ -1,7 +1,7 @@
 ----
 title: npm的库
 date: 2016-12-26 20:50:23
-categories:
+tags:
 - Project
 ----
 例子:

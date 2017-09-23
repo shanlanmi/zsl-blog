@@ -1,7 +1,7 @@
 ----
 title: npm taobao
 date: 2016-08-07 15:38:48
-categories:
+tags:
 - Project
 ----
 1. Install cnpm

@@ -1,7 +1,7 @@
 ----
 title: Hexo Blog 建设中遇到的 Bug
 date: 2016-07-21 13:36:38
-categories:
+tags:
 - Blog
 ----
 

@@ -1,7 +1,7 @@
 ----
 title: 单元测试 - Karma + Jasmine
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - Test
 ----
 ## 简介

@@ -1,7 +1,7 @@
 ----
 title: Lambda
 date: 2017-04-18 11:10:02
-categories:
+tags:
 - AWS
 ----
 # AWS Lambda

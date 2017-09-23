@@ -1,7 +1,7 @@
 ----
 title: Promise Chain
 date: 2016-12-21 22:28:11
-categories:
+tags:
 - NodeJS
 ----
 ```js

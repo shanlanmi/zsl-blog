@@ -1,7 +1,7 @@
 ----
 title: local swagger
 date: 2016-11-22 20:43:52
-categories:
+tags:
 - DevDependent
 ----
 ## 配置

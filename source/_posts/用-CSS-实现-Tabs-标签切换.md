@@ -1,7 +1,7 @@
 ----
 title: 用 CSS 实现 Tabs 标签切换
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - CSS
 ----
 ### 前言

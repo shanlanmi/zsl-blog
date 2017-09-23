@@ -1,7 +1,7 @@
 ----
 title: forEach loop
 date: 2016-11-06 09:52:39
-categories:
+tags:
 - JavaScirpt
 ----
 # The intuitive and powerful forEach loop in JavaScript 

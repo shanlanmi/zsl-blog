@@ -1,7 +1,7 @@
 ----
 title: Keyboard Shortcuts in OneNot
 date: 2016-07-21 18:25:51
-categories:
+tags:
 - Mac
 - ShortKey
 ----

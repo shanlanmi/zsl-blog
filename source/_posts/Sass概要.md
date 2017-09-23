@@ -1,7 +1,7 @@
 ----
 title: Sass概要
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - CSS
 ----
 **要点：**

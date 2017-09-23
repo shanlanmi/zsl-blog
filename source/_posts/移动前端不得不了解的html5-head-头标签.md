@@ -1,7 +1,7 @@
 ----
 title: 移动前端不得不了解的html5 head 头标签
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - HTML
 ----
 # 移动前端不得不了解的html5 head 头标签[转载]

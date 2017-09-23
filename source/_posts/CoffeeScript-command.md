@@ -1,7 +1,7 @@
 ----
 title: CoffeeScript command
 date: 2016-07-21 12:44:34
-categories:
+tags:
 - JavaScirpt
 ----
 ## 安装

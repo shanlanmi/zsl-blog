@@ -1,7 +1,7 @@
 ----
 title: AngularJS- Ready
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - AngularJS
 ----
 在 AngularJS中，监听 DOM 是否加载完，方便执行后续函数操作。

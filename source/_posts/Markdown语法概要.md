@@ -1,7 +1,7 @@
 ----
 title: Markdown语法概要
 date: 2016-07-21 13:36:38
-categories:
+tags:
 - Blog
 ----
 ## 基本语法

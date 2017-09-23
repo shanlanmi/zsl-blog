@@ -1,7 +1,7 @@
 ----
 title: 防止 string 过长的方法
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - CSS
 ----
 有时因为 string 过长，会撑破一些 HTML 元素，不方便布局，所以采用限制 string 长度的 css 显示方法。

@@ -1,7 +1,7 @@
 ----
 title: Nested Promoise
 date: 2016-12-13 06:06:31
-categories:
+tags:
 - NodeJS
 ----
 ## 核心思想

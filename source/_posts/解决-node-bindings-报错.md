@@ -1,7 +1,7 @@
 ----
 title: 解决 node bindings 报错
 date: 2017-01-04 01:22:39
-categories:
+tags:
 - NodeJS
 ----
 ## 报错信息

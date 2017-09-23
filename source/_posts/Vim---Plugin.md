@@ -1,7 +1,7 @@
 ----
 title: Vim - Plugin
 date: 2016-07-21 06:39:42
-categories:
+tags:
 - Editor
 ----
 ## Vim 插件与命令记录

@@ -1,7 +1,7 @@
 ----
 title: Memcached内存数据库
 date: 2016-12-01 15:51:29
-tags:
+categories:
 - DevDependent
 ----
 1. Install

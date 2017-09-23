@@ -1,7 +1,7 @@
 ----
 title: Jacman主题修改记录
 date: 2016-07-21 13:36:38
-categories:
+tags:
 - Blog
 ----
 ## 基本设置修改

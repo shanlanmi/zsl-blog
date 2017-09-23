@@ -1,7 +1,7 @@
 ----
 title: Genymotion安装
 date: 2016-07-21 12:44:34
-categories:
+tags:
 - AngularJS
 ----
 ## 安装

@@ -1,7 +1,7 @@
 ----
 title: 为Dash添加Linux的Man Pages
 date: 2016-07-21 18:25:51
-categories:
+tags:
 - Mac
 ----
 原文链接:http://www.binss.me/blog/add-linux-man-pages-to-dash/

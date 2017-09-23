@@ -1,7 +1,7 @@
 ----
 title: Mac OS X 安装GNU命令行工具[转载]
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 macos的很多用户都是做it相关的人，类unix系统带来了很多方面，尤其是经常和linux打交道的人。 但是作为经常使用linux 命令行的人发现macos中的命令行工具很多都是bsd工具，跟linux下得使用方式开始差距挺大的，那么怎么安装GNU命令行工具，然后更舒服的在macos和linux之间切换呢？ 于是找到了下面的文章，顺带翻译下。

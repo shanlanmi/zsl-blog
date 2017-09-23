@@ -1,7 +1,7 @@
 ----
 title: 用 AppleScript 模拟按键
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 ### 模拟按键

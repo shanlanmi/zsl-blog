@@ -1,7 +1,7 @@
 ----
 title: Bash Shell的编辑模式及快捷键
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 ## Set Emacs Mode in Bash(default)

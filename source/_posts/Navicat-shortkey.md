@@ -1,7 +1,7 @@
 ----
 title: Navicat shortkey
 date: 2017-01-31 16:38:50
-categories:
+tags:
 - Mac
 - ShortKey
 ----

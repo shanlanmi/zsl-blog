@@ -1,7 +1,7 @@
 ----
 title: 设置XMind的默认字体大小
 date: 2016-12-17 11:13:41
-categories:
+tags:
 - Mac
 ----
 设置XMind的默认字体大小

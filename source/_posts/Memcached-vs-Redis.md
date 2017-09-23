@@ -1,7 +1,7 @@
 ----
 title: Memcached vs Redis
 date: 2017-02-19 15:26:07
-categories:
+tags:
 - Database
 ----
 ## Memcached

@@ -1,7 +1,7 @@
 ----
 title: Nodejs 各种路径
 date: 2017-06-16 15:53:11
-categories:
+tags:
 - NodeJS
 ----
 ## Nodejs 各种路径

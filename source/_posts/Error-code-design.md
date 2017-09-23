@@ -1,8 +1,7 @@
 ----
 title: Error code design
 date: 2017-02-07 11:53:29
-top: true
-categories:
+tags:
 - NodeJS
 ----
 # Error code 设计

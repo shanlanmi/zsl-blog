@@ -1,7 +1,7 @@
 ----
 title: Vim的几种模式和按键映射[转载]
 date: 2016-07-21 18:29:45
-categories:
+tags:
 - Editor
 ----
 ## vim的几种模式和按键映射

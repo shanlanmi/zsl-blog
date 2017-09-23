@@ -1,7 +1,7 @@
 ----
 title: XMRouter
 date: 2016-12-06 04:43:01
-categories:
+tags:
 - Mac
 ----
 Time Machine 备份地址：

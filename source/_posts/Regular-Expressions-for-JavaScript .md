@@ -1,7 +1,7 @@
 ----
 title: Regular Expressions for JavaScript 
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - JavaScirpt
 ----
 ## JS RegExp

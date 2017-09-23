@@ -1,7 +1,7 @@
 ----
 title: 用ssh登录 github
 date: 2016-07-21 06:39:42
-categories:
+tags:
 - Project
 ----
 ## 配置 ssh

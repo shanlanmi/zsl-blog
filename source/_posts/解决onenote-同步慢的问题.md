@@ -1,7 +1,7 @@
 ----
 title: 解决onenote 同步慢的问题
 date: 2016-12-22 05:20:20
-categories:
+tags:
 - Mac
 ----
 1. 编辑 GFWLisT

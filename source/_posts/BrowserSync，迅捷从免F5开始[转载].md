@@ -1,7 +1,7 @@
 ----
 title: BrowserSync，迅捷从免F5开始[转载]
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - DevDependent
 ----
 原文作者：庭院茶

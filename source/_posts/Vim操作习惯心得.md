@@ -1,7 +1,7 @@
 ----
 title: Vim操作习惯心得
 date: 2016-07-21 18:29:45
-categories:
+tags:
 - Editor
 ----
 ###  Normal Mode

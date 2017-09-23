@@ -1,7 +1,7 @@
 ----
 title: Quiver Short Key
 date: 2016-07-15 06:02:45
-categories:
+tags:
 - Mac
 - ShortKey
 ----

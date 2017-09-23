@@ -1,7 +1,7 @@
 ----
 title: 向Github提交一次错误的commit后该怎么办[转载]
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - Project
 ----
 原文地址：<http://zhuqingcode.github.io/git/2014/05/15/github-a-bug-commit.html>

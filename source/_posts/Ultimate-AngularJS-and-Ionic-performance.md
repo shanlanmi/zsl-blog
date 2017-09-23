@@ -1,7 +1,7 @@
 ----
 title: Ultimate AngularJS and Ionic performance
 date: 2016-10-05 04:26:32
-categories:
+tags:
 - AngularJS
 ----
 AngularJS and Ionic performance is often questioned. The reason is because it does not necessarily comes out of the box. This post list all you need to focus on in order to get the best performance and user experience out of them.

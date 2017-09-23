@@ -1,7 +1,7 @@
 ----
 title: 解决drop database 时被占用的问题
 date: 2017-01-07 11:44:03
-categories:
+tags:
 - Database
 ----
 ## 报错

@@ -1,7 +1,7 @@
 ----
 title: Fixing npm permissions
 date: 2016-08-07 17:01:03
-categories:
+tags:
 - Project
 ----
 # Fixing npm permissions

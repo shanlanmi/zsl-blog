@@ -1,7 +1,7 @@
 ----
 title: Bash常用命令 
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 ## Bash 命令下达

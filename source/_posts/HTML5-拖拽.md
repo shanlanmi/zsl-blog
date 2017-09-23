@@ -1,7 +1,7 @@
 ----
 title: HTML5 拖拽
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - HTML
 ----
 ## 拖拽概述

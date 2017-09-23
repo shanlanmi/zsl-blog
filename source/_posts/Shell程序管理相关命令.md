@@ -1,7 +1,7 @@
 ----
 title: Shell程序管理相关命令
 date: 2016-07-21 18:34:23
-categories:
+tags:
 - Shell
 ----
 ## job control 工作管理

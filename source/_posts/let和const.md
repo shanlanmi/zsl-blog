@@ -1,7 +1,7 @@
 ----
 title: let和const
 date: 2017-01-25 13:49:24
-categories:
+tags:
 - JavaScirpt
 ----
 

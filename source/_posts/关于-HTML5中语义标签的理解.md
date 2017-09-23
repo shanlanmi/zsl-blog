@@ -1,7 +1,7 @@
 ----
 title: 关于 HTML5中语义标签的理解
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - HTML
 ----
 title: 关于 HTML5中语义标签的理解

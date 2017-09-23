@@ -1,7 +1,7 @@
 ----
 title: 一个简单的 nodeJS 项目
 date: 2016-11-04 12:12:19
-categories:
+tags:
 - NodeJS
 ----
 

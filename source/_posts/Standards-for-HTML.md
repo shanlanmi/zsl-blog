@@ -1,7 +1,7 @@
 ----
 title: Standards for HTML
 date: 2016-07-22 09:26:41
-categories:
+tags:
 - HTML
 ----
 Standards for developing flexible, durable, and sustainable HTML and CSS.

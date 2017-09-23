@@ -1,7 +1,7 @@
 ----
 title: Secret Random
 date: 2016-12-15 17:31:59
-categories:
+tags:
 - NodeJS
 ----
 安装 libsodium

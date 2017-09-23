@@ -1,7 +1,7 @@
 ----
 title: Ionic hardware button action(android)
 date: 2016-10-09 17:24:27
-categories:
+tags:
 - AngularJS
 ----
 通过 run.coffee 文件配置 hardware action，把所有特殊动作都指向$ionicGoBack 函数，例如：

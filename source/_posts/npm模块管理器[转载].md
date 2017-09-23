@@ -1,7 +1,7 @@
 ----
 title: npm模块管理器[转载]
 date: 2016-07-21 18:38:44
-categories:
+tags:
 - Project
 ----
 来自[《JavaScript 标准参考教程（alpha）》][0]，by 阮一峰
@@ -266,6 +266,15 @@ npm uninstall命令，卸载已安装的模块。
     # 卸载全局模块
     $ npm uninstall [package name] -global
     
+## npm root
+```
+# 查看当前包的安装路径
+npm root
+
+# 查看全局的包的安装路径
+npm root -g  
+```
+
 
 ## 10 npm run
 

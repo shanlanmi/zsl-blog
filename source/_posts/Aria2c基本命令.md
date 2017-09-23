@@ -1,7 +1,7 @@
 ----
 title: Aria2c基本命令
 date: 2016-07-21 12:44:34
-categories:
+tags:
 - Mac
 ----
 # Aria2c 使用举例

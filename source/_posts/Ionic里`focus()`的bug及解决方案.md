@@ -1,7 +1,7 @@
 ----
 title: Ionic里`focus()`的bug及解决方案
 date: 2016-09-12 14:09:03
-categories:
+tags:
 - AngularJS
 ----
 默认情况下，`focus()`是不生效的，需要在 config.xml 中配置：
