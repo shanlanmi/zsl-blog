@@ -1,0 +1,162 @@
+.bg, #show, .curtain, .curtain1, .curtain2, .curtain3, .curtain4, .curtain5 {
+  background: linear-gradient(100deg, #4d3988, #3c7695); }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+body {
+  background: black;
+  color: black;
+  font-weight: 100;
+  font-family: helvetica;
+  text-align: center; }
+
+img {
+  display: block;
+  float: left;
+  margin: 0 1px 0 0; }
+
+#show {
+  position: relative;
+  top: 20vw;
+  width: 50vw;
+  height: 50vw;
+  display: block;
+  margin: 5vw auto;
+  z-index: 100;
+  border-radius: 50%; }
+
+.ring, .ring1, .ring2, .ring3, .ring4, .circle-wrap, .ring5 {
+  position: absolute;
+  display: block;
+  border-radius: 50%;
+  filter: brightness(0.3);
+  overflow: hidden; }
+
+.ring1 {
+  top: 0vw;
+  left: 0vw;
+  width: 50vw;
+  height: 50vw;
+  animation: rotate-reverse 30s linear infinite;
+  z-index: 100; }
+
+.ring2 {
+  top: 5vw;
+  left: 5vw;
+  width: 40vw;
+  animation: rotate 30s linear infinite;
+  z-index: 102; }
+
+.ring3 {
+  top: 7vw;
+  left: 7vw;
+  width: 36vw;
+  height: 36vw;
+  z-index: 104; }
+
+.ring4, .circle-wrap {
+  top: 7.5vw;
+  left: 7.5vw;
+  width: 35vw;
+  height: 35vw;
+  transform: rotate(90deg);
+  z-index: 106; }
+
+.ring5 {
+  top: 11vw;
+  left: 11vw;
+  width: 28vw;
+  height: 28vw;
+  z-index: 108; }
+
+.demo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 50vw;
+  opacity: 0.5;
+  z-index: 999; }
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg); }
+
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes rotate-reverse {
+  0% {
+    transform: rotate(0deg); }
+
+  100% {
+    transform: rotate(-360deg); } }
+
+#num {
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: 5vw;
+  left: 0;
+  text-align: center;
+  font-size: 8vw; }
+
+.title {
+  display: block;
+  position: absolute;
+  top: 16vw;
+  width: 100%;
+  font-size: 2.5vw; }
+
+.curtain, .curtain1, .curtain2, .curtain3, .curtain4, .curtain5 {
+  position: absolute;
+  display: block;
+  margin: 0;
+  border-radius: 50%; }
+
+.curtain1 {
+  top: 5vw;
+  left: 5vw;
+  width: 40vw;
+  height: 40vw;
+  z-index: 101; }
+
+.curtain2 {
+  top: 7vw;
+  left: 7vw;
+  width: 36vw;
+  height: 36vw;
+  z-index: 103; }
+
+.curtain3 {
+  top: 7.5vw;
+  left: 7.5vw;
+  width: 35vw;
+  height: 35vw;
+  z-index: 105; }
+
+.curtain4 {
+  top: 11vw;
+  left: 11vw;
+  width: 28vw;
+  height: 28vw;
+  z-index: 107; }
+
+.curtain5 {
+  display: block;
+  top: 13.25vw;
+  left: 13.25vw;
+  width: 23.5vw;
+  height: 23.5vw;
+  background: white;
+  z-index: 108; }
+
+.circle-wrap {
+  filter: brightness(1);
+  transform: unset;
+  z-index: 105; }
+
+#circle {
+  width: 100%; }

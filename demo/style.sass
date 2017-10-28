@@ -1,0 +1,186 @@
+$black: #000
+.bg
+  background: linear-gradient(100deg, #4d3988, #3c7695)
+
+*
+  padding: 0
+  margin: 0
+body
+  background: $black
+  color: $black
+  font-weight: 100
+  font-family: helvetica
+  text-align: center
+
+img
+  display: block
+  float: left
+  margin: 0 1px 0 0
+
+#show
+  @extend .bg
+  position: relative
+  top: 20vw
+  width: 50vw
+  height: 50vw
+  display: block
+  margin: 5vw auto
+  z-index: 100
+  border-radius: 50%
+
+.ring
+  position: absolute
+  display: block
+  border-radius: 50%
+  filter: brightness(0.3)
+  overflow: hidden
+
+.ring1
+  @extend .ring
+  top: 0vw
+  left: 0vw
+  width: 50vw
+  height: 50vw
+  animation: rotate-reverse 30s linear infinite
+  z-index: 100
+
+.ring2
+  @extend .ring
+  top: 5vw
+  left: 5vw
+  width: 40vw
+  animation: rotate 30s linear infinite
+  z-index: 102
+
+$ring3: 36vw
+.ring3
+  @extend .ring
+  top: (50vw - $ring3) / 2
+  left: (50vw - $ring3) / 2
+  width: $ring3
+  height: $ring3
+  z-index: 104
+
+$ring4: 35vw
+.ring4
+  @extend .ring
+  top: (50vw - $ring4) / 2
+  left: (50vw - $ring4) / 2
+  width: $ring4
+  height: $ring4
+  transform: rotate(90deg)
+  z-index: 106
+
+$ring5: 28vw
+.ring5
+  @extend .ring
+  top: (50vw - $ring5) / 2
+  left: (50vw - $ring5) / 2
+  width: $ring5
+  height: $ring5
+  z-index: 108
+
+.demo
+  position: absolute
+  top: 0
+  left: 0
+  display: block
+  width: 50vw
+  opacity: 0.5
+  z-index: 999
+
+@keyframes rotate
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+
+@keyframes rotate-reverse
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(-360deg)
+
+
+#num
+  position: absolute
+  display: block
+  width: 100%
+  top: 5vw
+  left: 0
+  text-align: center
+  font-size: 8vw
+
+.title
+  display: block
+  position: absolute
+  top: 16vw
+  width: 100%
+  font-size: 2.5vw
+
+.curtain
+  @extend .bg
+  position: absolute
+  display: block
+  margin: 0
+  border-radius: 50%
+
+$curtain1: 40vw
+.curtain1
+  @extend .curtain
+  top: (50vw - $curtain1) /2
+  left: (50vw - $curtain1) / 2
+  width: $curtain1
+  height: $curtain1
+  z-index: 101
+
+$curtain2: 36vw
+.curtain2
+  @extend .curtain
+  top: ((50vw - $curtain2) / 2)
+  left: (50vw - $curtain2) / 2
+  width: $curtain2
+  height: $curtain2
+  z-index: 103
+
+$curtain3: 35vw
+.curtain3
+  @extend .curtain
+  top: ((50vw - $curtain3) / 2)
+  left: (50vw - $curtain3) / 2
+  width: $curtain3
+  height: $curtain3
+  z-index: 105
+
+$curtain4: 28vw
+.curtain4
+  @extend .curtain
+  top: ((50vw - $curtain4) / 2)
+  left: (50vw - $curtain4) / 2
+  width: $curtain4
+  height: $curtain4
+  z-index: 107
+
+$curtain5: 23.5vw
+.curtain5
+  @extend .curtain
+  display: block
+  top: ((50vw - $curtain5) / 2)
+  left: (50vw - $curtain5) / 2
+  width: $curtain5
+  height: $curtain5
+  background: white
+  z-index: 108
+
+.circle-wrap
+  @extend .ring
+  @extend .ring4
+  filter: brightness(1)
+  transform: unset
+  z-index: 105
+
+#circle
+  width: 100%
